@@ -19,7 +19,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               A boutique real estate brokerage specializing in luxury properties across Gurugram and Delhi NCR. We bring an editorial approach to real estate.
             </p>
             <div className="flex space-x-6">
-              <Instagram className="h-5 w-5 text-white/40 hover:text-white transition-colors cursor-pointer" />
+              <a href="https://www.instagram.com/thecornerhouserealty/" target="_blank" rel="noopener noreferrer"><Instagram className="h-5 w-5 text-white/40 hover:text-white transition-colors cursor-pointer" /></a>
               <Linkedin className="h-5 w-5 text-white/40 hover:text-white transition-colors cursor-pointer" />
               <Facebook className="h-5 w-5 text-white/40 hover:text-white transition-colors cursor-pointer" />
             </div>

@@ -81,9 +81,11 @@ export default function Founder() {
                 <Button variant="outline" size="icon" className="rounded-full h-10 w-10 md:h-12 md:w-12 border-border hover:border-primary hover:text-primary transition-all duration-300">
                   <Linkedin className="h-4 w-4 md:h-5 md:w-5" />
                 </Button>
-                <Button variant="outline" size="icon" className="rounded-full h-10 w-10 md:h-12 md:w-12 border-border hover:border-primary hover:text-primary transition-all duration-300">
-                  <Instagram className="h-4 w-4 md:h-5 md:w-5" />
-                </Button>
+                <a href="https://www.instagram.com/thecornerhouserealty/" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" size="icon" className="rounded-full h-10 w-10 md:h-12 md:w-12 border-border hover:border-primary hover:text-primary transition-all duration-300">
+                    <Instagram className="h-4 w-4 md:h-5 md:w-5" />
+                  </Button>
+                </a>
                 <Button variant="outline" size="icon" className="rounded-full h-10 w-10 md:h-12 md:w-12 border-border hover:border-primary hover:text-primary transition-all duration-300">
                   <Twitter className="h-4 w-4 md:h-5 md:w-5" />
                 </Button>
