@@ -102,7 +102,7 @@ export default function Home({ onNavigate }: HomeProps) {
             <div className="space-y-8">
               <h2 className="text-6xl font-heading font-medium leading-tight">
                 Ready to find your <br />
-                <span className="italic text-primary">Corner Home?</span>
+                <span className="italic text-primary">Corner House?</span>
               </h2>
               <p className="text-xl text-muted-foreground font-light leading-relaxed max-w-lg">
                 Whether you're looking to buy, sell, or invest, our team of expert advisors is here to guide you through every step of the process.

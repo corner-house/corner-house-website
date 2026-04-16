@@ -222,7 +222,7 @@ export const TESTIMONIALS: Testimonial[] = [
     id: '1',
     name: 'Vikram Malhotra',
     role: 'CEO, Tech Solutions',
-    content: 'The Corner Home team provided exceptional service. Their deep understanding of the Gurugram market helped us find our dream home in record time.',
+    content: 'The Corner House team provided exceptional service. Their deep understanding of the Gurugram market helped us find our dream home in record time.',
     image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200'
   },
   {

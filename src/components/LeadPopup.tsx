@@ -131,7 +131,7 @@ export default function LeadPopup({ isOpen, onClose, propertyTitle, onSubmit }: 
               </form>
 
               <p className="text-[9px] text-center text-muted-foreground mt-12 uppercase tracking-[0.3em] font-medium opacity-60">
-                Your data is secure with The Corner Home.
+                Your data is secure with The Corner House.
               </p>
             </div>
           </motion.div>

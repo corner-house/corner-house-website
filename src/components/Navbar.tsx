@@ -48,7 +48,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
         >
           <h1 className="text-2xl font-heading font-semibold tracking-tighter flex flex-col leading-none">
             <span className={`transition-colors ${isScrolled ? 'text-primary' : 'text-white'}`}>THE CORNER</span>
-            <span className={`text-sm font-sans font-medium tracking-widest transition-colors ${isScrolled ? 'text-foreground/60' : 'text-white/70'}`}>HOME</span>
+            <span className={`text-sm font-sans font-medium tracking-widest transition-colors ${isScrolled ? 'text-foreground/60' : 'text-white/70'}`}>HOUSE</span>
           </h1>
         </div>
 

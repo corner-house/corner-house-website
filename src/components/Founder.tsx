@@ -61,7 +61,7 @@ export default function Founder() {
                 Real estate in the luxury segment isn't just about square footage or amenities; it's about finding a space that resonates with your soul and reflects your journey.
               </p>
               <p>
-                With over two decades of experience in the Delhi NCR market, I founded The Corner Home to bridge the gap between impersonal property portals and the bespoke service that high-net-worth individuals deserve.
+                With over two decades of experience in the Delhi NCR market, I founded The Corner House to bridge the gap between impersonal property portals and the bespoke service that high-net-worth individuals deserve.
               </p>
             </motion.div>
             

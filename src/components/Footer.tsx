@@ -13,7 +13,7 @@ export default function Footer({ onNavigate }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
           <div className="col-span-1 md:col-span-1">
             <h2 className="text-3xl font-heading font-semibold tracking-tighter mb-6 cursor-pointer" onClick={() => onNavigate?.('home')}>
-              THE CORNER HOME
+              THE CORNER HOUSE
             </h2>
             <p className="text-white/60 font-light leading-relaxed mb-8">
               A boutique real estate brokerage specializing in luxury properties across Gurugram and Delhi NCR. We bring an editorial approach to real estate.
@@ -77,14 +77,14 @@ export default function Footer({ onNavigate }: FooterProps) {
               </li>
               <li className="flex items-center space-x-4">
                 <Mail className="h-5 w-5 text-primary" />
-                <span className="text-white/70 font-light">hello@thecornerhome.com</span>
+                <span className="text-white/70 font-light">hello@cornerhouse.co.in</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-white/30 text-xs tracking-widest uppercase">
-          <p>© 2026 THE CORNER HOME. ALL RIGHTS RESERVED.</p>
+          <p>© 2026 THE CORNER HOUSE. ALL RIGHTS RESERVED.</p>
           <div className="flex space-x-8 mt-4 md:mt-0">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
