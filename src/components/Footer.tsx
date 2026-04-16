@@ -68,12 +68,12 @@ export default function Footer({ onNavigate }: FooterProps) {
               <li className="flex items-start space-x-4">
                 <MapPin className="h-5 w-5 text-primary mt-1" />
                 <span className="text-white/70 font-light">
-                  Level 4, Augusta Point, Golf Course Road, Sector 53, Gurugram, Haryana 122002
+                  The Corner House, C3-151, Sobha Sector 108, Gurugram
                 </span>
               </li>
               <li className="flex items-center space-x-4">
                 <Phone className="h-5 w-5 text-primary" />
-                <span className="text-white/70 font-light">+91 98765 43210</span>
+                <span className="text-white/70 font-light">+91 98719 50051</span>
               </li>
               <li className="flex items-center space-x-4">
                 <Mail className="h-5 w-5 text-primary" />
