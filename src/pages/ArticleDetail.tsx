@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { useLayoutContext } from '@/App';
 import { motion } from 'motion/react';
 import { ArrowLeft, ArrowUpRight, Bookmark, Share2, Twitter, Linkedin, Facebook, Clock, Calendar } from 'lucide-react';
 import { ARTICLES } from '@/constants';
@@ -8,13 +9,10 @@ import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import SEO, { SITE_URL } from '@/components/SEO';
 
-interface ArticleDetailProps {
-  onBack: () => void;
-  onNavigate: (page: 'home' | 'detail' | 'service' | 'article', id?: string) => void;
-}
-
-export default function ArticleDetail({ onBack, onNavigate }: ArticleDetailProps) {
+export default function ArticleDetail() {
   const { id } = useParams<{ id: string }>();
+  const { onNavigate, onBack: layoutBack } = useLayoutContext();
+  const onBack = () => layoutBack('#insights');
   const article = ARTICLES.find((a) => a.id === id);
   const related = ARTICLES.filter((a) => a.id !== id).slice(0, 2);
 
@@ -43,8 +41,8 @@ export default function ArticleDetail({ onBack, onNavigate }: ArticleDetailProps
     headline: article.title,
     description: article.excerpt,
     image: article.image,
-    datePublished: article.date,
-    dateModified: article.date,
+    datePublished: article.datePublished,
+    dateModified: article.datePublished,
     author: {
       '@type': 'Person',
       name: article.author.name,
@@ -84,7 +82,7 @@ export default function ArticleDetail({ onBack, onNavigate }: ArticleDetailProps
         path={`/journal/${article.id}`}
         image={article.image}
         type="article"
-        publishedTime={article.date}
+        publishedTime={article.datePublished}
         author={article.author.name}
         keywords={article.tags}
         jsonLd={[articleJsonLd, breadcrumbJsonLd]}

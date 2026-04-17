@@ -1,16 +1,27 @@
 import React, { Suspense } from 'react';
-import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { Outlet, useNavigate, useLocation, useOutletContext } from 'react-router-dom';
+import type { RouteRecord } from 'vite-react-ssg';
 import { motion, AnimatePresence } from 'motion/react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Home from '@/pages/Home';
+import Properties from '@/pages/Properties';
+import Services from '@/pages/Services';
+import Journal from '@/pages/Journal';
 import LeadCaptureModal, { LeadData } from '@/components/LeadCaptureModal';
-import { PROPERTIES } from '@/constants';
+import { PROPERTIES, SERVICES, ARTICLES } from '@/constants';
 
-const PropertyDetail = React.lazy(() => import('@/pages/PropertyDetail'));
-const ServiceDetail = React.lazy(() => import('@/pages/ServiceDetail'));
-const ArticleDetail = React.lazy(() => import('@/pages/ArticleDetail'));
-const NotFound = React.lazy(() => import('@/pages/NotFound'));
+export type NavigatePage = 'home' | 'detail' | 'service' | 'article';
+export type NavigateFn = (page: NavigatePage, id?: string) => void;
+
+export interface LayoutContext {
+  onNavigate: NavigateFn;
+  onBack: (section?: string) => void;
+}
+
+export function useLayoutContext(): LayoutContext {
+  return useOutletContext<LayoutContext>();
+}
 
 function PageLoader() {
   return (
@@ -20,10 +31,7 @@ function PageLoader() {
   );
 }
 
-export type NavigatePage = 'home' | 'detail' | 'service' | 'article';
-export type NavigateFn = (page: NavigatePage, id?: string) => void;
-
-export default function App() {
+function Layout() {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -50,7 +58,6 @@ export default function App() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     } else if (page === 'detail' && id) {
-      // LEAD GATE for Properties
       if (!isLeadCaptured) {
         setPendingPropertyId(id);
         setIsLeadModalOpen(true);
@@ -67,6 +74,10 @@ export default function App() {
     }
   };
 
+  const handleBack = (section?: string) => {
+    handleNavigate('home', section);
+  };
+
   const handleLeadSuccess = (data: LeadData) => {
     setIsLeadCaptured(true);
     localStorage.setItem('corner_home_lead_captured', 'true');
@@ -78,6 +89,8 @@ export default function App() {
       window.scrollTo(0, 0);
     }
   };
+
+  const context: LayoutContext = { onNavigate: handleNavigate, onBack: handleBack };
 
   return (
     <div className="min-h-screen flex flex-col font-sans selection:bg-primary/20 selection:text-primary">
@@ -93,27 +106,7 @@ export default function App() {
             transition={{ duration: 0.4 }}
           >
             <Suspense fallback={<PageLoader />}>
-              <Routes location={location}>
-                <Route path="/" element={<Home onNavigate={handleNavigate} />} />
-                <Route
-                  path="/properties/:id"
-                  element={<PropertyDetail onBack={() => handleNavigate('home', '#properties')} />}
-                />
-                <Route
-                  path="/services/:id"
-                  element={<ServiceDetail onBack={() => handleNavigate('home', '#services')} />}
-                />
-                <Route
-                  path="/journal/:id"
-                  element={
-                    <ArticleDetail
-                      onBack={() => handleNavigate('home', '#insights')}
-                      onNavigate={handleNavigate}
-                    />
-                  }
-                />
-                <Route path="*" element={<NotFound onNavigate={handleNavigate} />} />
-              </Routes>
+              <Outlet context={context} />
             </Suspense>
           </motion.div>
         </AnimatePresence>
@@ -130,3 +123,45 @@ export default function App() {
     </div>
   );
 }
+
+// Bridge components so existing pages that consume the layout context still work.
+// Each page calls useLayoutContext() directly (see step-by-step page edits),
+// but this wrapper keeps the route tree tidy.
+const LazyPropertyDetail = React.lazy(() => import('@/pages/PropertyDetail'));
+const LazyServiceDetail = React.lazy(() => import('@/pages/ServiceDetail'));
+const LazyArticleDetail = React.lazy(() => import('@/pages/ArticleDetail'));
+const LazyNotFound = React.lazy(() => import('@/pages/NotFound'));
+
+export const routes: RouteRecord[] = [
+  {
+    path: '/',
+    element: <Layout />,
+    children: [
+      { index: true, Component: Home },
+      { path: 'properties', Component: Properties },
+      {
+        path: 'properties/:id',
+        Component: LazyPropertyDetail,
+        entry: 'src/pages/PropertyDetail.tsx',
+        getStaticPaths: () => PROPERTIES.map((p) => `properties/${p.id}`),
+      },
+      { path: 'services', Component: Services },
+      {
+        path: 'services/:id',
+        Component: LazyServiceDetail,
+        entry: 'src/pages/ServiceDetail.tsx',
+        getStaticPaths: () => SERVICES.map((s) => `services/${s.id}`),
+      },
+      { path: 'journal', Component: Journal },
+      {
+        path: 'journal/:id',
+        Component: LazyArticleDetail,
+        entry: 'src/pages/ArticleDetail.tsx',
+        getStaticPaths: () => ARTICLES.map((a) => `journal/${a.id}`),
+      },
+      // Static /404.html output needed by Cloudflare Pages _redirects catch-all.
+      { path: '404', Component: LazyNotFound },
+      { path: '*', Component: LazyNotFound },
+    ],
+  },
+];

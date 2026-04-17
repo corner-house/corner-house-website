@@ -6,9 +6,8 @@
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
     "sitemap": "tsx scripts/generate-sitemap.ts",
-    "prerender": "tsx scripts/prerender.ts",
     "indexnow": "tsx scripts/indexnow.ts",
-    "build": "npm run sitemap && vite build && npm run prerender",
+    "build": "npm run sitemap && vite-react-ssg build",
     "postdeploy": "npm run indexnow",
     "preview": "vite preview",
     "clean": "rm -rf dist",

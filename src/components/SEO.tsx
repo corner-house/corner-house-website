@@ -1,5 +1,4 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Head } from 'vite-react-ssg';
 
 export const SITE_URL = 'https://cornerhouse.co.in';
 const DEFAULT_OG = `${SITE_URL}/og-default.jpg`;
@@ -35,7 +34,7 @@ export default function SEO({
   const jsonLdArray = Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : [];
 
   return (
-    <Helmet>
+    <Head>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={url} />
@@ -78,6 +77,6 @@ export default function SEO({
           {JSON.stringify(schema)}
         </script>
       ))}
-    </Helmet>
+    </Head>
   );
 }

@@ -1,4 +1,3 @@
-import React from 'react';
 import Hero from '@/components/Hero';
 import PropertyCard from '@/components/PropertyCard';
 import Services from '@/components/Services';
@@ -7,16 +6,14 @@ import Insights from '@/components/Insights';
 import Testimonials from '@/components/Testimonials';
 import InquiryForm from '@/components/InquiryForm';
 import SEO, { SITE_URL } from '@/components/SEO';
+import { useLayoutContext } from '@/App';
 import { PROPERTIES } from '@/constants';
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-interface HomeProps {
-  onNavigate: (page: 'home' | 'detail' | 'service' | 'article', id?: string) => void;
-}
-
-export default function Home({ onNavigate }: HomeProps) {
+export default function Home() {
+  const { onNavigate } = useLayoutContext();
   const websiteJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',

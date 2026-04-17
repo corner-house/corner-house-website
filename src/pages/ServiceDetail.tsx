@@ -1,17 +1,16 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { useLayoutContext } from '@/App';
 import { SERVICES } from '@/constants';
 import { Button } from '@/components/ui/button';
 import { motion } from 'motion/react';
 import { ArrowLeft, CheckCircle2, MessageSquare, Phone } from 'lucide-react';
 import SEO, { SITE_URL } from '@/components/SEO';
 
-interface ServiceDetailProps {
-  onBack: () => void;
-}
-
-export default function ServiceDetail({ onBack }: ServiceDetailProps) {
+export default function ServiceDetail() {
   const { id } = useParams<{ id: string }>();
+  const { onBack: layoutBack } = useLayoutContext();
+  const onBack = () => layoutBack('#services');
   const service = SERVICES.find((s) => s.id === id);
 
   if (!service) {

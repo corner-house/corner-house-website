@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { useLayoutContext } from '@/App';
 import { PROPERTIES } from '@/constants';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -11,12 +12,10 @@ import {
 import { motion } from 'motion/react';
 import SEO, { SITE_URL } from '@/components/SEO';
 
-interface PropertyDetailProps {
-  onBack: () => void;
-}
-
-export default function PropertyDetail({ onBack }: PropertyDetailProps) {
+export default function PropertyDetail() {
   const { id } = useParams<{ id: string }>();
+  const { onBack: layoutBack } = useLayoutContext();
+  const onBack = () => layoutBack('#properties');
   const property = PROPERTIES.find((p) => p.id === id);
   const [activeImage, setActiveImage] = React.useState(0);
 

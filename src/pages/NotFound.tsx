@@ -1,14 +1,10 @@
-import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import SEO from '@/components/SEO';
-import type { NavigateFn } from '@/App';
+import { useLayoutContext } from '@/App';
 
-interface NotFoundProps {
-  onNavigate: NavigateFn;
-}
-
-export default function NotFound({ onNavigate }: NotFoundProps) {
+export default function NotFound() {
+  const { onNavigate } = useLayoutContext();
   return (
     <main className="pt-40 pb-32 bg-background min-h-screen flex items-center">
       <SEO
