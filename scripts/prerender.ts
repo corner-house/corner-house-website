@@ -75,9 +75,15 @@ function renderHtml(meta: RouteMeta): string {
 
 function writeRoute(meta: RouteMeta) {
   const html = renderHtml(meta);
-  const outDir = meta.path === '/' ? distDir : resolve(distDir, meta.path.replace(/^\//, ''));
-  mkdirSync(outDir, { recursive: true });
-  writeFileSync(resolve(outDir, 'index.html'), html);
+  if (meta.path === '/') {
+    writeFileSync(resolve(distDir, 'index.html'), html);
+    return;
+  }
+  // Write as /path.html so Cloudflare Pages serves /path without a trailing-slash redirect.
+  const trimmed = meta.path.replace(/^\//, '');
+  const outPath = resolve(distDir, `${trimmed}.html`);
+  mkdirSync(dirname(outPath), { recursive: true });
+  writeFileSync(outPath, html);
 }
 
 // Home
@@ -198,5 +204,14 @@ for (const a of ARTICLES) {
   });
 }
 
-const count = 1 + PROPERTIES.length + SERVICES.length + ARTICLES.length;
+// 404 page (served with HTTP 404 via _redirects catch-all)
+writeRoute({
+  path: '/404',
+  title: 'Page not found — The Corner House',
+  description: 'The page you are looking for does not exist. Return home to explore our current collection of luxury residences.',
+  canonical: `${SITE_URL}/404`,
+  jsonLd: [],
+});
+
+const count = 1 + PROPERTIES.length + SERVICES.length + ARTICLES.length + 1;
 console.log(`Prerendered ${count} routes to dist/`);

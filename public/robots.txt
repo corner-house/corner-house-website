@@ -1,8 +1,5 @@
 # https://cornerhouse.co.in/robots.txt
-# Allow all reputable crawlers; block only ByteDance's scraper.
-
-User-agent: Bytespider
-Disallow: /
+# Allow all reputable crawlers.
 
 User-agent: *
 Allow: /

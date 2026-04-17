@@ -1,0 +1,6 @@
+# Cloudflare Pages redirects — https://developers.cloudflare.com/pages/configuration/redirects/
+# Precedence: explicit prerendered files → these rules → 404 fallback.
+# Unknown routes hit 404.html with HTTP 404 (fixes soft-404 issue).
+
+/404.html    /404.html   404
+/*           /404.html   404
