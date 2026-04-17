@@ -40,3 +40,28 @@ export interface Testimonial {
   content: string;
   image: string;
 }
+
+export interface ArticleSection {
+  heading?: string;
+  paragraphs: string[];
+}
+
+export interface Article {
+  id: string;
+  category: string;
+  title: string;
+  subtitle: string;
+  excerpt: string;
+  date: string;
+  readTime: string;
+  image: string;
+  author: {
+    name: string;
+    role: string;
+    image: string;
+  };
+  heroQuote?: string;
+  sections: ArticleSection[];
+  keyTakeaways: string[];
+  tags: string[];
+}

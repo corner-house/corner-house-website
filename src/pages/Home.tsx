@@ -12,7 +12,7 @@ import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface HomeProps {
-  onNavigate: (page: 'home' | 'detail' | 'service', id?: string) => void;
+  onNavigate: (page: 'home' | 'detail' | 'service' | 'article', id?: string) => void;
 }
 
 export default function Home({ onNavigate }: HomeProps) {
@@ -84,7 +84,7 @@ export default function Home({ onNavigate }: HomeProps) {
       <Services onNavigate={onNavigate} />
 
       <Localities />
-      <Insights />
+      <Insights onNavigate={onNavigate} />
       <Testimonials />
 
       {/* Final CTA */}

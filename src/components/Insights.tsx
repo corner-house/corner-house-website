@@ -1,54 +1,13 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
+import { ARTICLES } from '@/constants';
 
-interface Article {
-  id: string;
-  category: string;
-  title: string;
-  excerpt: string;
-  date: string;
-  readTime: string;
-  image: string;
+interface InsightsProps {
+  onNavigate?: (page: 'home' | 'detail' | 'service' | 'article', id?: string) => void;
 }
 
-const ARTICLES: Article[] = [
-  {
-    id: 'delhi-ncr-luxury-report-2026',
-    category: 'Market Report',
-    title: 'The 2026 Delhi NCR Luxury Report',
-    excerpt:
-      'An inside look at how ultra-premium residences in Golf Course Road and Aerocity outperformed the broader market by 18% this year.',
-    date: 'March 2026',
-    readTime: '6 min read',
-    image:
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=1200',
-  },
-  {
-    id: 'farmhouse-investment-chattarpur',
-    category: 'Investment Guide',
-    title: 'Why Farmhouses in Chattarpur Are the New Heirloom Asset',
-    excerpt:
-      'Privacy, acreage, and legacy value — a closer look at why discerning families are pivoting from apartments to farm estates.',
-    date: 'February 2026',
-    readTime: '8 min read',
-    image:
-      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=1200',
-  },
-  {
-    id: 'dlf-camellias-resale',
-    category: 'Neighborhood',
-    title: 'Inside DLF Camellias: The Resale Story No One Talks About',
-    excerpt:
-      'What drives the quiet, off-market transactions in Gurugram\u2019s most exclusive address — and how sellers secure the right buyer.',
-    date: 'January 2026',
-    readTime: '5 min read',
-    image:
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200',
-  },
-];
-
-export default function Insights() {
+export default function Insights({ onNavigate }: InsightsProps) {
   return (
     <section id="insights" className="py-32 bg-white relative">
       <div className="container mx-auto px-6">
@@ -88,6 +47,7 @@ export default function Insights() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
+              onClick={() => onNavigate?.('article', article.id)}
               className="group cursor-pointer"
             >
               <div className="relative aspect-[4/5] overflow-hidden mb-8 shadow-xl">

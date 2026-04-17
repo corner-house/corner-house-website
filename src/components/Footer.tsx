@@ -3,7 +3,7 @@ import { Instagram, Linkedin, Facebook, Mail, Phone, MapPin } from 'lucide-react
 import { SERVICES } from '@/constants';
 
 interface FooterProps {
-  onNavigate?: (page: 'home' | 'detail' | 'service', id?: string) => void;
+  onNavigate?: (page: 'home' | 'detail' | 'service' | 'article', id?: string) => void;
 }
 
 export default function Footer({ onNavigate }: FooterProps) {
@@ -88,6 +88,21 @@ export default function Footer({ onNavigate }: FooterProps) {
           <div className="flex space-x-8 mt-4 md:mt-0">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+          </div>
+        </div>
+
+        <div className="mt-8 pt-6 border-t border-white/5 flex flex-col md:flex-row justify-center md:justify-end items-center gap-3 text-white/40">
+          <div className="flex items-center gap-3">
+            <img
+              src="/saurabh-jain.png"
+              alt="Saurabh Jain"
+              className="h-9 w-9 rounded-full object-cover object-top border border-white/20"
+              referrerPolicy="no-referrer"
+            />
+            <span className="text-[11px] tracking-[0.25em] uppercase">
+              Website Created &amp; Managed by{' '}
+              <span className="text-white/80 font-medium">Saurabh Jain</span>
+            </span>
           </div>
         </div>
       </div>

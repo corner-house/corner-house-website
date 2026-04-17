@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 interface NavbarProps {
-  onNavigate: (page: 'home' | 'detail' | 'service', id?: string) => void;
+  onNavigate: (page: 'home' | 'detail' | 'service' | 'article', id?: string) => void;
 }
 
 export default function Navbar({ onNavigate }: NavbarProps) {
