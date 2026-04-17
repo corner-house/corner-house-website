@@ -30,8 +30,10 @@ export default function PropertyCard({ property, onClick }: PropertyCardProps) {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               src={view === 'photo' ? property.images[0] : property.floorPlan}
-              alt={property.title}
+              alt={view === 'photo' ? `${property.title} — ${property.type} in ${property.location}` : `${property.title} — floor plan`}
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+              loading="lazy"
+              decoding="async"
               referrerPolicy="no-referrer"
             />
           </AnimatePresence>

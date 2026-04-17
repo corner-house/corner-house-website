@@ -53,8 +53,12 @@ export default function Insights({ onNavigate }: InsightsProps) {
               <div className="relative aspect-[4/5] overflow-hidden mb-8 shadow-xl">
                 <img
                   src={article.image}
-                  alt={article.title}
+                  alt={`${article.title} — ${article.category}`}
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                  loading="lazy"
+                  decoding="async"
+                  width="600"
+                  height="750"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />

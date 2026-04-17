@@ -1,166 +1,129 @@
-import React from 'react';
+import React, { Suspense } from 'react';
+import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'motion/react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Home from '@/pages/Home';
-import PropertyDetail from '@/pages/PropertyDetail';
-import ServiceDetail from '@/pages/ServiceDetail';
-import ArticleDetail from '@/pages/ArticleDetail';
 import LeadCaptureModal, { LeadData } from '@/components/LeadCaptureModal';
-import { motion, AnimatePresence } from 'motion/react';
-import { PROPERTIES, SERVICES } from '@/constants';
+import { PROPERTIES } from '@/constants';
 
-type Page = 'home' | 'detail' | 'service' | 'article';
+const PropertyDetail = React.lazy(() => import('@/pages/PropertyDetail'));
+const ServiceDetail = React.lazy(() => import('@/pages/ServiceDetail'));
+const ArticleDetail = React.lazy(() => import('@/pages/ArticleDetail'));
+const NotFound = React.lazy(() => import('@/pages/NotFound'));
+
+function PageLoader() {
+  return (
+    <div className="min-h-[60vh] flex items-center justify-center">
+      <div className="h-10 w-10 rounded-full border-2 border-primary/20 border-t-primary animate-spin" />
+    </div>
+  );
+}
+
+export type NavigatePage = 'home' | 'detail' | 'service' | 'article';
+export type NavigateFn = (page: NavigatePage, id?: string) => void;
 
 export default function App() {
-  const [currentPage, setCurrentPage] = React.useState<Page>('home');
-  const [selectedPropertyId, setSelectedPropertyId] = React.useState<string | undefined>();
-  const [selectedServiceId, setSelectedServiceId] = React.useState<string | undefined>();
-  const [selectedArticleId, setSelectedArticleId] = React.useState<string | undefined>();
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const [isLeadCaptured, setIsLeadCaptured] = React.useState(() => {
-    return localStorage.getItem('corner_home_lead_captured') === 'true';
+    return typeof window !== 'undefined' && localStorage.getItem('corner_home_lead_captured') === 'true';
   });
   const [isLeadModalOpen, setIsLeadModalOpen] = React.useState(false);
   const [pendingPropertyId, setPendingPropertyId] = React.useState<string | undefined>();
 
-  const handleNavigate = (page: Page, id?: string) => {
+  const handleNavigate: NavigateFn = (page, id) => {
     if (page === 'home') {
-      setCurrentPage('home');
-      setSelectedPropertyId(undefined);
-      setSelectedServiceId(undefined);
-      setSelectedArticleId(undefined);
-
       if (id && id.startsWith('#')) {
         const sectionId = id.substring(1);
-        setTimeout(() => {
-          const element = document.getElementById(sectionId);
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-          }
-        }, 100);
+        if (location.pathname !== '/') {
+          navigate('/');
+          setTimeout(() => {
+            document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+          }, 200);
+        } else {
+          document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+        }
       } else {
+        navigate('/');
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
-    } else if (page === 'detail') {
+    } else if (page === 'detail' && id) {
       // LEAD GATE for Properties
       if (!isLeadCaptured) {
         setPendingPropertyId(id);
         setIsLeadModalOpen(true);
         return;
       }
-
-      setCurrentPage('detail');
-      setSelectedPropertyId(id);
-      setSelectedServiceId(undefined);
-      setSelectedArticleId(undefined);
+      navigate(`/properties/${id}`);
       window.scrollTo(0, 0);
-    } else if (page === 'service') {
-      // NO GATE for Services
-      setCurrentPage('service');
-      setSelectedServiceId(id);
-      setSelectedPropertyId(undefined);
-      setSelectedArticleId(undefined);
+    } else if (page === 'service' && id) {
+      navigate(`/services/${id}`);
       window.scrollTo(0, 0);
-    } else if (page === 'article') {
-      // NO GATE for Articles
-      setCurrentPage('article');
-      setSelectedArticleId(id);
-      setSelectedPropertyId(undefined);
-      setSelectedServiceId(undefined);
+    } else if (page === 'article' && id) {
+      navigate(`/journal/${id}`);
       window.scrollTo(0, 0);
     }
   };
 
   const handleLeadSuccess = (data: LeadData) => {
-    console.log('Lead captured:', data);
     setIsLeadCaptured(true);
     localStorage.setItem('corner_home_lead_captured', 'true');
     setIsLeadModalOpen(false);
-    
-    // Proceed to the property that was clicked
+
     if (pendingPropertyId) {
-      setCurrentPage('detail');
-      setSelectedPropertyId(pendingPropertyId);
-      setSelectedServiceId(undefined);
+      navigate(`/properties/${pendingPropertyId}`);
       setPendingPropertyId(undefined);
       window.scrollTo(0, 0);
     }
   };
 
-  const selectedEntity = currentPage === 'detail' 
-    ? PROPERTIES.find(p => p.id === selectedPropertyId)
-    : SERVICES.find(s => s.id === selectedServiceId);
-
   return (
     <div className="min-h-screen flex flex-col font-sans selection:bg-primary/20 selection:text-primary">
       <Navbar onNavigate={handleNavigate} />
-      
+
       <div className="flex-grow">
         <AnimatePresence mode="wait">
-          {currentPage === 'home' ? (
-            <motion.div
-              key="home"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <Home onNavigate={handleNavigate} />
-            </motion.div>
-          ) : currentPage === 'detail' ? (
-            <motion.div
-              key={`detail-${selectedPropertyId}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-            >
-              {selectedPropertyId && (
-                <PropertyDetail
-                  propertyId={selectedPropertyId}
-                  onBack={() => handleNavigate('home')}
+          <motion.div
+            key={location.pathname}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4 }}
+          >
+            <Suspense fallback={<PageLoader />}>
+              <Routes location={location}>
+                <Route path="/" element={<Home onNavigate={handleNavigate} />} />
+                <Route
+                  path="/properties/:id"
+                  element={<PropertyDetail onBack={() => handleNavigate('home', '#properties')} />}
                 />
-              )}
-            </motion.div>
-          ) : currentPage === 'service' ? (
-            <motion.div
-              key={`service-${selectedServiceId}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-            >
-              {selectedServiceId && (
-                <ServiceDetail
-                  serviceId={selectedServiceId}
-                  onBack={() => handleNavigate('home')}
+                <Route
+                  path="/services/:id"
+                  element={<ServiceDetail onBack={() => handleNavigate('home', '#services')} />}
                 />
-              )}
-            </motion.div>
-          ) : (
-            <motion.div
-              key={`article-${selectedArticleId}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-            >
-              {selectedArticleId && (
-                <ArticleDetail
-                  articleId={selectedArticleId}
-                  onBack={() => handleNavigate('home', '#insights')}
-                  onNavigate={handleNavigate}
+                <Route
+                  path="/journal/:id"
+                  element={
+                    <ArticleDetail
+                      onBack={() => handleNavigate('home', '#insights')}
+                      onNavigate={handleNavigate}
+                    />
+                  }
                 />
-              )}
-            </motion.div>
-          )}
+                <Route path="*" element={<NotFound onNavigate={handleNavigate} />} />
+              </Routes>
+            </Suspense>
+          </motion.div>
         </AnimatePresence>
       </div>
 
-      <LeadCaptureModal 
+      <LeadCaptureModal
         isOpen={isLeadModalOpen}
         onClose={() => setIsLeadModalOpen(false)}
         onSuccess={handleLeadSuccess}
-        title={PROPERTIES.find(p => p.id === pendingPropertyId)?.title || 'Luxury Residence'}
+        title={PROPERTIES.find((p) => p.id === pendingPropertyId)?.title || 'Luxury Residence'}
       />
 
       <Footer onNavigate={handleNavigate} />

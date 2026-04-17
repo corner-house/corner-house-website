@@ -6,6 +6,7 @@ import Localities from '@/components/Localities';
 import Insights from '@/components/Insights';
 import Testimonials from '@/components/Testimonials';
 import InquiryForm from '@/components/InquiryForm';
+import SEO, { SITE_URL } from '@/components/SEO';
 import { PROPERTIES } from '@/constants';
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
@@ -16,8 +17,35 @@ interface HomeProps {
 }
 
 export default function Home({ onNavigate }: HomeProps) {
+  const websiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'The Corner House',
+    url: SITE_URL,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: `${SITE_URL}/?q={search_term_string}`,
+      'query-input': 'required name=search_term_string',
+    },
+  };
+
   return (
     <main className="overflow-hidden">
+      <SEO
+        title="The Corner House — Luxury Real Estate in Gurugram & Delhi NCR"
+        description="Boutique luxury real estate brokerage specialising in ultra-premium residences across Gurugram and Delhi NCR. Golf Course Road, DLF Camellias, Aerocity, Chattarpur farmhouses."
+        path="/"
+        keywords={[
+          'luxury real estate Gurugram',
+          'Delhi NCR luxury homes',
+          'DLF Camellias',
+          'Golf Course Road apartments',
+          'Chattarpur farmhouse',
+          'Aerocity residences',
+          'boutique real estate brokerage',
+        ]}
+        jsonLd={websiteJsonLd}
+      />
       <Hero />
 
       {/* Featured Properties */}
@@ -92,8 +120,12 @@ export default function Home({ onNavigate }: HomeProps) {
         <div className="absolute inset-0 -z-10">
           <img
             src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=2000"
-            alt="Luxury Interior"
+            alt=""
+            role="presentation"
+            aria-hidden="true"
             className="w-full h-full object-cover opacity-10"
+            loading="lazy"
+            decoding="async"
             referrerPolicy="no-referrer"
           />
         </div>

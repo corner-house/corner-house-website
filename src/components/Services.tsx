@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { SERVICES } from '@/constants';
 import { ArrowRight } from 'lucide-react';
 
-export default function Services({ onNavigate }: { onNavigate: (page: 'home' | 'detail' | 'service', id?: string) => void }) {
+export default function Services({ onNavigate }: { onNavigate: (page: 'home' | 'detail' | 'service' | 'article', id?: string) => void }) {
   return (
     <section id="services" className="py-32 bg-[#fdfcf8] relative overflow-hidden border-y border-border/40">
       {/* Decorative Elements */}
@@ -91,10 +91,12 @@ function ServiceCard({ service, index, className, number, onNavigate }: { servic
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={service.image} 
-          alt={service.title}
+        <img
+          src={service.image}
+          alt={`${service.title} — Corner House service`}
           className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 brightness-[0.4] group-hover:brightness-[0.6]"
+          loading="lazy"
+          decoding="async"
           referrerPolicy="no-referrer"
         />
         {/* Gradient Overlay */}

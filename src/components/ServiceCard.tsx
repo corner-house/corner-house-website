@@ -16,10 +16,14 @@ export default function ServiceCard({ service }: ServiceCardProps) {
     <Card className="group relative overflow-hidden border-none bg-white transition-all duration-700 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_40px_80px_rgba(0,0,0,0.08)] hover:-translate-y-4 rounded-none">
       {/* Background Image on Hover */}
       <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-1000 z-0">
-        <img 
-          src={`https://picsum.photos/seed/${service.title}/800/600?grayscale`} 
-          alt="" 
+        <img
+          src={`https://picsum.photos/seed/${service.title}/800/600?grayscale`}
+          alt=""
+          role="presentation"
+          aria-hidden="true"
           className="w-full h-full object-cover scale-125 group-hover:scale-100 transition-transform duration-1000"
+          loading="lazy"
+          decoding="async"
           referrerPolicy="no-referrer"
         />
       </div>

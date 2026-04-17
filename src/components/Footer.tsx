@@ -95,8 +95,12 @@ export default function Footer({ onNavigate }: FooterProps) {
           <div className="flex items-center gap-3">
             <img
               src="/saurabh-jain.png"
-              alt="Saurabh Jain"
+              alt="Saurabh Jain — website creator"
+              width="36"
+              height="36"
               className="h-9 w-9 rounded-full object-cover object-top border border-white/20"
+              loading="lazy"
+              decoding="async"
               referrerPolicy="no-referrer"
             />
             <span className="text-[11px] tracking-[0.25em] uppercase">

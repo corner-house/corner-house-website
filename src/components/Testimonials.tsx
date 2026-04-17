@@ -32,8 +32,10 @@ export default function Testimonials() {
                 <div className="h-16 w-16 rounded-full overflow-hidden border-2 border-primary/30">
                   <img
                     src={testimonial.image}
-                    alt={testimonial.name}
+                    alt={`${testimonial.name}, ${testimonial.role}`}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                     referrerPolicy="no-referrer"
                   />
                 </div>

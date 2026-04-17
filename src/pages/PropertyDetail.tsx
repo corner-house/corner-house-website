@@ -1,34 +1,96 @@
 import React from 'react';
-import { Property } from '@/types';
+import { useParams } from 'react-router-dom';
 import { PROPERTIES } from '@/constants';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
-import { Separator } from '@/components/ui/separator';
-import { 
-  Bed, Bath, Maximize, MapPin, Share2, Heart, 
-  Phone, MessageSquare, CheckCircle2, ChevronLeft, ChevronRight 
+import {
+  Bed, Bath, Maximize, MapPin, Share2, Heart,
+  Phone, MessageSquare, CheckCircle2, ChevronLeft, ChevronRight
 } from 'lucide-react';
-import InquiryForm from '@/components/InquiryForm';
 import { motion } from 'motion/react';
+import SEO, { SITE_URL } from '@/components/SEO';
 
 interface PropertyDetailProps {
-  propertyId: string;
   onBack: () => void;
 }
 
-export default function PropertyDetail({ propertyId, onBack }: PropertyDetailProps) {
-  const property = PROPERTIES.find((p) => p.id === propertyId);
+export default function PropertyDetail({ onBack }: PropertyDetailProps) {
+  const { id } = useParams<{ id: string }>();
+  const property = PROPERTIES.find((p) => p.id === id);
   const [activeImage, setActiveImage] = React.useState(0);
 
-  if (!property) return <div>Property not found</div>;
+  if (!property) {
+    return (
+      <main className="pt-40 pb-32 bg-background min-h-screen">
+        <SEO
+          title="Property not found"
+          description="The property you're looking for is no longer listed."
+          path={`/properties/${id ?? ''}`}
+          noindex
+        />
+        <div className="container mx-auto px-6 text-center">
+          <h1 className="text-4xl font-heading font-medium mb-6">Property not found</h1>
+          <Button variant="outline" onClick={onBack}>
+            <ChevronLeft className="mr-2 h-4 w-4" /> Back to collection
+          </Button>
+        </div>
+      </main>
+    );
+  }
+
+  const propertyJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Residence',
+    name: property.title,
+    description: property.description,
+    image: property.images.map((img) => (img.startsWith('http') ? img : `${SITE_URL}${img}`)),
+    url: `${SITE_URL}/properties/${property.id}`,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: property.location,
+      addressCountry: 'IN',
+    },
+    numberOfRooms: property.beds,
+    numberOfBathroomsTotal: property.baths,
+    floorSize: { '@type': 'QuantitativeValue', value: property.area },
+    offers: {
+      '@type': 'Offer',
+      price: property.price,
+      priceCurrency: 'INR',
+      availability: 'https://schema.org/InStock',
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+      { '@type': 'ListItem', position: 2, name: 'Properties', item: `${SITE_URL}/#properties` },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: property.title,
+        item: `${SITE_URL}/properties/${property.id}`,
+      },
+    ],
+  };
 
   return (
     <main className="pt-32 pb-24 bg-background">
+      <SEO
+        title={`${property.title} — ${property.type} in ${property.location}`}
+        description={`${property.title}, ${property.type.toLowerCase()} in ${property.location}. ${property.beds} beds, ${property.baths} baths, ${property.area}. ${property.description.slice(0, 120)}...`}
+        path={`/properties/${property.id}`}
+        image={property.images[0]}
+        keywords={[property.type, property.location, 'Gurugram luxury real estate', 'Delhi NCR']}
+        jsonLd={[propertyJsonLd, breadcrumbJsonLd]}
+      />
       <div className="container mx-auto px-6">
         {/* Breadcrumb / Back */}
-        <Button 
-          variant="ghost" 
+        <Button
+          variant="ghost"
           className="mb-8 -ml-4 text-muted-foreground hover:text-primary group"
           onClick={onBack}
         >
@@ -90,8 +152,11 @@ export default function PropertyDetail({ propertyId, onBack }: PropertyDetailPro
                 <div className="relative aspect-[16/9] overflow-hidden bg-muted">
                   <img
                     src={property.images[activeImage]}
-                    alt={property.title}
+                    alt={`${property.title} — image ${activeImage + 1} of ${property.images.length}`}
                     className="w-full h-full object-cover"
+                    loading="eager"
+                    decoding="async"
+                    fetchPriority="high"
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute inset-0 flex items-center justify-between px-4 md:opacity-0 md:hover:opacity-100 transition-opacity">
@@ -120,7 +185,14 @@ export default function PropertyDetail({ propertyId, onBack }: PropertyDetailPro
                       className={`aspect-square cursor-pointer overflow-hidden border-2 transition-all ${activeImage === i ? 'border-primary' : 'border-transparent opacity-60 hover:opacity-100'}`}
                       onClick={() => setActiveImage(i)}
                     >
-                      <img src={img} alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                      <img
+                        src={img}
+                        alt={`${property.title} thumbnail ${i + 1}`}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                        decoding="async"
+                        referrerPolicy="no-referrer"
+                      />
                     </div>
                   ))}
                 </div>
@@ -130,8 +202,10 @@ export default function PropertyDetail({ propertyId, onBack }: PropertyDetailPro
                 <div className="aspect-[4/3] bg-white border border-border p-8 flex items-center justify-center">
                   <img
                     src={property.floorPlan}
-                    alt="Floor Plan"
+                    alt={`${property.title} — floor plan`}
                     className="max-w-full max-h-full object-contain"
+                    loading="lazy"
+                    decoding="async"
                     referrerPolicy="no-referrer"
                   />
                 </div>

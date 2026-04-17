@@ -1,28 +1,87 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import { SERVICES } from '@/constants';
 import { Button } from '@/components/ui/button';
 import { motion } from 'motion/react';
 import { ArrowLeft, CheckCircle2, MessageSquare, Phone } from 'lucide-react';
-import InquiryForm from '@/components/InquiryForm';
+import SEO, { SITE_URL } from '@/components/SEO';
 
 interface ServiceDetailProps {
-  serviceId: string;
   onBack: () => void;
 }
 
-export default function ServiceDetail({ serviceId, onBack }: ServiceDetailProps) {
-  const service = SERVICES.find(s => s.id === serviceId);
+export default function ServiceDetail({ onBack }: ServiceDetailProps) {
+  const { id } = useParams<{ id: string }>();
+  const service = SERVICES.find((s) => s.id === id);
 
-  if (!service) return null;
+  if (!service) {
+    return (
+      <main className="pt-40 pb-32 bg-background min-h-screen">
+        <SEO
+          title="Service not found"
+          description="The service you're looking for is no longer offered."
+          path={`/services/${id ?? ''}`}
+          noindex
+        />
+        <div className="container mx-auto px-6 text-center">
+          <h1 className="text-4xl font-heading font-medium mb-6">Service not found</h1>
+          <Button variant="outline" onClick={onBack}>
+            <ArrowLeft className="mr-2 h-4 w-4" /> Back to home
+          </Button>
+        </div>
+      </main>
+    );
+  }
+
+  const serviceJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: service.title,
+    description: service.fullDescription,
+    provider: {
+      '@type': 'RealEstateAgent',
+      name: 'The Corner House',
+      url: SITE_URL,
+    },
+    areaServed: { '@type': 'Place', name: 'Delhi NCR' },
+    url: `${SITE_URL}/services/${service.id}`,
+    image: service.image,
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_URL}/#services` },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: service.title,
+        item: `${SITE_URL}/services/${service.id}`,
+      },
+    ],
+  };
 
   return (
     <div className="bg-background min-h-screen pb-24">
+      <SEO
+        title={`${service.title} — The Corner House`}
+        description={service.fullDescription.slice(0, 160)}
+        path={`/services/${service.id}`}
+        image={service.image}
+        keywords={['real estate services', 'Gurugram', 'Delhi NCR', service.title]}
+        jsonLd={[serviceJsonLd, breadcrumbJsonLd]}
+      />
       {/* Hero Section */}
       <div className="relative h-[60vh] min-h-[400px] overflow-hidden">
         <img
           src={service.image}
           alt={service.title}
           className="w-full h-full object-cover"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-black/50" />

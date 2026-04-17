@@ -1,0 +1,12 @@
+{
+  "name": "The Corner House",
+  "short_name": "Corner House",
+  "description": "Luxury real estate in Gurugram and Delhi NCR.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fdfcf8",
+  "theme_color": "#1c1c1c",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

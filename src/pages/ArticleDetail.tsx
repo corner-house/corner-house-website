@@ -1,24 +1,32 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { ArrowLeft, ArrowUpRight, Bookmark, Share2, Twitter, Linkedin, Facebook, Clock, Calendar } from 'lucide-react';
 import { ARTICLES } from '@/constants';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
+import SEO, { SITE_URL } from '@/components/SEO';
 
 interface ArticleDetailProps {
-  articleId: string;
   onBack: () => void;
   onNavigate: (page: 'home' | 'detail' | 'service' | 'article', id?: string) => void;
 }
 
-export default function ArticleDetail({ articleId, onBack, onNavigate }: ArticleDetailProps) {
-  const article = ARTICLES.find((a) => a.id === articleId);
-  const related = ARTICLES.filter((a) => a.id !== articleId).slice(0, 2);
+export default function ArticleDetail({ onBack, onNavigate }: ArticleDetailProps) {
+  const { id } = useParams<{ id: string }>();
+  const article = ARTICLES.find((a) => a.id === id);
+  const related = ARTICLES.filter((a) => a.id !== id).slice(0, 2);
 
   if (!article) {
     return (
       <main className="pt-40 pb-32 bg-background min-h-screen">
+        <SEO
+          title="Article not found"
+          description="The article you're looking for is no longer available."
+          path={`/journal/${id ?? ''}`}
+          noindex
+        />
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl font-heading font-medium mb-6">Article not found</h1>
           <Button variant="outline" onClick={onBack}>
@@ -29,14 +37,67 @@ export default function ArticleDetail({ articleId, onBack, onNavigate }: Article
     );
   }
 
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: article.title,
+    description: article.excerpt,
+    image: article.image,
+    datePublished: article.date,
+    dateModified: article.date,
+    author: {
+      '@type': 'Person',
+      name: article.author.name,
+      jobTitle: article.author.role,
+      image: `${SITE_URL}${article.author.image}`,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'The Corner House',
+      logo: { '@type': 'ImageObject', url: `${SITE_URL}/favicon.svg` },
+    },
+    mainEntityOfPage: `${SITE_URL}/journal/${article.id}`,
+    keywords: article.tags.join(', '),
+    articleSection: article.category,
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+      { '@type': 'ListItem', position: 2, name: 'Journal', item: `${SITE_URL}/#insights` },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: article.title,
+        item: `${SITE_URL}/journal/${article.id}`,
+      },
+    ],
+  };
+
   return (
     <main className="bg-background pb-24">
+      <SEO
+        title={article.title}
+        description={article.subtitle || article.excerpt}
+        path={`/journal/${article.id}`}
+        image={article.image}
+        type="article"
+        publishedTime={article.date}
+        author={article.author.name}
+        keywords={article.tags}
+        jsonLd={[articleJsonLd, breadcrumbJsonLd]}
+      />
       {/* Hero */}
       <section className="relative h-[80vh] min-h-[520px] overflow-hidden">
         <img
           src={article.image}
-          alt={article.title}
+          alt={`${article.title} — ${article.category}`}
           className="w-full h-full object-cover"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/80" />
@@ -74,8 +135,10 @@ export default function ArticleDetail({ articleId, onBack, onNavigate }: Article
                 <div className="flex items-center space-x-3">
                   <img
                     src={article.author.image}
-                    alt={article.author.name}
+                    alt={`${article.author.name}, ${article.author.role}`}
                     className="h-11 w-11 rounded-full object-cover object-top border border-white/30"
+                    loading="lazy"
+                    decoding="async"
                     referrerPolicy="no-referrer"
                   />
                   <div>
@@ -246,8 +309,10 @@ export default function ArticleDetail({ articleId, onBack, onNavigate }: Article
                 <div className="flex items-center space-x-4">
                   <img
                     src={article.author.image}
-                    alt={article.author.name}
+                    alt={`${article.author.name}, ${article.author.role}`}
                     className="h-14 w-14 rounded-full object-cover object-top"
+                    loading="lazy"
+                    decoding="async"
                     referrerPolicy="no-referrer"
                   />
                   <div>
@@ -317,8 +382,10 @@ export default function ArticleDetail({ articleId, onBack, onNavigate }: Article
                 <div className="relative aspect-[16/10] overflow-hidden mb-6 shadow-xl">
                   <img
                     src={item.image}
-                    alt={item.title}
+                    alt={`${item.title} — ${item.category}`}
                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                    loading="lazy"
+                    decoding="async"
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />

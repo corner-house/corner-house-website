@@ -20,8 +20,11 @@ export default function Hero() {
         >
           <img
             src="https://pub-82d76e9f6b704c56b2da92d2d7335ba8.r2.dev/Videos/the-cascades-club.webp"
-            alt="The Cascades Club"
+            alt="The Cascades Club — luxury residence exterior in Gurugram"
             className="w-full h-full object-cover brightness-[0.7]"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
             referrerPolicy="no-referrer"
           />
         </motion.div>

@@ -58,10 +58,14 @@ export default function LeadCaptureModal({ isOpen, onClose, onSuccess, title }: 
           >
             {/* Left Side - Visual/Context */}
             <div className="hidden md:block w-2/5 relative bg-luxury-charcoal overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=800" 
-                alt="Luxury Interior"
+              <img
+                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=800"
+                alt=""
+                role="presentation"
+                aria-hidden="true"
                 className="absolute inset-0 w-full h-full object-cover opacity-40"
+                loading="lazy"
+                decoding="async"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />

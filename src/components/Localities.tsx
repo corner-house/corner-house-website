@@ -46,8 +46,10 @@ export default function Localities() {
             >
               <img
                 src={locality.image}
-                alt={locality.name}
+                alt={`${locality.name} — luxury locality in Delhi NCR`}
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                loading="lazy"
+                decoding="async"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
