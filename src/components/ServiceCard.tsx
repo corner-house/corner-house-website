@@ -1,7 +1,18 @@
 import React from 'react';
 import { Service } from '@/types';
 import { Card, CardContent } from '@/components/ui/card';
-import * as Icons from 'lucide-react';
+// Named imports — namespace import was dragging the full lucide-react library
+// (~1000 icons, ~150 KB) into the main bundle. Only 5 icons are actually used.
+import { Home, Briefcase, Search, Globe, CreditCard } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
+
+const ICON_MAP: Record<string, LucideIcon> = {
+  Home,
+  Briefcase,
+  Search,
+  Globe,
+  CreditCard,
+};
 
 interface ServiceCardProps {
   key?: React.Key;
@@ -9,8 +20,7 @@ interface ServiceCardProps {
 }
 
 export default function ServiceCard({ service }: ServiceCardProps) {
-  // @ts-ignore
-  const Icon = Icons[service.icon] || Icons.Home;
+  const Icon = ICON_MAP[service.icon] ?? Home;
 
   return (
     <Card className="group relative overflow-hidden border-none bg-white transition-all duration-700 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_40px_80px_rgba(0,0,0,0.08)] hover:-translate-y-4 rounded-none">

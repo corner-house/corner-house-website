@@ -5,9 +5,6 @@ import { motion, AnimatePresence } from 'motion/react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Home from '@/pages/Home';
-import Properties from '@/pages/Properties';
-import Services from '@/pages/Services';
-import Journal from '@/pages/Journal';
 import LeadCaptureModal, { LeadData } from '@/components/LeadCaptureModal';
 import { PROPERTIES, SERVICES, ARTICLES } from '@/constants';
 
@@ -127,6 +124,12 @@ function Layout() {
 // Bridge components so existing pages that consume the layout context still work.
 // Each page calls useLayoutContext() directly (see step-by-step page edits),
 // but this wrapper keeps the route tree tidy.
+// Hub pages are lazy so the landing page (/) doesn't bundle code for
+// routes the user hasn't navigated to yet. SSG will resolve the promises
+// during the pre-render pass.
+const LazyProperties = React.lazy(() => import('@/pages/Properties'));
+const LazyServices = React.lazy(() => import('@/pages/Services'));
+const LazyJournal = React.lazy(() => import('@/pages/Journal'));
 const LazyPropertyDetail = React.lazy(() => import('@/pages/PropertyDetail'));
 const LazyServiceDetail = React.lazy(() => import('@/pages/ServiceDetail'));
 const LazyArticleDetail = React.lazy(() => import('@/pages/ArticleDetail'));
@@ -138,21 +141,21 @@ export const routes: RouteRecord[] = [
     element: <Layout />,
     children: [
       { index: true, Component: Home },
-      { path: 'properties', Component: Properties },
+      { path: 'properties', Component: LazyProperties, entry: 'src/pages/Properties.tsx' },
       {
         path: 'properties/:id',
         Component: LazyPropertyDetail,
         entry: 'src/pages/PropertyDetail.tsx',
         getStaticPaths: () => PROPERTIES.map((p) => `properties/${p.id}`),
       },
-      { path: 'services', Component: Services },
+      { path: 'services', Component: LazyServices, entry: 'src/pages/Services.tsx' },
       {
         path: 'services/:id',
         Component: LazyServiceDetail,
         entry: 'src/pages/ServiceDetail.tsx',
         getStaticPaths: () => SERVICES.map((s) => `services/${s.id}`),
       },
-      { path: 'journal', Component: Journal },
+      { path: 'journal', Component: LazyJournal, entry: 'src/pages/Journal.tsx' },
       {
         path: 'journal/:id',
         Component: LazyArticleDetail,
