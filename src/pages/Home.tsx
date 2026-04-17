@@ -3,7 +3,7 @@ import Hero from '@/components/Hero';
 import PropertyCard from '@/components/PropertyCard';
 import Services from '@/components/Services';
 import Localities from '@/components/Localities';
-import Founder from '@/components/Founder';
+import Insights from '@/components/Insights';
 import Testimonials from '@/components/Testimonials';
 import InquiryForm from '@/components/InquiryForm';
 import { PROPERTIES } from '@/constants';
@@ -84,11 +84,11 @@ export default function Home({ onNavigate }: HomeProps) {
       <Services onNavigate={onNavigate} />
 
       <Localities />
-      <Founder />
+      <Insights />
       <Testimonials />
 
       {/* Final CTA */}
-      <section className="py-24 relative overflow-hidden">
+      <section id="contact" className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <img
             src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=2000"

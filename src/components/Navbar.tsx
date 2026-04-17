@@ -22,7 +22,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
     { name: 'Properties', href: '#properties', type: 'anchor' },
     { name: 'Services', href: '#services', type: 'anchor' },
     { name: 'Localities', href: '#localities', type: 'anchor' },
-    { name: 'About', href: '#about', type: 'anchor' },
+    { name: 'Journal', href: '#insights', type: 'anchor' },
   ];
 
   const handleLinkClick = (e: React.MouseEvent, link: any) => {
@@ -69,7 +69,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
           ))}
           <Button 
             variant={isScrolled ? "outline" : "default"} 
-            onClick={() => onNavigate('home', '#about')}
+            onClick={() => onNavigate('home', '#contact')}
             className={`px-8 transition-all duration-300 ${
               isScrolled 
                 ? 'border-primary text-primary hover:bg-primary hover:text-white' 
@@ -104,7 +104,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
                 <div className="pt-8 space-y-4">
                   <Button 
                     className="w-full bg-primary text-white py-6"
-                    onClick={() => onNavigate('home', '#about')}
+                    onClick={() => onNavigate('home', '#contact')}
                   >
                     ENQUIRE NOW
                   </Button>

@@ -32,7 +32,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 { name: 'Properties', id: '#properties' },
                 { name: 'Services', id: '#services' },
                 { name: 'Localities', id: '#localities' },
-                { name: 'About Us', id: '#about' }
+                { name: 'Journal', id: '#insights' }
               ].map((item) => (
                 <li key={item.name}>
                   <button 
