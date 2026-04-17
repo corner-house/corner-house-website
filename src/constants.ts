@@ -243,6 +243,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       'An inside look at how ultra-premium residences in Golf Course Road and Aerocity outperformed the broader market by 18% this year.',
     date: 'March 2026',
+    datePublished: '2026-03-15',
     readTime: '6 min read',
     image:
       'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=1600',
@@ -292,6 +293,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       'Privacy, acreage, and legacy value — a closer look at why discerning families are pivoting from apartments to farm estates.',
     date: 'February 2026',
+    datePublished: '2026-02-15',
     readTime: '8 min read',
     image:
       'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=1600',
@@ -341,6 +343,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       'What drives the quiet, off-market transactions in Gurugram\u2019s most exclusive address — and how sellers secure the right buyer.',
     date: 'January 2026',
+    datePublished: '2026-01-15',
     readTime: '5 min read',
     image:
       'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1600',

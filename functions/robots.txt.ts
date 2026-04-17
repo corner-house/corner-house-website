@@ -63,6 +63,9 @@ Allow: /
 User-agent: Amazonbot
 Allow: /
 
+User-agent: Bytespider
+Allow: /
+
 User-agent: CCBot
 Allow: /
 

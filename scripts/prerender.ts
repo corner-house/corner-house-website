@@ -86,6 +86,19 @@ function writeRoute(meta: RouteMeta) {
   writeFileSync(outPath, html);
 }
 
+function breadcrumb(items: { name: string; url: string }[]): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+}
+
 // Home
 writeRoute({
   path: '/',
@@ -111,6 +124,90 @@ writeRoute({
   ],
 });
 
+// Hub: Properties listing
+writeRoute({
+  path: '/properties',
+  title: 'Luxury Properties — Gurugram & Delhi NCR | The Corner House',
+  description:
+    'Explore curated ultra-premium residences across Gurugram and Delhi NCR — penthouses, luxury apartments, and independent bungalows from our exclusive portfolio.',
+  canonical: `${SITE_URL}/properties`,
+  keywords: ['luxury properties Gurugram', 'Delhi NCR luxury homes', 'penthouses for sale', 'luxury apartments'],
+  jsonLd: [
+    breadcrumb([
+      { name: 'Home', url: `${SITE_URL}/` },
+      { name: 'Properties', url: `${SITE_URL}/properties` },
+    ]),
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'Luxury Properties',
+      url: `${SITE_URL}/properties`,
+      about: { '@type': 'Thing', name: 'Ultra-premium residences in Delhi NCR' },
+      hasPart: PROPERTIES.map((p) => ({
+        '@type': 'Residence',
+        name: p.title,
+        url: `${SITE_URL}/properties/${p.id}`,
+      })),
+    },
+  ],
+});
+
+// Hub: Services listing
+writeRoute({
+  path: '/services',
+  title: 'Our Services — Brokerage, Portfolio, NRI, Loans | The Corner House',
+  description:
+    'Boutique advisory services for luxury real estate: brokerage, portfolio management, market research, NRI services, and home loan assistance across Gurugram and Delhi NCR.',
+  canonical: `${SITE_URL}/services`,
+  keywords: ['real estate services', 'NRI property services', 'luxury broker Gurugram', 'home loan advisory'],
+  jsonLd: [
+    breadcrumb([
+      { name: 'Home', url: `${SITE_URL}/` },
+      { name: 'Services', url: `${SITE_URL}/services` },
+    ]),
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'Services',
+      url: `${SITE_URL}/services`,
+      hasPart: SERVICES.map((s) => ({
+        '@type': 'Service',
+        name: s.title,
+        url: `${SITE_URL}/services/${s.id}`,
+      })),
+    },
+  ],
+});
+
+// Hub: Journal listing
+writeRoute({
+  path: '/journal',
+  title: 'The Journal — Luxury Real Estate Insights | The Corner House',
+  description:
+    'Editorial insights on Delhi NCR luxury real estate — market reports, neighbourhood analysis, investment guides, and off-market deal dynamics from our research team.',
+  canonical: `${SITE_URL}/journal`,
+  keywords: ['Delhi NCR real estate insights', 'luxury property research', 'market reports Gurugram'],
+  jsonLd: [
+    breadcrumb([
+      { name: 'Home', url: `${SITE_URL}/` },
+      { name: 'Journal', url: `${SITE_URL}/journal` },
+    ]),
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Blog',
+      name: 'The Corner House Journal',
+      url: `${SITE_URL}/journal`,
+      publisher: { '@type': 'Organization', name: 'The Corner House', url: SITE_URL },
+      blogPost: ARTICLES.map((a) => ({
+        '@type': 'BlogPosting',
+        headline: a.title,
+        url: `${SITE_URL}/journal/${a.id}`,
+        datePublished: a.datePublished,
+      })),
+    },
+  ],
+});
+
 // Properties
 for (const p of PROPERTIES) {
   writeRoute({
@@ -121,6 +218,11 @@ for (const p of PROPERTIES) {
     canonical: `${SITE_URL}/properties/${p.id}`,
     keywords: [p.type, p.location, 'Gurugram luxury real estate', 'Delhi NCR'],
     jsonLd: [
+      breadcrumb([
+        { name: 'Home', url: `${SITE_URL}/` },
+        { name: 'Properties', url: `${SITE_URL}/properties` },
+        { name: p.title, url: `${SITE_URL}/properties/${p.id}` },
+      ]),
       {
         '@context': 'https://schema.org',
         '@type': 'Residence',
@@ -157,6 +259,11 @@ for (const s of SERVICES) {
     canonical: `${SITE_URL}/services/${s.id}`,
     keywords: ['real estate services', 'Gurugram', 'Delhi NCR', s.title],
     jsonLd: [
+      breadcrumb([
+        { name: 'Home', url: `${SITE_URL}/` },
+        { name: 'Services', url: `${SITE_URL}/services` },
+        { name: s.title, url: `${SITE_URL}/services/${s.id}` },
+      ]),
       {
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -180,17 +287,22 @@ for (const a of ARTICLES) {
     image: a.image,
     canonical: `${SITE_URL}/journal/${a.id}`,
     ogType: 'article',
-    publishedTime: a.date,
+    publishedTime: a.datePublished,
     author: a.author.name,
     keywords: a.tags,
     jsonLd: [
+      breadcrumb([
+        { name: 'Home', url: `${SITE_URL}/` },
+        { name: 'Journal', url: `${SITE_URL}/journal` },
+        { name: a.title, url: `${SITE_URL}/journal/${a.id}` },
+      ]),
       {
         '@context': 'https://schema.org',
         '@type': 'Article',
         headline: a.title,
         description: a.excerpt,
         image: a.image,
-        datePublished: a.date,
+        datePublished: a.datePublished,
         author: { '@type': 'Person', name: a.author.name, jobTitle: a.author.role },
         publisher: {
           '@type': 'Organization',
@@ -213,5 +325,6 @@ writeRoute({
   jsonLd: [],
 });
 
-const count = 1 + PROPERTIES.length + SERVICES.length + ARTICLES.length + 1;
+// 1 home + 3 hubs + properties + services + articles + 404
+const count = 1 + 3 + PROPERTIES.length + SERVICES.length + ARTICLES.length + 1;
 console.log(`Prerendered ${count} routes to dist/`);

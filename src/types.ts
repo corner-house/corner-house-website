@@ -53,6 +53,9 @@ export interface Article {
   subtitle: string;
   excerpt: string;
   date: string;
+  // ISO-8601 date used in structured data and sitemap lastmod.
+  // `date` remains the human-readable display string.
+  datePublished: string;
   readTime: string;
   image: string;
   author: {
