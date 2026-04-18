@@ -23,13 +23,7 @@ export default function Hero({ onNavigate }: HeroProps) {
           className="w-full h-full"
         >
           <img
-            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=1200"
-            srcSet="
-              https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=75&w=640 640w,
-              https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=75&w=1024 1024w,
-              https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=1600 1600w
-            "
-            sizes="100vw"
+            src="https://pub-82d76e9f6b704c56b2da92d2d7335ba8.r2.dev/Videos/the-cascades-club.webp"
             alt="The Cascades Club — luxury residence exterior in Gurugram"
             className="w-full h-full object-cover brightness-[0.7]"
             width="1920"
