@@ -43,7 +43,7 @@ export default function Home() {
         ]}
         jsonLd={websiteJsonLd}
       />
-      <Hero />
+      <Hero onNavigate={onNavigate} />
 
       {/* Featured Properties */}
       <section id="properties" className="py-32 relative">

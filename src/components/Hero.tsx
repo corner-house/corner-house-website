@@ -3,7 +3,11 @@ import { motion } from 'motion/react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 
-export default function Hero() {
+interface HeroProps {
+  onNavigate?: (page: 'home' | 'detail' | 'service' | 'article', id?: string) => void;
+}
+
+export default function Hero({ onNavigate }: HeroProps) {
   return (
     <section className="relative min-h-[850px] lg:h-screen flex items-center overflow-hidden pt-20 pb-32">
       <div className="absolute inset-0 z-0 bg-luxury-charcoal overflow-hidden">
@@ -56,10 +60,20 @@ export default function Hero() {
               Boutique real estate advisory for the discerning few. We curate the most exclusive addresses in Delhi NCR with an editorial eye for detail.
             </p>
             <div className="flex flex-col sm:flex-row space-y-5 sm:space-y-0 sm:space-x-8">
-              <Button size="lg" className="bg-primary text-white px-10 py-8 text-lg hover:bg-primary/90 transition-all duration-500 rounded-none">
+              <Button
+                size="lg"
+                onClick={() => onNavigate?.('home', '#properties')}
+                className="bg-primary text-white px-10 py-8 text-lg hover:bg-primary/90 transition-all duration-500 rounded-none"
+              >
                 VIEW COLLECTION
               </Button>
-              <Button size="lg" variant="outline" aria-label="Learn about our services" className="bg-white/5 backdrop-blur-xl border-white/20 text-white px-10 py-8 text-lg hover:bg-white/10 transition-all duration-500 rounded-none">
+              <Button
+                size="lg"
+                variant="outline"
+                aria-label="Learn about our services"
+                onClick={() => onNavigate?.('home', '#services')}
+                className="bg-white/5 backdrop-blur-xl border-white/20 text-white px-10 py-8 text-lg hover:bg-white/10 transition-all duration-500 rounded-none"
+              >
                 OUR SERVICES <ArrowRight className="ml-3 h-5 w-5" />
               </Button>
             </div>
