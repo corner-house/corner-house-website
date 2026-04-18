@@ -90,29 +90,47 @@ export default function Hero({ onNavigate }: HeroProps) {
       <div className="absolute bottom-16 left-6 right-6 flex justify-between items-end">
         <div className="hidden lg:block">
           <div className="flex space-x-16 text-white/50 text-[10px] tracking-[0.3em] uppercase font-semibold">
-            <div className="flex flex-col group cursor-default">
+            <button
+              type="button"
+              onClick={() => onNavigate?.('home', '#properties')}
+              aria-label="Curated Assets — view featured residences"
+              className="flex flex-col items-start group cursor-pointer text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+            >
               <span className="text-white text-lg font-heading font-medium mb-2 group-hover:text-primary transition-colors">01</span>
               <span className="group-hover:text-white/80 transition-colors">Curated Assets</span>
-            </div>
-            <div className="flex flex-col group cursor-default">
+            </button>
+            <button
+              type="button"
+              onClick={() => onNavigate?.('service', 'research')}
+              aria-label="Market Research — view service details"
+              className="flex flex-col items-start group cursor-pointer text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+            >
               <span className="text-white text-lg font-heading font-medium mb-2 group-hover:text-primary transition-colors">02</span>
               <span className="group-hover:text-white/80 transition-colors">Market Research</span>
-            </div>
-            <div className="flex flex-col group cursor-default">
+            </button>
+            <button
+              type="button"
+              onClick={() => onNavigate?.('service', 'nri')}
+              aria-label="NRI Advisory — view service details"
+              className="flex flex-col items-start group cursor-pointer text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+            >
               <span className="text-white text-lg font-heading font-medium mb-2 group-hover:text-primary transition-colors">03</span>
               <span className="group-hover:text-white/80 transition-colors">NRI Advisory</span>
-            </div>
+            </button>
           </div>
         </div>
-        <motion.div 
+        <motion.button
+          type="button"
+          onClick={() => onNavigate?.('home', '#properties')}
+          aria-label="Scroll to featured residences"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
-          className="flex items-center space-x-6"
+          className="flex items-center space-x-6 cursor-pointer group focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
         >
-          <div className="h-[1px] w-32 bg-white/20" />
-          <span className="text-white/40 text-[10px] tracking-[0.4em] uppercase font-bold">Scroll to Explore</span>
-        </motion.div>
+          <div className="h-[1px] w-32 bg-white/20 group-hover:bg-white/40 transition-colors" />
+          <span className="text-white/40 text-[10px] tracking-[0.4em] uppercase font-bold group-hover:text-white/70 transition-colors">Scroll to Explore</span>
+        </motion.button>
       </div>
     </section>
   );
