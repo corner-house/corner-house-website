@@ -95,6 +95,8 @@ function ServiceCard({ service, index, className, number, onNavigate }: { servic
           src={service.image}
           alt={`${service.title} — Corner House service`}
           className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 brightness-[0.4] group-hover:brightness-[0.6]"
+          width="800"
+          height="600"
           loading="lazy"
           decoding="async"
           referrerPolicy="no-referrer"

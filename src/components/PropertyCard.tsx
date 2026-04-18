@@ -32,6 +32,8 @@ export default function PropertyCard({ property, onClick }: PropertyCardProps) {
               src={view === 'photo' ? property.images[0] : property.floorPlan}
               alt={view === 'photo' ? `${property.title} — ${property.type} in ${property.location}` : `${property.title} — floor plan`}
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+              width="400"
+              height="500"
               loading="lazy"
               decoding="async"
               referrerPolicy="no-referrer"
@@ -43,6 +45,7 @@ export default function PropertyCard({ property, onClick }: PropertyCardProps) {
             <Button
               size="icon"
               variant={view === 'photo' ? 'default' : 'secondary'}
+              aria-label="View photo"
               className={`h-10 w-10 rounded-full backdrop-blur-xl border-none transition-all duration-500 ${
                 view === 'photo' ? 'bg-primary text-white scale-110' : 'bg-white/20 text-white hover:bg-white/40'
               }`}
@@ -56,6 +59,7 @@ export default function PropertyCard({ property, onClick }: PropertyCardProps) {
             <Button
               size="icon"
               variant={view === 'floorplan' ? 'default' : 'secondary'}
+              aria-label="View floorplan"
               className={`h-10 w-10 rounded-full backdrop-blur-xl border-none transition-all duration-500 ${
                 view === 'floorplan' ? 'bg-primary text-white scale-110' : 'bg-white/20 text-white hover:bg-white/40'
               }`}

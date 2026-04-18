@@ -49,6 +49,7 @@ export default function LeadPopup({ isOpen, onClose, propertyTitle, onSubmit }: 
             <div className="absolute top-6 right-6 z-10">
               <button
                 onClick={onClose}
+                aria-label="Close modal"
                 className="p-3 hover:bg-secondary rounded-full transition-all duration-300 hover:rotate-90"
               >
                 <X className="h-6 w-6 text-muted-foreground" />

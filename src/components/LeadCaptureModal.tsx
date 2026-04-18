@@ -64,6 +64,8 @@ export default function LeadCaptureModal({ isOpen, onClose, onSuccess, title }: 
                 role="presentation"
                 aria-hidden="true"
                 className="absolute inset-0 w-full h-full object-cover opacity-40"
+                width="200"
+                height="600"
                 loading="lazy"
                 decoding="async"
                 referrerPolicy="no-referrer"
@@ -82,6 +84,7 @@ export default function LeadCaptureModal({ isOpen, onClose, onSuccess, title }: 
             <div className="flex-1 p-8 md:p-12">
               <button 
                 onClick={onClose}
+                aria-label="Close modal"
                 className="absolute top-4 right-4 text-muted-foreground hover:text-foreground transition-colors"
               >
                 <X className="h-6 w-6" />
@@ -99,10 +102,11 @@ export default function LeadCaptureModal({ isOpen, onClose, onSuccess, title }: 
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
-                  <label className="text-[10px] font-bold tracking-widest uppercase text-muted-foreground ml-1">Full Name</label>
+                  <label htmlFor="lead-name" className="text-[10px] font-bold tracking-widest uppercase text-muted-foreground ml-1">Full Name</label>
                   <div className="relative">
                     <User className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                     <Input 
+                      id="lead-name"
                       required
                       placeholder="Enter your name"
                       className="pl-12 h-14 bg-secondary/30 border-none rounded-none focus-visible:ring-1 focus-visible:ring-primary"
@@ -113,10 +117,11 @@ export default function LeadCaptureModal({ isOpen, onClose, onSuccess, title }: 
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-[10px] font-bold tracking-widest uppercase text-muted-foreground ml-1">Phone Number</label>
+                  <label htmlFor="lead-phone" className="text-[10px] font-bold tracking-widest uppercase text-muted-foreground ml-1">Phone Number</label>
                   <div className="relative">
                     <Phone className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                     <Input 
+                      id="lead-phone"
                       required
                       type="tel"
                       placeholder="+91 00000 00000"
@@ -128,10 +133,11 @@ export default function LeadCaptureModal({ isOpen, onClose, onSuccess, title }: 
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-[10px] font-bold tracking-widest uppercase text-muted-foreground ml-1">Email Address</label>
+                  <label htmlFor="lead-email" className="text-[10px] font-bold tracking-widest uppercase text-muted-foreground ml-1">Email Address</label>
                   <div className="relative">
                     <Mail className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                     <Input 
+                      id="lead-email"
                       required
                       type="email"
                       placeholder="email@example.com"

@@ -42,15 +42,16 @@ export default function Navbar({ onNavigate }: NavbarProps) {
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <div 
-          className="cursor-pointer group"
+        <button 
+          className="cursor-pointer group text-left"
+          aria-label="The Corner House Home"
           onClick={() => onNavigate('home')}
         >
           <h1 className="text-2xl font-heading font-semibold tracking-tighter flex flex-col leading-none">
             <span className={`transition-colors ${isScrolled ? 'text-primary' : 'text-white'}`}>THE CORNER</span>
             <span className={`text-sm font-sans font-medium tracking-widest transition-colors ${isScrolled ? 'text-foreground/60' : 'text-white/70'}`}>HOUSE</span>
           </h1>
-        </div>
+        </button>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-12">
@@ -85,7 +86,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
           <Sheet>
             <SheetTrigger 
               render={
-                <Button variant="ghost" size="icon" className={isScrolled ? 'text-foreground' : 'text-white'}>
+                <Button variant="ghost" size="icon" aria-label="Open navigation menu" className={isScrolled ? 'text-foreground' : 'text-white'}>
                   <Menu className="h-6 w-6" />
                 </Button>
               }

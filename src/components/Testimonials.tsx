@@ -34,6 +34,8 @@ export default function Testimonials() {
                     src={testimonial.image}
                     alt={`${testimonial.name}, ${testimonial.role}`}
                     className="w-full h-full object-cover"
+                    width="64"
+                    height="64"
                     loading="lazy"
                     decoding="async"
                     referrerPolicy="no-referrer"

@@ -48,6 +48,8 @@ export default function Localities() {
                 src={locality.image}
                 alt={`${locality.name} — luxury locality in Delhi NCR`}
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                width="600"
+                height="800"
                 loading="lazy"
                 decoding="async"
                 referrerPolicy="no-referrer"

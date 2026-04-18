@@ -19,9 +19,11 @@ export default function Hero() {
           className="w-full h-full"
         >
           <img
-            src="https://pub-82d76e9f6b704c56b2da92d2d7335ba8.r2.dev/Videos/the-cascades-club.webp"
+            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=1200"
             alt="The Cascades Club — luxury residence exterior in Gurugram"
             className="w-full h-full object-cover brightness-[0.7]"
+            width="1920"
+            height="1080"
             loading="eager"
             decoding="async"
             fetchPriority="high"
@@ -57,7 +59,7 @@ export default function Hero() {
               <Button size="lg" className="bg-primary text-white px-10 py-8 text-lg hover:bg-primary/90 transition-all duration-500 rounded-none">
                 VIEW COLLECTION
               </Button>
-              <Button size="lg" variant="outline" className="bg-white/5 backdrop-blur-xl border-white/20 text-white px-10 py-8 text-lg hover:bg-white/10 transition-all duration-500 rounded-none">
+              <Button size="lg" variant="outline" aria-label="Learn about our services" className="bg-white/5 backdrop-blur-xl border-white/20 text-white px-10 py-8 text-lg hover:bg-white/10 transition-all duration-500 rounded-none">
                 OUR SERVICES <ArrowRight className="ml-3 h-5 w-5" />
               </Button>
             </div>
