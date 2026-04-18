@@ -131,14 +131,20 @@ export default function ArticleDetail() {
 
               <div className="mt-12 flex flex-wrap items-center gap-6 text-white/70">
                 <div className="flex items-center space-x-3">
-                  <img
-                    src={article.author.image}
-                    alt={`${article.author.name}, ${article.author.role}`}
-                    className="h-11 w-11 rounded-full object-cover object-top border border-white/30"
-                    loading="lazy"
-                    decoding="async"
-                    referrerPolicy="no-referrer"
-                  />
+                  <picture>
+                    <source
+                      srcSet={article.author.image.replace(/\.(png|jpe?g)$/i, '.webp')}
+                      type="image/webp"
+                    />
+                    <img
+                      src={article.author.image}
+                      alt={`${article.author.name}, ${article.author.role}`}
+                      className="h-11 w-11 rounded-full object-cover object-top border border-white/30"
+                      loading="lazy"
+                      decoding="async"
+                      referrerPolicy="no-referrer"
+                    />
+                  </picture>
                   <div>
                     <div className="text-sm font-medium text-white">{article.author.name}</div>
                     <div className="text-[11px] tracking-[0.2em] uppercase text-white/50">
@@ -305,14 +311,20 @@ export default function ArticleDetail() {
                   Written by
                 </span>
                 <div className="flex items-center space-x-4">
-                  <img
-                    src={article.author.image}
-                    alt={`${article.author.name}, ${article.author.role}`}
-                    className="h-14 w-14 rounded-full object-cover object-top"
-                    loading="lazy"
-                    decoding="async"
-                    referrerPolicy="no-referrer"
-                  />
+                  <picture>
+                    <source
+                      srcSet={article.author.image.replace(/\.(png|jpe?g)$/i, '.webp')}
+                      type="image/webp"
+                    />
+                    <img
+                      src={article.author.image}
+                      alt={`${article.author.name}, ${article.author.role}`}
+                      className="h-14 w-14 rounded-full object-cover object-top"
+                      loading="lazy"
+                      decoding="async"
+                      referrerPolicy="no-referrer"
+                    />
+                  </picture>
                   <div>
                     <div className="font-heading font-medium text-lg leading-tight">
                       {article.author.name}

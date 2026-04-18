@@ -19,9 +19,15 @@ export default function Footer({ onNavigate }: FooterProps) {
               A boutique real estate brokerage specializing in luxury properties across Gurugram and Delhi NCR. We bring an editorial approach to real estate.
             </p>
             <div className="flex space-x-6">
-              <a href="https://www.instagram.com/thecornerhouserealty/" target="_blank" rel="noopener noreferrer"><Instagram className="h-5 w-5 text-white/40 hover:text-white transition-colors cursor-pointer" /></a>
-              <Linkedin className="h-5 w-5 text-white/40 hover:text-white transition-colors cursor-pointer" />
-              <Facebook className="h-5 w-5 text-white/40 hover:text-white transition-colors cursor-pointer" />
+              <a href="https://www.instagram.com/thecornerhouserealty/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+                <Instagram className="h-5 w-5 text-white/40 hover:text-white transition-colors cursor-pointer" />
+              </a>
+              <a href="#" aria-label="Follow us on LinkedIn">
+                <Linkedin className="h-5 w-5 text-white/40 hover:text-white transition-colors cursor-pointer" />
+              </a>
+              <a href="#" aria-label="Follow us on Facebook">
+                <Facebook className="h-5 w-5 text-white/40 hover:text-white transition-colors cursor-pointer" />
+              </a>
             </div>
           </div>
 
@@ -93,16 +99,19 @@ export default function Footer({ onNavigate }: FooterProps) {
 
         <div className="mt-8 pt-6 border-t border-white/5 flex flex-col md:flex-row justify-center md:justify-end items-center gap-3 text-white/40">
           <div className="flex items-center gap-3">
-            <img
-              src="/saurabh-jain.png"
-              alt="Saurabh Jain — website creator"
-              width="36"
-              height="36"
-              className="h-9 w-9 rounded-full object-cover object-top border border-white/20"
-              loading="lazy"
-              decoding="async"
-              referrerPolicy="no-referrer"
-            />
+            <picture>
+              <source srcSet="/saurabh-jain.webp" type="image/webp" />
+              <img
+                src="/saurabh-jain.png"
+                alt="Saurabh Jain — website creator"
+                width="36"
+                height="36"
+                className="h-9 w-9 rounded-full object-cover object-top border border-white/20"
+                loading="lazy"
+                decoding="async"
+                referrerPolicy="no-referrer"
+              />
+            </picture>
             <span className="text-[11px] tracking-[0.25em] uppercase">
               Website Created &amp; Managed by{' '}
               <span className="text-white/80 font-medium">Saurabh Jain</span>
