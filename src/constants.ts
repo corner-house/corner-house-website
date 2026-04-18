@@ -11,11 +11,11 @@ export const PROPERTIES: Property[] = [
     baths: 5,
     area: '4,500 sq.ft',
     images: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800'
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=70&w=800',
+      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=70&w=800',
+      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=70&w=800'
     ],
-    floorPlan: 'https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&q=80&w=800',
+    floorPlan: 'https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&q=70&w=800',
     description: 'An exquisite penthouse offering panoramic views of the Gurugram skyline. Designed for those who appreciate the finer things in life, this villa features double-height ceilings, a private plunge pool, and bespoke Italian marble flooring.',
     amenities: ['Private Elevator', 'Plunge Pool', 'Home Automation', 'Concierge Service', '4 Parking Slots'],
     highlights: ['Close to Golf Course Road', 'High-end Security', 'Premium Club Membership', 'Staff Quarters'],
@@ -47,7 +47,7 @@ export const PROPERTIES: Property[] = [
       '/Interior-Krisumi-Lift-Lobby.webp',
       '/Interior-Krisumi-Living-Room.webp'
     ],
-    floorPlan: 'https://images.unsplash.com/photo-1585128719715-46776b56a0d1?auto=format&fit=crop&q=80&w=800',
+    floorPlan: 'https://images.unsplash.com/photo-1585128719715-46776b56a0d1?auto=format&fit=crop&q=70&w=800',
     description: 'A contemporary masterpiece in the heart of Sector 65. This apartment blends minimalist aesthetics with functional luxury, featuring floor-to-ceiling windows and a wrap-around balcony.',
     amenities: ['Gymnasium', 'Swimming Pool', 'Spa', 'Tennis Court', 'Power Backup'],
     highlights: ['Direct Access to Golf Course', 'LEED Gold Certified', 'Award-winning Architecture'],
@@ -69,10 +69,10 @@ export const PROPERTIES: Property[] = [
     baths: 6,
     area: '8,000 sq.ft',
     images: [
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1600585154526-990dcea4db0d?auto=format&fit=crop&q=80&w=800'
+      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=70&w=800',
+      'https://images.unsplash.com/photo-1600585154526-990dcea4db0d?auto=format&fit=crop&q=70&w=800'
     ],
-    floorPlan: 'https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=80&w=800',
+    floorPlan: 'https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=70&w=800',
     description: 'A rare opportunity to own a piece of history in one of Delhi\'s most prestigious neighborhoods. This bungalow features a sprawling lawn, classic colonial architecture, and unmatched privacy.',
     amenities: ['Private Garden', 'Library', 'Wine Cellar', 'Servant Quarters', 'Gated Entry'],
     highlights: ['Lutyens Delhi Proximity', 'Quiet Cul-de-sac', 'Mature Landscaping'],
@@ -92,7 +92,7 @@ export const SERVICES: Service[] = [
     title: 'Brokerage',
     description: 'Expert guidance for buying, selling, and leasing premium residential and commercial assets.',
     icon: 'Home',
-    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=70&w=800',
     fullDescription: 'Our brokerage services are built on the foundation of deep market knowledge and a commitment to transparency. Whether you are looking to acquire a luxury residence, sell a prime commercial asset, or lease high-end office space, our team provides end-to-end support to ensure a seamless transaction.',
     features: [
       'Residential Sales & Leasing',
@@ -114,7 +114,7 @@ export const SERVICES: Service[] = [
     title: 'Portfolio Management',
     description: 'Strategic real estate investment planning to maximize returns and diversify your wealth.',
     icon: 'Briefcase',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=70&w=800',
     fullDescription: 'We treat real estate as a critical asset class in your wealth portfolio. Our Portfolio Management Services (PMS) focus on identifying high-yield opportunities, managing risks, and ensuring long-term capital appreciation through strategic asset allocation.',
     features: [
       'Investment Strategy Development',
@@ -136,7 +136,7 @@ export const SERVICES: Service[] = [
     title: 'Market Research',
     description: 'Data-driven insights and trend analysis to help you make informed real estate decisions.',
     icon: 'Search',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=70&w=800',
     fullDescription: 'In a dynamic market like Gurugram and Delhi NCR, data is your most valuable asset. Our research team provides comprehensive reports, feasibility studies, and trend analysis to help developers, investors, and occupiers make informed decisions.',
     features: [
       'Feasibility Studies',
@@ -157,7 +157,7 @@ export const SERVICES: Service[] = [
     title: 'NRI Services',
     description: 'End-to-end support for non-resident Indians, from property search to legal compliance.',
     icon: 'Globe',
-    image: 'https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&q=70&w=800',
     fullDescription: 'We understand the unique challenges faced by Non-Resident Indians when investing in Indian real estate. Our dedicated NRI desk provides a single window for all property-related needs, ensuring peace of mind and complete transparency.',
     features: [
       'Remote Property Management',
@@ -178,7 +178,7 @@ export const SERVICES: Service[] = [
     title: 'Loan Services',
     description: 'Tailored financial solutions and seamless home loan processing with leading banks.',
     icon: 'CreditCard',
-    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=70&w=800',
     fullDescription: 'Securing the right financing is as important as finding the right property. We partner with leading financial institutions to provide you with the most competitive interest rates and a hassle-free loan processing experience.',
     features: [
       'Home Loan Assistance',
@@ -201,19 +201,19 @@ export const LOCALITIES: Locality[] = [
     id: 'dlf-phase-5',
     name: 'DLF Phase 5',
     description: 'The pinnacle of luxury living in Gurugram, home to the iconic Golf Course Road.',
-    image: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&q=70&w=800'
   },
   {
     id: 'golf-course-ext',
     name: 'Golf Course Extension',
     description: 'A rapidly developing corridor featuring modern high-rises and premium amenities.',
-    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=70&w=800'
   },
   {
     id: 'sunder-nagar',
     name: 'Sunder Nagar',
     description: 'An elite residential enclave in New Delhi known for its heritage and greenery.',
-    image: 'https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&q=70&w=800'
   }
 ];
 
@@ -223,14 +223,14 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Vikram Malhotra',
     role: 'CEO, Tech Solutions',
     content: 'The Corner House team provided exceptional service. Their deep understanding of the Gurugram market helped us find our dream home in record time.',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200'
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=70&w=200'
   },
   {
     id: '2',
     name: 'Ananya Sharma',
     role: 'NRI Investor',
     content: 'As an NRI, I was worried about the process, but their NRI services team handled everything seamlessly. Truly trustworthy and professional.',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=200'
+    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=70&w=200'
   }
 ];
 
@@ -246,7 +246,7 @@ export const ARTICLES: Article[] = [
     datePublished: '2026-03-15',
     readTime: '6 min read',
     image:
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=1000',
+      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=70&w=1000',
     author: {
       name: 'Saurabh Jain',
       role: 'Digital Marketing Automation Expert',
@@ -296,7 +296,7 @@ export const ARTICLES: Article[] = [
     datePublished: '2026-02-15',
     readTime: '8 min read',
     image:
-      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=1000',
+      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=70&w=1000',
     author: {
       name: 'Saurabh Jain',
       role: 'Digital Marketing Automation Expert',
@@ -346,7 +346,7 @@ export const ARTICLES: Article[] = [
     datePublished: '2026-01-15',
     readTime: '5 min read',
     image:
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1000',
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=70&w=1000',
     author: {
       name: 'Saurabh Jain',
       role: 'Digital Marketing Automation Expert',

@@ -59,7 +59,7 @@ export default function LeadCaptureModal({ isOpen, onClose, onSuccess, title }: 
             {/* Left Side - Visual/Context */}
             <div className="hidden md:block w-2/5 relative bg-luxury-charcoal overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=800"
+                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=70&w=800"
                 alt=""
                 role="presentation"
                 aria-hidden="true"
