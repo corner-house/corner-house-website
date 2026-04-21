@@ -1,0 +1,350 @@
+{
+  "slug": "emaar-serenity-hills",
+  "projectName": "Emaar Serenity Hills",
+  "developerName": "Emaar India",
+  "hero": {
+    "tagline": "Come Home to Acres of Nature.",
+    "priceFrom": "2.98 Cr",
+    "priceSuffix": "onwards",
+    "heroImageKey": "serenity-building",
+    "mobileHeroImageKey": "hero-featured",
+    "keyStats": [
+      { "label": "Configurations", "value": "3 & 4 BHK" },
+      { "label": "Starting Price", "value": "₹2.98 Cr" },
+      { "label": "Possession", "value": "2031" },
+      { "label": "Total Area", "value": "25.9 acres" },
+      { "label": "Towers", "value": "7 towers, up to G+40" },
+      { "label": "Green Rating", "value": "IGBC Platinum Pre-certified" }
+    ]
+  },
+  "atAGlance": {
+    "projectType": "Residential Apartments",
+    "configuration": "3 BHK & 4 BHK",
+    "unitSizes": "948–1,576 sq ft carpet",
+    "totalArea": "25.9 acres",
+    "totalUnits": 997,
+    "totalTowers": 7,
+    "floors": "G+32 to G+40",
+    "possession": "2031-12",
+    "status": "Pre-Launch",
+    "reraStatus": "Registered"
+  },
+  "pricing": [
+    {
+      "configuration": "3 BHK Small",
+      "carpetAreaSqft": 948,
+      "builtUpAreaSqft": 1185,
+      "totalPriceFrom": "2.98 Cr",
+      "inventoryStatus": "Available"
+    },
+    {
+      "configuration": "3 BHK Large",
+      "carpetAreaSqft": 1219,
+      "builtUpAreaSqft": 1524,
+      "totalPriceFrom": "3.92 Cr",
+      "inventoryStatus": "Available"
+    },
+    {
+      "configuration": "4 BHK Small",
+      "carpetAreaSqft": 1576,
+      "builtUpAreaSqft": 1970,
+      "totalPriceFrom": "On Request",
+      "inventoryStatus": "Limited"
+    }
+  ],
+  "floorPlans": [
+    {
+      "name": "3 BHK Small — Type 1",
+      "configuration": "3 BHK + 2T",
+      "carpetAreaSqft": 948,
+      "balconyAreaSqft": 235,
+      "towers": "Tower E, F, G (select floors)",
+      "imageKey": "floor-plan-3bhk-small-type-1-type-3",
+      "description": "Compact 3 BHK with 39-foot-wide balcony overlooking the central green. Two toilets and dedicated laundry space."
+    },
+    {
+      "name": "3 BHK Small — Type 3",
+      "configuration": "3 BHK + 2T",
+      "carpetAreaSqft": 948,
+      "balconyAreaSqft": 258,
+      "towers": "Tower E, F, G (select floors)",
+      "imageKey": "floor-plan-3bhk-small-type-1-type-3",
+      "description": "Drop-off-side 3 BHK variant with 43-foot-long balcony and separated kitchen zone."
+    },
+    {
+      "name": "3 BHK Small — Type 4",
+      "configuration": "3 BHK + 2T",
+      "carpetAreaSqft": 948,
+      "balconyAreaSqft": 268,
+      "towers": "Tower F, Wing 3 & 4 (floors 7, 23)",
+      "imageKey": "floor-plan-3bhk-small-type-4-large-type-1",
+      "description": "Corner 3 BHK with the largest balcony in the Small category — 49 feet long."
+    },
+    {
+      "name": "3 BHK Large — Type 1",
+      "configuration": "3 BHK + 3T + Utility",
+      "carpetAreaSqft": 1219,
+      "balconyAreaSqft": 318,
+      "towers": "Tower A, C (select floors)",
+      "imageKey": "floor-plan-3bhk-small-type-4-large-type-1",
+      "description": "Premium 3 BHK with three toilets, utility room, and WC. Includes dedicated laundry and 43-foot balcony."
+    },
+    {
+      "name": "3 BHK Large — Type 2",
+      "configuration": "3 BHK + 3T + Utility",
+      "carpetAreaSqft": 1220,
+      "balconyAreaSqft": 318,
+      "towers": "Tower D (select floors)",
+      "imageKey": "floor-plan-3bhk-large-type-2-type-3",
+      "description": "Tower D configuration with cross-ventilated bedrooms, dresser, and dedicated MS deck."
+    },
+    {
+      "name": "3 BHK Large — Type 4 (Corner)",
+      "configuration": "3 BHK + 3T + Utility",
+      "carpetAreaSqft": 1219,
+      "balconyAreaSqft": 412,
+      "towers": "Tower A, C (floors 1, 3, 12, 15, 19, 21)",
+      "imageKey": "floor-plan-3bhk-large-type-4-type-5",
+      "description": "Corner-floor 3 BHK with wrap-around 54-foot balcony — the signature layout for three-sides-open living."
+    },
+    {
+      "name": "4 BHK Small — Type 1",
+      "configuration": "4 BHK + 4T + Powder Room + Utility",
+      "carpetAreaSqft": 1576,
+      "balconyAreaSqft": 430,
+      "towers": "Tower A, B, C (select floors)",
+      "imageKey": "floor-plan-4bhk-small-type-1-type-3",
+      "description": "Four-bedroom home with powder room, utility, and four toilets. Master suite features dresser and ensuite."
+    }
+  ],
+  "building": {
+    "structure": "RCC framed structure",
+    "towers": [
+      { "name": "Tower A", "floors": 37, "units": "4 per floor" },
+      { "name": "Tower B", "floors": 34, "units": "4 per floor" },
+      { "name": "Tower C", "floors": 37, "units": "4 per floor" },
+      { "name": "Tower D", "floors": 35, "units": "4 per floor" },
+      { "name": "Tower E", "floors": 40, "units": "4 per floor" },
+      { "name": "Tower F", "floors": 40, "units": "4 per floor" },
+      { "name": "Tower G", "floors": 40, "units": "4 per floor" }
+    ],
+    "parking": {
+      "type": "basement",
+      "levels": 2,
+      "notes": "Two-level basement parking across the development, with provision for EV charging points."
+    },
+    "heroImageKey": "tower-facade-dusk"
+  },
+  "amenities": {
+    "wellness": [
+      { "name": "Resort-Style Swimming Pool", "description": "Outdoor pool framed by cabanas and landscaped decks, mirroring the sky.", "imageKey": "resort-pool" },
+      { "name": "Wellness Spa", "description": "Full-service spa with treatment rooms and a revitalisation lounge.", "imageKey": "revitalisation-lounge-banquet" },
+      { "name": "Yoga & Meditation Zone", "description": "Open-air deck for yoga, meditation, and mindfulness, set beside the waterbody.", "imageKey": "yoga-meditation-zone" },
+      { "name": "Forest Trails & Jogging Paths", "description": "Tree-lined running and walking trails winding through the 8-acre central grove.", "imageKey": "central-greens" }
+    ],
+    "sports": [
+      { "name": "Multi-Sport Arenas", "description": "Basketball, tennis, and paddle courts for daily play.", "imageKey": "central-greens" },
+      { "name": "Cycling Track", "description": "Dedicated cycling loop weaving around the central meadows.", "imageKey": "lake-pergola-lifestyle" }
+    ],
+    "family": [
+      { "name": "Kids' Play Area", "description": "Themed outdoor play zone with slides, climbing features, and toddler spaces.", "imageKey": "kids-play-area" },
+      { "name": "Kids' Pool", "description": "Shallow kids' pool adjacent to the main pool deck for family swim time.", "imageKey": "resort-pool" },
+      { "name": "Pet Park", "description": "Secure off-leash zone designed for pets and their humans.", "imageKey": "central-greens" },
+      { "name": "Family Activity Lawns", "description": "Open lawns for picnics, kite-flying, and community events.", "imageKey": "kids-play-area" }
+    ],
+    "lifestyle": [
+      { "name": "Clubhouse Reception & Lobby", "description": "Grand arrival space anchored by handcrafted lighting and warm materials.", "imageKey": "clubhouse-reception-lobby" },
+      { "name": "Multi-Cuisine Restaurant", "description": "In-community dining with a pool-facing outlook — part of future-phase club build-out.", "imageKey": "multi-cuisine-restaurant" },
+      { "name": "Patisserie & Café", "description": "Casual coffee and pastry lounge for everyday gatherings.", "imageKey": "patisserie" },
+      { "name": "Banquet Hall", "description": "Event space for celebrations, ceremonies, and community programmes.", "imageKey": "revitalisation-lounge-banquet" },
+      { "name": "Co-Working Space", "description": "Private pods, open desks, and phone booths for work-from-community days.", "imageKey": "co-working-space" },
+      { "name": "Tower Lobby Meeting Lounge", "description": "In-tower meeting lounges sized for informal hosting and quick calls.", "imageKey": "tower-lobby-meeting-lounge" },
+      { "name": "Waterfront Promenade", "description": "Continuous walkway along the central waterbody, with lakeside and floating decks.", "imageKey": "lake-pergola-lifestyle" }
+    ],
+    "sustainability": [
+      { "name": "IGBC Platinum Pre-Certified", "description": "Designed across five pillars: energy efficiency, water saving, air quality, natural ventilation, and heat-island reduction.", "imageKey": "central-greens" },
+      { "name": "EV Charging Provisions", "description": "Provision for electric-vehicle charging points across basement parking.", "imageKey": "tower-drop-off" },
+      { "name": "Three-Sides-Open Homes", "description": "Over 80% of homes overlook central greens or enjoy corner positioning — maximising natural light and ventilation.", "imageKey": "landscape-balcony-view" }
+    ]
+  },
+  "location": {
+    "addressLine": "Emaar Serenity Hills, Sector 86",
+    "locality": "Sector 86",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "pincode": "122004",
+    "latitude": 28.4738,
+    "longitude": 76.9735,
+    "googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14029.69!2d76.9735!3d28.4738!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zU2VjdG9yIDg2LCBHdXJ1Z3JhbQ!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+  },
+  "connectivity": [
+    { "destination": "Dwarka Expressway", "distanceKm": 2.9, "driveTimeMinutes": 6, "category": "other" },
+    { "destination": "NH-48 (Delhi–Jaipur Expressway)", "distanceKm": 3.8, "driveTimeMinutes": 8, "category": "other" },
+    { "destination": "Indira Gandhi International Airport", "distanceKm": 32, "driveTimeMinutes": 45, "category": "airport" },
+    { "destination": "Cyber City", "distanceKm": 22, "driveTimeMinutes": 40, "category": "business" },
+    { "destination": "Udyog Vihar Phase 4", "distanceKm": 20, "driveTimeMinutes": 35, "category": "business" },
+    { "destination": "IMT Manesar", "distanceKm": 9.6, "driveTimeMinutes": 18, "category": "business" },
+    { "destination": "Corporate Greens", "distanceKm": 7.6, "driveTimeMinutes": 15, "category": "business" },
+    { "destination": "Aarvy Healthcare Super Speciality Hospital", "distanceKm": 1.9, "driveTimeMinutes": 5, "category": "healthcare" },
+    { "destination": "Miracles Apollo Cradle/Spectra", "distanceKm": 2.1, "driveTimeMinutes": 6, "category": "healthcare" },
+    { "destination": "Artemis Lite", "distanceKm": 4.8, "driveTimeMinutes": 10, "category": "healthcare" },
+    { "destination": "Delhi Public School", "distanceKm": 3.2, "driveTimeMinutes": 8, "category": "education" },
+    { "destination": "St. Xavier's High School", "distanceKm": 2, "driveTimeMinutes": 5, "category": "education" },
+    { "destination": "RPS International School", "distanceKm": 2.4, "driveTimeMinutes": 6, "category": "education" },
+    { "destination": "SS Omnia", "distanceKm": 0.5, "driveTimeMinutes": 2, "category": "retail" },
+    { "destination": "Iris Broadway", "distanceKm": 1, "driveTimeMinutes": 3, "category": "retail" },
+    { "destination": "Sapphire 83", "distanceKm": 4.1, "driveTimeMinutes": 10, "category": "retail" },
+    { "destination": "Hyatt Regency Gurugram", "distanceKm": 5.8, "driveTimeMinutes": 12, "category": "other" }
+  ],
+  "neighbourhood": {
+    "title": "The Neighbourhood",
+    "paragraphs": [
+      "Sector 86 sits on the fast-emerging New Gurugram corridor, anchored by direct frontage on the 75-metre sector road and seamless links to both NH-48 and the Dwarka Expressway. What was farmland a decade ago is now one of Gurugram's most closely-watched residential addresses — a fresh canvas where low-density, branded developments are setting the tone.",
+      "Daily life here is notably self-contained. SS Omnia sits at walking distance for groceries and everyday retail; Iris Broadway and Sapphire malls handle weekend needs within a five-minute drive. Aarvy Super Speciality Hospital is two minutes away, with Miracles Apollo Cradle and Artemis Lite backing it up within the sector cluster. Four reputed schools — Delhi Public School, St. Xavier's, and RPS International — all sit within a 3 km radius, making the school run a non-event.",
+      "For work, the corridor is unusually flexible. Cyber City is a 40-minute drive via NH-48 on a good day; IMT Manesar's industrial and corporate cluster sits just 10 km south, reachable in under 20 minutes. Udyog Vihar, American Express, and Corporate Greens are all within a 25-minute radius. For travellers, IGI Airport is 32 km via the newly-operational Dwarka Expressway — genuinely the fastest airport run from deep Gurugram today.",
+      "The sector is still early in its build-out cycle, which is precisely why forward-looking buyers are paying attention. Master-planned communities like Serenity Hills establish the quality benchmark before prices settle into their long-term trajectory."
+    ],
+    "highlights": [
+      "Direct frontage on the 75-metre Sector 86 road — no service-lane access issues",
+      "Dwarka Expressway fully operational — 32 km airport run in 45 minutes",
+      "Four reputed schools within 3 km radius",
+      "Three super-speciality hospitals within 5 km",
+      "SS Omnia retail 500 metres away; Iris Broadway within 1 km",
+      "IMT Manesar employment hub just 10 km south",
+      "Cyber City reachable via NH-48 — 40 minutes on average"
+    ],
+    "cards": [
+      {
+        "icon": "MapPin",
+        "label": "75-metre road frontage",
+        "body": "Direct access from the Sector 86 arterial — the kind of arrival address that holds its value as the corridor densifies."
+      },
+      {
+        "icon": "GraduationCap",
+        "label": "Schools within 3 km",
+        "body": "Delhi Public School, St. Xavier's, and RPS International all sit within a 3 km radius. The school run stays short, years after move-in."
+      },
+      {
+        "icon": "Briefcase",
+        "label": "Three employment corridors",
+        "body": "NH-48 to Cyber City, Dwarka Expressway to Udyog Vihar, and IMT Manesar just 10 km south — one postcode connects to all three."
+      },
+      {
+        "icon": "TrendingUp",
+        "label": "Early-cycle positioning",
+        "body": "New Gurugram's most-watched sector is still in early build-out. Branded entrants like Emaar set the quality benchmark before the corridor matures."
+      }
+    ],
+    "backdropImageKey": "landscape-balcony-view"
+  },
+  "builder": {
+    "name": "Emaar India",
+    "description": "Emaar is one of the world's most respected real estate groups, renowned for transforming skylines with its visionary architecture and uncompromising standards. From Burj Khalifa and Dubai Mall to The Address hotels, Emaar's name is etched onto some of the most recognisable landmarks in Dubai and beyond. Emaar India brings this global delivery pedigree to the Indian market, with an active portfolio across Delhi NCR, Mohali, Lucknow, Indore, Alibaug, and Jaipur. For the Indian buyer, Emaar represents the rare combination of Dubai-grade execution discipline and long-horizon development commitment.",
+    "notableProjects": [
+      "Emerald Hills, Gurugram",
+      "Palm Hills, Gurugram",
+      "Digihomes, Gurugram",
+      "Urban Oasis, Gurugram",
+      "Marbella Villas, Gurugram",
+      "Mohali Hills, Mohali"
+    ]
+  },
+  "paymentPlan": {
+    "planName": "Emaar EasyPay Plan",
+    "milestones": [
+      { "milestone": "On Booking", "percentage": 0, "notes": "₹10 lakh flat booking amount" },
+      { "milestone": "Within 30 days of booking", "percentage": 9.5, "notes": "9.50% of unit price and EDC/IDC, less booking amount" },
+      { "milestone": "Within 90 days of booking", "percentage": 10.5, "notes": "10.50% of unit price and EDC/IDC, subject to Agreement for Sale registration" },
+      { "milestone": "Within 180 days of booking", "percentage": 10, "notes": "10% of unit price and EDC/IDC, subject to Agreement for Sale registration" },
+      { "milestone": "On completion of 25th floor slab", "percentage": 10, "notes": "10% of unit price and EDC/IDC" },
+      { "milestone": "On completion of top-floor roof slab", "percentage": 30, "notes": "30% of unit price and EDC/IDC" },
+      { "milestone": "On application of OC", "percentage": 20, "notes": "20% of unit price and EDC/IDC" },
+      { "milestone": "On offer of possession (on OC)", "percentage": 10, "notes": "10% of unit price and EDC/IDC, plus 100% IFMS and 100% CAM charges" }
+    ]
+  },
+  "emiCalculator": {
+    "defaultPrincipalCr": 3.92,
+    "defaultInterestRatePct": 8.5,
+    "defaultTenureYears": 20,
+    "downPaymentPct": 20
+  },
+  "investmentThesis": {
+    "headline": "Why Serenity Hills Earns a Second Look",
+    "paragraphs": [
+      "Three factors make Emaar Serenity Hills an unusually well-positioned bet in the New Gurugram corridor. First, the developer. Emaar India carries the Burj Khalifa lineage — a quality and delivery benchmark that Indian buyers read as de-risking. In a market where delivery delay is the number-one buyer anxiety, branded execution commands a durable premium.",
+      "Second, the product format. Twenty-five acres, seven towers, 997 units — this is deliberately low-density for a sector seeing rapid vertical build-out. Eighty percent of homes are either corner units or face the 8-acre central grove, which means light, privacy, and view quality hold up over time. IGBC Platinum pre-certification adds a sustainability edge that aligns with the long-term buyer preferences this cohort is already signalling.",
+      "Third, the timing. Sector 86 sits at the inflection point of the Dwarka Expressway corridor. The expressway is fully operational, the 75-metre sector road provides premium arrival, and IMT Manesar's corporate expansion is feeding local demand. With Phase 1 launching now and Phase 2 registered but not yet priced, early buyers are entering before the full inventory hits the market — the classic early-cycle advantage."
+    ],
+    "dataPoints": [
+      { "label": "Total area", "value": "25.9 acres" },
+      { "label": "Central grove", "value": "8 acres" },
+      { "label": "Homes overlooking greens or corner-positioned", "value": "80%+" },
+      { "label": "Total units", "value": "997" },
+      { "label": "Airport distance", "value": "32 km" },
+      { "label": "Green rating", "value": "IGBC Platinum Pre-certified" }
+    ],
+    "cards": [
+      {
+        "icon": "Landmark",
+        "label": "Emaar's global pedigree",
+        "body": "The same developer behind Burj Khalifa, Dubai Mall, and The Address hotels. Dubai-grade delivery discipline applied to an Indian residential build."
+      },
+      {
+        "icon": "Home",
+        "label": "Low-density format",
+        "body": "Just 997 units across 25.9 acres, with an 8-acre central grove. Unusually open for a New Gurugram project in this price band."
+      },
+      {
+        "icon": "Sparkles",
+        "label": "IGBC Platinum Pre-certified",
+        "body": "Built to the highest Indian green-building tier: energy efficiency, water conservation, air quality, natural ventilation, and heat-island reduction."
+      },
+      {
+        "icon": "Calendar",
+        "label": "Early-cycle entry window",
+        "body": "Phase 1 is open now; Phase 2 is HARERA-registered but not yet released. Buyers enter before the full 997-unit inventory hits the market."
+      }
+    ],
+    "backdropImageKey": "pool-towers-wide-view"
+  },
+  "similarProperties": ["downtown66"],
+  "faqs": [
+    { "question": "What is the price of Emaar Serenity Hills?", "answer": "Emaar Serenity Hills starts at ₹2.98 Cr for the 3 BHK Small configuration and ₹3.92 Cr for the 3 BHK Large. Prices are inclusive of EDC/IDC, IFMS, car park, and club membership; GST is extra. 4 BHK pricing is part of the Phase 2 release and will be announced by the developer." },
+    { "question": "What configurations are available at Emaar Serenity Hills?", "answer": "The project offers 3 BHK and 4 BHK apartments. 3 BHK Small units have 948 sq ft carpet area; 3 BHK Large units range from 1,218 to 1,220 sq ft with utility and three toilets. 4 BHK Small units offer 1,576 sq ft carpet area with four toilets, a powder room, and utility space." },
+    { "question": "When is possession of Emaar Serenity Hills?", "answer": "Possession is targeted for 2031, in line with the HRERA-registered completion timelines for Phase 1 and Phase 2. Buyers should refer to their Agreement for Sale for the binding possession date applicable to their specific unit and tower." },
+    { "question": "What is the RERA number of Emaar Serenity Hills?", "answer": "Emaar Serenity Hills is registered in two phases with the Haryana Real Estate Regulatory Authority. Phase 1: RC/REP/HARERA/GGM/993/725/2025/96 and Phase 2: RC/REP/HARERA/GGM/994/726/2025/97, both dated 16 October 2025. Details are verifiable at haryanarera.gov.in." },
+    { "question": "Where is Emaar Serenity Hills located?", "answer": "Emaar Serenity Hills is in Sector 86, Gurugram, with direct frontage on the 75-metre sector road. It has seamless links to NH-48 (Delhi–Jaipur Expressway) at 3.8 km and the Dwarka Expressway at 2.9 km, placing it 32 km from IGI Airport and roughly 22 km from Cyber City." },
+    { "question": "What are the key amenities at Emaar Serenity Hills?", "answer": "The community features an 8-acre central green grove, a resort-style swimming pool and wellness spa, a clubhouse with multi-cuisine restaurant and patisserie, co-working space, banquet hall, yoga and meditation zones, multi-sport courts (basketball, tennis, paddle), kids' play area, pet park, and tree-lined jogging and cycling trails. The clubhouse and certain amenities are part of the future-phase build-out." },
+    { "question": "How is Emaar Serenity Hills connected to the rest of Gurugram?", "answer": "The site is connected via three major arteries: NH-48 at 3.8 km, the Dwarka Expressway at 2.9 km, and the 75-metre Sector 86 road directly at the entrance. Cyber City is 22 km via NH-48, IMT Manesar is 9.6 km, and IGI Airport is 32 km via the Dwarka Expressway — typically a 45-minute drive." },
+    { "question": "What does IGBC Platinum Pre-certified mean at Emaar Serenity Hills?", "answer": "IGBC Platinum is the highest tier of the Indian Green Building Council rating system. Pre-certification confirms the project's design meets Platinum standards across five pillars: energy efficiency, water conservation, enhanced indoor air quality, natural light and ventilation, and reduction of the urban heat-island effect. Final certification is awarded upon project completion." },
+    { "question": "How many towers and floors does Emaar Serenity Hills have?", "answer": "The development has seven towers (Towers A through G) ranging from G+32 to G+40 in height, with 997 total units spread across 25.9 acres. Over 80% of homes either overlook the 8-acre central grove or occupy corner positions, and each home opens on three sides for cross-ventilation and natural light." },
+    { "question": "Is Emaar Serenity Hills a good investment in Sector 86, Gurugram?", "answer": "Emaar Serenity Hills combines three investment-relevant factors: a globally established developer known for on-time delivery, a low-density product in a rapidly densifying sector, and early-cycle pricing in the maturing Dwarka Expressway corridor. As with any real estate decision, buyers should evaluate their own holding horizon, leverage, and portfolio mix. Property investment carries market risk; past trajectories do not guarantee future returns." }
+  ],
+  "rera": {
+    "number": "RC/REP/HARERA/GGM/993/725/2025/96",
+    "registeredDate": "2025-10-16",
+    "authority": "HARERA",
+    "state": "Haryana",
+    "verificationUrl": "https://haryanarera.gov.in"
+  },
+  "disclaimerAddendum": "Emaar Serenity Hills is being developed by Emaar India Limited in a phased manner. HARERA Registration Nos. RC/REP/HARERA/GGM/993/725/2025/96 (Phase 1) and RC/REP/HARERA/GGM/994/726/2025/97 (Phase 2), both dated 16 October 2025. Currently, Phase 1 of the project is being offered for sale; Phase 2 is registered with HARERA but not yet offered. The clubhouse and certain community amenities will be developed in future phases. Illustrations, renders, and floor plans shown are conceptual and intended for representational purposes — actual details may vary and are subject to authority approvals. Prospective purchasers are advised to verify approved details on the HARERA website at haryanarera.gov.in.",
+  "seo": {
+    "title": "Emaar Serenity Hills Sector 86 Gurugram — 3 & 4 BHK Apartments",
+    "description": "Emaar Serenity Hills: 3 & 4 BHK luxury apartments in Sector 86 Gurugram, from ₹2.98 Cr. IGBC Platinum, 25.9 acres, 8-acre grove. HARERA registered.",
+    "keywords": [
+      "emaar serenity hills",
+      "emaar sector 86",
+      "serenity hills gurugram",
+      "emaar properties gurugram",
+      "3 bhk sector 86 gurugram",
+      "4 bhk sector 86 gurugram",
+      "luxury apartments gurugram",
+      "sector 86 gurgaon property",
+      "dwarka expressway property",
+      "new launch gurugram",
+      "igbc platinum apartments",
+      "emaar new project gurgaon"
+    ],
+    "ogImageKey": "hero-featured"
+  }
+}

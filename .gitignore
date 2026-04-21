@@ -13,3 +13,7 @@ Client-Brochers/
 IMp_DATA/
 graphify-out/
 MARKETING-REPORT.md
+urls/*-local/
+e2e-artifacts/
+test-results/
+playwright-report/

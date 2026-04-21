@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync, appendFileSync } fr
 import { dirname, extname, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { config as loadEnv } from 'dotenv';
-import { S3Client, PutObjectCommand, HeadObjectCommand } from '@aws-sdk/client-s3';
+import { S3Client, PutObjectCommand, HeadObjectCommand, DeleteObjectCommand } from '@aws-sdk/client-s3';
 import sharp from 'sharp';
 import mime from 'mime-types';
 
@@ -62,6 +62,10 @@ function cleanName(rawFilename: string, propertyName: string): { stem: string; e
   return { stem, ext };
 }
 
+function isRemoteUrl(line: string): boolean {
+  return /^https?:\/\//i.test(line);
+}
+
 function filenameFromUrl(url: string): string {
   const u = new URL(url);
   const last = u.pathname.split('/').filter(Boolean).pop() ?? 'image';
@@ -72,6 +76,24 @@ async function downloadToBuffer(url: string): Promise<Buffer> {
   const res = await fetch(url);
   if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
   return Buffer.from(await res.arrayBuffer());
+}
+
+interface LoadedSource {
+  buffer: Buffer;
+  rawFilename: string;
+  verb: 'downloading' | 'reading';
+}
+
+async function loadSource(line: string): Promise<LoadedSource> {
+  if (isRemoteUrl(line)) {
+    const buffer = await downloadToBuffer(line);
+    return { buffer, rawFilename: filenameFromUrl(line), verb: 'downloading' };
+  }
+  if (!existsSync(line)) {
+    throw new Error(`Local file not found: ${line}`);
+  }
+  const buffer = readFileSync(line);
+  return { buffer, rawFilename: basename(line), verb: 'reading' };
 }
 
 async function keyExists(s3: S3Client, bucket: string, key: string): Promise<boolean> {
@@ -113,9 +135,15 @@ async function toWebpVariant(input: Buffer, maxWidth: number, quality: number): 
 }
 
 async function main() {
-  const [propertyNameArg, urlListFileArg] = process.argv.slice(2);
+  const rawArgs = process.argv.slice(2);
+  const flagSet = new Set(rawArgs.filter((a) => a.startsWith('--')));
+  const positional = rawArgs.filter((a) => !a.startsWith('--'));
+  const [propertyNameArg, urlListFileArg] = positional;
+  const pruneOrphans = flagSet.has('--prune-orphans');
   if (!propertyNameArg || !urlListFileArg) {
-    console.error('Usage: npx tsx scripts/import-property-images.ts <propertyName> <urlListFile>');
+    console.error(
+      'Usage: npx tsx scripts/import-property-images.ts <propertyName> <urlListFile> [--prune-orphans]',
+    );
     process.exit(1);
   }
   const propertyName = propertyNameArg.trim();
@@ -138,12 +166,30 @@ async function main() {
     credentials: { accessKeyId, secretAccessKey },
   });
 
-  const urls = readFileSync(urlListFile, 'utf8')
+  interface Entry {
+    source: string;
+    alias?: string;
+  }
+
+  const entries: Entry[] = readFileSync(urlListFile, 'utf8')
     .split(/\r?\n/)
     .map((l) => l.trim())
-    .filter((l) => l && !l.startsWith('#'));
+    .filter((l) => l && !l.startsWith('#'))
+    .map((line): Entry => {
+      const pipeIdx = line.indexOf('|');
+      if (pipeIdx === -1) return { source: line };
+      const source = line.slice(0, pipeIdx).trim();
+      const alias = line.slice(pipeIdx + 1).trim();
+      if (!alias) return { source };
+      if (!/^[A-Za-z0-9._-]+$/.test(alias)) {
+        throw new Error(
+          `Invalid alias "${alias}" — must match [A-Za-z0-9._-]+ (no spaces, slashes, or special chars)`,
+        );
+      }
+      return { source, alias };
+    });
 
-  const total = urls.length;
+  const total = entries.length;
   console.log(`Importing ${total} images for property "${propertyName}"\n`);
 
   const manifestPath = `data/properties/${propertyName}-images.json`;
@@ -169,25 +215,44 @@ async function main() {
 
   let succeeded = 0;
   let failed = 0;
+  const intendedStems = new Set<string>();
 
-  for (let i = 0; i < urls.length; i++) {
-    const url = urls[i];
+  for (let i = 0; i < entries.length; i++) {
+    const { source, alias } = entries[i];
     const idx = `[${i + 1}/${total}]`;
-    const rawName = filenameFromUrl(url);
+    const isLocal = !isRemoteUrl(source);
+
+    let rawName: string;
+    try {
+      const sourceFilename = isLocal ? basename(source) : filenameFromUrl(source);
+      if (alias) {
+        const sourceExt = extname(sourceFilename);
+        rawName = alias + sourceExt;
+      } else {
+        rawName = sourceFilename;
+      }
+    } catch (err: any) {
+      console.log(`${idx} ✗ skipped (bad source "${source}"): ${err?.message ?? err}`);
+      appendFileSync(logPath, `${source}\treason=bad-source\n`);
+      failed++;
+      continue;
+    }
     const { stem, ext } = cleanName(rawName, propertyName);
 
     if (!stem) {
-      console.log(`${idx} ✗ skipped (empty filename after cleaning): ${url}`);
-      appendFileSync(logPath, `${url}\treason=empty-filename\n`);
+      console.log(`${idx} ✗ skipped (empty filename after cleaning): ${source}`);
+      appendFileSync(logPath, `${source}\treason=empty-filename\n`);
       failed++;
       continue;
     }
     if (!ALLOWED_EXT.has(ext)) {
-      console.log(`${idx} ✗ skipped (unsupported ext ${ext}): ${url}`);
-      appendFileSync(logPath, `${url}\treason=unsupported-ext\n`);
+      console.log(`${idx} ✗ skipped (unsupported ext ${ext}): ${source}`);
+      appendFileSync(logPath, `${source}\treason=unsupported-ext\n`);
       failed++;
       continue;
     }
+
+    intendedStems.add(stem);
 
     const originalKey = `${propertyName}/originals/${stem}${ext}`;
     const variantKeys = VARIANTS.map((v) => ({
@@ -207,18 +272,18 @@ async function main() {
       if (allExist) {
         process.stdout.write('skip (all exist) ✓\n');
       } else {
-        process.stdout.write('downloading... ');
-        const buf = await downloadToBuffer(url);
+        process.stdout.write(`${isLocal ? 'reading' : 'downloading'}... `);
+        const loaded = await loadSource(source);
         process.stdout.write('✓ ');
 
         if (!origExists) {
           const contentType = mime.lookup(ext) || 'application/octet-stream';
-          await putObject(s3, bucket, originalKey, buf, contentType);
+          await putObject(s3, bucket, originalKey, loaded.buffer, contentType);
         }
 
         process.stdout.write('converting... ');
         const variantBuffers = await Promise.all(
-          VARIANTS.map((v) => toWebpVariant(buf, v.maxWidth, v.quality)),
+          VARIANTS.map((v) => toWebpVariant(loaded.buffer, v.maxWidth, v.quality)),
         );
         process.stdout.write('✓ ');
 
@@ -241,9 +306,44 @@ async function main() {
       succeeded++;
     } catch (err: any) {
       process.stdout.write(`✗ ${err?.message ?? String(err)}\n`);
-      appendFileSync(logPath, `${url}\treason=${(err?.message ?? 'unknown').replace(/\s+/g, ' ')}\n`);
+      appendFileSync(logPath, `${source}\treason=${(err?.message ?? 'unknown').replace(/\s+/g, ' ')}\n`);
       failed++;
     }
+  }
+
+  if (pruneOrphans) {
+    const existingKeys = Object.keys(existingManifest?.images ?? {});
+    const orphans = existingKeys.filter((k) => !intendedStems.has(k));
+    let deletedObjects = 0;
+    for (const key of orphans) {
+      const prior = existingManifest?.images[key];
+      let ext = '.jpg';
+      if (prior?.original) {
+        try {
+          const guessed = extname(new URL(prior.original).pathname);
+          if (guessed) ext = guessed;
+        } catch {
+          // fall through to default
+        }
+      }
+      const targetKeys = [
+        `${propertyName}/originals/${key}${ext}`,
+        `${propertyName}/webp/hero/${key}.webp`,
+        `${propertyName}/webp/gallery/${key}.webp`,
+        `${propertyName}/webp/thumb/${key}.webp`,
+      ];
+      for (const tk of targetKeys) {
+        try {
+          await s3.send(new DeleteObjectCommand({ Bucket: bucket, Key: tk }));
+          deletedObjects++;
+        } catch (err: any) {
+          console.log(`  warn: could not delete ${tk}: ${err?.message ?? err}`);
+        }
+      }
+      delete manifest.images[key];
+      console.log(`✗ orphan deleted: ${key}`);
+    }
+    console.log(`\nPruned ${orphans.length} orphan keys (${deletedObjects} R2 objects deleted)`);
   }
 
   manifest.totalImages = Object.keys(manifest.images).length;
