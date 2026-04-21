@@ -46,8 +46,20 @@ export function useLeadGate(): LeadGate {
     const captured = readStoredCaptured();
     setState({ captured, ready: true });
     exposeDebugHook();
-    if (!captured && typeof console !== 'undefined') {
-      console.info('[lead-gate] not captured — showing modal.');
+
+    if (typeof console !== 'undefined') {
+      console.info('[lead-gate] mount', {
+        captured,
+        sessionStorageValue: (() => {
+          try {
+            return window.sessionStorage.getItem(LEAD_STORAGE_KEY);
+          } catch {
+            return '<blocked>';
+          }
+        })(),
+        href: window.location.href,
+        timestamp: new Date().toISOString(),
+      });
     }
   }, []);
 
