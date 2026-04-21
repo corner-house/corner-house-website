@@ -25,33 +25,6 @@ export default function PropertyDetail() {
   const { captured, ready, markCaptured } = useLeadGate();
   const showGate = ready && !captured;
 
-  React.useEffect(() => {
-    if (typeof console === 'undefined') return;
-    console.log('[gate] PropertyDetail mounted, slug:', id);
-    let storedValue: string | null = '<unavailable>';
-    try {
-      storedValue = window.sessionStorage.getItem('corner_home_lead_captured');
-    } catch (err) {
-      storedValue = `<error: ${(err as Error).message}>`;
-    }
-    console.log('[gate] sessionStorage value:', storedValue);
-  }, [id]);
-
-  React.useEffect(() => {
-    if (typeof console === 'undefined') return;
-    console.log('[gate] useLeadGate returned:', { ready, captured });
-    console.log('[gate] Modal isOpen prop:', showGate);
-  }, [ready, captured, showGate]);
-
-  React.useEffect(() => {
-    if (typeof console === 'undefined' || typeof document === 'undefined') return;
-    const raf = requestAnimationFrame(() => {
-      const modal = document.querySelector('[data-lead-modal]');
-      console.log('[gate] Modal component rendered in DOM:', Boolean(modal), modal);
-    });
-    return () => cancelAnimationFrame(raf);
-  }, [showGate]);
-
   const content = richListing ? (
     <PropertyListingPage listing={richListing} />
   ) : (
@@ -68,50 +41,7 @@ export default function PropertyDetail() {
         onClose={() => {}}
         onSuccess={() => markCaptured()}
       />
-      <LeadGateDebugBadge ready={ready} captured={captured} />
     </>
-  );
-}
-
-function LeadGateDebugBadge({ ready, captured }: { ready: boolean; captured: boolean }) {
-  const showGate = ready && !captured;
-  const color = !ready
-    ? '#eab308'
-    : captured
-    ? '#64748b'
-    : '#16a34a';
-  const label = !ready
-    ? 'gate: waiting for mount'
-    : captured
-    ? 'gate: bypassed (sessionStorage set)'
-    : 'gate: OPEN — modal should be visible';
-
-  return (
-    <div
-      style={{
-        position: 'fixed',
-        bottom: 12,
-        right: 12,
-        zIndex: 2147483647,
-        background: color,
-        color: 'white',
-        padding: '6px 10px',
-        fontSize: 11,
-        fontFamily: 'monospace',
-        borderRadius: 4,
-        boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
-        maxWidth: 320,
-        pointerEvents: 'auto',
-      }}
-      aria-hidden="true"
-      data-debug="lead-gate"
-    >
-      {label}
-      <br />
-      <span style={{ opacity: 0.85 }}>
-        ready={String(ready)} captured={String(captured)} showGate={String(showGate)}
-      </span>
-    </div>
   );
 }
 

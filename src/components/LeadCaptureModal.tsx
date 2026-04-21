@@ -1,4 +1,5 @@
 import React from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, User, Phone, Mail, ArrowRight, Lock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -29,7 +30,7 @@ export default function LeadCaptureModal({ isOpen, onClose, onSuccess, title, pe
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate API call
     setTimeout(() => {
       onSuccess(formData);
@@ -37,12 +38,18 @@ export default function LeadCaptureModal({ isOpen, onClose, onSuccess, title, pe
     }, 1000);
   };
 
-  return (
+  const [portalMounted, setPortalMounted] = React.useState(false);
+  React.useEffect(() => {
+    setPortalMounted(true);
+  }, []);
+
+  const modal = (
     <AnimatePresence>
       {isOpen && (
         <div
           data-lead-modal="true"
-          className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6"
+          className="fixed inset-0 z-[9999] flex items-center justify-center p-4 md:p-6"
+          style={{ isolation: 'isolate' }}
         >
           {/* Backdrop */}
           <motion.div
@@ -173,4 +180,7 @@ export default function LeadCaptureModal({ isOpen, onClose, onSuccess, title, pe
       )}
     </AnimatePresence>
   );
+
+  if (!portalMounted || typeof document === 'undefined') return null;
+  return createPortal(modal, document.body);
 }

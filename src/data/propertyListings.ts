@@ -61,12 +61,3 @@ export function listingAsProperty(listing: PropertyListing): Property {
 }
 
 export const RICH_PROPERTIES: readonly Property[] = Object.values(listings).map(listingAsProperty);
-
-if (typeof console !== 'undefined') {
-  console.log('[propertyListings] modules globbed:', Object.keys(modules));
-  console.log('[propertyListings] listings populated:', Object.keys(listings));
-  console.log('[propertyListings] RICH_PROPERTIES count:', RICH_PROPERTIES.length);
-  if (RICH_PROPERTIES.length > 0) {
-    console.log('[propertyListings] first card:', RICH_PROPERTIES[0]);
-  }
-}
