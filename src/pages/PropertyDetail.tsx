@@ -25,6 +25,33 @@ export default function PropertyDetail() {
   const { captured, ready, markCaptured } = useLeadGate();
   const showGate = ready && !captured;
 
+  React.useEffect(() => {
+    if (typeof console === 'undefined') return;
+    console.log('[gate] PropertyDetail mounted, slug:', id);
+    let storedValue: string | null = '<unavailable>';
+    try {
+      storedValue = window.sessionStorage.getItem('corner_home_lead_captured');
+    } catch (err) {
+      storedValue = `<error: ${(err as Error).message}>`;
+    }
+    console.log('[gate] sessionStorage value:', storedValue);
+  }, [id]);
+
+  React.useEffect(() => {
+    if (typeof console === 'undefined') return;
+    console.log('[gate] useLeadGate returned:', { ready, captured });
+    console.log('[gate] Modal isOpen prop:', showGate);
+  }, [ready, captured, showGate]);
+
+  React.useEffect(() => {
+    if (typeof console === 'undefined' || typeof document === 'undefined') return;
+    const raf = requestAnimationFrame(() => {
+      const modal = document.querySelector('[data-lead-modal]');
+      console.log('[gate] Modal component rendered in DOM:', Boolean(modal), modal);
+    });
+    return () => cancelAnimationFrame(raf);
+  }, [showGate]);
+
   const content = richListing ? (
     <PropertyListingPage listing={richListing} />
   ) : (
