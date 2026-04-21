@@ -2,8 +2,7 @@ import React from 'react';
 import { Property } from '@/types';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Bed, Bath, Maximize, MapPin, Image as ImageIcon, Layout } from 'lucide-react';
+import { Bed, Bath, Maximize, MapPin, Image as ImageIcon, Layout, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 interface PropertyCardProps {
@@ -16,11 +15,11 @@ export default function PropertyCard({ property, onClick }: PropertyCardProps) {
   const [view, setView] = React.useState<'photo' | 'floorplan'>('photo');
 
   return (
-    <Card 
-      className="group border border-border/40 bg-white overflow-hidden rounded-none shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer"
+    <Card
+      className="group border border-border/40 bg-white overflow-hidden rounded-none shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer flex flex-col h-full"
       onClick={() => onClick(property.id)}
     >
-      <CardContent className="p-0">
+      <CardContent className="p-0 flex flex-col h-full">
         <div className="relative aspect-[4/5] overflow-hidden bg-muted">
           <AnimatePresence mode="wait">
             <motion.img
@@ -30,7 +29,11 @@ export default function PropertyCard({ property, onClick }: PropertyCardProps) {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               src={view === 'photo' ? property.images[0] : property.floorPlan}
-              alt={view === 'photo' ? `${property.title} — ${property.type} in ${property.location}` : `${property.title} — floor plan`}
+              alt={
+                view === 'photo'
+                  ? `${property.title} — ${property.type} in ${property.location}`
+                  : `${property.title} — floor plan`
+              }
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
               width="400"
               height="500"
@@ -40,14 +43,12 @@ export default function PropertyCard({ property, onClick }: PropertyCardProps) {
             />
           </AnimatePresence>
 
-          {/* View Toggle */}
-          <div className="absolute top-6 right-6 flex space-x-3 z-10">
-            <Button
-              size="icon"
-              variant={view === 'photo' ? 'default' : 'secondary'}
+          <div className="absolute top-4 right-4 flex space-x-2 z-10">
+            <button
+              type="button"
               aria-label="View photo"
-              className={`h-10 w-10 rounded-full backdrop-blur-xl border-none transition-all duration-500 ${
-                view === 'photo' ? 'bg-primary text-white scale-110' : 'bg-white/20 text-white hover:bg-white/40'
+              className={`h-9 w-9 rounded-full backdrop-blur-xl border-none transition-all duration-500 flex items-center justify-center ${
+                view === 'photo' ? 'bg-primary text-white' : 'bg-white/25 text-white hover:bg-white/45'
               }`}
               onClick={(e) => {
                 e.stopPropagation();
@@ -55,13 +56,12 @@ export default function PropertyCard({ property, onClick }: PropertyCardProps) {
               }}
             >
               <ImageIcon className="h-4 w-4" />
-            </Button>
-            <Button
-              size="icon"
-              variant={view === 'floorplan' ? 'default' : 'secondary'}
+            </button>
+            <button
+              type="button"
               aria-label="View floorplan"
-              className={`h-10 w-10 rounded-full backdrop-blur-xl border-none transition-all duration-500 ${
-                view === 'floorplan' ? 'bg-primary text-white scale-110' : 'bg-white/20 text-white hover:bg-white/40'
+              className={`h-9 w-9 rounded-full backdrop-blur-xl border-none transition-all duration-500 flex items-center justify-center ${
+                view === 'floorplan' ? 'bg-primary text-white' : 'bg-white/25 text-white hover:bg-white/45'
               }`}
               onClick={(e) => {
                 e.stopPropagation();
@@ -69,80 +69,74 @@ export default function PropertyCard({ property, onClick }: PropertyCardProps) {
               }}
             >
               <Layout className="h-4 w-4" />
-            </Button>
+            </button>
           </div>
 
-          <div className="absolute top-6 left-6 z-10">
-            <Badge className="bg-primary text-white px-4 py-1.5 text-[10px] tracking-[0.3em] uppercase border-none rounded-none shadow-xl">
+          <div className="absolute top-4 left-4 z-10">
+            <Badge className="bg-primary text-white px-3 py-1 text-[10px] tracking-[0.3em] uppercase border-none rounded-none shadow-xl">
               {property.type}
             </Badge>
           </div>
-
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-          
-          <div className="hidden md:block absolute bottom-0 left-0 right-0 p-8 translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-[0.22, 1, 0.36, 1]">
-            <Button 
-              className="w-full bg-white text-foreground hover:bg-primary hover:text-white transition-all duration-500 py-8 text-sm font-bold tracking-[0.2em] rounded-none"
-            >
-              VIEW DETAILS
-            </Button>
-          </div>
         </div>
 
-        <div className="px-10 py-12 space-y-12">
-          <div className="flex justify-between items-start gap-8">
-            <div className="flex-1">
-              <h3 className="text-2xl md:text-3xl font-heading font-medium text-foreground group-hover:text-primary transition-colors duration-500 leading-[1.2] tracking-tight">
+        <div className="px-6 md:px-8 py-6 md:py-8 flex-1 flex flex-col">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4">
+            <div className="flex-1 min-w-0">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-heading font-medium text-foreground group-hover:text-primary transition-colors duration-500 leading-tight tracking-tight">
                 {property.title}
               </h3>
-              <div className="flex items-center text-muted-foreground text-sm mt-6 font-light tracking-wide">
-                <MapPin className="h-4 w-4 mr-2.5 text-primary/60" />
-                {property.location}
+              <div className="flex items-start text-muted-foreground text-xs sm:text-sm mt-3 font-light tracking-wide">
+                <MapPin className="h-4 w-4 mr-1.5 mt-0.5 text-primary/60 flex-shrink-0" />
+                <span>{property.location}</span>
               </div>
             </div>
-            <div className="text-2xl md:text-3xl font-heading font-bold text-primary whitespace-nowrap tabular-nums pt-1">
+            <div className="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-primary whitespace-nowrap tabular-nums">
               {property.price}
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-8 pt-12 border-t border-border/40">
-            <div className="flex flex-col items-center gap-2.5">
-              <div className="h-12 w-12 rounded-full bg-secondary/30 flex items-center justify-center group-hover:bg-primary/5 transition-colors duration-500">
-                <Bed className="h-5 w-5 text-primary/60" />
-              </div>
-              <span className="text-[10px] text-muted-foreground font-bold tracking-[0.2em] uppercase">
-                {property.beds} Beds
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-2.5 border-x border-border/40">
-              <div className="h-12 w-12 rounded-full bg-secondary/30 flex items-center justify-center group-hover:bg-primary/5 transition-colors duration-500">
-                <Bath className="h-5 w-5 text-primary/60" />
-              </div>
-              <span className="text-[10px] text-muted-foreground font-bold tracking-[0.2em] uppercase">
-                {property.baths} Baths
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-2.5">
-              <div className="h-12 w-12 rounded-full bg-secondary/30 flex items-center justify-center group-hover:bg-primary/5 transition-colors duration-500">
-                <Maximize className="h-5 w-5 text-primary/60" />
-              </div>
-              <span className="text-[10px] text-muted-foreground font-bold tracking-[0.2em] uppercase">
-                {property.area}
-              </span>
-            </div>
+          <div className="grid grid-cols-3 gap-4 mt-6 pt-5 border-t border-border/40">
+            <Stat icon={Bed} value={`${property.beds} Beds`} />
+            <Stat icon={Bath} value={`${property.baths} Baths`} bordered />
+            <Stat icon={Maximize} value={property.area} />
           </div>
 
-          {/* Mobile View Details Button */}
-          <div className="md:hidden pt-4">
-            <Button 
-              className="w-full bg-primary text-white hover:bg-primary/90 transition-all duration-500 py-6 text-xs font-bold tracking-[0.2em] rounded-none"
-              onClick={() => onClick(property.id)}
-            >
-              VIEW DETAILS
-            </Button>
-          </div>
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              onClick(property.id);
+            }}
+            className="mt-6 w-full inline-flex items-center justify-center gap-2 bg-primary text-white hover:bg-primary/90 active:scale-[0.98] transition-all py-4 text-xs font-bold tracking-[0.2em] rounded-none touch-manipulation"
+          >
+            VIEW DETAILS
+            <ArrowRight className="h-4 w-4" />
+          </button>
         </div>
       </CardContent>
     </Card>
+  );
+}
+
+interface StatProps {
+  icon: typeof Bed;
+  value: string;
+  bordered?: boolean;
+}
+
+function Stat({ icon: Icon, value, bordered = false }: StatProps) {
+  return (
+    <div
+      className={`flex flex-col items-center gap-2 ${
+        bordered ? 'border-x border-border/40' : ''
+      }`}
+    >
+      <div className="h-10 w-10 rounded-full bg-secondary/30 flex items-center justify-center group-hover:bg-primary/10 transition-colors duration-500">
+        <Icon className="h-4 w-4 text-primary/60" />
+      </div>
+      <span className="text-[9px] md:text-[10px] text-muted-foreground font-bold tracking-[0.15em] md:tracking-[0.2em] uppercase text-center leading-tight">
+        {value}
+      </span>
+    </div>
   );
 }
