@@ -8,18 +8,47 @@ export interface LeadGate {
   markCaptured: () => void;
 }
 
+function readStoredCaptured(): boolean {
+  try {
+    if (typeof window === 'undefined') return false;
+
+    const url = new URL(window.location.href);
+    if (url.searchParams.has('reset-lead-gate')) {
+      window.sessionStorage.removeItem(LEAD_STORAGE_KEY);
+      return false;
+    }
+
+    return window.sessionStorage.getItem(LEAD_STORAGE_KEY) === 'true';
+  } catch {
+    return false;
+  }
+}
+
+function exposeDebugHook() {
+  if (typeof window === 'undefined') return;
+  (window as unknown as { __cornerClearLeadGate?: () => void }).__cornerClearLeadGate = () => {
+    try {
+      window.sessionStorage.removeItem(LEAD_STORAGE_KEY);
+      console.info('[lead-gate] sessionStorage cleared. Reload to see the modal.');
+    } catch (err) {
+      console.warn('[lead-gate] could not clear sessionStorage:', err);
+    }
+  };
+}
+
 export function useLeadGate(): LeadGate {
-  const [captured, setCaptured] = useState(false);
-  const [ready, setReady] = useState(false);
+  const [state, setState] = useState<{ captured: boolean; ready: boolean }>({
+    captured: false,
+    ready: false,
+  });
 
   useEffect(() => {
-    try {
-      const stored = window.sessionStorage.getItem(LEAD_STORAGE_KEY) === 'true';
-      setCaptured(stored);
-    } catch {
-      // sessionStorage unavailable (SSR shell, privacy mode, etc.)
+    const captured = readStoredCaptured();
+    setState({ captured, ready: true });
+    exposeDebugHook();
+    if (!captured && typeof console !== 'undefined') {
+      console.info('[lead-gate] not captured — showing modal.');
     }
-    setReady(true);
   }, []);
 
   const markCaptured = useCallback(() => {
@@ -28,8 +57,8 @@ export function useLeadGate(): LeadGate {
     } catch {
       // ignore
     }
-    setCaptured(true);
+    setState((s) => ({ ...s, captured: true }));
   }, []);
 
-  return { captured, ready, markCaptured };
+  return { captured: state.captured, ready: state.ready, markCaptured };
 }

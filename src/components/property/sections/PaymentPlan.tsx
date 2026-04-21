@@ -23,29 +23,32 @@ export default function PaymentPlan({ paymentPlan }: PaymentPlanProps) {
         <div className="bg-white border border-border/40">
           <ul className="divide-y divide-dashed divide-border/50">
             {paymentPlan.milestones.map((m, i) => (
-              <li key={`${i}-${m.milestone}`} className="grid grid-cols-12 gap-4 px-5 py-4 items-center">
-                <div className="col-span-1 text-[10px] tracking-[0.2em] uppercase text-muted-foreground">
+              <li
+                key={`${i}-${m.milestone}`}
+                className="flex items-center gap-3 sm:gap-4 px-4 sm:px-5 py-4"
+              >
+                <div className="shrink-0 text-[10px] tracking-[0.2em] uppercase text-muted-foreground tabular-nums w-6">
                   {String(i + 1).padStart(2, '0')}
                 </div>
-                <div className="col-span-7 md:col-span-8">
-                  <div className="font-heading font-medium">{m.milestone}</div>
+                <div className="flex-1 min-w-0">
+                  <div className="font-heading font-medium text-sm sm:text-base leading-tight">
+                    {m.milestone}
+                  </div>
                   {m.description && (
                     <div className="text-xs text-muted-foreground mt-0.5">{m.description}</div>
                   )}
                 </div>
-                <div className="col-span-4 md:col-span-3 text-right font-heading font-semibold text-primary text-lg">
-                  <span className={m.percentage > 0 ? 'highlight-yellow' : ''}>{m.percentage}%</span>
+                <div className="shrink-0 text-right font-heading font-semibold text-primary text-base sm:text-lg tabular-nums">
+                  <span className={m.percentage > 0 ? 'highlight-yellow' : ''}>
+                    {m.percentage}%
+                  </span>
                 </div>
               </li>
             ))}
           </ul>
-          <div className="grid grid-cols-12 gap-4 px-5 py-3 border-t border-border bg-secondary/30 items-center">
-            <div className="col-span-8 md:col-span-9 text-[10px] tracking-[0.2em] uppercase text-muted-foreground">
-              Total
-            </div>
-            <div className="col-span-4 md:col-span-3 text-right font-heading font-semibold">
-              {totalPct}%
-            </div>
+          <div className="flex items-center justify-between px-4 sm:px-5 py-3 border-t border-border bg-secondary/30">
+            <div className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground">Total</div>
+            <div className="text-right font-heading font-semibold tabular-nums">{totalPct}%</div>
           </div>
         </div>
 

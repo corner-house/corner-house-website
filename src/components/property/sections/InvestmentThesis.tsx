@@ -16,7 +16,7 @@ export default function InvestmentThesis({ thesis, listing }: InvestmentThesisPr
   return (
     <section id="thesis" className="bg-[#FAF6E8]">
       {backdrop && (
-        <div className="relative h-[500px] md:h-[600px] overflow-hidden">
+        <div className="relative h-[440px] sm:h-[500px] md:h-[600px] overflow-hidden">
           <img
             src={backdrop.hero}
             alt={thesis.headline}
@@ -24,16 +24,16 @@ export default function InvestmentThesis({ thesis, listing }: InvestmentThesisPr
             loading="lazy"
             decoding="async"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/10" />
 
           <div className="absolute inset-x-0 bottom-0">
-            <div className="container mx-auto px-6 pb-10 md:pb-14">
+            <div className="container mx-auto px-4 sm:px-6 pb-8 sm:pb-10 md:pb-14">
               <div className="max-w-3xl text-white">
-                <div className="flex items-center gap-4 mb-3">
-                  <DoodleTrendingUp className="text-white/80 w-10 h-10 flex-shrink-0" />
-                  <div>
+                <div className="flex items-center gap-3 sm:gap-4 mb-3">
+                  <DoodleTrendingUp className="text-white/80 w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0" />
+                  <div className="min-w-0">
                     <span
-                      className="block text-2xl md:text-3xl font-medium text-[#FAF6E8]"
+                      className="block text-xl sm:text-2xl md:text-3xl font-medium text-[#FAF6E8]"
                       style={{
                         fontFamily: 'var(--font-accent)',
                         fontWeight: 500,
@@ -43,7 +43,7 @@ export default function InvestmentThesis({ thesis, listing }: InvestmentThesisPr
                       the thesis
                     </span>
                     <h2
-                      className="text-3xl md:text-4xl font-heading font-medium tracking-tight leading-tight"
+                      className="text-xl sm:text-2xl md:text-4xl font-heading font-medium tracking-tight leading-tight"
                       style={{ textShadow: '0 2px 14px rgba(0,0,0,0.55)' }}
                     >
                       {thesis.headline}
@@ -51,7 +51,7 @@ export default function InvestmentThesis({ thesis, listing }: InvestmentThesisPr
                   </div>
                 </div>
                 <p
-                  className="font-light leading-relaxed text-base md:text-lg text-white/95 max-w-2xl"
+                  className="font-light leading-relaxed text-sm sm:text-base md:text-lg text-white/95 max-w-2xl line-clamp-4 sm:line-clamp-none"
                   style={{ textShadow: '0 2px 10px rgba(0,0,0,0.55)' }}
                 >
                   {firstPara}
