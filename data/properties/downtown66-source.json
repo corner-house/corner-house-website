@@ -1,0 +1,322 @@
+{
+  "slug": "downtown66",
+  "projectName": "BPTP Downtown 66",
+  "developerName": "BPTP",
+  "seo": {
+    "keywords": [
+      "BPTP Downtown 66",
+      "Downtown 66 Sector 66",
+      "3 BHK Golf Course Extension Road",
+      "BPTP Gurugram",
+      "Downtown 66 price",
+      "Downtown 66 floor plan",
+      "luxury apartments Sector 66 Gurugram"
+    ]
+  },
+  "videos": {
+    "vimeoId": "1176825699",
+    "virtualTourUrl": "https://www.bptp.com/360-tour/downtown-66/index.html",
+    "tagline": "A cinematic walkthrough of Downtown 66"
+  },
+  "hero": {
+    "tagline": "The Pulse of Gurugram — where the city's rhythm meets refined living",
+    "priceFrom": "₹5.33 Cr",
+    "priceSuffix": "onwards",
+    "heroImageKey": "banner-image",
+    "mobileHeroImageKey": "mobile-banner-image",
+    "keyStats": [
+      { "label": "Configurations", "value": "3 BHK" },
+      { "label": "Carpet Area", "value": "1,500 sq.ft" },
+      { "label": "Towers", "value": "3" },
+      { "label": "Floors", "value": "G+38" },
+      { "label": "Possession", "value": "2030" }
+    ]
+  },
+  "atAGlance": {
+    "projectType": "Residential Apartment",
+    "configuration": "3 BHK + Family Lounge / 3 BHK + Study",
+    "unitSizes": "1,912 – 2,084 sq.ft (built-up)",
+    "totalArea": "4.25 acres",
+    "totalUnits": 456,
+    "totalTowers": 3,
+    "floors": "G+38",
+    "possession": "Dec 2030",
+    "status": "Under Construction",
+    "reraStatus": "Registered"
+  },
+  "pricing": [
+    {
+      "configuration": "Tower 1 · 3 BHK + Family Lounge",
+      "carpetAreaSqft": 1500,
+      "builtUpAreaSqft": 2084,
+      "totalPriceFrom": "₹5.33 Cr",
+      "inventoryStatus": "Available"
+    },
+    {
+      "configuration": "Towers 2 & 3 · 3 BHK + Study",
+      "carpetAreaSqft": 1298,
+      "builtUpAreaSqft": 1912,
+      "totalPriceFrom": "₹5.33 Cr",
+      "inventoryStatus": "Available"
+    }
+  ],
+  "floorPlans": [
+    {
+      "name": "Unit Plan 1",
+      "configuration": "3 BHK + Family Lounge (Tower 1)",
+      "carpetAreaSqft": 1500,
+      "imageKey": "unit-plan-1-scaled"
+    },
+    {
+      "name": "Unit Plan 2",
+      "configuration": "3 BHK + Family Lounge (Tower 1)",
+      "carpetAreaSqft": 1500,
+      "imageKey": "unit-plan-2-scaled"
+    },
+    {
+      "name": "Unit Plan 3",
+      "configuration": "3 BHK + Study (Towers 2 & 3)",
+      "carpetAreaSqft": 1298,
+      "imageKey": "unit-plan-3-scaled"
+    },
+    {
+      "name": "Unit Plan 4",
+      "configuration": "3 BHK + Study (Towers 2 & 3)",
+      "carpetAreaSqft": 1298,
+      "imageKey": "unit-plan-4-scaled"
+    }
+  ],
+  "building": {
+    "towers": [
+      { "name": "Tower 1", "floors": 38, "unitsPerFloor": 4 },
+      { "name": "Tower 2", "floors": 38, "unitsPerFloor": 4 },
+      { "name": "Tower 3", "floors": 38, "unitsPerFloor": 4 }
+    ],
+    "heightMeters": 150,
+    "structure": "RCC framed structure, Seismic Zone V compliant",
+    "earthquakeZone": "Seismic Zone V compliant",
+    "liftsPerTower": 6,
+    "parking": { "type": "basement" }
+  },
+  "amenities": {
+    "wellness": [
+      { "name": "Gym", "imageKey": "gym" },
+      { "name": "Full-Service Spa", "imageKey": "spa-4" },
+      { "name": "Turkish Hammam", "imageKey": "turkish-hammam-2" },
+      { "name": "Yoga Room", "imageKey": "yoga-room" },
+      { "name": "Pilates Studio", "imageKey": "pilates-1" },
+      { "name": "Meditation Plaza", "imageKey": "meditation-plaza" },
+      { "name": "Reflexology Path", "imageKey": "reflexology-path" },
+      { "name": "Spa Treatment Room", "imageKey": "treatment-room" },
+      { "name": "Rainwater Sensory Shower", "imageKey": "rainwater-shower" }
+    ],
+    "sports": [
+      { "name": "Indoor Pool", "imageKey": "indoor-pool" },
+      { "name": "Outdoor Pool", "imageKey": "outdoor-pool-1" },
+      { "name": "Padel Court", "imageKey": "padel-court" },
+      { "name": "Pickleball Court", "imageKey": "pickleball-court" },
+      { "name": "Indoor Badminton Court", "imageKey": "indoor-badminton-court-2" },
+      { "name": "Squash Court", "imageKey": "squash-court-2" },
+      { "name": "Boxing Ring", "imageKey": "boxing-ring" },
+      { "name": "Climbing Wall", "imageKey": "climbing-wall-1" }
+    ],
+    "family": [
+      { "name": "Senior Citizen Area", "imageKey": "senior-citizen-area" },
+      { "name": "Kids' Indoor Play Room", "imageKey": "kids-room" },
+      { "name": "Art, Pottery & Clay Studio", "imageKey": "art-pottery-and-clay-modelling" },
+      { "name": "Dance Studio", "imageKey": "dance-room-1" },
+      { "name": "Coaching Centre", "imageKey": "coachinc-centre" },
+      { "name": "Kids' Reading Zone", "imageKey": "kids-reading-zone-2" },
+      { "name": "Kids' Robotics Lab", "imageKey": "kids-robotic-room" },
+      { "name": "Cooking Studio", "imageKey": "cooking-studio-3" },
+      { "name": "Music Room", "imageKey": "music-room" }
+    ],
+    "lifestyle": [
+      { "name": "Fine Dining Restaurant", "imageKey": "fine-dining" },
+      { "name": "Sports Bar", "imageKey": "sports-bar" },
+      { "name": "Private Theatre", "imageKey": "private-theatre" },
+      { "name": "Whiskey Lounge", "imageKey": "whiskey-lounge" },
+      { "name": "Outdoor Dining", "imageKey": "outdoor-dining" },
+      { "name": "Business Centre", "imageKey": "business-centre" },
+      { "name": "Ballroom", "imageKey": "ballroom" },
+      { "name": "Pre-Function Hall", "imageKey": "pre-function-area-2" },
+      { "name": "Musical Garden", "imageKey": "musical-garden-1" },
+      { "name": "Reading Lounge", "imageKey": "reading-zone-2" }
+    ],
+    "sustainability": [
+      { "name": "IGBC Platinum Pre-Certification", "description": "Building designed to IGBC Platinum green-building standards." },
+      { "name": "Rainwater Harvesting System", "description": "Onsite rainwater collection and groundwater recharge across the podium." },
+      { "name": "Sewage Treatment Plant", "description": "Fully treated water recycled for landscape irrigation and flushing." },
+      { "name": "Solar Water Heating", "description": "Common-area hot water supplied via rooftop solar thermal collectors." },
+      { "name": "EV Charging Points", "description": "Dedicated EV charging infrastructure across the basement parking." },
+      { "name": "Drought-Tolerant Landscaping", "description": "Native and low-water species reduce irrigation demand year-round." }
+    ]
+  },
+  "location": {
+    "addressLine": "Golf Course Extension Road",
+    "locality": "Sector 66",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "latitude": 28.4089,
+    "longitude": 77.0926,
+    "googleMapsEmbedUrl": "https://maps.app.goo.gl/kxnj6SWmdPHDQazK8"
+  },
+  "connectivity": [
+    { "destination": "Sector 55-56 Metro Station", "driveTimeMinutes": 15, "distanceKm": 6, "category": "metro" },
+    { "destination": "Sohna Road", "driveTimeMinutes": 5, "distanceKm": 1, "category": "other" },
+    { "destination": "IGI Airport, New Delhi", "driveTimeMinutes": 45, "distanceKm": 32, "category": "airport" },
+    { "destination": "Cyber City", "driveTimeMinutes": 25, "distanceKm": 12, "category": "business" },
+    { "destination": "Medanta Medicity", "driveTimeMinutes": 12, "distanceKm": 5, "category": "healthcare" }
+  ],
+  "neighbourhood": {
+    "backdropImageKey": "outdoor-pool-1",
+    "cards": [
+      {
+        "icon": "Building2",
+        "label": "Roads, Metro & Corporate Campuses",
+        "body": "The signal-free six-lane Golf Course Extension Road connects Sector 66 directly to NH-48 and the Delhi-Jaipur Expressway. The proposed Gurugram Metro extension is expected to bring a station within walking distance, while Cyber City and the emerging SPR office clusters are reachable in under 25 minutes."
+      },
+      {
+        "icon": "GraduationCap",
+        "label": "Schools, Hospitals & Retail",
+        "body": "Medanta Medicity — one of North India's largest quaternary-care hospitals — sits 12 minutes away, with Artemis and Park Hospital as further options. Premium schools including Pathways, DPS Sector 45, Shri Ram (Aravali) and GD Goenka Signature cluster within a 15-minute radius. In-pocket retail anchors: M3M 65th Avenue, Airia Mall, and Paras Square."
+      },
+      {
+        "icon": "TrendingUp",
+        "label": "Price Trajectory & Supply",
+        "body": "Golf Course Extension Road has appreciated materially over the past five years, driven by road infrastructure and a tight supply of new premium inventory. Downtown 66 joins a cluster of under-construction projects with handovers clustering around 2029-2031 — a cohort that will define the corridor's next resale cycle."
+      }
+    ],
+    "title": "Sector 66 & Golf Course Extension Road",
+    "paragraphs": [
+      "Sector 66 sits at the confluence of three of Gurugram's fastest-maturing arterial corridors — Golf Course Extension Road, Southern Peripheral Road, and Sohna Road — placing residents within fifteen minutes of both the established Cyber City business district and the emerging office clusters along the SPR. Over the past decade, this pocket has transformed from the southern edge of the city into one of its most actively developed residential belts, with a mix of branded high-rises, boutique low-density projects, and retail anchors coming online in quick succession.",
+      "The Golf Course Extension Road corridor has benefited from sustained public and private infrastructure investment. A six-lane signal-free arterial now connects Sector 66 directly to NH-48 and the Delhi-Jaipur Expressway, while the proposed extension of the Gurugram Metro is expected to bring a station within walking distance over the next construction cycle. Major corporate campuses — including One Horizon Center, DLF Cyber Park, and upcoming SPR office developments — are reachable in under twenty-five minutes during standard traffic.",
+      "Everyday social infrastructure around Sector 66 has matured alongside the residential build-out. The Medanta Medicity campus — one of North India's largest quaternary-care hospitals — is twelve minutes away, with Artemis and Park Hospital as additional options. Premium retail is concentrated at M3M 65th Avenue, Airia Mall, and Paras Square, while schools including Pathways, GD Goenka Signature, DPS Sector 45, and Shri Ram School (Aravali) are clustered within a fifteen-minute radius. For golfers, DLF Golf & Country Club and ITC Classic Golf Resort are both within reach.",
+      "Residential pricing on Golf Course Extension Road has appreciated materially over the past five years, driven by steadily improving road infrastructure and a tight supply of new premium inventory. With a limited number of launches in the 1,900–2,100 sq.ft built-up range across 2025-2026, Downtown 66 joins a cluster of under-construction projects whose handover dates cluster around 2029-2031 — a cohort that will define the corridor's next resale cycle."
+    ],
+    "highlights": [
+      "Direct access to Golf Course Extension Road and the Southern Peripheral Road",
+      "15-minute drive to Cyber City; 25-minute drive to emerging SPR office clusters",
+      "Medanta Medicity within 5 km; Artemis and Park Hospital also reachable",
+      "Premium schools within a 15-minute radius — Pathways, DPS Sector 45, Shri Ram, GD Goenka Signature",
+      "M3M 65th Avenue, Airia Mall, and Paras Square for in-pocket retail",
+      "DLF Golf & Country Club and ITC Classic Golf Resort within reach"
+    ]
+  },
+  "builder": {
+    "name": "BPTP Limited",
+    "tagline": "Crafting homes with global inspiration since 2003",
+    "description": "Founded in 2003, BPTP has delivered 50+ projects across NCR with 50 million+ sq.ft of built-up area and 25,000+ units handed over. The developer is known for quality construction, globally inspired design, and a focus on branded residential communities in Gurugram, Faridabad, and Greater Noida.",
+    "foundedYear": 2003,
+    "websiteUrl": "https://www.bptp.com",
+    "notableProjects": ["Amstoria", "Astaire Gardens", "Parklands Pride", "The Deck", "Capital City"]
+  },
+  "paymentPlan": {
+    "planName": "Construction-Linked Payment Plan",
+    "milestones": [
+      { "milestone": "Expression of Interest (EOI)", "percentage": 0, "description": "₹25 Lacs fixed — adjustable against the 10% booking consideration." },
+      { "milestone": "Booking", "percentage": 10, "description": "Within 30 days of EOI." },
+      { "milestone": "2nd instalment", "percentage": 5, "description": "Within 90 days of booking." },
+      { "milestone": "3rd instalment", "percentage": 5, "description": "Within 180 days of booking." },
+      { "milestone": "2nd floor slab casting", "percentage": 15 },
+      { "milestone": "25th floor slab casting", "percentage": 15 },
+      { "milestone": "Top floor slab casting", "percentage": 15 },
+      { "milestone": "Window installation", "percentage": 15 },
+      { "milestone": "OC application", "percentage": 15 },
+      { "milestone": "Offer of possession", "percentage": 5, "description": "Plus applicable possession charges, GST, stamp duty, and registration." }
+    ],
+    "notes": [
+      "GST, stamp duty, and registration charges are applicable over and above the listed percentages.",
+      "EDC, IDC, and any statutory/regulatory charges notified during the construction period will be billed as per actuals.",
+      "Payment milestones are triggered by demand letter from the developer; timelines are indicative."
+    ]
+  },
+  "emiCalculator": {
+    "defaultPrincipalCr": 5.33,
+    "defaultInterestRatePct": 8.5,
+    "defaultTenureYears": 20,
+    "downPaymentPct": 20
+  },
+  "investmentThesis": {
+    "backdropImageKey": "fine-dining",
+    "cards": [
+      {
+        "icon": "TrendingUp",
+        "label": "Configuration & Pricing Edge",
+        "body": "Downtown 66 is exclusively 3 BHK, producing a homogeneous buyer community at the upper end of the typical 3 BHK segment. Built-up areas of 1,912–2,084 sq.ft place it squarely in the 'premium but not super-premium' bracket that historically sees the strongest resale liquidity."
+      },
+      {
+        "icon": "ShieldCheck",
+        "label": "Developer & Build Risk",
+        "body": "BPTP has delivered 50+ NCR projects across 50 million+ sq.ft of built-up area. That track record materially de-risks possession timing compared to first-time or less-capitalised developers operating in the same postcode — a meaningful consideration on a construction-linked payment plan."
+      },
+      {
+        "icon": "Calendar",
+        "label": "Capital Appreciation Outlook",
+        "body": "Base case: mid-to-high single-digit annual appreciation through possession, with potential for a one-time uplift at OC if metro connectivity materialises on schedule. Primary risk is timing — even well-regarded NCR developers have slipped six to twelve months in recent cycles."
+      }
+    ],
+    "headline": "A constrained supply on a corridor still in infrastructure build-out",
+    "paragraphs": [
+      "Golf Course Extension Road sits one step behind Golf Course Road in price and one step ahead in new infrastructure. As the original Golf Course Road corridor has matured into a fully-priced, resale-dominant market, buyer demand has shifted southward along the SPR alignment — a corridor where signal-free six-lane connectivity, major healthcare campuses, and a second-wave metro extension are simultaneously coming online. The net result is a pricing differential that has narrowed each year since 2022, with new supply now absorbing at a pace that suggests further convergence.",
+      "Within this corridor, Downtown 66 stands out on three dimensions. First, configuration: the project is exclusively 3 BHK, producing a homogeneous buyer community at the upper end of the typical 3 BHK segment. Second, unit size: built-up areas of 1,912 to 2,084 sq.ft place the project squarely in the 'premium but not super-premium' bracket that historically sees the strongest resale liquidity. Third, developer: BPTP has delivered 50+ NCR projects, which materially de-risks possession timing compared to first-time or less-capitalized developers in the same postcode.",
+      "Key variables for capital appreciation over the possession cycle include the Gurugram Metro extension schedule, the pace of corporate occupancy along the SPR, and broader NCR liquidity. Downside risks are primarily timing — construction-linked plans tie commitment to developer execution, and even well-regarded NCR developers have slipped six to twelve months in recent cycles. Our base case: mid-to-high single-digit annual appreciation through possession, with potential for a one-time uplift at OC if metro connectivity materialises on schedule."
+    ],
+    "dataPoints": [
+      { "label": "Configuration mix — homogeneous buyer profile", "value": "3 BHK only" },
+      { "label": "Built-up range — resale-liquid bracket", "value": "1,912 – 2,084 sq.ft" },
+      { "label": "Land area — low-density podium", "value": "4.25 acres" },
+      { "label": "Expected possession", "value": "Dec 2030" }
+    ]
+  },
+  "similarProperties": [],
+  "faqs": [
+    {
+      "question": "What is BPTP Downtown 66?",
+      "answer": "BPTP Downtown 66 is a premium residential project on Golf Course Extension Road, Sector 66, Gurugram. It comprises three towers of G+38 floors with 456 exclusively 3 BHK apartments (with Family Lounge or Study layouts) set across 4.25 acres of landscaped grounds."
+    },
+    {
+      "question": "What is the price range?",
+      "answer": "3 BHK apartments at Downtown 66 start from ₹5.33 Cr onwards. Exact pricing depends on tower, floor level, and view. Contact our advisors for the current floor-wise price list and inventory availability."
+    },
+    {
+      "question": "What are the unit configurations and sizes?",
+      "answer": "Two configurations are on offer — 3 BHK + Family Lounge in Tower 1 (1,500 sq.ft carpet / 2,084 sq.ft built-up) and 3 BHK + Study in Towers 2 and 3 (1,298 sq.ft carpet / 1,912 sq.ft built-up). All units include three full bathrooms and dedicated servant quarters."
+    },
+    {
+      "question": "Is BPTP Downtown 66 RERA registered?",
+      "answer": "Yes. The project is registered with HARERA under number RC/REP/HARERA/GGM/981/713/2025/84, issued on 19 September 2025. You can verify this directly on the HARERA portal at haryanarera.gov.in."
+    },
+    {
+      "question": "When is the possession date?",
+      "answer": "Expected possession is December 2030. The developer is offering a construction-linked payment plan with milestones tied to slab-casting progress, window installation, and OC application."
+    },
+    {
+      "question": "What amenities are included?",
+      "answer": "Downtown 66 offers a comprehensive amenity package across Wellness (gym, spa, Turkish hammam, yoga, pilates, meditation plaza), Sports (indoor and outdoor pools, padel, pickleball, badminton, squash, boxing, climbing wall), Family (dedicated kids' zones, coaching centre, music and art studios) and Lifestyle (fine dining, private theatre, ballroom, business centre, whiskey lounge)."
+    },
+    {
+      "question": "How is the connectivity from Sector 66?",
+      "answer": "The project is on Golf Course Extension Road with direct access to the Southern Peripheral Road. Sohna Road is about 5 minutes away, Sector 55-56 Metro Station 15 minutes, Cyber City 25 minutes, and IGI Airport 45 minutes. Medanta Medicity is 12 minutes away."
+    },
+    {
+      "question": "Is the project IGBC certified?",
+      "answer": "Yes, BPTP Downtown 66 is IGBC Platinum pre-certified. The building incorporates rainwater harvesting, sewage treatment, energy-efficient lighting, EV charging infrastructure, and drought-tolerant landscaping to meet green-building standards."
+    },
+    {
+      "question": "What is the payment plan?",
+      "answer": "A 10-stage construction-linked plan beginning with a ₹25 Lacs Expression of Interest (adjustable against the 10% booking amount), followed by milestone-linked instalments through slab casting, window installation, and OC application. See the Payment Plan section for the complete schedule."
+    },
+    {
+      "question": "Is home loan available for Downtown 66?",
+      "answer": "Yes. The project is approved by all leading banks and housing finance companies including SBI, HDFC, ICICI Bank, LIC Housing Finance, and Bajaj Housing Finance. The Corner House can assist with pre-approval and end-to-end loan processing for qualifying buyers."
+    }
+  ],
+  "rera": {
+    "number": "RC/REP/HARERA/GGM/981/713/2025/84",
+    "authority": "HARERA",
+    "state": "Haryana",
+    "registeredDate": "2025-09-19",
+    "verificationUrl": "https://haryanarera.gov.in"
+  }
+}

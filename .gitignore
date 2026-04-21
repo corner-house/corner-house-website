@@ -6,3 +6,10 @@ coverage/
 *.log
 .env*
 !.env.example
+KEYs/
+logs/
+.claude/
+Client-Brochers/
+IMp_DATA/
+graphify-out/
+MARKETING-REPORT.md

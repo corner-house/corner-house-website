@@ -1,0 +1,277 @@
+{
+  "propertyName": "downtown66",
+  "uploadedAt": "2026-04-21T07:23:43.709Z",
+  "totalImages": 45,
+  "images": {
+    "banner-image": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/banner-image.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/banner-image.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/banner-image.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/banner-image.webp"
+    },
+    "gym": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/gym.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/gym.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/gym.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/gym.webp"
+    },
+    "mobile-banner-image": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/mobile-banner-image.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/mobile-banner-image.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/mobile-banner-image.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/mobile-banner-image.webp"
+    },
+    "cover-image": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/cover-image.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/cover-image.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/cover-image.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/cover-image.webp"
+    },
+    "site-plan-compressed-page-0002-scaled": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/site-plan-compressed-page-0002-scaled.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/site-plan-compressed-page-0002-scaled.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/site-plan-compressed-page-0002-scaled.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/site-plan-compressed-page-0002-scaled.webp"
+    },
+    "site-plan-compressed-page-0003-scaled": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/site-plan-compressed-page-0003-scaled.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/site-plan-compressed-page-0003-scaled.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/site-plan-compressed-page-0003-scaled.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/site-plan-compressed-page-0003-scaled.webp"
+    },
+    "unit-plan-1-scaled": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/unit-plan-1-scaled.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/unit-plan-1-scaled.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/unit-plan-1-scaled.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/unit-plan-1-scaled.webp"
+    },
+    "unit-plan-2-scaled": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/unit-plan-2-scaled.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/unit-plan-2-scaled.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/unit-plan-2-scaled.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/unit-plan-2-scaled.webp"
+    },
+    "unit-plan-3-scaled": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/unit-plan-3-scaled.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/unit-plan-3-scaled.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/unit-plan-3-scaled.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/unit-plan-3-scaled.webp"
+    },
+    "unit-plan-4-scaled": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/unit-plan-4-scaled.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/unit-plan-4-scaled.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/unit-plan-4-scaled.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/unit-plan-4-scaled.webp"
+    },
+    "reflexology-path": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/reflexology-path.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/reflexology-path.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/reflexology-path.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/reflexology-path.webp"
+    },
+    "meditation-plaza": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/meditation-plaza.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/meditation-plaza.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/meditation-plaza.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/meditation-plaza.webp"
+    },
+    "yoga-room": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/yoga-room.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/yoga-room.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/yoga-room.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/yoga-room.webp"
+    },
+    "treatment-room": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/treatment-room.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/treatment-room.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/treatment-room.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/treatment-room.webp"
+    },
+    "indoor-pool": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/indoor-pool.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/indoor-pool.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/indoor-pool.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/indoor-pool.webp"
+    },
+    "spa-4": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/spa-4.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/spa-4.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/spa-4.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/spa-4.webp"
+    },
+    "turkish-hammam-2": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/turkish-hammam-2.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/turkish-hammam-2.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/turkish-hammam-2.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/turkish-hammam-2.webp"
+    },
+    "rainwater-shower": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/rainwater-shower.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/rainwater-shower.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/rainwater-shower.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/rainwater-shower.webp"
+    },
+    "pilates-1": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/pilates-1.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/pilates-1.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/pilates-1.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/pilates-1.webp"
+    },
+    "padel-court": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/padel-court.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/padel-court.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/padel-court.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/padel-court.webp"
+    },
+    "pickleball-court": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/pickleball-court.jpeg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/pickleball-court.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/pickleball-court.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/pickleball-court.webp"
+    },
+    "indoor-badminton-court-2": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/indoor-badminton-court-2.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/indoor-badminton-court-2.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/indoor-badminton-court-2.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/indoor-badminton-court-2.webp"
+    },
+    "squash-court-2": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/squash-court-2.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/squash-court-2.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/squash-court-2.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/squash-court-2.webp"
+    },
+    "boxing-ring": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/boxing-ring.jpeg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/boxing-ring.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/boxing-ring.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/boxing-ring.webp"
+    },
+    "climbing-wall-1": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/climbing-wall-1.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/climbing-wall-1.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/climbing-wall-1.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/climbing-wall-1.webp"
+    },
+    "outdoor-pool-1": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/outdoor-pool-1.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/outdoor-pool-1.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/outdoor-pool-1.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/outdoor-pool-1.webp"
+    },
+    "musical-garden-1": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/musical-garden-1.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/musical-garden-1.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/musical-garden-1.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/musical-garden-1.webp"
+    },
+    "reading-zone-2": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/reading-zone-2.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/reading-zone-2.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/reading-zone-2.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/reading-zone-2.webp"
+    },
+    "fine-dining": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/fine-dining.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/fine-dining.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/fine-dining.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/fine-dining.webp"
+    },
+    "sports-bar": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/sports-bar.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/sports-bar.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/sports-bar.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/sports-bar.webp"
+    },
+    "private-theatre": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/private-theatre.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/private-theatre.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/private-theatre.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/private-theatre.webp"
+    },
+    "whiskey-lounge": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/whiskey-lounge.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/whiskey-lounge.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/whiskey-lounge.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/whiskey-lounge.webp"
+    },
+    "outdoor-dining": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/outdoor-dining.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/outdoor-dining.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/outdoor-dining.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/outdoor-dining.webp"
+    },
+    "business-centre": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/business-centre.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/business-centre.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/business-centre.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/business-centre.webp"
+    },
+    "ballroom": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/ballroom.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/ballroom.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/ballroom.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/ballroom.webp"
+    },
+    "pre-function-area-2": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/pre-function-area-2.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/pre-function-area-2.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/pre-function-area-2.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/pre-function-area-2.webp"
+    },
+    "senior-citizen-area": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/senior-citizen-area.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/senior-citizen-area.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/senior-citizen-area.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/senior-citizen-area.webp"
+    },
+    "kids-room": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/kids-room.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/kids-room.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/kids-room.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/kids-room.webp"
+    },
+    "art-pottery-and-clay-modelling": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/art-pottery-and-clay-modelling.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/art-pottery-and-clay-modelling.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/art-pottery-and-clay-modelling.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/art-pottery-and-clay-modelling.webp"
+    },
+    "dance-room-1": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/dance-room-1.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/dance-room-1.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/dance-room-1.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/dance-room-1.webp"
+    },
+    "coachinc-centre": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/coachinc-centre.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/coachinc-centre.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/coachinc-centre.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/coachinc-centre.webp"
+    },
+    "kids-reading-zone-2": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/kids-reading-zone-2.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/kids-reading-zone-2.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/kids-reading-zone-2.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/kids-reading-zone-2.webp"
+    },
+    "kids-robotic-room": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/kids-robotic-room.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/kids-robotic-room.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/kids-robotic-room.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/kids-robotic-room.webp"
+    },
+    "cooking-studio-3": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/cooking-studio-3.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/cooking-studio-3.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/cooking-studio-3.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/cooking-studio-3.webp"
+    },
+    "music-room": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/music-room.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/hero/music-room.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/music-room.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/thumb/music-room.webp"
+    }
+  }
+}

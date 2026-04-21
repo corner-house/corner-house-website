@@ -9,6 +9,7 @@ interface LeadCaptureModalProps {
   onClose: () => void;
   onSuccess: (data: LeadData) => void;
   title: string;
+  persistent?: boolean;
 }
 
 export interface LeadData {
@@ -17,7 +18,7 @@ export interface LeadData {
   email: string;
 }
 
-export default function LeadCaptureModal({ isOpen, onClose, onSuccess, title }: LeadCaptureModalProps) {
+export default function LeadCaptureModal({ isOpen, onClose, onSuccess, title, persistent = false }: LeadCaptureModalProps) {
   const [formData, setFormData] = React.useState<LeadData>({
     name: '',
     phone: '',
@@ -45,7 +46,7 @@ export default function LeadCaptureModal({ isOpen, onClose, onSuccess, title }: 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={onClose}
+            onClick={persistent ? undefined : onClose}
             className="absolute inset-0 bg-black/80 backdrop-blur-sm"
           />
 
@@ -82,13 +83,15 @@ export default function LeadCaptureModal({ isOpen, onClose, onSuccess, title }: 
 
             {/* Right Side - Form */}
             <div className="flex-1 p-8 md:p-12">
-              <button 
-                onClick={onClose}
-                aria-label="Close modal"
-                className="absolute top-4 right-4 text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <X className="h-6 w-6" />
-              </button>
+              {!persistent && (
+                <button
+                  onClick={onClose}
+                  aria-label="Close modal"
+                  className="absolute top-4 right-4 text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <X className="h-6 w-6" />
+                </button>
+              )}
 
               <div className="mb-10">
                 <span className="text-[10px] font-sans font-bold tracking-[0.3em] uppercase text-primary block mb-2">

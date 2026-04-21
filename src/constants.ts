@@ -2,32 +2,6 @@ import { Article, Property, Service, Locality, Testimonial } from './types';
 
 export const PROPERTIES: Property[] = [
   {
-    id: '1',
-    title: 'The Sky Villa',
-    location: 'DLF Phase 5, Gurugram',
-    price: '₹12.5 Cr',
-    type: 'Penthouse',
-    beds: 4,
-    baths: 5,
-    area: '4,500 sq.ft',
-    images: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=70&w=800',
-      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=70&w=800',
-      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=70&w=800'
-    ],
-    floorPlan: 'https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&q=70&w=800',
-    description: 'An exquisite penthouse offering panoramic views of the Gurugram skyline. Designed for those who appreciate the finer things in life, this villa features double-height ceilings, a private plunge pool, and bespoke Italian marble flooring.',
-    amenities: ['Private Elevator', 'Plunge Pool', 'Home Automation', 'Concierge Service', '4 Parking Slots'],
-    highlights: ['Close to Golf Course Road', 'High-end Security', 'Premium Club Membership', 'Staff Quarters'],
-    details: {
-      'Project': 'DLF The Aralias',
-      'Status': 'Ready to Move',
-      'Facing': 'North-East',
-      'Floor': '24th of 25',
-      'Furnishing': 'Semi-Furnished'
-    }
-  },
-  {
     id: '2',
     title: 'The Krisumi Heights',
     location: 'Golf Estate, Sector 65, Gurugram',
@@ -57,31 +31,6 @@ export const PROPERTIES: Property[] = [
       'Facing': 'Park Facing',
       'Floor': '12th of 40',
       'Furnishing': 'Bare Shell'
-    }
-  },
-  {
-    id: '3',
-    title: 'Heritage Manor',
-    location: 'Sunder Nagar, New Delhi',
-    price: '₹45 Cr',
-    type: 'Independent Bungalow',
-    beds: 5,
-    baths: 6,
-    area: '8,000 sq.ft',
-    images: [
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=70&w=800',
-      'https://images.unsplash.com/photo-1600585154526-990dcea4db0d?auto=format&fit=crop&q=70&w=800'
-    ],
-    floorPlan: 'https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=70&w=800',
-    description: 'A rare opportunity to own a piece of history in one of Delhi\'s most prestigious neighborhoods. This bungalow features a sprawling lawn, classic colonial architecture, and unmatched privacy.',
-    amenities: ['Private Garden', 'Library', 'Wine Cellar', 'Servant Quarters', 'Gated Entry'],
-    highlights: ['Lutyens Delhi Proximity', 'Quiet Cul-de-sac', 'Mature Landscaping'],
-    details: {
-      'Project': 'Independent',
-      'Status': 'Resale',
-      'Facing': 'East',
-      'Floor': 'G+2',
-      'Furnishing': 'Unfurnished'
     }
   }
 ];

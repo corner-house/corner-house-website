@@ -3,9 +3,12 @@ import { motion } from 'motion/react';
 import SEO, { SITE_URL } from '@/components/SEO';
 import PropertyCard from '@/components/PropertyCard';
 import { PROPERTIES } from '@/constants';
+import { RICH_PROPERTIES } from '@/data/propertyListings';
 
 export default function Properties() {
   const navigate = useNavigate();
+
+  const allProperties = [...RICH_PROPERTIES, ...PROPERTIES];
 
   const collectionJsonLd = {
     '@context': 'https://schema.org',
@@ -13,7 +16,7 @@ export default function Properties() {
     name: 'Luxury Properties',
     url: `${SITE_URL}/properties`,
     about: { '@type': 'Thing', name: 'Ultra-premium residences in Delhi NCR' },
-    hasPart: PROPERTIES.map((p) => ({
+    hasPart: allProperties.map((p) => ({
       '@type': 'Residence',
       name: p.title,
       url: `${SITE_URL}/properties/${p.id}`,
@@ -59,7 +62,7 @@ export default function Properties() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
-          {PROPERTIES.map((property, index) => (
+          {allProperties.map((property, index) => (
             <motion.div
               key={property.id}
               initial={{ opacity: 0, y: 40 }}

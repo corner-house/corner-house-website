@@ -1,5 +1,5 @@
 import Hero from '@/components/Hero';
-import PropertyCard from '@/components/PropertyCard';
+import HomePropertyCarousel from '@/components/HomePropertyCarousel';
 import Services from '@/components/Services';
 import Localities from '@/components/Localities';
 import Insights from '@/components/Insights';
@@ -8,12 +8,14 @@ import InquiryForm from '@/components/InquiryForm';
 import SEO, { SITE_URL } from '@/components/SEO';
 import { useLayoutContext } from '@/App';
 import { PROPERTIES } from '@/constants';
+import { RICH_PROPERTIES } from '@/data/propertyListings';
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function Home() {
   const { onNavigate } = useLayoutContext();
+  const allProperties = [...RICH_PROPERTIES, ...PROPERTIES];
   const websiteJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
@@ -87,22 +89,10 @@ export default function Home() {
             </motion.div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
-            {PROPERTIES.map((property, index) => (
-              <motion.div
-                key={property.id}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.15 }}
-              >
-                <PropertyCard
-                  property={property}
-                  onClick={(id) => onNavigate('detail', id)}
-                />
-              </motion.div>
-            ))}
-          </div>
+          <HomePropertyCarousel
+            properties={allProperties}
+            onNavigate={(id) => onNavigate('detail', id)}
+          />
         </div>
       </section>
 

@@ -2,6 +2,10 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useLayoutContext } from '@/App';
 import { PROPERTIES } from '@/constants';
+import { getPropertyListing } from '@/data/propertyListings';
+import PropertyListingPage from '@/components/property/PropertyListingPage';
+import LeadCaptureModal from '@/components/LeadCaptureModal';
+import { useLeadGate } from '@/lib/lead-gate';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
@@ -9,11 +13,39 @@ import {
   Bed, Bath, Maximize, MapPin, Share2, Heart,
   Phone, MessageSquare, CheckCircle2, ChevronLeft, ChevronRight
 } from 'lucide-react';
-import { motion } from 'motion/react';
 import SEO, { SITE_URL } from '@/components/SEO';
 
 export default function PropertyDetail() {
   const { id } = useParams<{ id: string }>();
+  const richListing = getPropertyListing(id);
+  const legacy = !richListing ? PROPERTIES.find((p) => p.id === id) : null;
+  const projectTitle =
+    richListing?.projectName ?? legacy?.title ?? 'this residence';
+
+  const { captured, ready, markCaptured } = useLeadGate();
+  const showGate = ready && !captured;
+
+  const content = richListing ? (
+    <PropertyListingPage listing={richListing} />
+  ) : (
+    <LegacyPropertyDetail id={id} />
+  );
+
+  return (
+    <>
+      {content}
+      <LeadCaptureModal
+        isOpen={showGate}
+        persistent
+        title={projectTitle}
+        onClose={() => {}}
+        onSuccess={() => markCaptured()}
+      />
+    </>
+  );
+}
+
+function LegacyPropertyDetail({ id }: { id: string | undefined }) {
   const { onBack: layoutBack } = useLayoutContext();
   const onBack = () => layoutBack('#properties');
   const property = PROPERTIES.find((p) => p.id === id);
