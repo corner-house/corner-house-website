@@ -107,11 +107,13 @@ export default function Amenities({ amenities, listing }: AmenitiesProps) {
                     <img
                       src={variants.thumb}
                       srcSet={`${variants.thumb} 400w, ${variants.gallery} 1200w`}
-                      sizes="(max-width: 768px) 50vw, 25vw"
+                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                       alt={item.name}
                       className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
                       decoding="async"
+                      width={400}
+                      height={300}
                     />
                   ) : SustainIcon ? (
                     <SustainIcon className="w-16 h-16 md:w-20 md:h-20 text-primary" />

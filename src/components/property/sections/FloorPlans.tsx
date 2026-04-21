@@ -39,11 +39,15 @@ export default function FloorPlans({ floorPlans, listing }: FloorPlansProps) {
               >
                 <div className="relative aspect-[4/3] bg-secondary/30 flex items-center justify-center overflow-hidden">
                   <img
-                    src={variants.gallery}
+                    src={variants.thumb}
+                    srcSet={`${variants.thumb} 400w, ${variants.gallery} 1200w`}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     alt={`${plan.name} floor plan`}
                     className="max-h-full max-w-full object-contain"
                     loading="lazy"
                     decoding="async"
+                    width={1200}
+                    height={900}
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
                     <ZoomIn className="h-8 w-8 text-white opacity-0 group-hover:opacity-100 transition-opacity" />

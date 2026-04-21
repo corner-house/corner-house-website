@@ -22,10 +22,19 @@ export default function Hero({ listing }: HeroProps) {
     <section className="relative">
       <div className="relative h-[70vh] min-h-[520px] max-h-[820px] w-full overflow-hidden bg-luxury-charcoal">
         <picture>
-          <source media="(max-width: 640px)" srcSet={mobile.hero} type="image/webp" />
-          <source srcSet={desktop.hero} type="image/webp" />
+          <source
+            media="(max-width: 640px)"
+            srcSet={`${mobile.thumb} 400w, ${mobile.gallery} 1200w, ${mobile.hero} 2000w`}
+            sizes="100vw"
+            type="image/webp"
+          />
+          <source
+            srcSet={`${desktop.gallery} 1200w, ${desktop.hero} 2000w`}
+            sizes="100vw"
+            type="image/webp"
+          />
           <img
-            src={desktop.original}
+            src={desktop.gallery}
             alt={`${listing.projectName} — ${listing.hero.tagline}`}
             className="h-full w-full object-cover"
             loading="eager"

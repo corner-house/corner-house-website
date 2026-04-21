@@ -18,11 +18,15 @@ export default function InvestmentThesis({ thesis, listing }: InvestmentThesisPr
       {backdrop && (
         <div className="relative h-[440px] sm:h-[500px] md:h-[600px] overflow-hidden">
           <img
-            src={backdrop.hero}
+            src={backdrop.gallery}
+            srcSet={`${backdrop.gallery} 1200w, ${backdrop.hero} 2000w`}
+            sizes="100vw"
             alt={thesis.headline}
             className="absolute inset-0 w-full h-full object-cover"
             loading="lazy"
             decoding="async"
+            width={2000}
+            height={1200}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/10" />
 
