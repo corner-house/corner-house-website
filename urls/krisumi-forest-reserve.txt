@@ -1,0 +1,93 @@
+# Krisumi Forest Reserve — combined image list
+# Sources:
+#   1. krisumi.com website (lifestyle gallery + 40 floor plans)
+#   2. PDF brochure extracts (artistic renders + concept pages)
+
+# ============================================================
+# WEBSITE — Lifestyle gallery (8 images)
+# ============================================================
+
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/gallery-img-a.jpg|main-pool-website
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/gallery-img-b.jpg|balcony-view-website
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/gallery-img-c.jpg|yoga-deck-website
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/gallery-img-d.jpg|kids-stream-website
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/gallery-img-e.jpg|source-fountain-website
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/gallery-img-f.jpg|forest-resting-space-website
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/home-design-img.jpg|entrance-render-website
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/home-design-img-2.jpg|forest-mist-pond-website
+
+# ============================================================
+# WEBSITE — Hero banner & video thumbnail
+# ============================================================
+
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/banner.jpg|hero-banner-forest
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/video-thumb.jpg|video-thumbnail
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/map-img-1.png|connectivity-map-illustrated
+
+# ============================================================
+# WEBSITE — Floor plans (curated subset from 40+ available)
+# ============================================================
+
+# Forest Reserve A — 4LDKS plans
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/Waterside-Residences-4LDKS-FF-1.jpg|floor-plan-fr-a-4ldks-ff-1
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/Waterside-Residences-4LDKS-FF-2.jpg|floor-plan-fr-a-4ldks-ff-2
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/Waterside-Residences-4LDKS-Typical.jpg|floor-plan-fr-a-4ldks-typical
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/Waterside-Residences-3LDK-Refuge.jpg|floor-plan-fr-a-3ldk-refuge
+
+# Forest Reserve A — Penthouse plans
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/Waterside-Residences-Penthouse-A-Lower-Level.jpg|floor-plan-fr-a-penthouse-a-lower
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/Waterside-Residences-Penthouse-A-Upper-Level.jpg|floor-plan-fr-a-penthouse-a-upper
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/Waterside-Residences-Penthouse-B-Lower-Level.jpg|floor-plan-fr-a-penthouse-b-lower
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/Waterside-Residences-Penthouse-B-Upper-Level.jpg|floor-plan-fr-a-penthouse-b-upper
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/Waterside-Residences-Penthouse-B-Terrace-Level.jpg|floor-plan-fr-a-penthouse-b-terrace
+
+# Forest Reserve B — 3LDKS plans
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/Waterside-Residences-3LDKS-FF-1.jpg|floor-plan-fr-b-3ldks-ff-1
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/Waterside-Residences-3LDKS-FF-2.jpg|floor-plan-fr-b-3ldks-ff-2
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/Waterside-Residences-3LDKS-Typical.jpg|floor-plan-fr-b-3ldks-typical
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/Waterside-Residences-2LDKS-Refuge.jpg|floor-plan-fr-b-2ldks-refuge
+
+# Forest Reserve B — Penthouse plans
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/Waterside-Residences-Penthouse-01-Lower-Level.jpg|floor-plan-fr-b-penthouse-01-lower
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/Waterside-Residences-Penthouse-01-Upper-Level.jpg|floor-plan-fr-b-penthouse-01-upper
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/Waterside-Residences-Penthouse-04-Lower-Level.jpg|floor-plan-fr-b-penthouse-04-lower
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/Waterside-Residences-Penthouse-04-Upper-Level.jpg|floor-plan-fr-b-penthouse-04-upper
+
+# Forest Reserve II — 3LDKS plans
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/Waterside-Residences-3LDKS-A-FF.jpg|floor-plan-fr-ii-3ldks-a-ff
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/Waterside-Residences-3LDKS-B-FF.jpg|floor-plan-fr-ii-3ldks-b-ff
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/Waterside-Residences-3LDKS-B-Typical.jpg|floor-plan-fr-ii-3ldks-b-typical
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/Waterside-Residences-The-Forest-Reserve-II-2LDKS-Refuge.jpg|floor-plan-fr-ii-2ldks-refuge
+
+# Forest Reserve II — Penthouse plans
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/The-Forest-Reserve-II-Pentouse-A-Lower.jpg|floor-plan-fr-ii-penthouse-a-lower
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/The-Forest-Reserve-II-Pentouse-A-Upper.jpg|floor-plan-fr-ii-penthouse-a-upper
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/The-Forest-Reserve-II-Pentouse-B-Lower.jpg|floor-plan-fr-ii-penthouse-b-lower
+https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/The-Forest-Reserve-II-Pentouse-B-Upper.jpg|floor-plan-fr-ii-penthouse-b-upper
+
+# ============================================================
+# BROCHURE EXTRACTS (local — generated by extract-pdf-pages.ts)
+# ============================================================
+
+./urls/krisumi-forest-reserve-local/main-pool-kids-pool.jpg
+./urls/krisumi-forest-reserve-local/lake-kids-stream.jpg
+./urls/krisumi-forest-reserve-local/yoga-deck-central-courtyard.jpg
+./urls/krisumi-forest-reserve-local/source-fountain-forest-mist-pond.jpg
+./urls/krisumi-forest-reserve-local/forest-resting-spaces.jpg
+./urls/krisumi-forest-reserve-local/japanese-design-concept-spread.jpg
+./urls/krisumi-forest-reserve-local/chinju-no-mori-sacred-forest-concept.jpg
+./urls/krisumi-forest-reserve-local/japanese-design-harmony-philosophy.jpg
+./urls/krisumi-forest-reserve-local/shakkei-miegakure-inei-design-principles.jpg
+./urls/krisumi-forest-reserve-local/ten-sen-men-seijaku-miyama-design-principles.jpg
+./urls/krisumi-forest-reserve-local/kagami-kekkai-koshi-design-principles.jpg
+./urls/krisumi-forest-reserve-local/oku-towers-architecture.jpg
+./urls/krisumi-forest-reserve-local/forest-reserve-ii-drop-off-night.jpg
+./urls/krisumi-forest-reserve-local/forest-reserve-a-drop-off-ramp.jpg
+./urls/krisumi-forest-reserve-local/bamboo-garden-ground-view.jpg
+./urls/krisumi-forest-reserve-local/gym-pool-view-private-pool.jpg
+./urls/krisumi-forest-reserve-local/kids-pool-mirage-pilotis.jpg
+./urls/krisumi-forest-reserve-local/entrance-lobby-renders.jpg
+./urls/krisumi-forest-reserve-local/interior-living-dining-room.jpg
+./urls/krisumi-forest-reserve-local/interior-master-bedroom-balcony-view.jpg
+./urls/krisumi-forest-reserve-local/the-afterglow-evening-render.jpg
+./urls/krisumi-forest-reserve-local/location-map-sector-36a-gurugram.jpg

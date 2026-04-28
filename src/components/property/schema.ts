@@ -281,6 +281,13 @@ export const propertySourceSchema = z.object({
   faqs: faqSchema,
   rera: reraSchema,
   brochureUrl: url.optional(),
+  externalGalleryUrl: z
+    .object({
+      url: url,
+      label: nonEmpty.default('More Photos'),
+      hostName: nonEmpty.optional(),
+    })
+    .optional(),
   gallery: z
     .object({
       enabled: z.boolean().default(true),

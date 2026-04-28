@@ -1,39 +1,6 @@
 import { Article, Property, Service, Locality, Testimonial } from './types';
 
-export const PROPERTIES: Property[] = [
-  {
-    id: '2',
-    title: 'The Krisumi Heights',
-    location: 'Golf Estate, Sector 65, Gurugram',
-    price: '₹8.9 Cr',
-    type: 'Luxury Apartment',
-    beds: 3,
-    baths: 4,
-    area: '3,200 sq.ft',
-    images: [
-      '/modernist-estate-ext-1.webp',
-      '/modernist-estate-ext-2.webp',
-      '/Interior-Krisumi-aerial.webp',
-      '/Interior-Krisumi-Bar-Area.webp',
-      '/Interior-Krisumi-Dining-Finished.webp',
-      '/Interior-Krisumi-Inside-Lift.webp',
-      '/Interior-Krisumi-Lift-Lobby-2.webp',
-      '/Interior-Krisumi-Lift-Lobby.webp',
-      '/Interior-Krisumi-Living-Room.webp'
-    ],
-    floorPlan: 'https://images.unsplash.com/photo-1585128719715-46776b56a0d1?auto=format&fit=crop&q=70&w=800',
-    description: 'A contemporary masterpiece in the heart of Sector 65. This apartment blends minimalist aesthetics with functional luxury, featuring floor-to-ceiling windows and a wrap-around balcony.',
-    amenities: ['Gymnasium', 'Swimming Pool', 'Spa', 'Tennis Court', 'Power Backup'],
-    highlights: ['Direct Access to Golf Course', 'LEED Gold Certified', 'Award-winning Architecture'],
-    details: {
-      'Project': 'M3M Golf Estate',
-      'Status': 'Under Construction',
-      'Facing': 'Park Facing',
-      'Floor': '12th of 40',
-      'Furnishing': 'Bare Shell'
-    }
-  }
-];
+export const PROPERTIES: Property[] = [];
 
 export const SERVICES: Service[] = [
   {

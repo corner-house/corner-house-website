@@ -34,12 +34,27 @@ const PREFIX_RULES: Array<[Category, string[]]> = [
       'masterplan-',
       'cluster-plan-',
       'site-plan-',
+      'floor-plan-',
       'location-map-',
       'connectivity-radial-',
       'karma-lakelands-master',
     ],
   ],
-  ['exteriors', ['towers-', 'tower-', 'elevation-', 'brochure-cover-', 'clubhouse-exterior', 'cover-']],
+  [
+    'exteriors',
+    [
+      'towers-',
+      'tower-',
+      'elevation-',
+      'brochure-cover-',
+      'clubhouse-exterior',
+      'cover-',
+      'forest-reserve-',
+      'oku-towers-',
+      'entrance-',
+      'the-afterglow-',
+    ],
+  ],
   ['interiors', ['interior-', 'balcony-']],
   [
     'amenities',
@@ -54,9 +69,30 @@ const PREFIX_RULES: Array<[Category, string[]]> = [
       'island-cove',
       'swimming-pool-',
       'pool-',
+      'main-pool-',
+      'kids-pool-',
+      'yoga-deck-',
+      'gym-',
+      'forest-resting-',
+      'bamboo-garden-',
+      'source-fountain-',
+      'lake-',
+      'forest-mist-pond-',
     ],
   ],
-  ['surroundings', ['serenity-lake-', 'lake-', 'karma-lakelands-', 'pursuit-']],
+  [
+    'surroundings',
+    [
+      'serenity-lake-',
+      'karma-lakelands-',
+      'pursuit-',
+      'chinju-',
+      'shakkei-',
+      'kagami-',
+      'ten-sen-men-',
+      'japanese-design-',
+    ],
+  ],
 ];
 
 const TAB_ORDER: Array<{ key: 'all' | Category; label: string }> = [
@@ -205,6 +241,19 @@ export default function Gallery({ listing }: GalleryProps) {
             );
           })}
         </div>
+
+        {listing.externalGalleryUrl && (
+          <div className="-mt-4 mb-6">
+            <a
+              href={listing.externalGalleryUrl.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-primary hover:underline inline-flex items-center gap-1"
+            >
+              {listing.externalGalleryUrl.label} ↗
+            </a>
+          </div>
+        )}
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {visibleItems.map((it, i) => {

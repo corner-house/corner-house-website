@@ -2,5 +2,8 @@
 # Precedence: explicit prerendered files → these rules → 404 fallback.
 # Unknown routes hit 404.html with HTTP 404 (fixes soft-404 issue).
 
+# Legacy listings retired — 301 to listings index so inbound links + crawlers settle gracefully.
+/properties/2   /properties   301
+
 /404.html    /404.html   404
 /*           /404.html   404

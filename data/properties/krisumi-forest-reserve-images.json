@@ -1,0 +1,355 @@
+{
+  "propertyName": "krisumi-forest-reserve",
+  "uploadedAt": "2026-04-28T07:30:29.754Z",
+  "totalImages": 58,
+  "images": {
+    "main-pool-website": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/main-pool-website.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/main-pool-website.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/main-pool-website.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/main-pool-website.webp"
+    },
+    "balcony-view-website": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/balcony-view-website.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/balcony-view-website.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/balcony-view-website.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/balcony-view-website.webp"
+    },
+    "yoga-deck-website": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/yoga-deck-website.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/yoga-deck-website.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/yoga-deck-website.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/yoga-deck-website.webp"
+    },
+    "kids-stream-website": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/kids-stream-website.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/kids-stream-website.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/kids-stream-website.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/kids-stream-website.webp"
+    },
+    "source-fountain-website": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/source-fountain-website.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/source-fountain-website.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/source-fountain-website.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/source-fountain-website.webp"
+    },
+    "forest-resting-space-website": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/forest-resting-space-website.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/forest-resting-space-website.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/forest-resting-space-website.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/forest-resting-space-website.webp"
+    },
+    "entrance-render-website": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/entrance-render-website.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/entrance-render-website.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/entrance-render-website.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/entrance-render-website.webp"
+    },
+    "forest-mist-pond-website": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/forest-mist-pond-website.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/forest-mist-pond-website.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/forest-mist-pond-website.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/forest-mist-pond-website.webp"
+    },
+    "hero-banner-forest": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/hero-banner-forest.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/hero-banner-forest.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/hero-banner-forest.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/hero-banner-forest.webp"
+    },
+    "video-thumbnail": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/video-thumbnail.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/video-thumbnail.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/video-thumbnail.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/video-thumbnail.webp"
+    },
+    "connectivity-map-illustrated": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/connectivity-map-illustrated.png",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/connectivity-map-illustrated.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/connectivity-map-illustrated.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/connectivity-map-illustrated.webp"
+    },
+    "floor-plan-fr-a-4ldks-ff-1": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/floor-plan-fr-a-4ldks-ff-1.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/floor-plan-fr-a-4ldks-ff-1.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/floor-plan-fr-a-4ldks-ff-1.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/floor-plan-fr-a-4ldks-ff-1.webp"
+    },
+    "floor-plan-fr-a-4ldks-ff-2": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/floor-plan-fr-a-4ldks-ff-2.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/floor-plan-fr-a-4ldks-ff-2.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/floor-plan-fr-a-4ldks-ff-2.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/floor-plan-fr-a-4ldks-ff-2.webp"
+    },
+    "floor-plan-fr-a-4ldks-typical": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/floor-plan-fr-a-4ldks-typical.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/floor-plan-fr-a-4ldks-typical.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/floor-plan-fr-a-4ldks-typical.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/floor-plan-fr-a-4ldks-typical.webp"
+    },
+    "floor-plan-fr-a-3ldk-refuge": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/floor-plan-fr-a-3ldk-refuge.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/floor-plan-fr-a-3ldk-refuge.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/floor-plan-fr-a-3ldk-refuge.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/floor-plan-fr-a-3ldk-refuge.webp"
+    },
+    "floor-plan-fr-a-penthouse-a-lower": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/floor-plan-fr-a-penthouse-a-lower.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/floor-plan-fr-a-penthouse-a-lower.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/floor-plan-fr-a-penthouse-a-lower.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/floor-plan-fr-a-penthouse-a-lower.webp"
+    },
+    "floor-plan-fr-a-penthouse-a-upper": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/floor-plan-fr-a-penthouse-a-upper.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/floor-plan-fr-a-penthouse-a-upper.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/floor-plan-fr-a-penthouse-a-upper.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/floor-plan-fr-a-penthouse-a-upper.webp"
+    },
+    "floor-plan-fr-a-penthouse-b-lower": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/floor-plan-fr-a-penthouse-b-lower.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/floor-plan-fr-a-penthouse-b-lower.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/floor-plan-fr-a-penthouse-b-lower.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/floor-plan-fr-a-penthouse-b-lower.webp"
+    },
+    "floor-plan-fr-a-penthouse-b-upper": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/floor-plan-fr-a-penthouse-b-upper.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/floor-plan-fr-a-penthouse-b-upper.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/floor-plan-fr-a-penthouse-b-upper.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/floor-plan-fr-a-penthouse-b-upper.webp"
+    },
+    "floor-plan-fr-a-penthouse-b-terrace": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/floor-plan-fr-a-penthouse-b-terrace.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/floor-plan-fr-a-penthouse-b-terrace.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/floor-plan-fr-a-penthouse-b-terrace.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/floor-plan-fr-a-penthouse-b-terrace.webp"
+    },
+    "floor-plan-fr-b-3ldks-ff-1": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/floor-plan-fr-b-3ldks-ff-1.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/floor-plan-fr-b-3ldks-ff-1.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/floor-plan-fr-b-3ldks-ff-1.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/floor-plan-fr-b-3ldks-ff-1.webp"
+    },
+    "floor-plan-fr-b-3ldks-ff-2": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/floor-plan-fr-b-3ldks-ff-2.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/floor-plan-fr-b-3ldks-ff-2.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/floor-plan-fr-b-3ldks-ff-2.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/floor-plan-fr-b-3ldks-ff-2.webp"
+    },
+    "floor-plan-fr-b-3ldks-typical": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/floor-plan-fr-b-3ldks-typical.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/floor-plan-fr-b-3ldks-typical.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/floor-plan-fr-b-3ldks-typical.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/floor-plan-fr-b-3ldks-typical.webp"
+    },
+    "floor-plan-fr-b-2ldks-refuge": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/floor-plan-fr-b-2ldks-refuge.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/floor-plan-fr-b-2ldks-refuge.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/floor-plan-fr-b-2ldks-refuge.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/floor-plan-fr-b-2ldks-refuge.webp"
+    },
+    "floor-plan-fr-b-penthouse-01-lower": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/floor-plan-fr-b-penthouse-01-lower.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/floor-plan-fr-b-penthouse-01-lower.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/floor-plan-fr-b-penthouse-01-lower.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/floor-plan-fr-b-penthouse-01-lower.webp"
+    },
+    "floor-plan-fr-b-penthouse-01-upper": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/floor-plan-fr-b-penthouse-01-upper.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/floor-plan-fr-b-penthouse-01-upper.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/floor-plan-fr-b-penthouse-01-upper.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/floor-plan-fr-b-penthouse-01-upper.webp"
+    },
+    "floor-plan-fr-b-penthouse-04-lower": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/floor-plan-fr-b-penthouse-04-lower.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/floor-plan-fr-b-penthouse-04-lower.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/floor-plan-fr-b-penthouse-04-lower.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/floor-plan-fr-b-penthouse-04-lower.webp"
+    },
+    "floor-plan-fr-b-penthouse-04-upper": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/floor-plan-fr-b-penthouse-04-upper.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/floor-plan-fr-b-penthouse-04-upper.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/floor-plan-fr-b-penthouse-04-upper.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/floor-plan-fr-b-penthouse-04-upper.webp"
+    },
+    "floor-plan-fr-ii-3ldks-a-ff": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/floor-plan-fr-ii-3ldks-a-ff.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/floor-plan-fr-ii-3ldks-a-ff.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/floor-plan-fr-ii-3ldks-a-ff.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/floor-plan-fr-ii-3ldks-a-ff.webp"
+    },
+    "floor-plan-fr-ii-3ldks-b-ff": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/floor-plan-fr-ii-3ldks-b-ff.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/floor-plan-fr-ii-3ldks-b-ff.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/floor-plan-fr-ii-3ldks-b-ff.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/floor-plan-fr-ii-3ldks-b-ff.webp"
+    },
+    "floor-plan-fr-ii-3ldks-b-typical": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/floor-plan-fr-ii-3ldks-b-typical.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/floor-plan-fr-ii-3ldks-b-typical.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/floor-plan-fr-ii-3ldks-b-typical.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/floor-plan-fr-ii-3ldks-b-typical.webp"
+    },
+    "floor-plan-fr-ii-2ldks-refuge": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/floor-plan-fr-ii-2ldks-refuge.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/floor-plan-fr-ii-2ldks-refuge.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/floor-plan-fr-ii-2ldks-refuge.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/floor-plan-fr-ii-2ldks-refuge.webp"
+    },
+    "floor-plan-fr-ii-penthouse-a-lower": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/floor-plan-fr-ii-penthouse-a-lower.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/floor-plan-fr-ii-penthouse-a-lower.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/floor-plan-fr-ii-penthouse-a-lower.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/floor-plan-fr-ii-penthouse-a-lower.webp"
+    },
+    "floor-plan-fr-ii-penthouse-a-upper": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/floor-plan-fr-ii-penthouse-a-upper.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/floor-plan-fr-ii-penthouse-a-upper.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/floor-plan-fr-ii-penthouse-a-upper.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/floor-plan-fr-ii-penthouse-a-upper.webp"
+    },
+    "floor-plan-fr-ii-penthouse-b-lower": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/floor-plan-fr-ii-penthouse-b-lower.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/floor-plan-fr-ii-penthouse-b-lower.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/floor-plan-fr-ii-penthouse-b-lower.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/floor-plan-fr-ii-penthouse-b-lower.webp"
+    },
+    "floor-plan-fr-ii-penthouse-b-upper": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/floor-plan-fr-ii-penthouse-b-upper.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/floor-plan-fr-ii-penthouse-b-upper.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/floor-plan-fr-ii-penthouse-b-upper.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/floor-plan-fr-ii-penthouse-b-upper.webp"
+    },
+    "main-pool-kids-pool": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/main-pool-kids-pool.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/main-pool-kids-pool.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/main-pool-kids-pool.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/main-pool-kids-pool.webp"
+    },
+    "lake-kids-stream": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/lake-kids-stream.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/lake-kids-stream.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/lake-kids-stream.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/lake-kids-stream.webp"
+    },
+    "yoga-deck-central-courtyard": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/yoga-deck-central-courtyard.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/yoga-deck-central-courtyard.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/yoga-deck-central-courtyard.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/yoga-deck-central-courtyard.webp"
+    },
+    "source-fountain-forest-mist-pond": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/source-fountain-forest-mist-pond.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/source-fountain-forest-mist-pond.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/source-fountain-forest-mist-pond.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/source-fountain-forest-mist-pond.webp"
+    },
+    "forest-resting-spaces": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/forest-resting-spaces.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/forest-resting-spaces.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/forest-resting-spaces.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/forest-resting-spaces.webp"
+    },
+    "japanese-design-concept-spread": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/japanese-design-concept-spread.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/japanese-design-concept-spread.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/japanese-design-concept-spread.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/japanese-design-concept-spread.webp"
+    },
+    "chinju-no-mori-sacred-forest-concept": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/chinju-no-mori-sacred-forest-concept.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/chinju-no-mori-sacred-forest-concept.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/chinju-no-mori-sacred-forest-concept.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/chinju-no-mori-sacred-forest-concept.webp"
+    },
+    "japanese-design-harmony-philosophy": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/japanese-design-harmony-philosophy.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/japanese-design-harmony-philosophy.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/japanese-design-harmony-philosophy.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/japanese-design-harmony-philosophy.webp"
+    },
+    "shakkei-miegakure-inei-design-principles": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/shakkei-miegakure-inei-design-principles.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/shakkei-miegakure-inei-design-principles.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/shakkei-miegakure-inei-design-principles.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/shakkei-miegakure-inei-design-principles.webp"
+    },
+    "ten-sen-men-seijaku-miyama-design-principles": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/ten-sen-men-seijaku-miyama-design-principles.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/ten-sen-men-seijaku-miyama-design-principles.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/ten-sen-men-seijaku-miyama-design-principles.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/ten-sen-men-seijaku-miyama-design-principles.webp"
+    },
+    "kagami-kekkai-koshi-design-principles": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/kagami-kekkai-koshi-design-principles.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/kagami-kekkai-koshi-design-principles.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/kagami-kekkai-koshi-design-principles.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/kagami-kekkai-koshi-design-principles.webp"
+    },
+    "oku-towers-architecture": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/oku-towers-architecture.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/oku-towers-architecture.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/oku-towers-architecture.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/oku-towers-architecture.webp"
+    },
+    "forest-reserve-ii-drop-off-night": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/forest-reserve-ii-drop-off-night.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/forest-reserve-ii-drop-off-night.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/forest-reserve-ii-drop-off-night.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/forest-reserve-ii-drop-off-night.webp"
+    },
+    "forest-reserve-a-drop-off-ramp": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/forest-reserve-a-drop-off-ramp.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/forest-reserve-a-drop-off-ramp.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/forest-reserve-a-drop-off-ramp.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/forest-reserve-a-drop-off-ramp.webp"
+    },
+    "bamboo-garden-ground-view": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/bamboo-garden-ground-view.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/bamboo-garden-ground-view.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/bamboo-garden-ground-view.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/bamboo-garden-ground-view.webp"
+    },
+    "gym-pool-view-private-pool": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/gym-pool-view-private-pool.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/gym-pool-view-private-pool.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/gym-pool-view-private-pool.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/gym-pool-view-private-pool.webp"
+    },
+    "kids-pool-mirage-pilotis": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/kids-pool-mirage-pilotis.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/kids-pool-mirage-pilotis.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/kids-pool-mirage-pilotis.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/kids-pool-mirage-pilotis.webp"
+    },
+    "entrance-lobby-renders": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/entrance-lobby-renders.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/entrance-lobby-renders.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/entrance-lobby-renders.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/entrance-lobby-renders.webp"
+    },
+    "interior-living-dining-room": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/interior-living-dining-room.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/interior-living-dining-room.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/interior-living-dining-room.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/interior-living-dining-room.webp"
+    },
+    "interior-master-bedroom-balcony-view": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/interior-master-bedroom-balcony-view.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/interior-master-bedroom-balcony-view.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/interior-master-bedroom-balcony-view.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/interior-master-bedroom-balcony-view.webp"
+    },
+    "the-afterglow-evening-render": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/the-afterglow-evening-render.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/the-afterglow-evening-render.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/the-afterglow-evening-render.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/the-afterglow-evening-render.webp"
+    },
+    "location-map-sector-36a-gurugram": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/originals/location-map-sector-36a-gurugram.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/location-map-sector-36a-gurugram.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/location-map-sector-36a-gurugram.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/location-map-sector-36a-gurugram.webp"
+    }
+  }
+}
