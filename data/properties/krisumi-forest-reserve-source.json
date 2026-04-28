@@ -1,41 +1,49 @@
 {
+  "_audit": "Corrective rewrite per scripts/krisumi-forest-reserve-audit.md. Source of truth: Client-Brochers/krisumi-forest-reserve/Krishumi-Forest-researve.pdf. All claims trace to a brochure page citation. Fields requiring developer confirmation are listed in _unverified.",
+
+  "_unverified": [
+    "location.latitude / location.longitude — brochure page 63 only gives Sales Lounge address (NOT project site). Current values point at Krisumi Sales Lounge / Tata project. NEEDS-CLIENT-INPUT: actual project site lat/lng from Krisumi.",
+    "atAGlance.possession — brochure does not state a possession date. RERA registered 02.05.2025; license validity dates 17.01.2029 / 27.06.2029 / 03.06.2026. Current value 'November 2030' is unverified placeholder. NEEDS-CLIENT-INPUT.",
+    "pricing[*].carpetAreaSqft / builtUpAreaSqft — brochure does not publish carpet or built-up areas. Schema requires positive numbers; current values are placeholders. NEEDS-CLIENT-INPUT: Krisumi pricing/area sheet.",
+    "atAGlance.totalTowers — brochure spec sections reference 'A & B' (one RERA) plus 'II' (separate RERA). Tower B's physical existence and floor count not visible in brochure. Source uses '3' as a working number. NEEDS-CLIENT-INPUT.",
+    "building.towers[*].floors — brochure does not state floor counts numerically. Schema requires positive integer; placeholder '30' kept here. NEEDS-CLIENT-INPUT.",
+    "videoMp4s[0] — sourced from krisumi.com generic video URL, not a brochure-confirmed Forest Reserve walkthrough. NEEDS-CLIENT-INPUT.",
+    "floorPlans — REMOVED (brochure has zero floor-plan pages). 19 plans previously sourced from krisumi.com Waterside-Residences-*.jpg. Provenance unconfirmed for The Forest Reserve specifically."
+  ],
+
   "slug": "krisumi-forest-reserve",
-  "projectName": "Krisumi Waterside Residences: The Forest Reserve",
-  "developerName": "Krisumi Corporation (Sumitomo × Krishna Group)",
+  "projectName": "The Forest Reserve",
+  "developerName": "Krisumi Corporation",
 
   "seo": {
-    "title": "Krisumi Forest Reserve Sector 36A Gurugram | Japanese-Designed Homes",
-    "description": "Krisumi Forest Reserve: 2, 3 & 4 LDK Japanese-designed homes in Sector 36A Gurugram. Sumitomo × Krishna Group JV. Possession Nov 2030.",
+    "title": "The Forest Reserve Sector 36A Gurugram | Krisumi Corporation",
+    "description": "The Forest Reserve by Krisumi Corporation: Japanese-designed apartments in Sector 36A Gurugram. RERA registered. Part of the Krisumi City masterplan.",
     "keywords": [
-      "krisumi forest reserve",
-      "krisumi waterside residences",
+      "the forest reserve gurugram",
+      "krisumi the forest reserve",
       "krisumi sector 36a",
+      "krisumi city",
       "japanese designed apartments gurugram",
       "luxury apartments dwarka expressway",
-      "3 ldk gurugram",
-      "4 ldk gurugram",
-      "sumitomo krishna joint venture",
-      "nikken sekkei india",
-      "krisumi new launch",
-      "indo japanese real estate",
-      "luxury homes sector 36a"
+      "sumitomo krishna real estate",
+      "nikken sekkei"
     ],
     "ogImageKey": "hero-banner-forest"
   },
 
   "hero": {
-    "tagline": "Japanese craftsmanship in Gurugram — a sanctuary for the spirit, where timeless design meets modern luxury.",
+    "tagline": "A sanctuary for the spirit.",
     "priceFrom": "On Request",
     "priceSuffix": "",
     "heroImageKey": "hero-banner-forest",
     "mobileHeroImageKey": "main-pool-website",
     "keyStats": [
       { "label": "Configuration", "value": "2, 3 & 4 LDK + Penthouses" },
-      { "label": "Status", "value": "New Launch" },
-      { "label": "Possession", "value": "November 2030" },
+      { "label": "Status", "value": "RERA Registered" },
       { "label": "Location", "value": "Sector 36A, Gurugram" },
-      { "label": "Distance to IGI", "value": "17 km" },
-      { "label": "Joint Venture", "value": "Sumitomo × Krishna Group" }
+      { "label": "Distance to IGI", "value": "24.8 km" },
+      { "label": "Total Area", "value": "6.49 acres" },
+      { "label": "Joint Venture", "value": "Sumitomo × Krishna" }
     ]
   },
 
@@ -43,184 +51,50 @@
     "projectType": "Residential Apartments",
     "configuration": "2 LDK, 3 LDK, 4 LDK & Penthouses",
     "unitSizes": "On Request",
-    "totalArea": "On Request",
-    "totalUnits": 600,
+    "totalArea": "6.4868 acres (5.1743 + 1.3125)",
+    "totalUnits": 638,
     "totalTowers": 3,
     "floors": "Multi-tower mid-rise",
     "possession": "November 2030",
-    "status": "Pre-Launch",
+    "status": "Under Construction",
     "reraStatus": "Registered"
   },
 
   "pricing": [
     {
       "configuration": "2 LDK",
-      "carpetAreaSqft": 1200,
-      "builtUpAreaSqft": 1500,
+      "carpetAreaSqft": 1,
+      "builtUpAreaSqft": 1,
       "totalPriceFrom": "On Request",
       "inventoryStatus": "Available"
     },
     {
       "configuration": "3 LDK",
-      "carpetAreaSqft": 1800,
-      "builtUpAreaSqft": 2250,
+      "carpetAreaSqft": 1,
+      "builtUpAreaSqft": 1,
       "totalPriceFrom": "On Request",
       "inventoryStatus": "Available"
     },
     {
       "configuration": "4 LDK",
-      "carpetAreaSqft": 2400,
-      "builtUpAreaSqft": 3000,
+      "carpetAreaSqft": 1,
+      "builtUpAreaSqft": 1,
       "totalPriceFrom": "On Request",
       "inventoryStatus": "Available"
     },
     {
       "configuration": "Penthouse",
-      "carpetAreaSqft": 4000,
-      "builtUpAreaSqft": 5000,
+      "carpetAreaSqft": 1,
+      "builtUpAreaSqft": 1,
       "totalPriceFrom": "On Request",
       "inventoryStatus": "Limited"
     }
   ],
 
-  "floorPlans": [
-    {
-      "name": "Forest Reserve A — 4LDKS Typical",
-      "configuration": "4 LDK + Servant",
-      "carpetAreaSqft": 2400,
-      "imageKey": "floor-plan-fr-a-4ldks-typical",
-      "description": "Typical-floor 4 LDK apartment in Forest Reserve A — Japanese-inspired layout with engineered wood flooring, balconies framing forest views, walk-in wardrobes."
-    },
-    {
-      "name": "Forest Reserve A — 4LDKS First Floor (FF-1)",
-      "configuration": "4 LDK + Servant",
-      "carpetAreaSqft": 2400,
-      "imageKey": "floor-plan-fr-a-4ldks-ff-1",
-      "description": "First-floor variant with extended balcony access to landscape courtyard — Forest Reserve A signature unit."
-    },
-    {
-      "name": "Forest Reserve A — 3LDK Refuge",
-      "configuration": "3 LDK",
-      "carpetAreaSqft": 1800,
-      "imageKey": "floor-plan-fr-a-3ldk-refuge",
-      "description": "Compact 3 LDK refuge unit — full Forest Reserve A amenity access, optimized for nuclear families."
-    },
-    {
-      "name": "Forest Reserve A — Penthouse A (Lower Level)",
-      "configuration": "Penthouse",
-      "carpetAreaSqft": 4000,
-      "imageKey": "floor-plan-fr-a-penthouse-a-lower",
-      "description": "Forest Reserve A signature Penthouse A — lower level layout with double-height living area."
-    },
-    {
-      "name": "Forest Reserve A — Penthouse A (Upper Level)",
-      "configuration": "Penthouse",
-      "carpetAreaSqft": 4000,
-      "imageKey": "floor-plan-fr-a-penthouse-a-upper",
-      "description": "Penthouse A upper level — private terrace gardens, master suite with ensuite walk-in wardrobe."
-    },
-    {
-      "name": "Forest Reserve A — Penthouse B (Lower)",
-      "configuration": "Penthouse",
-      "carpetAreaSqft": 4500,
-      "imageKey": "floor-plan-fr-a-penthouse-b-lower",
-      "description": "Forest Reserve A Penthouse B — alternate layout with corner positioning for triple-aspect light."
-    },
-    {
-      "name": "Forest Reserve A — Penthouse B (Upper)",
-      "configuration": "Penthouse",
-      "carpetAreaSqft": 4500,
-      "imageKey": "floor-plan-fr-a-penthouse-b-upper",
-      "description": "Penthouse B upper level layout."
-    },
-    {
-      "name": "Forest Reserve A — Penthouse B Terrace",
-      "configuration": "Penthouse",
-      "carpetAreaSqft": 4500,
-      "imageKey": "floor-plan-fr-a-penthouse-b-terrace",
-      "description": "Penthouse B terrace level — private rooftop garden and entertaining deck."
-    },
-    {
-      "name": "Forest Reserve B — 3LDKS Typical",
-      "configuration": "3 LDK + Servant",
-      "carpetAreaSqft": 1900,
-      "imageKey": "floor-plan-fr-b-3ldks-typical",
-      "description": "Typical 3 LDK + Servant in Forest Reserve B — refined finish standards with central courtyard view."
-    },
-    {
-      "name": "Forest Reserve B — 3LDKS First Floor (FF-1)",
-      "configuration": "3 LDK + Servant",
-      "carpetAreaSqft": 1900,
-      "imageKey": "floor-plan-fr-b-3ldks-ff-1",
-      "description": "First-floor variant with direct landscape access — Forest Reserve B."
-    },
-    {
-      "name": "Forest Reserve B — 3LDKS First Floor (FF-2)",
-      "configuration": "3 LDK + Servant",
-      "carpetAreaSqft": 1900,
-      "imageKey": "floor-plan-fr-b-3ldks-ff-2",
-      "description": "Alternate first-floor variant — Forest Reserve B."
-    },
-    {
-      "name": "Forest Reserve B — 2LDKS Refuge",
-      "configuration": "2 LDK + Servant",
-      "carpetAreaSqft": 1300,
-      "imageKey": "floor-plan-fr-b-2ldks-refuge",
-      "description": "Compact 2 LDK + Servant refuge unit in Forest Reserve B."
-    },
-    {
-      "name": "Forest Reserve B — Penthouse 01",
-      "configuration": "Penthouse",
-      "carpetAreaSqft": 4200,
-      "imageKey": "floor-plan-fr-b-penthouse-01-lower",
-      "description": "Forest Reserve B Penthouse 01 — lower level."
-    },
-    {
-      "name": "Forest Reserve B — Penthouse 04",
-      "configuration": "Penthouse",
-      "carpetAreaSqft": 4500,
-      "imageKey": "floor-plan-fr-b-penthouse-04-lower",
-      "description": "Forest Reserve B Penthouse 04 — lower level with expansive entertaining area."
-    },
-    {
-      "name": "Forest Reserve II — 3LDKS Type A",
-      "configuration": "3 LDK + Servant",
-      "carpetAreaSqft": 2000,
-      "imageKey": "floor-plan-fr-ii-3ldks-a-ff",
-      "description": "Type A 3 LDK in Forest Reserve II — premium variant with VRV/VRF air-conditioned lobbies."
-    },
-    {
-      "name": "Forest Reserve II — 3LDKS Type B",
-      "configuration": "3 LDK + Servant",
-      "carpetAreaSqft": 2000,
-      "imageKey": "floor-plan-fr-ii-3ldks-b-ff",
-      "description": "Type B 3 LDK in Forest Reserve II — alternate orientation with extended balcony."
-    },
-    {
-      "name": "Forest Reserve II — 2LDKS Refuge",
-      "configuration": "2 LDK + Servant",
-      "carpetAreaSqft": 1400,
-      "imageKey": "floor-plan-fr-ii-2ldks-refuge",
-      "description": "Compact 2 LDK in Forest Reserve II with the higher Reserve II finish standards."
-    },
-    {
-      "name": "Forest Reserve II — Penthouse A",
-      "configuration": "Penthouse",
-      "carpetAreaSqft": 4500,
-      "imageKey": "floor-plan-fr-ii-penthouse-a-lower",
-      "description": "Forest Reserve II Penthouse A — premium tier penthouse with full Reserve II amenities."
-    },
-    {
-      "name": "Forest Reserve II — Penthouse B",
-      "configuration": "Penthouse",
-      "carpetAreaSqft": 4800,
-      "imageKey": "floor-plan-fr-ii-penthouse-b-lower",
-      "description": "Forest Reserve II Penthouse B — largest variant with rooftop garden and pilotis-level access."
-    }
-  ],
+  "floorPlans": [],
 
   "building": {
-    "structure": "Earthquake-resistant RCC framed structure with high-strength concrete and advanced construction technology",
+    "structure": "RCC framed structure",
     "towers": [
       { "name": "The Forest Reserve A", "floors": 30 },
       { "name": "The Forest Reserve B", "floors": 30 },
@@ -233,108 +107,86 @@
 
   "amenities": {
     "wellness": [
-      { "name": "Yoga Deck", "description": "Open-air yoga and meditation deck at the heart of the central courtyard.", "imageKey": "yoga-deck-website" },
-      { "name": "Resting Place", "description": "Quiet seating zones for contemplation and pause." },
-      { "name": "Mist Pond", "description": "Misty water feature inspired by Miyama (deep forest) — calming, immersive ambience." }
+      { "name": "Mist Pond", "description": "Brochure page 57 — common-area amenity grid." },
+      { "name": "Resting Place", "description": "Brochure page 57 — quiet seating zones in the landscape." }
     ],
     "sports": [
-      { "name": "Forest Reserve Gym", "description": "Modern gym overlooking the pool — exclusive to Forest Reserve.", "imageKey": "gym-pool-view-private-pool" },
-      { "name": "Lap Pool", "description": "Sleek lap pool for uninterrupted morning swims — exclusive to Forest Reserve." },
-      { "name": "Kid's Water Park", "description": "Safe, playful water park with interactive features for children." }
+      { "name": "Lap Pool", "description": "Brochure page 58 — exclusive to The Forest Reserve.", "imageKey": "main-pool-website" },
+      { "name": "Gym", "description": "Brochure page 58 — exclusive to The Forest Reserve.", "imageKey": "gym-pool-view-private-pool" }
     ],
     "family": [
-      { "name": "Kid's Stream", "description": "Children's water-play stream at the heart of the landscape.", "imageKey": "kids-stream-website" },
-      { "name": "Kid's Play Area", "description": "Vibrant outdoor play zone — safe, exploratory, immersed in nature." },
-      { "name": "Multipurpose Hall", "description": "Hall with modern amenities for family events and community gatherings." },
-      { "name": "Amphitheatre", "description": "Versatile open-air event space for performances and family gatherings." },
-      { "name": "Outdoor Gazebo", "description": "Serene outdoor gazebo with peaceful surroundings." }
+      { "name": "Outdoor Gazebo", "description": "Brochure page 57 — common-area amenity (brochure spelling: 'Outdoor Gazibo')." },
+      { "name": "Multipurpose Hall", "description": "Brochure page 57 — common-area amenity for events." },
+      { "name": "Amphitheatre", "description": "Brochure page 57 — open-air event space." },
+      { "name": "Kid's Stream", "description": "Brochure page 57 — children's water-play feature.", "imageKey": "kids-stream-website" },
+      { "name": "Kid's Water Park", "description": "Brochure page 57 — children's water park." },
+      { "name": "Kid's Play Area", "description": "Brochure page 57 — outdoor play zone." }
     ],
     "lifestyle": [
-      { "name": "Pool Bar", "description": "Elegant poolside bar — Krisumi's signature reflection of Japanese serenity meets evening sociability.", "imageKey": "main-pool-website" },
-      { "name": "Source Fountain", "description": "Architectural fountain feature with continuous flowing water at the project entrance.", "imageKey": "source-fountain-website" },
-      { "name": "Waterscape", "description": "Continuous water-feature landscape connecting key social spaces." },
-      { "name": "PDR Dining", "description": "Private Dining Room — exclusive to Forest Reserve, designed for intimate dinners." },
-      { "name": "Bamboo Garden", "description": "Bamboo-framed garden walk — direct interpretation of Japanese landscape tradition.", "imageKey": "bamboo-garden-ground-view" },
-      { "name": "Forest Mist Pond", "description": "Atmospheric water feature with mist effect — calming, contemplative.", "imageKey": "forest-mist-pond-website" }
+      { "name": "Pool Bar", "description": "Brochure page 57 — poolside bar.", "imageKey": "main-pool-website" },
+      { "name": "Waterscape", "description": "Brochure page 57 — landscape water-feature." },
+      { "name": "Source Fountain", "description": "Brochure page 57 — architectural fountain.", "imageKey": "source-fountain-website" },
+      { "name": "PDR Dining", "description": "Brochure page 58 — Private Dining Room exclusive to The Forest Reserve." }
     ],
-    "sustainability": [
-      { "name": "Rainwater Harvesting", "description": "Water-management system reduces dependence on municipal supply." },
-      { "name": "Water Recycling", "description": "On-site water recycling reduces consumption efficiently." },
-      { "name": "LED Lighting Throughout", "description": "All common areas use LED for materially lower energy consumption." },
-      { "name": "Solar Power for Common Areas", "description": "Solar panels generate clean energy for clubhouse and common areas." },
-      { "name": "Low-flow Fixtures", "description": "Water-efficient fixtures across all units reduce daily water usage." },
-      { "name": "Sustainable Materials", "description": "Eco-friendly, low-emission materials and durable finishes throughout." }
-    ]
+    "sustainability": []
   },
 
   "location": {
-    "addressLine": "Krisumi Waterside Residences The Forest Reserve, Sector 36A",
+    "addressLine": "The Forest Reserve, Krisumi City",
     "locality": "Sector 36A",
     "city": "Gurugram",
     "state": "Haryana",
     "pincode": "122004",
-    "latitude": 28.4180,
+    "latitude": 28.418,
     "longitude": 76.9732,
-    "googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3514.0!2d76.9732!3d28.4180!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sKrisumi+Waterside+Residences!5e0!3m2!1sen!2sin!4v1714300000000"
+    "googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3514.0!2d76.9732!3d28.4180!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sKrisumi+City+Sector+36A+Gurugram!5e0!3m2!1sen!2sin!4v1714300000000"
   },
 
   "connectivity": [
-    { "destination": "NH-48 (Delhi-Jaipur Expressway)", "distanceKm": 1.5, "driveTimeMinutes": 3, "category": "other" },
-    { "destination": "Dwarka Expressway", "distanceKm": 0.5, "driveTimeMinutes": 2, "category": "other" },
-    { "destination": "Indira Gandhi International Airport", "distanceKm": 17, "driveTimeMinutes": 25, "category": "airport" },
-    { "destination": "Cyber City Gurugram", "distanceKm": 18, "driveTimeMinutes": 30, "category": "business" },
-    { "destination": "Vatika Business Park", "distanceKm": 8, "driveTimeMinutes": 18, "category": "business" },
-    { "destination": "Global City Gurugram", "distanceKm": 5, "driveTimeMinutes": 10, "category": "business" },
-    { "destination": "Delhi Public School", "distanceKm": 3.5, "driveTimeMinutes": 8, "category": "education" },
-    { "destination": "St. Xaviers High School", "distanceKm": 4, "driveTimeMinutes": 10, "category": "education" },
-    { "destination": "Hyatt Regency Gurugram", "distanceKm": 6, "driveTimeMinutes": 12, "category": "other" },
-    { "destination": "DoubleTree by Hilton", "distanceKm": 5, "driveTimeMinutes": 11, "category": "other" },
-    { "destination": "Radisson Hotel", "distanceKm": 7, "driveTimeMinutes": 15, "category": "other" },
-    { "destination": "Sapphire 83 Mall", "distanceKm": 9, "driveTimeMinutes": 18, "category": "retail" },
-    { "destination": "Ambience Mall Gurugram", "distanceKm": 16, "driveTimeMinutes": 28, "category": "retail" },
-    { "destination": "Yashobhoomi Convention Centre", "distanceKm": 14, "driveTimeMinutes": 22, "category": "other" },
-    { "destination": "Medanta Medicity", "distanceKm": 16, "driveTimeMinutes": 30, "category": "healthcare" },
-    { "destination": "Apnoghar Amusement Park", "distanceKm": 4, "driveTimeMinutes": 8, "category": "other" }
+    { "destination": "Northern Peripheral Road (Dwarka Expressway)", "distanceKm": 1, "driveTimeMinutes": 5, "category": "other" },
+    { "destination": "Pataudi Road", "distanceKm": 1.6, "driveTimeMinutes": 5, "category": "other" },
+    { "destination": "Hero Honda Chowk", "distanceKm": 5.6, "driveTimeMinutes": 10, "category": "other" },
+    { "destination": "Rajiv Chowk", "distanceKm": 8.6, "driveTimeMinutes": 15, "category": "other" },
+    { "destination": "Fortis Hospital", "distanceKm": 9.2, "driveTimeMinutes": 15, "category": "healthcare" },
+    { "destination": "Medanta Hospital", "distanceKm": 9.6, "driveTimeMinutes": 15, "category": "healthcare" },
+    { "destination": "IFFCO Chowk", "distanceKm": 13.6, "driveTimeMinutes": 20, "category": "other" },
+    { "destination": "MG Road", "distanceKm": 14.6, "driveTimeMinutes": 22, "category": "other" },
+    { "destination": "Cyber City", "distanceKm": 17, "driveTimeMinutes": 25, "category": "business" },
+    { "destination": "Ambience Mall", "distanceKm": 18, "driveTimeMinutes": 25, "category": "retail" },
+    { "destination": "Dwarka", "distanceKm": 19, "driveTimeMinutes": 25, "category": "other" },
+    { "destination": "Indira Gandhi International Airport", "distanceKm": 24.8, "driveTimeMinutes": 35, "category": "airport" }
   ],
 
   "neighbourhood": {
     "title": "The Neighbourhood",
     "paragraphs": [
-      "Sector 36A sits at the confluence of two of Gurugram's widest roads — the Northern Peripheral Road (Dwarka Expressway) and the Central Peripheral Road. This is one of the most strategically positioned addresses in NCR, with NH-48 (Delhi-Jaipur Expressway) just three minutes away and the IGI Airport reachable in 17 km via a signal-free corridor. The Forest Reserve sits inside the larger Krisumi City masterplan — a township already shaped by the matured Waterfall Residences project that has been the area's quality benchmark since 2019.",
-      "What sets this address apart is its unusual buffer of greenery. Sobha Aranya and several other premium NCR projects have built-in parks; Forest Reserve is encircled by 220 acres of green zone and an additional 50-metre green belt. Combined with the 'Chinju No Mori' design concept that anchors the project's central courtyard — an ancient Japanese sacred-grove ideal — the everyday experience is closer to a forest retreat than a typical Gurugram tower complex.",
-      "Daily logistics work in your favour. Delhi Public School and St. Xaviers High School sit within 4 km. Hyatt Regency Gurugram, DoubleTree by Hilton, and Radisson are all within 7 km — useful for weekend relaxation, business meetings, and visiting-family overflow. Vatika Business Park and Global City are close enough to walk during pleasant months. Cyber City reaches in 30 minutes via NH-48; Medanta Medicity is 16 km. Sapphire 83 Mall and Apnoghar amusement park handle weekend retail and family days within 10 km.",
-      "The corridor is in active build-out. Krisumi City itself has Waterfall Residences (delivered/handed over), Waterfall Suites, Waterfall Suites II, the original Waterside Residences (in active construction), and now Forest Reserve as the latest addition. Buyers entering Forest Reserve at launch participate in the densification curve before the full corridor matures — a window that historically rewards patient capital."
+      "The Forest Reserve is part of the Krisumi City Group Housing Colony in Sector 36A, Gurugram, on land admeasuring 6.4868 acres across two RERA registrations: 5.1743 acres for The Forest Reserve (Phase I) and 1.3125 acres for The Forest Reserve - II. The site sits along the Dwarka Expressway (Northern Peripheral Road) corridor with the Central Peripheral Road within minutes of the project entrance.",
+      "From the brochure's location map, key destinations are: Indira Gandhi International Airport at 24.8 km, Cyber City at 17 km, IFFCO Chowk at 13.6 km, MG Road at 14.6 km, Medanta Hospital at 9.6 km, Fortis Hospital at 9.2 km, and Hero Honda Chowk at 5.6 km. The Northern Peripheral Road frontage is at 1 km and Pataudi Road at 1.6 km.",
+      "The Forest Reserve is the latest Krisumi project in Sector 36A. Other Krisumi projects shown in the brochure are Waterfall Residences, Waterfall Suites, Waterfall Suites II, and Waterside Residences."
     ],
     "highlights": [
-      "Sector 36A — confluence of NPR (Dwarka Expressway) and CPR",
-      "3-minute drive to NH-48 (Delhi-Jaipur Expressway)",
-      "17 km signal-free run to IGI Airport via Dwarka Expressway",
-      "Encircled by 220 acres of green zone + 50-metre green belt",
-      "Inside the Krisumi City masterplan with mature township amenities",
-      "Adjacent to Gurugram's emerging Global City business centre",
-      "Planned Mass Rapid Transit System along NPR and CPR",
-      "Cyber City, Medanta, Ambience Mall all within 30-minute reach"
+      "Sector 36A, Gurugram — part of the Krisumi City masterplan",
+      "Northern Peripheral Road (Dwarka Expressway) — 1 km",
+      "Indira Gandhi International Airport — 24.8 km",
+      "Cyber City — 17 km",
+      "Medanta Hospital — 9.6 km",
+      "Hero Honda Chowk — 5.6 km"
     ],
     "cards": [
       {
         "icon": "Sparkles",
-        "label": "Indo-Japanese design heritage",
-        "body": "Sumitomo Corporation × Krishna Group — India's first Indo-Japanese mega real-estate JV. Architecture by Nikken Sekkei (No. 1 architects in Japan), interiors by A.N.D Nomura."
+        "label": "Indo-Japanese real estate development",
+        "body": "Krisumi Corporation is the joint venture between Sumitomo Corporation and the Krishna Group, with architecture by Nikken Sekkei (brochure page 7)."
       },
       {
         "icon": "MapPin",
-        "label": "Confluence of two expressways",
-        "body": "NPR (Dwarka Expressway) and CPR meet at this address. Three-minute drive to NH-48. The most efficient corridor connectivity in western Gurugram."
+        "label": "Krisumi City masterplan",
+        "body": "Group Housing Colony in Sector 36A, Gurugram, with The Forest Reserve and The Forest Reserve - II as the latest phases (brochure page 63)."
       },
       {
         "icon": "Landmark",
-        "label": "270-acre green buffer",
-        "body": "Encircled by 220 acres of green zone + a 50-metre green belt. Forest Reserve genuinely fits within a sustainable, low-density urban context."
-      },
-      {
-        "icon": "TrendingUp",
-        "label": "Krisumi City corridor maturing",
-        "body": "Multiple Krisumi projects already delivered or under construction. Forest Reserve enters as the latest premium tier — corridor effect already visible in resale data."
+        "label": "Chinju No Mori — sacred grove",
+        "body": "The Forest Reserve is built on the Japanese concept of Chinju No Mori — a sacred haven for kami (brochure page 20)."
       }
     ],
     "backdropImageKey": "connectivity-map-illustrated"
@@ -342,17 +194,15 @@
 
   "builder": {
     "name": "Krisumi Corporation",
-    "tagline": "India's First Indo-Japanese Mega Real Estate JV",
-    "description": "Krisumi Corporation is India's first major real-estate joint venture between Sumitomo Corporation Japan and Krishna Group India. Sumitomo brings 400+ years of Japanese craftsmanship pedigree (founded 1615) and global trading and infrastructure expertise. Krishna Group is one of India's largest automotive component manufacturers, with Krishna Maruti as its flagship company, plus diversified interests across automotive, travel, media, entertainment seating, and real estate. This partnership embodies five Japanese principles that guide every Krisumi project: Omotenashi (hospitality — anticipating needs and exceeding expectations), Monozukuri (craftsmanship — blending traditional concepts with modern innovation), Kaizen (continuous improvement), Wa (harmony), and Genchi Genbutsu (going to the source to understand). All Krisumi projects in Gurugram — Waterfall Residences, Waterfall Suites, Waterfall Suites II, Waterside Residences, and now The Forest Reserve — are designed by Nikken Sekkei (rated India's No. 1 Japanese architects), with interiors by A.N.D Nomura, project management by Nikken Sekkei Construction Management, and quality control by the same Japanese-led team.",
-    "foundedYear": 2017,
-    "headquarters": "Gurugram, India (Sumitomo HQ: Tokyo, Japan)",
+    "tagline": "Indo-Japanese real estate development",
+    "description": "Krisumi Corporation Private Limited is the developer of the Krisumi City Group Housing Colony in Sector 36A, Gurugram. The Forest Reserve and The Forest Reserve - II are part of this colony, registered separately with HARERA Gurugram (brochure page 63). The architectural design is by Nikken Sekkei, Japan's No. 1 architectural firm (brochure page 7). The brochure positions Krisumi as a partnership between Krishna Group — one of India's largest automotive component manufacturers, with Krishna Maruti Limited as its flagship company and 17 Joint Ventures with global leaders (brochure page 4) — and Sumitomo Corporation, the 400-year-old Sumitomo group, a Fortune 500 company with annual revenues of $47 Billion USD (FY 2024-25), 80,000 employees across 900 group companies in 65 countries, and over 300 world-class projects delivered across Japan, USA, China and Indonesia (brochure page 5). Krisumi's approach is guided by five Japanese principles: Wa (Harmony), Omotenashi (Hospitality), Monozukuri (Craftsmanship), Seijitsu (Integrity), and Iki (Sophistication) — brochure page 3.",
+    "headquarters": "Gurugram, India",
     "websiteUrl": "https://krisumi.com",
     "notableProjects": [
-      "Krisumi Waterfall Residences (delivered)",
+      "Krisumi Waterfall Residences",
       "Krisumi Waterfall Suites",
       "Krisumi Waterfall Suites II",
-      "Krisumi Waterside Residences",
-      "Krisumi City — integrated township masterplan"
+      "Krisumi Waterside Residences"
     ]
   },
 
@@ -364,40 +214,40 @@
   },
 
   "investmentThesis": {
-    "headline": "Why The Forest Reserve Is a Patient-Capital Play on Krisumi City",
+    "headline": "Brochure-grounded summary",
     "paragraphs": [
-      "Three structural factors make Forest Reserve a deliberate long-term hold, not a flip. First is the developer pedigree. Krisumi's Indo-Japanese JV between Sumitomo Corporation (a 400-year-old institution founded in 1615) and Krishna Group is genuinely without parallel in Indian real estate. Sumitomo's reputation for delivery discipline and Krishna's local execution combine to address the single biggest buyer anxiety in Indian real estate — handover delay and quality variance. Krisumi has demonstrated this with Waterfall Residences (delivered in 2025) and is now scaling the model.",
-      "The second factor is the design quality and conceptual depth. Forest Reserve is anchored on the ancient Japanese 'Chinju No Mori' concept — a sacred grove that protects spirit and people. This isn't decorative. The design integrates nine Japanese principles (Shakkei, Mie Gakure, In-ei, Ten Sen Men, Seijaku, Miyama, Kagami, Kekkai, Koshi, Oku) directly into the architecture and landscape. For premium NCR buyers — increasingly seeking authentic differentiation rather than commodity luxury — this depth is a defensible moat. Nikken Sekkei (Japan's No. 1 architects) signs the project; A.N.D Nomura handles interiors with the same Japanese discipline.",
-      "The third factor is the corridor and timing. Sector 36A sits at the confluence of NPR (Dwarka Expressway) and CPR — the two widest arterials in Gurugram. The 220-acre green zone encircling the site is irreplaceable: protected and stable. Krisumi City as a whole has already established a price benchmark via Waterfall Residences (delivered 2025); Forest Reserve enters at the New Launch tier with November 2030 possession, which creates a five-year window of construction-linked appreciation as the corridor densifies. Branded developer + irreplaceable green buffer + early entry into a maturing corridor = a defensible long-term position."
+      "The Forest Reserve introduces itself with a single Japanese concept on brochure page 20: Chinju No Mori — a grove or forest that serves as a sacred haven for kami, the divine spirits that safeguard the land and its people. Within this sanctuary, nature, humanity and spirituality dwell in perfect harmony.",
+      "The brochure expresses the design philosophy through thirteen Japanese principles arranged across pages 22, 24, 26, 28, and 30: Minamoto (The Source), Engawa (Veranda), Kaiyu Sei (Strollable Gardens), Shakkei (The Bigger Picture), Mie Gakure (Show and Hide), In-ei (Light and Dark), Ten Sen Men (Point · Line · Surface), Seijaku (Stillness), Miyama (Deep Forest), Kagami (Mirror), Kekkai (Boundary), Koshi (Latticework), and Oku (Embracing the Secrecy).",
+      "The development is registered with HARERA Gurugram under two registrations: The Forest Reserve (RC/REP/HARERA/GGM/944/676/2025/47, 5.1743 acres, 298 residential units plus 53 EWS units) and The Forest Reserve - II (RC/REP/HARERA/GGM/945/677/2025/48, 1.3125 acres, 244 residential units plus 43 EWS units). Both registrations are dated 02.05.2025 (brochure page 63)."
     ],
     "dataPoints": [
-      { "label": "Possession", "value": "November 2030" },
-      { "label": "Distance to IGI Airport", "value": "17 km" },
-      { "label": "Distance to NH-48", "value": "3 min drive" },
-      { "label": "Green zone buffer", "value": "220 acres + 50m belt" },
-      { "label": "Indo-Japanese JV", "value": "Since 2017" },
-      { "label": "Sumitomo founded", "value": "1615 (410+ years)" }
+      { "label": "Total project area", "value": "6.4868 acres" },
+      { "label": "Total residential units", "value": "542" },
+      { "label": "Total EWS units", "value": "96" },
+      { "label": "Distance to IGI Airport", "value": "24.8 km" },
+      { "label": "Distance to NPR (Dwarka Expressway)", "value": "1 km" },
+      { "label": "RERA dated", "value": "02.05.2025" }
     ],
     "cards": [
       {
         "icon": "Landmark",
-        "label": "Indo-Japanese pedigree",
-        "body": "Sumitomo (400+ years) × Krishna Group. Designed by Nikken Sekkei, India's No. 1 Japanese architectural firm. Quality is non-negotiable in this DNA."
+        "label": "Chinju No Mori",
+        "body": "The Forest Reserve is built on the Japanese concept of Chinju No Mori — a sacred grove. Brochure page 20."
       },
       {
-        "icon": "ShieldCheck",
-        "label": "Five Japanese principles",
-        "body": "Omotenashi (hospitality), Monozukuri (craftsmanship), Kaizen (improvement), Wa (harmony), Genchi Genbutsu (going to source). Embedded in every design choice."
+        "icon": "Sparkles",
+        "label": "Thirteen design principles",
+        "body": "Minamoto, Engawa, Kaiyu Sei, Shakkei, Mie Gakure, In-ei, Ten Sen Men, Seijaku, Miyama, Kagami, Kekkai, Koshi, Oku. Brochure pages 22–30."
       },
       {
         "icon": "MapPin",
-        "label": "Sector 36A — corridor sweet spot",
-        "body": "Confluence of Dwarka Expressway and CPR. 17 km to IGI in signal-free drive. Encircled by 220-acre green zone."
+        "label": "Sector 36A, Gurugram",
+        "body": "Krisumi City Group Housing Colony, on 6.4868 acres across Phase I and Phase II. Brochure page 63."
       },
       {
-        "icon": "Calendar",
-        "label": "Five-year construction-linked window",
-        "body": "Launch entry, 2030 possession. Pre-handover phase coincides with corridor maturation. Historical pattern: branded launches in early sectors deliver disproportionate appreciation in this window."
+        "icon": "ShieldCheck",
+        "label": "Five Krisumi Way principles",
+        "body": "Wa (Harmony), Omotenashi (Hospitality), Monozukuri (Craftsmanship), Seijitsu (Integrity), Iki (Sophistication). Brochure page 3."
       }
     ],
     "backdropImageKey": "the-afterglow-evening-render"
@@ -406,35 +256,31 @@
   "similarProperties": ["sobha-aranya", "emaar-serenity-hills"],
 
   "faqs": [
-    { "question": "Where is Krisumi Forest Reserve located?", "answer": "Krisumi Forest Reserve is located in Sector 36A, Gurugram, at the confluence of the Dwarka Expressway (Northern Peripheral Road) and the Central Peripheral Road. It is a 3-minute drive to NH-48 (Delhi-Jaipur Expressway) and 17 km from Indira Gandhi International Airport via a signal-free corridor." },
-    { "question": "Who is the developer of Krisumi Forest Reserve?", "answer": "Forest Reserve is developed by Krisumi Corporation — India's first Indo-Japanese mega real-estate joint venture between Sumitomo Corporation Japan (founded 1615, 400+ years old) and Krishna Group India. Architecture is led by Nikken Sekkei, Japan's No. 1 architectural firm, with interiors by A.N.D Nomura and project management by Nikken Sekkei Construction Management." },
-    { "question": "What configurations are available at Forest Reserve?", "answer": "Forest Reserve offers 2 LDK, 3 LDK, 4 LDK, and Penthouse residences, distributed across three buildings: The Forest Reserve A, The Forest Reserve B, and The Forest Reserve II. Forest Reserve A and B have one set of finish standards; Forest Reserve II has elevated specifications including VRV/VRF air-conditioned lobbies and premium common-area finishes." },
-    { "question": "When is possession of Forest Reserve scheduled?", "answer": "Possession of Krisumi Forest Reserve is scheduled for November 2030. The project is RERA-registered and currently in the New Launch / Pre-Launch phase. Buyers should refer to their Agreement for Sale for the binding possession date applicable to their specific unit." },
-    { "question": "What is the RERA registration number?", "answer": "Krisumi Forest Reserve is registered with the Haryana RERA under registration numbers RC/REP/HARERA/GGN/944/676/2025/47 and RC/REP/HARERA/GGN/944/677/2025/47, both dated 02 May 2025. Registration details are verifiable on the HARERA website at haryanarera.gov.in under 'Registered Projects'." },
-    { "question": "What is special about the Japanese design approach?", "answer": "Forest Reserve is built on the ancient Japanese concept of 'Chinju No Mori' — a sacred grove that protects the land and its inhabitants. Nine Japanese design principles are integrated throughout: Shakkei (the bigger picture), Mie Gakure (show and hide), In-ei (light and dark), Ten Sen Men (point line surface), Seijaku (stillness), Miyama (deep forest), Kagami (mirror), Kekkai (boundary), Koshi (latticework), and Oku (embracing secrecy). These translate directly into balcony framing, light/shadow play, water features, and tower placement." },
-    { "question": "What amenities are exclusive to Forest Reserve residents?", "answer": "Forest Reserve residents have access to all common Krisumi City amenities (pool bar, multipurpose hall, amphitheatre, kid's stream, kid's water park, kid's play area, mist pond, source fountain, resting place, outdoor gazebo) plus three Forest Reserve-exclusive amenities: a private gymnasium, lap pool, and PDR (Private Dining Room) for intimate residents-only dining." },
-    { "question": "What is the sustainability story?", "answer": "Forest Reserve is encircled by 220 acres of green zone and a 50-metre green belt. The project itself integrates rainwater harvesting, water recycling, low-flow fixtures, LED lighting throughout common areas, solar power for common spaces, and eco-friendly building materials. The 'Chinju No Mori' central courtyard is designed as a sacred grove preserving native landscape rather than a manicured garden." },
-    { "question": "How does Forest Reserve fit within Krisumi City?", "answer": "Forest Reserve is the latest addition to Krisumi City — Krisumi's integrated township masterplan in Sector 36A. The masterplan includes Waterfall Residences (delivered 2025), Waterfall Suites and Suites II (in delivery), the original Waterside Residences (in construction), and now Forest Reserve. Residents of Forest Reserve gain access to the broader Krisumi City social infrastructure already in place." },
-    { "question": "Is the price available for Forest Reserve?", "answer": "Detailed pricing for Krisumi Forest Reserve is available on request. The project is in the New Launch / Pre-Launch phase, and Krisumi typically releases pricing through its sales team and authorized channel partners. Cornerhouse Realty can connect interested buyers with the developer for current pricing, payment plans, and unit availability." }
+    { "question": "Where is The Forest Reserve located?", "answer": "The Forest Reserve is located in Sector 36A, Gurugram, as part of the Krisumi City Group Housing Colony. The brochure's location map (page 60) lists Indira Gandhi International Airport at 24.8 km, Cyber City at 17 km, Medanta Hospital at 9.6 km, and Northern Peripheral Road (Dwarka Expressway) at 1 km from the site." },
+    { "question": "Who is the developer?", "answer": "The Forest Reserve and The Forest Reserve - II are developed by Krisumi Corporation Private Limited. The brochure describes Krisumi as a partnership between Krishna Group India and Sumitomo Corporation Japan (brochure pages 4, 5, 6, 7). Architecture is by Nikken Sekkei, Japan's No. 1 architectural firm (brochure page 7)." },
+    { "question": "What configurations are available?", "answer": "The brochure references 2 LDK, 3 LDK, 4 LDK and Penthouse residences across three building designations — The Forest Reserve A, The Forest Reserve B (one combined RERA registration covering A and B), and The Forest Reserve II (separately registered)." },
+    { "question": "What is the RERA registration number?", "answer": "The Forest Reserve is registered with the Haryana Real Estate Regulatory Authority (HARERA Gurugram) under two registration numbers, both dated 02.05.2025: The Forest Reserve — RC/REP/HARERA/GGM/944/676/2025/47, and The Forest Reserve - II — RC/REP/HARERA/GGM/945/677/2025/48 (brochure page 63). Details are verifiable at haryanarera.gov.in under 'Registered Projects'." },
+    { "question": "What is the project area and unit count?", "answer": "Per the brochure RERA disclosure (page 63), The Forest Reserve covers 5.1743 acres with 298 residential units and 53 EWS units. The Forest Reserve - II covers 1.3125 acres with 244 residential units and 43 EWS units. Combined: 6.4868 acres, 542 residential units, and 96 EWS units." },
+    { "question": "What is the design concept?", "answer": "The Forest Reserve is built on the Japanese concept of Chinju No Mori — a grove or forest that serves as a sacred haven for kami, the divine spirits that safeguard the land and its people (brochure page 20). The brochure expresses this through thirteen Japanese design principles across pages 22 to 30: Minamoto, Engawa, Kaiyu Sei, Shakkei, Mie Gakure, In-ei, Ten Sen Men, Seijaku, Miyama, Kagami, Kekkai, Koshi, and Oku." },
+    { "question": "What amenities are exclusive to The Forest Reserve?", "answer": "Brochure page 58 lists three amenities exclusive to The Forest Reserve, on the ground floor: Lap Pool, PDR Dining (Private Dining Room), and Gym. All Krisumi City residents share the common-area amenities listed on brochure page 57: Pool Bar, Outdoor Gazebo, Waterscape, Multipurpose Hall, Amphitheatre, Kid's Stream, Kid's Water Park, Kid's Play Area, Mist Pond, Resting Place, and Source Fountain." },
+    { "question": "What are the Krisumi Way principles?", "answer": "Brochure page 3 names five Krisumi Way principles: Wa (Harmony), Omotenashi (Hospitality), Monozukuri (Craftsmanship), Seijitsu (Integrity), and Iki (Sophistication)." },
+    { "question": "How does The Forest Reserve fit within Krisumi City?", "answer": "Per brochure page 63, The Forest Reserve and The Forest Reserve - II are part of the Group Housing Colony named 'Krisumi City' in Sector 36A, Gurugram. Brochure pages 6 and 7 introduce the broader Krisumi portfolio: Waterfall Residences, Waterfall Suites, Waterfall Suites II, and Waterside Residences." },
+    { "question": "Is the price available?", "answer": "Detailed pricing is not published in the brochure. For current pricing, payment plans, and unit availability, please contact Krisumi via the brochure's listed channels — sales@krisumi.com, +91 9513270083, +91 87226 87226 — or via Cornerhouse Realty." }
   ],
 
   "rera": {
-    "number": "RC/REP/HARERA/GGN/944/676/2025/47",
+    "number": "RC/REP/HARERA/GGM/944/676/2025/47",
     "registeredDate": "2025-05-02",
     "authority": "HARERA",
     "state": "Haryana",
     "verificationUrl": "https://haryanarera.gov.in"
   },
 
-  "videos": {
-    "tagline": "A glimpse into Krisumi's Indo-Japanese craftsmanship"
-  },
-
   "videoMp4s": [
     {
       "url": "https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/krisumi-video.mp4",
-      "label": "Krisumi Forest Reserve Walkthrough",
-      "description": "A cinematic walkthrough of the Indo-Japanese design philosophy at Krisumi Forest Reserve.",
+      "label": "Krisumi walkthrough",
+      "description": "Generic Krisumi walkthrough hosted on krisumi.com — not a Forest Reserve specific film.",
       "posterImageKey": "video-thumbnail"
     }
   ],
@@ -447,5 +293,61 @@
 
   "brochureUrl": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/brochure/Krishumi-Forest-researve.pdf",
 
-  "disclaimerAddendum": "Krisumi Waterside Residences: The Forest Reserve is being developed by Krisumi Corporation in partnership with Sumitomo Corporation Japan and Krishna Group India. HARERA Registration Nos. RC/REP/HARERA/GGN/944/676/2025/47 and RC/REP/HARERA/GGN/944/677/2025/47, both dated 2 May 2025. The project is in the New Launch / Pre-Launch phase with possession scheduled for November 2030. Pricing is available on request and is subject to GST, stamp duty, registration, Preferential Location Charges (PLC), Floor Rise Charges, club membership, and other statutory dues. Floor plans, configurations, finishes, and specifications shown are conceptual artist's impressions for representational purposes — actual designs may vary and are subject to authority approvals. Prospective purchasers are advised to verify all approved details on the HARERA website at haryanarera.gov.in before booking."
+  "gallery": {
+    "enabled": true,
+    "exclude": [
+      "floor-plan-fr-a-4ldks-typical",
+      "floor-plan-fr-a-4ldks-ff-1",
+      "floor-plan-fr-a-4ldks-ff-2",
+      "floor-plan-fr-a-3ldk-refuge",
+      "floor-plan-fr-a-penthouse-a-lower",
+      "floor-plan-fr-a-penthouse-a-upper",
+      "floor-plan-fr-a-penthouse-b-lower",
+      "floor-plan-fr-a-penthouse-b-upper",
+      "floor-plan-fr-a-penthouse-b-terrace",
+      "floor-plan-fr-b-3ldks-typical",
+      "floor-plan-fr-b-3ldks-ff-1",
+      "floor-plan-fr-b-3ldks-ff-2",
+      "floor-plan-fr-b-2ldks-refuge",
+      "floor-plan-fr-b-penthouse-01-lower",
+      "floor-plan-fr-b-penthouse-01-upper",
+      "floor-plan-fr-b-penthouse-04-lower",
+      "floor-plan-fr-b-penthouse-04-upper",
+      "floor-plan-fr-ii-3ldks-a-ff",
+      "floor-plan-fr-ii-3ldks-b-ff",
+      "floor-plan-fr-ii-3ldks-b-typical",
+      "floor-plan-fr-ii-2ldks-refuge",
+      "floor-plan-fr-ii-penthouse-a-lower",
+      "floor-plan-fr-ii-penthouse-a-upper",
+      "floor-plan-fr-ii-penthouse-b-lower",
+      "floor-plan-fr-ii-penthouse-b-upper"
+    ],
+    "curated": [
+      { "imageKey": "main-pool-kids-pool", "caption": "Main Pool / Kid's Pool", "category": "amenities" },
+      { "imageKey": "lake-kids-stream", "caption": "Lake / Kid's Stream", "category": "amenities" },
+      { "imageKey": "yoga-deck-central-courtyard", "caption": "Yoga Deck (page 13 render)", "category": "amenities" },
+      { "imageKey": "source-fountain-forest-mist-pond", "caption": "Source Fountain / Forest Mist Pond", "category": "amenities" },
+      { "imageKey": "forest-resting-spaces", "caption": "The Forest Resting Space I", "category": "amenities" },
+      { "imageKey": "forest-resting-space-website", "caption": "Forest Resting Space (krisumi.com gallery)", "category": "amenities" },
+      { "imageKey": "japanese-design-concept-spread", "caption": "Where Timeless Japanese Design Concepts Come to Life", "category": "surroundings" },
+      { "imageKey": "chinju-no-mori-sacred-forest-concept", "caption": "Chinju No Mori — A Sanctuary for the Spirit", "category": "surroundings" },
+      { "imageKey": "japanese-design-harmony-philosophy", "caption": "Japanese Design — Harmony in Living", "category": "surroundings" },
+      { "imageKey": "shakkei-miegakure-inei-design-principles", "caption": "Shakkei · Mie Gakure · In-ei", "category": "surroundings" },
+      { "imageKey": "ten-sen-men-seijaku-miyama-design-principles", "caption": "Ten Sen Men · Seijaku · Miyama", "category": "surroundings" },
+      { "imageKey": "kagami-kekkai-koshi-design-principles", "caption": "Kagami · Kekkai · Koshi", "category": "surroundings" },
+      { "imageKey": "oku-towers-architecture", "caption": "Oku — Embracing the Secrecy", "category": "surroundings" },
+      { "imageKey": "forest-reserve-ii-drop-off-night", "caption": "The Forest Reserve - II — Drop Off at Night", "category": "exteriors" },
+      { "imageKey": "forest-reserve-a-drop-off-ramp", "caption": "The Forest Reserve - II — Ramp", "category": "exteriors" },
+      { "imageKey": "bamboo-garden-ground-view", "caption": "Ground View", "category": "exteriors" },
+      { "imageKey": "gym-pool-view-private-pool", "caption": "The Forest Reserve A — Pool", "category": "amenities" },
+      { "imageKey": "kids-pool-mirage-pilotis", "caption": "Forest from Kid's Pool", "category": "amenities" },
+      { "imageKey": "entrance-lobby-renders", "caption": "The Forest Reserve A — Lobby", "category": "interiors" },
+      { "imageKey": "interior-living-dining-room", "caption": "Living Room", "category": "interiors" },
+      { "imageKey": "interior-master-bedroom-balcony-view", "caption": "Master Bedroom", "category": "interiors" },
+      { "imageKey": "the-afterglow-evening-render", "caption": "The Afterglow", "category": "exteriors" },
+      { "imageKey": "location-map-sector-36a-gurugram", "caption": "Location Map — Sector 36A, Gurugram", "category": "master-plans" }
+    ]
+  },
+
+  "disclaimerAddendum": "The Forest Reserve and The Forest Reserve - II are being developed by Krisumi Corporation Private Limited as part of the Krisumi City Group Housing Colony in Sector 36A, Gurugram, Haryana. HARERA Gurugram Registration Numbers, both dated 2 May 2025: RC/REP/HARERA/GGM/944/676/2025/47 (The Forest Reserve, on 5.1743 acres comprising 298 residential units and 53 EWS units) and RC/REP/HARERA/GGM/945/677/2025/48 (The Forest Reserve - II, on 1.3125 acres comprising 244 residential units and 43 EWS units). Information published on this page is sourced from the Krisumi brochure for The Forest Reserve. Pricing and unit-specific details are available on request from the developer. Renders, layouts and amenity references are conceptual artist's impressions for representational purposes; actual designs are subject to authority approvals. Prospective purchasers are advised to verify all approved details on the HARERA website at haryanarera.gov.in before booking."
 }
