@@ -12,9 +12,22 @@ export default function Footer({ onNavigate }: FooterProps) {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
           <div className="col-span-1 md:col-span-1">
-            <h2 className="text-3xl font-heading font-semibold tracking-tighter mb-6 cursor-pointer" onClick={() => onNavigate?.('home')}>
-              THE CORNER HOUSE
-            </h2>
+            <button
+              type="button"
+              className="mb-6 cursor-pointer"
+              aria-label="The Corner House Home"
+              onClick={() => onNavigate?.('home')}
+            >
+              <img
+                src="/logos/corner-house-one-color-white.svg"
+                alt="The Corner House"
+                className="h-20 w-auto"
+                width={1600}
+                height={1000}
+                loading="lazy"
+                decoding="async"
+              />
+            </button>
             <p className="text-white/60 font-light leading-relaxed mb-8">
               A boutique real estate brokerage specializing in luxury properties across Gurugram and Delhi NCR. We bring an editorial approach to real estate.
             </p>

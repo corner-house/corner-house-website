@@ -1,10 +1,11 @@
 import { ExternalLink } from 'lucide-react';
 import type { PropertyListing } from '../schema';
+import { getImageOrNull } from '../image-helpers';
 import SectionHeading from '../SectionHeading';
 import { DoodlePlay } from '../Doodles';
 
 interface WalkthroughProps {
-  videos: PropertyListing['videos'];
+  listing: PropertyListing;
 }
 
 function buildVideoEmbed(videos: NonNullable<PropertyListing['videos']>): {
@@ -29,8 +30,15 @@ function buildVideoEmbed(videos: NonNullable<PropertyListing['videos']>): {
   return null;
 }
 
-export default function Walkthrough({ videos }: WalkthroughProps) {
-  if (!videos || (!videos.vimeoId && !videos.youtubeId && !videos.virtualTourUrl)) return null;
+export default function Walkthrough({ listing }: WalkthroughProps) {
+  const videos = listing.videos;
+  const videoMp4s = listing.videoMp4s ?? [];
+
+  const hasIframe = Boolean(videos && (videos.vimeoId || videos.youtubeId));
+  const hasVirtualTour = Boolean(videos?.virtualTourUrl);
+  const hasMp4s = videoMp4s.length > 0;
+
+  if (!hasIframe && !hasVirtualTour && !hasMp4s) return null;
 
   const embed = videos ? buildVideoEmbed(videos) : null;
 
@@ -40,7 +48,7 @@ export default function Walkthrough({ videos }: WalkthroughProps) {
         <SectionHeading
           eyebrow="press play"
           title="Walkthrough"
-          description={videos.tagline}
+          description={videos?.tagline}
           doodle={<DoodlePlay />}
         />
 
@@ -58,7 +66,45 @@ export default function Walkthrough({ videos }: WalkthroughProps) {
           </div>
         )}
 
-        {videos.virtualTourUrl && (
+        {hasMp4s && (
+          <div
+            className={`${embed ? 'mt-8' : ''} grid gap-8 ${
+              videoMp4s.length === 1 ? 'max-w-5xl mx-auto' : 'md:grid-cols-2'
+            }`}
+          >
+            {videoMp4s.map((v) => {
+              const poster = v.posterImageKey
+                ? getImageOrNull(listing, v.posterImageKey)
+                : null;
+              return (
+                <figure key={v.url} className="space-y-3">
+                  <div className="relative aspect-video bg-black overflow-hidden shadow-lg">
+                    <video
+                      controls
+                      preload="metadata"
+                      playsInline
+                      poster={poster?.gallery}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    >
+                      <source src={v.url} type="video/mp4" />
+                      Your browser doesn't support embedded video.
+                    </video>
+                  </div>
+                  <figcaption>
+                    <div className="font-heading font-medium text-base md:text-lg">
+                      {v.label}
+                    </div>
+                    {v.description && (
+                      <p className="mt-1 text-sm text-muted-foreground">{v.description}</p>
+                    )}
+                  </figcaption>
+                </figure>
+              );
+            })}
+          </div>
+        )}
+
+        {hasVirtualTour && videos?.virtualTourUrl && (
           <div className="mt-6 flex justify-center">
             <a
               href={videos.virtualTourUrl}

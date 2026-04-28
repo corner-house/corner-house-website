@@ -42,15 +42,19 @@ export default function Navbar({ onNavigate }: NavbarProps) {
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <button 
-          className="cursor-pointer group text-left"
+        <button
+          className="cursor-pointer group text-left flex-shrink-0"
           aria-label="The Corner House Home"
           onClick={() => onNavigate('home')}
         >
-          <h1 className="text-2xl font-heading font-semibold tracking-tighter flex flex-col leading-none">
-            <span className={`transition-colors ${isScrolled ? 'text-primary' : 'text-white'}`}>THE CORNER</span>
-            <span className={`text-sm font-sans font-medium tracking-widest transition-colors ${isScrolled ? 'text-foreground/60' : 'text-white/70'}`}>HOUSE</span>
-          </h1>
+          <img
+            src="/logos/corner-house-horizontal-transparent.svg"
+            alt="The Corner House"
+            className={`w-auto transition-all duration-500 ${isScrolled ? 'h-12' : 'h-16'}`}
+            width={1800}
+            height={520}
+            decoding="async"
+          />
         </button>
 
         {/* Desktop Nav */}

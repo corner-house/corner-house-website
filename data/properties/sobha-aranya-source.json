@@ -1,0 +1,327 @@
+{
+  "slug": "sobha-aranya",
+  "projectName": "Sobha Aranya",
+  "developerName": "Sobha Limited",
+
+  "seo": {
+    "title": "Sobha Aranya Sector 80 Gurugram | 3 & 4 BHK from ₹7.1 Cr",
+    "description": "Sobha Aranya: 3 & 4 BHK eco-luxe homes inside 270-acre Karma Lakelands, Sector 80 Gurugram. From ₹7.1 Cr. 524 residences. Possession March 2030.",
+    "keywords": [
+      "sobha aranya",
+      "sobha aranya sector 80",
+      "sobha aranya karma lakelands",
+      "sobha aranya price",
+      "sobha sector 80 gurugram",
+      "luxury apartments gurugram",
+      "3 bhk sector 80 gurugram",
+      "4 bhk sector 80 gurugram",
+      "golf course view apartments",
+      "eco luxury homes gurugram",
+      "karma lakelands residences",
+      "sobha new project gurgaon"
+    ],
+    "ogImageKey": "elevation-day-view"
+  },
+
+  "hero": {
+    "tagline": "Eco-luxe residences inside Karma Lakelands — forest grove and golf course views.",
+    "priceFrom": "7.09 Cr",
+    "priceTo": "10.71 Cr",
+    "priceSuffix": "onwards",
+    "heroImageKey": "towers-elevation-dusk-hero",
+    "mobileHeroImageKey": "elevation-day-view",
+    "keyStats": [
+      { "label": "Configuration", "value": "3 & 4 BHK" },
+      { "label": "Sizes", "value": "2,836–4,285 sq.ft." },
+      { "label": "Starting Price", "value": "₹7.1 Cr" },
+      { "label": "Possession", "value": "March 2030" },
+      { "label": "Total Area", "value": "31.28 acres" },
+      { "label": "Phase 1 Residences", "value": "524 homes" }
+    ]
+  },
+
+  "atAGlance": {
+    "projectType": "Residential Apartments",
+    "configuration": "3 BHK & 4 BHK",
+    "unitSizes": "2,836–4,285 sq.ft.",
+    "totalArea": "31.28 acres",
+    "totalUnits": 524,
+    "totalTowers": 5,
+    "floors": "3B+G+43/46",
+    "possession": "March 2030",
+    "status": "Under Construction",
+    "reraStatus": "Registered"
+  },
+
+  "pricing": [
+    {
+      "configuration": "3 BHK",
+      "carpetAreaSqft": 2836,
+      "builtUpAreaSqft": 2836,
+      "pricePerSqft": 25000,
+      "totalPriceFrom": "7.09 Cr",
+      "inventoryStatus": "Available"
+    },
+    {
+      "configuration": "4 BHK",
+      "carpetAreaSqft": 4285,
+      "builtUpAreaSqft": 4285,
+      "pricePerSqft": 25000,
+      "totalPriceFrom": "10.71 Cr",
+      "inventoryStatus": "Available"
+    }
+  ],
+
+  "floorPlans": [],
+
+  "building": {
+    "structure": "RCC framed structure",
+    "towers": [
+      { "name": "Tower 1", "floors": 43 },
+      { "name": "Tower 2", "floors": 43 },
+      { "name": "Tower 3", "floors": 43 },
+      { "name": "Tower 4", "floors": 46 },
+      { "name": "Tower 5", "floors": 46 }
+    ],
+    "basements": 3,
+    "parking": {
+      "type": "basement"
+    }
+  },
+
+  "amenities": {
+    "wellness": [
+      { "name": "Club Antara — 75,000 sq.ft. clubhouse", "description": "Eco-conscious clubhouse powered by solar panels and rainwater harvesting, with panoramic views.", "imageKey": "club-antara-clubhouse-75000-sqft" },
+      { "name": "Indoor Swimming Pool", "description": "Climate-controlled indoor pool inside Club Antara." },
+      { "name": "Yoga Studio", "description": "Dedicated yoga and meditation space within the clubhouse." },
+      { "name": "Gymnasium", "description": "Fully equipped indoor gym with cardio and strength training zones." },
+      { "name": "Reflexology Pavilion", "description": "Outdoor reflexology pavilion in the Active Zone." },
+      { "name": "Healing Garden", "description": "Themed healing garden inside the Park & Plaza Zone.", "imageKey": "park-plaza-zone-healing-garden" }
+    ],
+    "sports": [
+      { "name": "6-Lane Olympic-Size Swimming Pool", "description": "Outdoor competition-grade pool in the Active Zone.", "imageKey": "active-zone-olympic-pool" },
+      { "name": "Jogging & Cycling Path", "description": "Continuous loop weaving through the property." },
+      { "name": "Outdoor Fitness Deck", "description": "Open-air strength and conditioning zone." },
+      { "name": "Badminton Court", "description": "Indoor badminton court inside Club Antara." },
+      { "name": "Squash Court", "description": "Glass-walled squash court inside Club Antara." },
+      { "name": "Table Tennis", "description": "Indoor table tennis facility inside the clubhouse." }
+    ],
+    "family": [
+      { "name": "Play Park", "description": "Themed outdoor play zone with slides and climbing features.", "imageKey": "kids-zone-play-park" },
+      { "name": "Kids' Pool", "description": "Shallow children's pool with adjacent play deck." },
+      { "name": "Water Play Deck", "description": "Splash play area with interactive water features." },
+      { "name": "Play Plaza", "description": "Open plaza for older children and group activities." },
+      { "name": "Fountain Deck", "description": "Decorative fountain with seating, themed for children." },
+      { "name": "Pet Park", "description": "Secure off-leash zone designed for pets and families." },
+      { "name": "Seniors' Park", "description": "Quiet park designed for elder residents." },
+      { "name": "Celebration Lawn", "description": "Open lawn for family celebrations and events." },
+      { "name": "Party Lawn", "description": "Dedicated open-air party space with landscaped surrounds." },
+      { "name": "Amphitheatre", "description": "Tiered seating for community performances and events." }
+    ],
+    "lifestyle": [
+      { "name": "Café & Reading Lounge", "description": "Quiet lounge with curated reading area inside Club Antara." },
+      { "name": "Co-Working Space", "description": "Private pods and open desks for work-from-community days." },
+      { "name": "Mini Theatre", "description": "Private screening room for residents." },
+      { "name": "Multipurpose Room", "description": "Flexible event and activity space." },
+      { "name": "Activity / Hobby Room", "description": "Dedicated room for arts, crafts, and hobby pursuits." },
+      { "name": "Indoor Games Room", "description": "Carrom, chess, and board games lounge." },
+      { "name": "Picnic Grove", "description": "Landscaped grove for casual outdoor gatherings.", "imageKey": "recreational-zone-leisure-pool" },
+      { "name": "Leisure / Lazy Pool", "description": "Slow-current outdoor leisure pool with lounging zones." },
+      { "name": "Alfresco Deck", "description": "Open-air dining and lounging deck adjacent to the pool." },
+      { "name": "Bonfire Circle", "description": "Communal fire pit for evening gatherings." },
+      { "name": "Sun Deck", "description": "Lounging deck designed for sunset viewing." },
+      { "name": "Zen-Themed Hanging Garden", "description": "Tranquil garden with zen-inspired landscape design." },
+      { "name": "Scented Garden", "description": "Themed garden featuring fragrant native species." },
+      { "name": "Feature Garden", "description": "Statement landscaped garden in the Park & Plaza Zone." },
+      { "name": "Water Feature", "description": "Sculptural waterbody feature inside the central plaza." },
+      { "name": "Island Cove Centrepiece", "description": "Signature water-island landscape element.", "imageKey": "island-cove-swimming-pool" }
+    ],
+    "sustainability": [
+      { "name": "Solar Power Generation", "description": "Solar panels generate clubhouse electricity." },
+      { "name": "Rainwater Harvesting", "description": "Collection ponds cater to project water requirements." },
+      { "name": "Organic Waste Converter", "description": "On-site organic waste processing." },
+      { "name": "85%+ Open Spaces", "description": "Over 85% of the project area is open green space." },
+      { "name": "Forest Grove (East & West)", "description": "Preserved forest groves on both sides of the property.", "imageKey": "towers-forest-grove-view" },
+      { "name": "Eco Pond", "description": "Natural eco pond integrated into the landscape." },
+      { "name": "Ecology Deck", "description": "Elevated deck for nature observation and education." },
+      { "name": "Bamboo Walk", "description": "Tree-lined bamboo grove walking path.", "imageKey": "eco-amenities-zone-bamboo-walk" },
+      { "name": "Camping Ground", "description": "Designated camping area for residents.", "imageKey": "camping-ground-render" },
+      { "name": "Restoration Forest", "description": "Reforestation zone with native species planting." },
+      { "name": "Peripheral Vehicular Driveway", "description": "Cars are routed around the perimeter, keeping amenity zones traffic-free." }
+    ]
+  },
+
+  "location": {
+    "addressLine": "Sobha Aranya, Karma Lakelands, Sector 80",
+    "locality": "Sector 80",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "pincode": "122004",
+    "latitude": 28.3765,
+    "longitude": 76.9214,
+    "googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3514.0!2d76.9214!3d28.3765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSobha+Aranya+Karma+Lakelands!5e0!3m2!1sen!2sin!4v1714300000000"
+  },
+
+  "connectivity": [
+    { "destination": "Bal Bharti School", "distanceKm": 3.7, "driveTimeMinutes": 8, "category": "education" },
+    { "destination": "Indian School of Hospitality", "distanceKm": 4.8, "driveTimeMinutes": 10, "category": "education" },
+    { "destination": "Trehan IRIS Broadway", "distanceKm": 5.8, "driveTimeMinutes": 12, "category": "retail" },
+    { "destination": "IMT Manesar", "distanceKm": 6, "driveTimeMinutes": 12, "category": "business" },
+    { "destination": "Delhi Public School Sector 84", "distanceKm": 6.6, "driveTimeMinutes": 13, "category": "education" },
+    { "destination": "Maitri Kiran School", "distanceKm": 6.9, "driveTimeMinutes": 14, "category": "education" },
+    { "destination": "Aarvy Hospital", "distanceKm": 7.5, "driveTimeMinutes": 15, "category": "healthcare" },
+    { "destination": "Silver Streak Mall", "distanceKm": 7.5, "driveTimeMinutes": 15, "category": "retail" },
+    { "destination": "ITC Grand Bharat", "distanceKm": 9.8, "driveTimeMinutes": 18, "category": "other" },
+    { "destination": "Amity University Gurugram", "distanceKm": 14, "driveTimeMinutes": 25, "category": "education" },
+    { "destination": "Aria Mall", "distanceKm": 15, "driveTimeMinutes": 26, "category": "retail" },
+    { "destination": "Signature Advanced Super Speciality Hospital", "distanceKm": 15, "driveTimeMinutes": 27, "category": "healthcare" },
+    { "destination": "Sector 32 Institutional Area", "distanceKm": 16, "driveTimeMinutes": 28, "category": "business" },
+    { "destination": "Unitech Cyber Park", "distanceKm": 16, "driveTimeMinutes": 30, "category": "business" },
+    { "destination": "Medanta Medicity", "distanceKm": 16, "driveTimeMinutes": 30, "category": "healthcare" },
+    { "destination": "Sanjeevni Hospital", "distanceKm": 17, "driveTimeMinutes": 32, "category": "healthcare" },
+    { "destination": "Artemis Hospital", "distanceKm": 19, "driveTimeMinutes": 35, "category": "healthcare" },
+    { "destination": "Indira Gandhi International Airport", "distanceKm": 38, "driveTimeMinutes": 50, "category": "airport" }
+  ],
+
+  "neighbourhood": {
+    "title": "The Neighbourhood",
+    "paragraphs": [
+      "Sector 80 sits along Gurugram's western growth corridor with direct NH-48 frontage and the Dwarka Expressway operational just minutes away. What makes this address unusual is what surrounds it: Sobha Aranya is set inside Karma Lakelands, a 270-acre golf and biodiversity estate that has been quietly maturing on this stretch of NH-48 since 1998. The trees, the 9-hole golf course, the four sacred forest zones — none of these can be replicated by newer projects, no matter how premium.",
+      "Daily life here balances seclusion with accessibility. Bal Bharti School is 3.7 km away; Delhi Public School Sector 84 is 6.6 km. The Indian School of Hospitality and Maitri Kiran School fall within a 7 km radius. For healthcare, Aarvy Hospital is 7.5 km, with Signature Advanced and Medanta Medicity reachable in under 30 minutes. Trehan IRIS Broadway and Silver Streak handle weekend retail; Aria Mall is 15 km for larger trips. ITC Grand Bharat — one of the region's most recognised luxury hospitality landmarks — sits less than 10 km away.",
+      "For work, the location plays unusually well. IMT Manesar is 6 km south, putting the entire Manesar industrial and corporate cluster within a 15-minute drive. Cyber Park (16 km) and Sector 32 institutional area (16 km) are accessible via NH-48 in under half an hour. The Dwarka Expressway has compressed the IGI Airport run to a signal-free 50 minutes. A proposed metro corridor along the Northern Peripheral Road is positioned to deepen this connectivity over the project's possession horizon.",
+      "Sector 80 is in early build-out, which is precisely the appeal for buyers thinking five years out. Branded entrants like Sobha set the quality benchmark before the corridor densifies — and the Karma Lakelands partnership is a moat that subsequent projects in this micro-market simply cannot match."
+    ],
+    "highlights": [
+      "Inside Karma Lakelands — 270-acre established golf and biodiversity estate",
+      "Direct NH-48 frontage with Dwarka Expressway access",
+      "Signal-free drive to IGI Airport via Dwarka Expressway",
+      "IMT Manesar 6 km — entire industrial cluster within 15 minutes",
+      "ITC Grand Bharat luxury landmark under 10 km",
+      "Four reputed schools within 7 km radius",
+      "Three super-speciality hospitals within 17 km",
+      "Proposed metro corridor along Northern Peripheral Road"
+    ],
+    "cards": [
+      {
+        "icon": "Sparkles",
+        "label": "Inside a 270-acre biodiversity estate",
+        "body": "Karma Lakelands has been maturing since 1998. Four sacred forests, a 9-hole golf course, and decades of established landscape — irreplaceable by any newer project."
+      },
+      {
+        "icon": "MapPin",
+        "label": "NH-48 plus Dwarka Expressway",
+        "body": "Two of the most strategic arterials in NCR meet at this address. Signal-free drive to IGI, direct access to Manesar's corporate cluster."
+      },
+      {
+        "icon": "GraduationCap",
+        "label": "Four schools within 7 km",
+        "body": "Bal Bharti, Delhi Public School Sector 84, Maitri Kiran, and the Indian School of Hospitality all sit within easy reach."
+      },
+      {
+        "icon": "TrendingUp",
+        "label": "Early-cycle Sector 80",
+        "body": "Sector 80 is in early build-out. Branded entrants set the quality benchmark before the corridor matures and prices settle into their long-term trajectory."
+      }
+    ],
+    "backdropImageKey": "karma-lakelands-master-site-map"
+  },
+
+  "builder": {
+    "name": "Sobha Limited",
+    "description": "Sobha Limited is one of India's most respected real estate developers, founded in 1995 by P.N.C. Menon and headquartered in Bengaluru. Listed on the BSE and NSE, Sobha is distinguished by its backward-integrated delivery model — the company manufactures its own interiors, glazing and metal works, concrete products, and Restoplus mattresses entirely in-house. This unusually deep vertical integration gives Sobha tighter control over construction quality and finish standards than peers who outsource. With 581+ iconic projects spanning 150.13 million sq.ft. across 27 cities in 14 states, and 1,456 quality checks performed before every handover, Sobha has earned a reputation for execution discipline at a tier few Indian developers can match. Sobha Aranya is delivered in partnership with Karma Lakelands, the 270-acre golf and biodiversity estate established in 1998 along NH-48.",
+    "foundedYear": 1995,
+    "headquarters": "Bengaluru, India",
+    "websiteUrl": "https://www.sobha.com",
+    "notableProjects": [
+      "Sobha City, Gurugram",
+      "Sobha Altus, Gurugram",
+      "Sobha Crescent, Gurugram",
+      "Sobha International City, Gurugram",
+      "Sobha Royal Pavilion, Bengaluru",
+      "Sobha Dream Acres, Bengaluru"
+    ]
+  },
+
+  "emiCalculator": {
+    "defaultPrincipalCr": 7.09,
+    "defaultInterestRatePct": 8.5,
+    "defaultTenureYears": 20,
+    "downPaymentPct": 20
+  },
+
+  "investmentThesis": {
+    "headline": "Why Sobha Aranya Is Positioned As a Long-Term Hold",
+    "paragraphs": [
+      "Three structural factors make Sobha Aranya an unusually well-positioned bet in the western Gurugram corridor. The first is the Karma Lakelands integration. Few projects in NCR can claim genuine adjacency to an established 270-acre golf and biodiversity estate that has been maturing for over two decades. The trees, the 9-hole golf course, the four sacred forests, the wildlife — these are decades old and cannot be replicated by newer developments at any price point. This creates a defensible moat that anchors long-term resale value.",
+      "The second factor is Sobha's delivery model. Sobha is one of the very few developers in India that has backward-integrated its supply chain — manufacturing interiors, glazing, concrete products, and metal works in-house. Combined with 1,456 quality checks before handover, this translates into materially lower post-possession defect rates and more reliable finish quality. In a market where construction quality variance is the number-one buyer anxiety, branded execution discipline of this kind commands a durable premium.",
+      "The third factor is timing. Sector 80 is on the western flank of Gurugram's New Sector growth corridor. The Dwarka Expressway is now fully operational, the proposed metro corridor along the Northern Peripheral Road will deepen connectivity, and IMT Manesar's expansion continues to feed local demand. Phase 1 launches now with 524 residences across 14.81 acres; the remaining 16+ acres of future phases are still to come — meaning early buyers enter before the full project supply hits the market."
+    ],
+    "dataPoints": [
+      { "label": "Total project area", "value": "31.28 acres" },
+      { "label": "Phase 1 area", "value": "14.81 acres" },
+      { "label": "Open spaces", "value": "85%+" },
+      { "label": "Total Phase 1 residences", "value": "524" },
+      { "label": "Karma Lakelands estate", "value": "270 acres" },
+      { "label": "Possession", "value": "March 2030" }
+    ],
+    "cards": [
+      {
+        "icon": "Landmark",
+        "label": "Karma Lakelands moat",
+        "body": "270-acre golf and biodiversity estate established in 1998. Decades of mature landscape — irreplaceable by any newer competitor."
+      },
+      {
+        "icon": "ShieldCheck",
+        "label": "Backward-integrated delivery",
+        "body": "Sobha manufactures interiors, glazing, and concrete in-house. 1,456 quality checks before handover. Lower defect risk than outsourced peers."
+      },
+      {
+        "icon": "MapPin",
+        "label": "Western corridor positioning",
+        "body": "NH-48 frontage, Dwarka Expressway access, proposed metro along Northern Peripheral Road. Three infrastructure tailwinds at one address."
+      },
+      {
+        "icon": "Calendar",
+        "label": "Early-phase entry",
+        "body": "Phase 1 is 524 residences on 14.81 acres. Roughly half the project's developable area is still to launch — early buyers price below full supply."
+      }
+    ],
+    "backdropImageKey": "phase-1-master-plan-amenities-zones"
+  },
+
+  "similarProperties": ["emaar-serenity-hills", "downtown66"],
+
+  "faqs": [
+    { "question": "What is the price of Sobha Aranya?", "answer": "Sobha Aranya starts at ₹7.09 Cr for the smallest 3 BHK (2,836 sq.ft.) at an indicative rate of ₹25,000 per sq.ft. The largest 4 BHK (4,285 sq.ft.) is priced from ₹10.71 Cr. Final pricing is subject to applicable GST, stamp duty, registration, Preferential Location Charges, Floor Rise Charges, club membership and other statutory dues. A detailed price sheet is available on request." },
+    { "question": "What configurations are available at Sobha Aranya?", "answer": "Sobha Aranya offers 3 BHK and 4 BHK eco-luxe residences. Sizes range from 2,836 sq.ft. (3 BHK starting) to 4,285 sq.ft. (4 BHK largest). Phase 1 comprises 524 residences across 5 towers configured as 3B+G+43/46 floors, with Towers 1–3 rising to 43 floors and Towers 4–5 to 46 floors." },
+    { "question": "When is possession of Sobha Aranya?", "answer": "Possession of Sobha Aranya Phase 1 is scheduled for March 2030. The project is currently under construction and is RERA-registered with HARERA Gurugram under registration RC/REP/HARERA/GGM/808/540/2024/35 dated 1 April 2024." },
+    { "question": "What is the RERA registration number of Sobha Aranya?", "answer": "Sobha Aranya is registered with the Haryana Real Estate Regulatory Authority under registration number RC/REP/HARERA/GGM/808/540/2024/35 dated 1 April 2024. Registration details are verifiable on the HARERA website at haryanarera.gov.in." },
+    { "question": "Where is Sobha Aranya located?", "answer": "Sobha Aranya is located inside Karma Lakelands, Sector 80, Gurugram, Haryana, with direct frontage on NH-48 (Delhi–Jaipur Expressway). It offers a signal-free drive to IGI Airport via the Dwarka Expressway, sits 6 km from IMT Manesar, and is under 10 km from ITC Grand Bharat. Cyber Park is accessible in 30 minutes via NH-48." },
+    { "question": "What amenities does Sobha Aranya offer?", "answer": "Sobha Aranya offers 35+ amenities organised across five zones — Recreational, Active, Park & Plaza, Kids', and Eco-Amenities. Highlights include Club Antara, a 75,000 sq.ft. eco-conscious clubhouse with indoor pool, gym, yoga studio, mini theatre, badminton and squash courts; a 6-lane Olympic-size swimming pool; camping grounds; zen-themed hanging garden; pet park; healing garden; and forest groves on both east and west sides." },
+    { "question": "What makes Sobha Aranya 'eco-luxe'?", "answer": "Sobha Aranya integrates with Karma Lakelands, a 270-acre biodiversity estate with a 9-hole golf course and four sacred forests (Kailash, Devakad, Ficus, and Bamboo). The project itself maintains over 85% open spaces. Club Antara is solar-powered, rainwater harvesting meets project water needs, and an organic waste converter handles bio-waste on-site. A peripheral vehicular driveway keeps the central amenity zones traffic-free." },
+    { "question": "What views do Sobha Aranya residences offer?", "answer": "Sobha Aranya residences offer two principal view categories — forest grove views looking onto Karma Lakelands' biodiversity zones, and golf course views overlooking the 9-hole course. Towers are positioned so that no homes face each other, ensuring full privacy. All apartments come with sun-kissed balconies featuring private gardens, wood-like flooring, and thermal-insulation glass sliding doors that help regulate interior temperatures." },
+    { "question": "Who is the developer of Sobha Aranya?", "answer": "Sobha Aranya is developed by Sobha Limited in partnership with Karma Lakelands. Sobha Limited, founded in 1995 and headquartered in Bengaluru, has delivered 581+ projects spanning 150.13 million sq.ft. across 27 cities. Sobha is distinguished by its backward-integrated quality model — manufacturing its own interiors, glazing, and concrete products in-house — and performs 1,456 quality checks before every handover." },
+    { "question": "How many phases does Sobha Aranya have?", "answer": "Sobha Aranya is planned across multiple phases on a 31.28-acre site. Phase 1 covers 14.81 acres with 5 towers and 524 residences (currently under construction with March 2030 possession). The remaining acreage is reserved for future development phases, which will be launched separately. Buyers entering Phase 1 do so before the full project supply hits the market." }
+  ],
+
+  "rera": {
+    "number": "RC/REP/HARERA/GGM/808/540/2024/35",
+    "registeredDate": "2024-04-01",
+    "authority": "HARERA",
+    "state": "Haryana",
+    "verificationUrl": "https://haryanarera.gov.in"
+  },
+
+  "brochureUrl": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/sobha-aranya/brochure/PDF_Mobile_Brochure_Aranya.pdf",
+
+  "videoMp4s": [
+    {
+      "url": "https://www.sobha.com/wp-content/uploads/2025/07/Immersive-Project-Showcase-Aranya.mp4",
+      "label": "Immersive Project Showcase",
+      "description": "A cinematic walkthrough of Sobha Aranya at Karma Lakelands.",
+      "posterImageKey": "towers-elevation-dusk-hero"
+    }
+  ],
+
+  "disclaimerAddendum": "Sobha Aranya is being developed by Sobha Limited in partnership with Karma Lakelands. HARERA Registration No. RC/REP/HARERA/GGM/808/540/2024/35 dated 1 April 2024 (Phase 1). The project is currently under construction with possession scheduled for March 2030. Pricing shown is indicative, based on a base rate of ₹25,000 per sq.ft. — final cost is subject to applicable GST, stamp duty, registration charges, Preferential Location Charges (PLC), Floor Rise Charges, club membership, and other statutory dues. Floor plans, payment plan milestones, and detailed specifications will be added once received from the developer. Illustrations, renders, and visuals shown are artist's impressions and conceptual in nature; actual designs may vary and are subject to authority approvals. Prospective purchasers are advised to verify all approved details on the HARERA website at haryanarera.gov.in before booking."
+}

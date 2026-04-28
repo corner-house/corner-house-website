@@ -2,6 +2,7 @@ import SEO from '@/components/SEO';
 import type { PropertyListing } from './schema';
 import Hero from './sections/Hero';
 import Walkthrough from './sections/Walkthrough';
+import Gallery from './sections/Gallery';
 import AtAGlance from './sections/AtAGlance';
 import Pricing from './sections/Pricing';
 import FloorPlans from './sections/FloorPlans';
@@ -45,7 +46,8 @@ export default function PropertyListingPage({ listing }: PropertyListingPageProp
       />
 
       <Hero listing={listing} />
-      <Walkthrough videos={listing.videos} />
+      <Walkthrough listing={listing} />
+      <Gallery listing={listing} />
       <AtAGlance atAGlance={listing.atAGlance} />
       <Pricing pricing={listing.pricing} />
       <FloorPlans floorPlans={listing.floorPlans} listing={listing} />

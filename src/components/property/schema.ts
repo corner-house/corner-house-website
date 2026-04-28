@@ -255,6 +255,16 @@ export const propertySourceSchema = z.object({
       tagline: z.string().optional(),
     })
     .optional(),
+  videoMp4s: z
+    .array(
+      z.object({
+        url: url,
+        label: nonEmpty,
+        description: z.string().optional(),
+        posterImageKey: imageKey.optional(),
+      }),
+    )
+    .default([]),
   atAGlance: atAGlanceSchema,
   pricing: z.array(pricingRowSchema).min(1),
   floorPlans: z.array(floorPlanSchema).default([]),
@@ -270,6 +280,24 @@ export const propertySourceSchema = z.object({
   similarProperties: z.array(z.string()).default([]),
   faqs: faqSchema,
   rera: reraSchema,
+  brochureUrl: url.optional(),
+  gallery: z
+    .object({
+      enabled: z.boolean().default(true),
+      curated: z
+        .array(
+          z.object({
+            imageKey: imageKey,
+            caption: z.string().optional(),
+            category: z
+              .enum(['exteriors', 'interiors', 'amenities', 'master-plans', 'surroundings', 'other'])
+              .optional(),
+          }),
+        )
+        .optional(),
+      exclude: z.array(imageKey).default([]),
+    })
+    .default({ enabled: true, exclude: [] }),
   disclaimerAddendum: z.string().optional(),
 });
 

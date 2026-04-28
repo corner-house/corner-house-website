@@ -1,4 +1,4 @@
-import { MapPin, MessageSquare, Phone } from 'lucide-react';
+import { Download, MapPin, MessageSquare, Phone } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import type { PropertyListing } from '../schema';
 import { getImage, getImageOrNull } from '../image-helpers';
@@ -109,6 +109,17 @@ export default function Hero({ listing }: HeroProps) {
               >
                 <Phone className="mr-2 h-5 w-5" /> <span className="hidden sm:inline">CALL&nbsp;</span>{SITE_CONTACT.phone}
               </a>
+              {listing.brochureUrl && (
+                <a
+                  href={listing.brochureUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download
+                  className="inline-flex flex-1 sm:flex-none items-center justify-center rounded-lg border border-white/50 bg-black/30 hover:bg-black/50 text-white font-medium text-sm px-6 md:px-8 py-3.5 md:py-4 transition-colors backdrop-blur"
+                >
+                  <Download className="mr-2 h-5 w-5" /> BROCHURE
+                </a>
+              )}
             </div>
           </div>
         </div>

@@ -47,6 +47,7 @@
     "virtualTourUrl": "https://www.bptp.com/360-tour/downtown-66/index.html",
     "tagline": "A cinematic walkthrough of Downtown 66"
   },
+  "videoMp4s": [],
   "atAGlance": {
     "projectType": "Residential Apartment",
     "configuration": "3 BHK + Family Lounge / 3 BHK + Study",
@@ -552,6 +553,10 @@
     "registeredDate": "2025-09-19",
     "verificationUrl": "https://haryanarera.gov.in"
   },
+  "gallery": {
+    "enabled": true,
+    "exclude": []
+  },
   "images": {
     "banner-image": {
       "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/originals/banner-image.jpg",
@@ -870,7 +875,7 @@
         "latitude": 28.4089,
         "longitude": 77.0926
       },
-      "datePosted": "2026-04-21",
+      "datePosted": "2026-04-28",
       "offers": {
         "@type": "Offer",
         "priceCurrency": "INR",
@@ -1010,5 +1015,5 @@
       ]
     }
   },
-  "generatedAt": "2026-04-21T09:50:39.198Z"
+  "generatedAt": "2026-04-28T05:24:34.572Z"
 }

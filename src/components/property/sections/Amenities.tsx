@@ -48,13 +48,22 @@ const SUSTAINABILITY_ILLUSTRATIONS: Record<string, SvgComponent> = {
   'Drought-Tolerant Landscaping': IconCactus,
 };
 
+const hasVisual = (
+  item: { imageKey?: string; name: string },
+  cat: CategoryKey,
+): boolean =>
+  Boolean(item.imageKey) ||
+  (cat === 'sustainability' && item.name in SUSTAINABILITY_ILLUSTRATIONS);
+
 export default function Amenities({ amenities, listing }: AmenitiesProps) {
-  const populated = CATEGORIES.filter((c) => amenities[c.key].length > 0);
+  const populated = CATEGORIES.filter((c) =>
+    amenities[c.key].some((i) => hasVisual(i, c.key)),
+  );
   const [active, setActive] = useState<CategoryKey>(populated[0]?.key ?? 'wellness');
 
   if (populated.length === 0) return null;
 
-  const items = amenities[active];
+  const items = amenities[active].filter((i) => hasVisual(i, active));
   const isSustainability = active === 'sustainability';
 
   return (
@@ -84,7 +93,9 @@ export default function Amenities({ amenities, listing }: AmenitiesProps) {
               >
                 <TabIcon className="h-3.5 w-3.5" />
                 {cat.label}{' '}
-                <span className="text-muted-foreground/60 ml-1">({amenities[cat.key].length})</span>
+                <span className="text-muted-foreground/60 ml-1">
+                  ({amenities[cat.key].filter((i) => hasVisual(i, cat.key)).length})
+                </span>
               </button>
             );
           })}
