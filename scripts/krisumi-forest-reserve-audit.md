@@ -22,7 +22,7 @@
 | C8 — Bamboo Garden (fabricated) | CRITICAL | **FIXED** | Removed from amenities. Page-36 image kept in gallery with brochure-correct caption "Ground View" (no "bamboo" claim). |
 | C9 — Forest Mist Pond (duplicate) | CRITICAL | **FIXED** | Removed; only "Mist Pond" remains in amenities (page 57). Page-15 render kept in gallery as "Source Fountain / Forest Mist Pond" caption |
 | C10 — Gallery captions vs. brochure | CRITICAL | **FIXED** | All 23 gallery items now have brochure-verbatim captions in `gallery.curated[]`. Filenames stay as-is on R2 (no re-upload required); the curated caption overrides any auto-humanized label. |
-| C11 — Map coordinates wrong | CRITICAL | **NEEDS-CLIENT-INPUT** | Brochure has no project lat/lng; Saurabh confirmed current coordinates point to sales lounge. Schema requires lat/lng. Kept current values + flagged in `_unverified` array of source.json. **Action: Saurabh to provide accurate site coordinates.** |
+| C11 — Map coordinates wrong | CRITICAL | **FIXED** | Coordinates provided by Saurabh, plot-precise per Krisumi project listings: `28.417709115225378, 76.97435806153578`. Updated in source.json (location.latitude, location.longitude, googleMapsEmbedUrl) and propagated to JSON-LD geo + structured address via `npx tsx scripts/scaffold-property.ts`. |
 | M1 — Project name framing | MAJOR | **FIXED** | Display name = "The Forest Reserve" (page 20 self-introduction). Legal name "Waterside Residences The Forest Reserve" appears in disclaimer (page 63 verbatim). Old colon-separated name removed. |
 | M2 — Address duplication | MAJOR | **FIXED** | addressLine simplified to "The Forest Reserve, Krisumi City"; locality "Sector 36A"; rendered hero now reads "The Forest Reserve, Krisumi City, Sector 36A, Gurugram" (no duplicate) |
 | M3 — Tower B / 30-floor claim | MAJOR | **NEEDS-CLIENT-INPUT** | Schema requires `floors: positive integer` per tower. Kept "30" as placeholder; flagged in `_unverified`. **Action: confirm tower configuration and floor counts.** |
@@ -41,7 +41,7 @@
 
 ### Open NEEDS-CLIENT-INPUT items requiring Saurabh / Krisumi response
 
-1. **Project site lat/lng** (C11) — current value points to sales lounge.
+1. ~~**Project site lat/lng** (C11)~~ — RESOLVED 2026-04-28 (Saurabh).
 2. **Tower configuration & floor counts** (M3) — does Tower B exist as a separate building, and how many floors per tower?
 3. **Possession date** (m1) — for both Phase I (944/676) and Phase II (945/677).
 4. **Pricing & area sheet** (m3) — carpet area, built-up area, indicative pricing per configuration.

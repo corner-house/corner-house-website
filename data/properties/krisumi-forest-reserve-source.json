@@ -2,7 +2,7 @@
   "_audit": "Corrective rewrite per scripts/krisumi-forest-reserve-audit.md. Source of truth: Client-Brochers/krisumi-forest-reserve/Krishumi-Forest-researve.pdf. All claims trace to a brochure page citation. Fields requiring developer confirmation are listed in _unverified.",
 
   "_unverified": [
-    "location.latitude / location.longitude — brochure page 63 only gives Sales Lounge address (NOT project site). Current values point at Krisumi Sales Lounge / Tata project. NEEDS-CLIENT-INPUT: actual project site lat/lng from Krisumi.",
+    "location.latitude / location.longitude — RESOLVED 2026-04-28 by Saurabh: plot-precise coordinates from Krisumi project listings (28.417709115225378, 76.97435806153578).",
     "atAGlance.possession — brochure does not state a possession date. RERA registered 02.05.2025; license validity dates 17.01.2029 / 27.06.2029 / 03.06.2026. Current value 'November 2030' is unverified placeholder. NEEDS-CLIENT-INPUT.",
     "pricing[*].carpetAreaSqft / builtUpAreaSqft — brochure does not publish carpet or built-up areas. Schema requires positive numbers; current values are placeholders. NEEDS-CLIENT-INPUT: Krisumi pricing/area sheet.",
     "atAGlance.totalTowers — brochure spec sections reference 'A & B' (one RERA) plus 'II' (separate RERA). Tower B's physical existence and floor count not visible in brochure. Source uses '3' as a working number. NEEDS-CLIENT-INPUT.",
@@ -137,9 +137,9 @@
     "city": "Gurugram",
     "state": "Haryana",
     "pincode": "122004",
-    "latitude": 28.418,
-    "longitude": 76.9732,
-    "googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3514.0!2d76.9732!3d28.4180!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sKrisumi+City+Sector+36A+Gurugram!5e0!3m2!1sen!2sin!4v1714300000000"
+    "latitude": 28.417709115225378,
+    "longitude": 76.97435806153578,
+    "googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3514.0!2d76.97435806153578!3d28.417709115225378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sThe+Forest+Reserve+Krisumi+City+Sector+36A+Gurugram!5e0!3m2!1sen!2sin!4v1714300000000"
   },
 
   "connectivity": [
