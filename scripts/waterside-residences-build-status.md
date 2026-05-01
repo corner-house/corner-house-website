@@ -117,6 +117,29 @@ Sequence after Saurabh approves preview:
 - All Phase 1 to 6 complete except Saurabh's manual preview review.
 - HARD STOP. No staging or main merge from this session.
 
+---
+
+## Post-preview fix iteration (2026-05-01, same day)
+
+After first eyeball preview, Saurabh asked for two fixes before staging merge:
+
+**Fix 1 — Caption leakage:** the `videoMp4s[0].description` field carried the audit-note text and was rendering publicly. Replaced with public copy:
+- label: "Walkthrough"
+- description: "Take a virtual walk through Waterside Residences."
+
+Audit-note text stays in `scripts/krisumi-waterside-residences-audit.md` only.
+
+**Fix 2 — Video failed to play from krisumi.com hotlink:** Saurabh's preview browser showed a frozen frame at 0:00 with controls but no play. CLI diagnosis showed krisumi.com itself returns 200 + 206 Range correctly even with cornerhouse.co.in Referer, so simple hotlink protection is ruled out. Followed Option A regardless: downloaded 3.21 MB to /tmp, uploaded to R2 at `krisumi-waterside-residences/video/walkthrough.mp4` via a one-off script (created and removed in the same turn). Verified the R2 URL returns 200 OK + 206 Partial Content. `videoMp4s[0].url` updated to the R2 URL. Matches the Sobha Aranya pattern.
+
+Re-scaffold + rebuild clean. Rendered HTML verified to contain:
+- New R2 URL (krisumi-waterside-residences/video/walkthrough.mp4)
+- Old krisumi.com URL (waterfall-residences-desktop-video.mp4) is gone (0 occurrences)
+- New caption "Take a virtual walk through Waterside Residences" present
+- Old leaked audit-note text gone (0 occurrences)
+- Label "Walkthrough" rendered
+
+Audit doc rows 26 and 27 updated. New "Post-preview fixes" section added to audit doc with diagnosis steps and resolution.
+
 
 ---
 

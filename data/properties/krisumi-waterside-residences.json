@@ -57,9 +57,9 @@
   },
   "videoMp4s": [
     {
-      "url": "https://krisumi.com/project/waterside-residences/video/waterfall-residences-desktop-video.mp4",
-      "label": "Krisumi walkthrough",
-      "description": "Walkthrough video as published on krisumi.com Waterside Residences page. Filename references the internal Krisumi name 'waterfall-residences', a generic Krisumi promo. Hotlinked, not Waterside-specific.",
+      "url": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-waterside-residences/video/walkthrough.mp4",
+      "label": "Walkthrough",
+      "description": "Take a virtual walk through Waterside Residences.",
       "posterImageKey": "main-pool"
     }
   ],
@@ -843,5 +843,5 @@
       ]
     }
   },
-  "generatedAt": "2026-05-01T04:39:59.005Z"
+  "generatedAt": "2026-05-01T10:07:58.980Z"
 }
