@@ -1,0 +1,31 @@
+[
+  { "section": "hero-elevation",        "source": "krisumi.com Elevation and Interiors section", "filename": "hero-elevation-pool",                   "imageKey": "hero-elevation-pool",            "purpose": "hero, primary"   },
+  { "section": "elevation-day",         "source": "krisumi.com Elevation and Interiors section", "filename": "elevation-day-view",                    "imageKey": "elevation-day-view",             "purpose": "gallery"         },
+  { "section": "elevation-dusk",        "source": "krisumi.com Elevation and Interiors section", "filename": "elevation-dusk",                        "imageKey": "elevation-dusk",                 "purpose": "gallery"         },
+  { "section": "tower-cluster-aerial",  "source": "krisumi.com Elevation and Interiors section", "filename": "tower-cluster-aerial",                  "imageKey": "tower-cluster-aerial",           "purpose": "gallery"         },
+  { "section": "interior-living",       "source": "krisumi.com Elevation and Interiors section", "filename": "interior-living-room",                  "imageKey": "interior-living-room",           "purpose": "gallery"         },
+  { "section": "interior-dining",       "source": "krisumi.com Elevation and Interiors section", "filename": "interior-dining",                       "imageKey": "interior-dining",                "purpose": "gallery"         },
+  { "section": "interior-master-bed",   "source": "krisumi.com Elevation and Interiors section", "filename": "interior-master-bedroom",               "imageKey": "interior-master-bedroom",        "purpose": "gallery"         },
+  { "section": "interior-bathroom",     "source": "krisumi.com Elevation and Interiors section", "filename": "interior-bathroom",                     "imageKey": "interior-bathroom",              "purpose": "gallery"         },
+  { "section": "balcony-view",          "source": "krisumi.com Elevation and Interiors section", "filename": "balcony-view",                          "imageKey": "balcony-view",                   "purpose": "gallery"         },
+  { "section": "swimming-pool",         "source": "krisumi.com Amenities / Lifestyle section",   "filename": "swimming-pool",                         "imageKey": "swimming-pool",                  "purpose": "gallery"         },
+  { "section": "landscape-garden",      "source": "krisumi.com Amenities / Lifestyle section",   "filename": "landscape-garden",                      "imageKey": "landscape-garden",               "purpose": "gallery"         },
+  { "section": "clubhouse-render",      "source": "krisumi.com Amenities / Lifestyle section",   "filename": "clubhouse-render",                      "imageKey": "clubhouse-render",               "purpose": "gallery"         },
+  { "section": "kids-play-zone",        "source": "krisumi.com Amenities / Lifestyle section",   "filename": "kids-play-zone",                        "imageKey": "kids-play-zone",                 "purpose": "gallery"         },
+  { "section": "lobby-interior",        "source": "krisumi.com Elevation and Interiors section", "filename": "lobby-interior",                        "imageKey": "lobby-interior",                 "purpose": "gallery"         },
+
+  { "section": "master-plan",           "source": "krisumi.com Master Plan section",             "filename": "master-plan",                           "imageKey": "master-plan",                    "purpose": "site-plan"       },
+  { "section": "site-plan-tower-layout","source": "krisumi.com Master Plan section",             "filename": "site-plan-tower-layout",                "imageKey": "site-plan-tower-layout",         "purpose": "site-plan"       },
+
+  { "section": "floor-plan-tower1-sldk-servant-a", "source": "krisumi.com Unit Plan, Tower 1 tab",      "filename": "floor-plan-tower1-sldk-servant-a", "imageKey": "floor-plan-tower1-sldk-servant-a", "purpose": "floor-plan" },
+  { "section": "floor-plan-tower2-3-ph-a-lower",   "source": "krisumi.com Unit Plan, Tower 2&3 tab",    "filename": "floor-plan-tower2-3-ph-a-lower",   "imageKey": "floor-plan-tower2-3-ph-a-lower",   "purpose": "floor-plan" },
+  { "section": "floor-plan-tower2-3-ph-a-upper",   "source": "krisumi.com Unit Plan, Tower 2&3 tab",    "filename": "floor-plan-tower2-3-ph-a-upper",   "imageKey": "floor-plan-tower2-3-ph-a-upper",   "purpose": "floor-plan" },
+  { "section": "floor-plan-tower1-2-bhk-a",        "source": "krisumi.com Unit Plan, Tower 1 tab",      "filename": "floor-plan-tower1-2-bhk-a",        "imageKey": "floor-plan-tower1-2-bhk-a",        "purpose": "floor-plan" },
+  { "section": "floor-plan-tower1-2-bhk-b",        "source": "krisumi.com Unit Plan, Tower 1 tab",      "filename": "floor-plan-tower1-2-bhk-b",        "imageKey": "floor-plan-tower1-2-bhk-b",        "purpose": "floor-plan" },
+  { "section": "floor-plan-tower1-3-bhk-a",        "source": "krisumi.com Unit Plan, Tower 1 tab",      "filename": "floor-plan-tower1-3-bhk-a",        "imageKey": "floor-plan-tower1-3-bhk-a",        "purpose": "floor-plan" },
+  { "section": "floor-plan-tower1-3-bhk-b",        "source": "krisumi.com Unit Plan, Tower 1 tab",      "filename": "floor-plan-tower1-3-bhk-b",        "imageKey": "floor-plan-tower1-3-bhk-b",        "purpose": "floor-plan" },
+  { "section": "floor-plan-tower2-3-2-bhk",        "source": "krisumi.com Unit Plan, Tower 2&3 tab",    "filename": "floor-plan-tower2-3-2-bhk",        "imageKey": "floor-plan-tower2-3-2-bhk",        "purpose": "floor-plan" },
+  { "section": "floor-plan-tower2-3-3-bhk",        "source": "krisumi.com Unit Plan, Tower 2&3 tab",    "filename": "floor-plan-tower2-3-3-bhk",        "imageKey": "floor-plan-tower2-3-3-bhk",        "purpose": "floor-plan" },
+
+  { "_note": "Floor plan list includes confirmed 3 (SLDK+Servant A, PH-A Lower, PH-A Upper from screenshots) plus 6 placeholder slots for the additional floor plans Claude Code captured (16 total floor plan URLs from krisumi.com per Phase 2 status report). Claude Code to reconcile actual filenames during Phase 3 image import." }
+]
