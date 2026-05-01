@@ -1,0 +1,43 @@
+# Krisumi Waterside Residences, asset import URL list
+# Verified 2026-05-01 by curl HEAD against page-relative paths.
+# Page base: https://krisumi.com/project/waterside-residences/
+# Format: <url> | <alias-stem>
+
+# Concept renders (5)
+https://krisumi.com/project/waterside-residences/images/concept/concept_view_01.webp|concept-view-01
+https://krisumi.com/project/waterside-residences/images/concept/concept_view_02.webp|concept-view-02
+https://krisumi.com/project/waterside-residences/images/concept/concept_view_03.webp|concept-view-03
+https://krisumi.com/project/waterside-residences/images/concept/concept_view_04.webp|concept-view-04
+https://krisumi.com/project/waterside-residences/images/concept/concept_view_05.webp|concept-view-05
+
+# Landscape renders, exteriors and interiors (10)
+https://krisumi.com/project/waterside-residences/images/landscapes/Main-Pool.webp|main-pool
+https://krisumi.com/project/waterside-residences/images/landscapes/Kids-Pool.webp|kids-pool
+https://krisumi.com/project/waterside-residences/images/landscapes/Lake.webp|lake
+https://krisumi.com/project/waterside-residences/images/landscapes/Living.webp|living
+https://krisumi.com/project/waterside-residences/images/landscapes/Lounge.webp|lounge
+https://krisumi.com/project/waterside-residences/images/landscapes/Elevator-Lobby.webp|elevator-lobby
+https://krisumi.com/project/waterside-residences/images/landscapes/Dining.webp|dining
+https://krisumi.com/project/waterside-residences/images/landscapes/Master-Bedroom.webp|master-bedroom
+https://krisumi.com/project/waterside-residences/images/landscapes/Kids-Bedroom.webp|kids-bedroom
+https://krisumi.com/project/waterside-residences/images/landscapes/Bath-Room.webp|bath-room
+
+# Hero banner and location map (2)
+https://krisumi.com/project/waterside-residences/images/krisumi_suites_banner.webp|hero-banner
+https://krisumi.com/project/waterside-residences/images/location_map.webp|location-map
+
+# Floor plans, only the 2 with confirmed area data per Saurabh handoff (2)
+# Note: PH-A files live under tower_1 directory on krisumi.com but Saurabh's
+# screenshot labels them as Tower 2 and 3 inventory. Image content is the same;
+# the imageKey reflects Saurabh's labeling.
+https://krisumi.com/project/waterside-residences/images/floor_plan/tower_1/3LDK+SERVANT_A.webp|floor-plan-tower1-sldk-servant-a
+https://krisumi.com/project/waterside-residences/images/floor_plan/tower_1/PH-A/PH_A_LOWER_FLOOR_PLAN.webp|floor-plan-tower2-3-ph-a-lower
+
+# Floor plans NOT uploaded (audit-flagged for brochure follow-up):
+# - PH-A Upper (UNVERIFIED area in handoff)
+# - PH-A Terrace, PH-B Lower, PH-B Upper, 2LDK (Tower 1)
+# - 2LDK-A, 2LDK-B, 2LDK-Study-A, 2LDK-Study-B, 3LDK-A, PH-C Lower/Upper, PH-D Lower/Upper (Tower 2 and 3)
+# 14 floor plan images at krisumi.com remain unreferenced on this listing.
+
+# Walkthrough video (NOT uploaded, hotlinked via videoMp4s[].url in source.json):
+# https://krisumi.com/project/waterside-residences/video/waterfall-residences-desktop-video.mp4
