@@ -43,7 +43,79 @@ Of those, **upload only what gets displayed**: 5 concepts + 11 landscapes + 1 ba
 
 ---
 
-## Phase 3 progress
+## Phase 3 progress (complete)
+
+- 19 image URLs verified at krisumi.com (page-relative path).
+- `urls/krisumi-waterside-residences.txt` written with 19 entries.
+- `npx tsx scripts/import-property-images.ts krisumi-waterside-residences urls/krisumi-waterside-residences.txt` ran clean: 19 succeeded, 0 failed.
+- Manifest `data/properties/krisumi-waterside-residences-images.json` generated with hero/gallery/thumb variants for each of 19 images on R2.
+
+## Phase 4 progress (complete)
+
+- Schema-conformant `data/properties/krisumi-waterside-residences-source.json` written (PropertySource shape).
+- Image keys cross-checked against manifest, all valid.
+- `npx tsx scripts/scaffold-property.ts krisumi-waterside-residences` ran clean. One soft warning: `neighbourhood content is 180 words (recommend ≥ 200)`. Non-blocking. Generated `data/properties/krisumi-waterside-residences.json` with computed SEO + 4 JSON-LD blocks (RealEstateListing, Product, FAQPage, BreadcrumbList).
+
+## Phase 5 progress (complete)
+
+- `scripts/krisumi-waterside-residences-audit.md` written. 40-row audit table. RERA placeholder flagged Critical (MUST FIX BEFORE MAIN MERGE). 14 floor plans flagged for brochure follow-up. Forest Reserve isolation verified.
+
+## Phase 6 progress (complete to push, awaiting preview URL)
+
+- `npm run build`: clean. SSG rendered 18 pages including `dist/properties/krisumi-waterside-residences.html` at 123 KB.
+- Sanity-check on rendered HTML: 44 unique R2 URLs (19 images × hero/gallery/thumb variants), 1 video URL, 1 RERA placeholder, 0 Forest Reserve cross-references, 0 em-dashes in listing content (the one em-dash detected is in the site-wide `Footer.tsx` "Saurabh Jain — website creator" alt text, pre-existing, out of scope).
+- Public sitemap auto-updated by `npm run sitemap` to include `/properties/krisumi-waterside-residences`.
+- Commit `3e14d5c` on `feature/krisumi-waterside-residences`. 10 files, +2212 lines.
+- `git push -u origin feature/krisumi-waterside-residences`: clean. Branch tracks origin.
+- GitHub PR creation URL: `https://github.com/corner-house/corner-house-website/pull/new/feature/krisumi-waterside-residences`
+
+## STOP at preview URL gate
+
+Per the brief, work stops here for Saurabh's eyeball review.
+
+The Cloudflare Pages preview URL is generated automatically by CF Pages on every branch push. It will appear:
+- In the GitHub PR checks panel once the PR is opened (or directly under the branch's commit checks)
+- In the Cloudflare Pages dashboard for the project
+
+Standard CF Pages preview URL pattern: `https://feature-krisumi-waterside-residences.<project-name>.pages.dev`. Project name not in repo config, lives in the CF dashboard.
+
+## Saurabh review checklist (eyeball)
+
+- [ ] Hero (Main Pool render) renders correctly, video autoplays muted
+- [ ] At-a-Glance shows 6 keyStats correctly
+- [ ] Pricing table shows 5 configs, 4 with placeholder areas, 1 with confirmed (3 LDK + S, 1485 carpet, 2157 built-up)
+- [ ] Floor Plans section shows 2 plans (3 LDK + Servant A, PH-A Lower) with images
+- [ ] Gallery renders all 17 curated images (excl. 2 floor plans), categorized
+- [ ] Amenities renders 13 across wellness/family/lifestyle/sustainability buckets, sports empty
+- [ ] Construction Progress dataPoints visible in investmentThesis section: T3.1=80%, T3.2=85%, T3.3=65%, all earlier=100%
+- [ ] Walkthrough video plays from krisumi.com hotlink
+- [ ] Location map embed loads, Sector 36A pin
+- [ ] Connectivity shows 10 Sector 36A destinations
+- [ ] FAQ section shows 10 questions including the RERA-pending FAQ
+- [ ] RERA disclosure footer reads as placeholder, not a real number
+- [ ] Mobile layout clean
+- [ ] No Forest Reserve text appears anywhere on the page
+
+## Path to staging and production
+
+Per Saurabh's resumption instruction:
+- "Auto-allowed on Saurabh approval: merge feature to staging for visual review on staging.cornerhouse.co.in."
+- "HARD STOP before main. Do not merge to main until RERA is confirmed and updated."
+
+Sequence after Saurabh approves preview:
+1. Merge feature/krisumi-waterside-residences to staging on GitHub. CF Pages auto-deploys staging.cornerhouse.co.in.
+2. Saurabh eyeballs staging.
+3. Saurabh resolves HARERA mapping, gets confirmed RERA number.
+4. Source.json `rera.number` placeholder replaced with confirmed number; `_unverified` and `disclaimerAddendum` updated. Re-run scaffold-property.ts. Commit fix.
+5. Merge staging to main. CF Pages auto-deploys cornerhouse.co.in.
+6. Run `npm run indexnow` (postdeploy hook may already do this).
+
+## State
+
+- Branch: `feature/krisumi-waterside-residences` at commit `3e14d5c`, pushed to origin and tracking it.
+- Local working tree clean.
+- All Phase 1 to 6 complete except Saurabh's manual preview review.
+- HARD STOP. No staging or main merge from this session.
 
 
 ---
