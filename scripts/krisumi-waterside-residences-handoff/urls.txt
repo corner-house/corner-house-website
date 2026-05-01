@@ -1,0 +1,69 @@
+# Krisumi Waterside Residences, Combined asset manifest
+#
+# Source policy: krisumi.com/project/waterside-residences/ + user-provided screenshots only.
+# Brochure pending. Builder asset agreement signed, krisumi.com assets approved for use.
+#
+# Pattern mirrors Sobha Aranya: section A = website CDN-hosted assets fetched directly,
+# section B = local extracts from user-provided screenshots / brochure (when available).
+#
+# Format: URL_or_local_path | descriptive-filename
+#
+# Phase 3 task for Claude Code: download all section A URLs, push to R2 via
+# import-property-images.ts, generate {slug}-images.json with ImageVariants.
+# Walkthrough video stays as a hotlink via videoMp4s[].url, NOT pushed to R2.
+
+# ============================================================
+# SECTION A, KRISUMI.COM WEBSITE ASSETS (CDN-hosted, fetched directly)
+# Hero, gallery, master plan, floor plans, amenity renders.
+# Claude Code captured 14 render URLs and 16 floor plan URLs in Phase 2.
+# Claude Code to reconcile exact URLs during Phase 3 by re-scraping krisumi.com.
+# ============================================================
+
+# Hero, elevation and interior renders (target: 14 URLs from krisumi.com Elevation and Interiors section)
+https://krisumi.com/[exact-url-to-be-captured]/hero-elevation-pool.jpg|hero-elevation-pool
+https://krisumi.com/[exact-url-to-be-captured]/elevation-day-view.jpg|elevation-day-view
+https://krisumi.com/[exact-url-to-be-captured]/elevation-dusk.jpg|elevation-dusk
+https://krisumi.com/[exact-url-to-be-captured]/tower-cluster-aerial.jpg|tower-cluster-aerial
+https://krisumi.com/[exact-url-to-be-captured]/interior-living-room.jpg|interior-living-room
+https://krisumi.com/[exact-url-to-be-captured]/interior-dining.jpg|interior-dining
+https://krisumi.com/[exact-url-to-be-captured]/interior-master-bedroom.jpg|interior-master-bedroom
+https://krisumi.com/[exact-url-to-be-captured]/interior-bathroom.jpg|interior-bathroom
+https://krisumi.com/[exact-url-to-be-captured]/balcony-view.jpg|balcony-view
+https://krisumi.com/[exact-url-to-be-captured]/swimming-pool.jpg|swimming-pool
+https://krisumi.com/[exact-url-to-be-captured]/landscape-garden.jpg|landscape-garden
+https://krisumi.com/[exact-url-to-be-captured]/clubhouse-render.jpg|clubhouse-render
+https://krisumi.com/[exact-url-to-be-captured]/kids-play-zone.jpg|kids-play-zone
+https://krisumi.com/[exact-url-to-be-captured]/lobby-interior.jpg|lobby-interior
+
+# Master plan and site plan (krisumi.com Master Plan section)
+https://krisumi.com/[exact-url-to-be-captured]/master-plan.jpg|master-plan
+https://krisumi.com/[exact-url-to-be-captured]/site-plan-tower-layout.jpg|site-plan-tower-layout
+
+# Floor plans (target: 16 URLs from krisumi.com Unit Plan section, Tower 1 + Tower 2&3 tabs)
+https://krisumi.com/[exact-url-to-be-captured]/floor-plan-tower1-sldk-servant-a.jpg|floor-plan-tower1-sldk-servant-a
+https://krisumi.com/[exact-url-to-be-captured]/floor-plan-tower1-2-bhk-a.jpg|floor-plan-tower1-2-bhk-a
+https://krisumi.com/[exact-url-to-be-captured]/floor-plan-tower1-2-bhk-b.jpg|floor-plan-tower1-2-bhk-b
+https://krisumi.com/[exact-url-to-be-captured]/floor-plan-tower1-3-bhk-a.jpg|floor-plan-tower1-3-bhk-a
+https://krisumi.com/[exact-url-to-be-captured]/floor-plan-tower1-3-bhk-b.jpg|floor-plan-tower1-3-bhk-b
+https://krisumi.com/[exact-url-to-be-captured]/floor-plan-tower2-3-ph-a-lower.jpg|floor-plan-tower2-3-ph-a-lower
+https://krisumi.com/[exact-url-to-be-captured]/floor-plan-tower2-3-ph-a-upper.jpg|floor-plan-tower2-3-ph-a-upper
+https://krisumi.com/[exact-url-to-be-captured]/floor-plan-tower2-3-2-bhk.jpg|floor-plan-tower2-3-2-bhk
+https://krisumi.com/[exact-url-to-be-captured]/floor-plan-tower2-3-3-bhk.jpg|floor-plan-tower2-3-3-bhk
+
+# Walkthrough video, KEEP AS HOTLINK, do NOT push to R2
+# Goes into source.json -> videoMp4s[].url, not into images.json
+# https://krisumi.com/project/waterside-residences/video/waterfall-residences-desktop-video.mp4
+
+# ============================================================
+# SECTION B, USER-PROVIDED SCREENSHOTS (local references only)
+# These are reference materials only, NOT for import.
+# Image data on the rendered page comes from Section A above.
+# These screenshots informed the source.json values (pricing, areas, construction progress).
+# ============================================================
+
+./screenshots/waterside-pricing-table.png|user-provided-screenshot-pricing-table
+./screenshots/waterside-unit-plan-tower1-tower2-3.png|user-provided-screenshot-unit-plans
+./screenshots/waterside-amenities-grid.png|user-provided-screenshot-amenities
+./screenshots/waterside-elevation-pool-render.png|user-provided-screenshot-elevation
+./screenshots/waterside-construction-progress-apr06-2026.png|user-provided-screenshot-construction-progress
+./screenshots/waterside-hero-video-still-waterfall.png|user-provided-screenshot-hero-video

@@ -1,0 +1,202 @@
+{
+  "_meta": {
+    "slug": "krisumi-waterside-residences",
+    "displayName": "Waterside Residences",
+    "legalName": "Krisumi Waterside Residences",
+    "developer": "Krisumi Corporation Pvt. Ltd.",
+    "tagline": "Luxury Waterside Residences on Dwarka Expressway",
+    "sourcePolicy": "krisumi.com/project/waterside-residences/ + user-provided screenshots only. Brochure pending. Forest Reserve and Waterside are separate sibling projects, no cross-references.",
+    "lastUpdated": "2026-05-01"
+  },
+
+  "hero": {
+    "title": "Waterside Residences",
+    "subtitle": "Luxury Waterside Residences on Dwarka Expressway",
+    "location": "Sector 36A, Gurgaon",
+    "developer": "Krisumi Corporation Pvt. Ltd.",
+    "startingPriceLabel": "Starting from \u20b94.35 Cr",
+    "heroImageKey": "hero-elevation-pool",
+    "heroVideoUrl": "https://krisumi.com/project/waterside-residences/video/waterfall-residences-desktop-video.mp4",
+    "videoNote": "Video hosted on krisumi.com, hotlinked. Filename uses internal Krisumi name 'waterfall-residences'."
+  },
+
+  "atAGlance": {
+    "developer": "Krisumi Corporation Pvt. Ltd.",
+    "masterTownship": "Krisumi City",
+    "location": "Sector 36A, Gurgaon, Haryana, India",
+    "corridor": "Dwarka Expressway",
+    "configurations": "2 LDK, 2 LDK + S, 3 LDK, 3 LDK + S",
+    "startingPriceCr": 4.35,
+    "possessionDate": "[UNVERIFIED, pending brochure]",
+    "rera": "[UNVERIFIED, pending HARERA confirmation]",
+    "architectsExterior": "Nikken Housing System (Japan)",
+    "architectsInterior": "Aoyama Nomura Design / a.N.D."
+  },
+
+  "overview": {
+    "paragraphs": [
+      "Waterside Residences is a premium residential collection within Krisumi City, the 65-acre Indo-Japanese master township in Sector 36A, Gurgaon. Designed by Japan's Nikken Housing System for exteriors and Aoyama Nomura Design for interiors, the project brings considered Japanese craftsmanship to the Dwarka Expressway corridor.",
+      "The development offers 2 LDK and 3 LDK apartments along with their +S (servant) variants, with starting prices from \u20b94.35 Cr. Tower configurations span Tower 1 with SLDK + Servant layouts, and Tower 2 and Tower 3 with larger penthouse-format units. Construction across Towers 3.1, 3.2 and 3.3 is well into the structural phase as of April 2026."
+    ]
+  },
+
+  "pricing": {
+    "label": "Starting Price",
+    "currency": "INR",
+    "unit": "Crore",
+    "rows": [
+      { "type": "2 LDK", "startingPriceCr": 4.35 },
+      { "type": "2 LDK + S", "startingPriceCr": 4.82 },
+      { "type": "2 LDK + S (variant)", "startingPriceCr": 4.91 },
+      { "type": "3 LDK", "startingPriceCr": 5.65 },
+      { "type": "3 LDK + S", "startingPriceCr": 6.75 }
+    ],
+    "citation": "user-provided-screenshot-pricing-table (krisumi.com Project Price List)"
+  },
+
+  "unitPlans": {
+    "tower1": [
+      {
+        "name": "SLDK + Servant A",
+        "carpetAreaSqm": 137.95,
+        "carpetAreaSqft": 1485,
+        "exclusiveAreaSqm": 200.39,
+        "exclusiveAreaSqft": 2157,
+        "saleableAreaSqm": 250.84,
+        "saleableAreaSqft": 2700,
+        "imageKey": "floor-plan-tower1-sldk-servant-a"
+      }
+    ],
+    "tower2And3": [
+      {
+        "name": "PH-A Lower Floor Plan",
+        "carpetAreaSqm": 288.9,
+        "carpetAreaSqft": 3110,
+        "exclusiveAreaSqm": 488.13,
+        "exclusiveAreaSqft": 5233,
+        "saleableAreaSqm": 545.09,
+        "saleableAreaSqft": 5867,
+        "imageKey": "floor-plan-tower2-3-ph-a-lower"
+      },
+      {
+        "name": "PH-A Upper Floor Plan",
+        "carpetAreaSqm": "[UNVERIFIED, pending brochure]",
+        "saleableAreaSqft": "[UNVERIFIED, pending brochure]",
+        "imageKey": "floor-plan-tower2-3-ph-a-upper"
+      }
+    ],
+    "schemaMapping": "carpetAreaSqft -> Krisumi 'carpet'. builtUpAreaSqft -> Krisumi 'exclusive'. saleableAreaSqft preserved here for source-of-truth completeness; if PropertyListingPage schema does not have a saleable field, omit from rendered page.",
+    "citation": "user-provided-screenshot-unit-plans (krisumi.com Unit Plan section, Tower 1 + Tower 2&3 tabs)"
+  },
+
+  "amenities": [
+    { "label": "Round the Clock Security", "lucideIcon": "Shield", "category": "security" },
+    { "label": "24 Hours Electricity and Water", "lucideIcon": "Zap", "category": "utility" },
+    { "label": "100% Power Back-up", "lucideIcon": "BatteryCharging", "category": "utility" },
+    { "label": "Piped Gas System", "lucideIcon": "Flame", "category": "utility" },
+    { "label": "Open and Covered Parking Spaces", "lucideIcon": "Car", "category": "convenience" },
+    { "label": "All the Lobbies are Air-conditioned", "lucideIcon": "Wind", "category": "comfort" },
+    { "label": "High Speed Elevators with Service Lift", "lucideIcon": "ArrowUpDown", "category": "convenience" },
+    { "label": "Swimming Pools", "lucideIcon": "Waves", "category": "leisure" },
+    { "label": "Convenience Store", "lucideIcon": "ShoppingBag", "category": "convenience" },
+    { "label": "Landscape and Green Areas", "lucideIcon": "Trees", "category": "landscape" },
+    { "label": "Water Features", "lucideIcon": "Droplets", "category": "landscape" },
+    { "label": "Seating Areas", "lucideIcon": "Armchair", "category": "leisure" },
+    { "label": "[UNVERIFIED, 13th amenity from krisumi.com to be captured by Claude Code during scrape]", "lucideIcon": "HelpCircle", "category": "tbd" }
+  ],
+  "amenitiesNote": "12 amenities visible in user-provided screenshot. Krisumi.com page may list more below the fold. Claude Code to scrape the full list during Phase 3 and reconcile.",
+
+  "constructionProgress": {
+    "title": "Construction Progress, as on 6 April 2026",
+    "asOf": "2026-04-06",
+    "renderAs": "dataPoints in investmentThesis section (no schema change). Three towers, five milestones each. Plain percentages. Neutral palette, no green highlight.",
+    "towers": [
+      {
+        "name": "Tower 3.1",
+        "milestones": {
+          "Excavation Work": 100,
+          "Foundation Work": 100,
+          "Basement 2 Slab Work": 100,
+          "Basement 1 Slab Work": 100,
+          "Ground Floor Slab Work": 80
+        }
+      },
+      {
+        "name": "Tower 3.2",
+        "milestones": {
+          "Excavation Work": 100,
+          "Foundation Work": 100,
+          "Basement 2 Slab Work": 100,
+          "Basement 1 Slab Work": 100,
+          "Ground Floor Slab Work": 85
+        }
+      },
+      {
+        "name": "Tower 3.3",
+        "milestones": {
+          "Excavation Work": 100,
+          "Foundation Work": 100,
+          "Basement 2 Slab Work": 100,
+          "Basement 1 Slab Work": 100,
+          "Ground Floor Slab Work": 65
+        }
+      }
+    ],
+    "citation": "user-provided-screenshot-construction-progress"
+  },
+
+  "video": {
+    "type": "hotlink",
+    "url": "https://krisumi.com/project/waterside-residences/video/waterfall-residences-desktop-video.mp4",
+    "verified": "HTTP 200, 3.2 MB, captured by Claude Code Phase 2",
+    "muteByDefault": true,
+    "controls": true,
+    "lazyLoad": true,
+    "schemaTarget": "videoMp4s[].url"
+  },
+
+  "location": {
+    "address": "Sector 36A, Gurgaon, Haryana, India",
+    "masterTownship": "Krisumi City",
+    "corridor": "Dwarka Expressway",
+    "coordinates": {
+      "lat": "[UNVERIFIED, use Sector 36A approximate or pull from Forest Reserve coordinates if same plot]",
+      "lng": "[UNVERIFIED, same as above]"
+    },
+    "coordinatesNote": "Forest Reserve uses 28.417709115225378, 76.97435806153578. Waterside Residences may share or differ from this since they are sibling projects in the same Krisumi City. Claude Code to verify during Phase 3 by checking krisumi.com Waterside contact/location section."
+  },
+
+  "developerInfo": {
+    "name": "Krisumi Corporation Pvt. Ltd.",
+    "summary": "Krisumi Corporation is a joint venture between India's Krishna Group and Japan's Sumitomo Corporation, bringing Japanese design sensibility, construction quality and after-sales service to the Indian residential market. Krisumi City in Sector 36A is its flagship 65-acre master township in Gurgaon."
+  },
+
+  "rera": {
+    "number": "[UNVERIFIED, pending HARERA confirmation]",
+    "registrationDate": "[UNVERIFIED]",
+    "validity": "[UNVERIFIED]",
+    "harerePortalUrl": "https://haryanarera.gov.in/assistancecontrol/project_search_public/2",
+    "note": "HARERA registry shows 4 Krisumi Sector 36A entries: Waterfall Residence (GGM/271/2018/03, Issued 2018), Waterfall Suites (GGM/715/447/2023/59, Issued 2023), plus 2 In-Process registrations under same names. Mapping from 'Waterside Residences' marketing name to legal HARERA registration pending. Candidate RC/REP/HARERA/GGM/812/544/2024/39 from krisumi.com HTML rejected (not in HARERA registry). RERA placeholder must be replaced before merging to main.",
+    "blockerSeverity": "Must fix before main merge. Acceptable on staging for visual review."
+  },
+
+  "seo": {
+    "ogTitle": "Waterside Residences, Sector 36A Gurgaon | Corner House",
+    "ogDescription": "Luxury Waterside Residences on Dwarka Expressway by Krisumi. 2 LDK and 3 LDK configurations starting from \u20b94.35 Cr. Indo-Japanese design within the 65-acre Krisumi City master township.",
+    "canonicalUrl": "https://cornerhouse.co.in/properties/krisumi-waterside-residences"
+  },
+
+  "auditNotes": {
+    "sourceOfTruth": "krisumi.com/project/waterside-residences/ + user-provided screenshots (pricing, unit plans, amenities, construction progress, elevation render). Brochure-only rule relaxed by signed builder asset agreement.",
+    "forestReserveSeparation": "Forest Reserve and Waterside Residences are separate sibling projects. No cross-references on either listing. Forest Reserve listing files untouched.",
+    "unverifiedItems": [
+      "RERA number (HARERA mapping pending)",
+      "Possession date",
+      "Project coordinates (may share with Forest Reserve, may not)",
+      "PH-A Upper Floor Plan exact areas",
+      "Full amenities list (12 of likely more visible)",
+      "13th amenity if present"
+    ],
+    "preDeployAuditDoc": "scripts/krisumi-waterside-residences-audit.md (Claude Code to create in Phase 5)"
+  }
+}
