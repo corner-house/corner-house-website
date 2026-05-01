@@ -112,10 +112,46 @@ Sequence after Saurabh approves preview:
 
 ## State
 
-- Branch: `feature/krisumi-waterside-residences` at commit `3e14d5c`, pushed to origin and tracking it.
-- Local working tree clean.
-- All Phase 1 to 6 complete except Saurabh's manual preview review.
-- HARD STOP. No staging or main merge from this session.
+- Branch: `feature/krisumi-waterside-residences` last commit `ee65c03` plus the post-launch docs commit on top.
+- All Phase 1 to 6 complete and verified by Saurabh's incognito browser review.
+- Cleared for staging and main merge.
+
+---
+
+# FINAL — SHIPPED to production
+
+**Date:** 2026-05-01
+**Status:** SHIPPED to production. Live on cornerhouse.co.in.
+**Branch:** feature/krisumi-waterside-residences merged through staging to main, branch deleted.
+
+## Final state
+
+- **Last feature-branch build commit:** `ee65c03` (`fix(waterside,csp): RERA verified, possession date verified, site-wide media-src fix`)
+- **RERA:** verified `RC/REP/HARERA/GGM/812/544/2024/39` (HARERA project ID 2817), registered 2024-04-08, valid upto 2029-10-14
+- **Possession:** 14 October 2029, declared per HARERA REP-III certificate
+- **CSP media-src fix:** included as site-wide collateral benefit. Forest Reserve, Sobha Aranya, Emaar Serenity Hills, Downtown 66 all benefit from the new `media-src 'self' https://*.r2.dev https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev` directive in `public/_headers`.
+
+## Verifications confirmed by Saurabh on preview before staging merge
+
+- Walkthrough video plays on the Waterside listing
+- DevTools Console clean (no CSP violation errors)
+- RERA number rendered on page is `RC/REP/HARERA/GGM/812/544/2024/39`
+- Possession date FAQ reads "14 October 2029"
+- Site-wide playback on at least one other listing confirmed
+
+## Post-launch follow-up
+
+A separate ticket has been opened at `scripts/legacy-video-csp-followup.md` covering legacy listings whose videos hotlink from non-r2.dev domains (Forest Reserve, Sobha Aranya, Downtown 66). The Waterside CSP fix unblocks `*.r2.dev` only; legacy listings using other video sources need a separate audit and CSP whitelist extension. Downtown 66 also has a dead Vimeo source that needs replacement or removal.
+
+## Cleanup performed
+
+- Local feature branch `feature/krisumi-waterside-residences` deleted
+- Remote feature branch `origin/feature/krisumi-waterside-residences` deleted
+- IndexNow ping run via `npm run indexnow` covering the new property URL
+
+## Next manual step (flagged for Saurabh)
+
+Submit https://cornerhouse.co.in/properties/krisumi-waterside-residences to Google Search Console URL Inspection for explicit re-crawl. IndexNow handles Bing and Yandex; GSC needs a separate manual ping.
 
 ---
 
