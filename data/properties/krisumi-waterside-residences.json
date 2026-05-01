@@ -1,10 +1,10 @@
 {
   "slug": "krisumi-waterside-residences",
   "projectName": "Waterside Residences",
-  "developerName": "Krisumi Corporation",
+  "developerName": "Krisumi Corporation Pvt. Ltd.",
   "seo": {
-    "title": "Waterside Residences Sector 36A Gurugram | Krisumi Corporation",
-    "description": "Waterside Residences by Krisumi: 2 LDK and 3 LDK Indo-Japanese homes in Sector 36A Gurugram, Krisumi City master township. Starting from 4.35 Cr.",
+    "title": "Waterside Residences Sector 36A Gurugram | Krisumi HARERA",
+    "description": "Krisumi Waterside Residences, Sector 36A Gurgaon. HARERA registered (GGM/812/544/2024/39). 2 LDK and 3 LDK from 4.35 Cr. Possession Oct 2029.",
     "keywords": [
       "waterside residences",
       "krisumi waterside residences",
@@ -17,7 +17,7 @@
       "krisumi city",
       "nikken housing system",
       "aoyama nomura design",
-      "sector 36a gurugram apartments"
+      "harera 812 544 2024"
     ],
     "ogImageKey": "main-pool"
   },
@@ -38,20 +38,20 @@
         "value": "4.35 Cr"
       },
       {
+        "label": "Possession",
+        "value": "14 October 2029"
+      },
+      {
         "label": "Location",
         "value": "Sector 36A, Gurugram"
       },
       {
         "label": "Master Township",
-        "value": "Krisumi City, 65 acres"
+        "value": "Krisumi City, 30.38 acres"
       },
       {
-        "label": "Status",
-        "value": "Under Construction"
-      },
-      {
-        "label": "Architect (Exteriors)",
-        "value": "Nikken Housing System, Japan"
+        "label": "RERA",
+        "value": "GGM/812/544/2024/39"
       }
     ]
   },
@@ -67,13 +67,13 @@
     "projectType": "Residential Apartments",
     "configuration": "2 LDK, 2 LDK + S, 3 LDK, 3 LDK + S",
     "unitSizes": "1485 sqft to 5867 sqft saleable",
-    "totalArea": "Krisumi City master township, 65 acres",
-    "totalUnits": 1,
+    "totalArea": "5.0951 acres registered phase, of 30.3813-acre Krisumi City master",
+    "totalUnits": 721,
     "totalTowers": 3,
     "floors": "Pending brochure",
-    "possession": "2028-12",
+    "possession": "2029-10-14",
     "status": "Under Construction",
-    "reraStatus": "Pending"
+    "reraStatus": "Registered"
   },
   "pricing": [
     {
@@ -212,11 +212,11 @@
     ]
   },
   "location": {
-    "addressLine": "Waterside Residences, Krisumi City",
+    "addressLine": "Waterside Residences, Krisumi City, Sector 36A, Village Sihi",
     "locality": "Sector 36A",
     "city": "Gurugram",
     "state": "Haryana",
-    "pincode": "122004",
+    "pincode": "121004",
     "latitude": 28.417709115225378,
     "longitude": 76.97435806153578,
     "googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3514.0!2d76.97435806153578!3d28.417709115225378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sWaterside+Residences+Krisumi+City+Sector+36A+Gurugram!5e0!3m2!1sen!2sin!4v1714300000000"
@@ -286,14 +286,14 @@
   "neighbourhood": {
     "title": "The Neighbourhood",
     "paragraphs": [
-      "Waterside Residences sits inside Krisumi City, a 65-acre Indo-Japanese master township in Sector 36A, Gurugram. The plot opens onto the Northern Peripheral Road, the alignment marketed locally as the Dwarka Expressway, with the Central Peripheral Road also within minutes of the site. Pataudi Road is at 1.6 km, giving the location two of the widest road frontages in southwest Gurugram.",
+      "Waterside Residences sits inside Krisumi City, a 30.38-acre Indo-Japanese master township in Sector 36A, Village Sihi, Gurugram, Haryana. The plot opens onto the Northern Peripheral Road, the alignment marketed locally as the Dwarka Expressway, with the Central Peripheral Road also within minutes of the site. Pataudi Road is at 1.6 km, giving the location two of the widest road frontages in southwest Gurugram.",
       "The Sector 36A address places Waterside between the established commercial belts of Cyber City (17 km), MG Road (14.6 km) and IFFCO Chowk (13.6 km), and the green-zone planning corridor along the Dwarka Expressway, which is mapped for sustained low-density character. Indira Gandhi International Airport is at 24.8 km, a 35 minute drive on the expressway. Healthcare access is supported by Medanta and Fortis hospitals, both within 10 km.",
-      "Within the 65-acre Krisumi City masterplan, residents share landscape and green areas, water features and seating zones woven through the site. The Waterside development itself sits within the active construction phase of the master township, with Towers 3.1, 3.2 and 3.3 advancing through ground floor slab work as of April 2026."
+      "Within the 30.38-acre Krisumi City masterplan, residents share landscape and green areas, water features and seating zones woven through the site. The Waterside Residences phase covers 5.0951 acres and houses Tower 3.1, Tower 3.2 and Tower 3.3, advancing through ground floor slab work as of April 2026."
     ],
     "highlights": [
-      "Sector 36A, Gurugram, inside the Krisumi City 65-acre master township",
+      "Sector 36A, Village Sihi, Gurugram, inside the Krisumi City 30.38-acre master township",
       "Northern Peripheral Road (Dwarka Expressway) frontage at 1 km",
-      "Indira Gandhi International Airport at 24.8 km, 35 minute drive",
+      "Indira Gandhi International Authority Airport at 24.8 km, 35 minute drive",
       "Cyber City at 17 km, MG Road at 14.6 km, IFFCO Chowk at 13.6 km",
       "Medanta Hospital at 9.6 km, Fortis Hospital at 9.2 km",
       "Two widest road frontages in southwest Gurugram (NPR and CPR)"
@@ -302,7 +302,7 @@
       {
         "icon": "Sparkles",
         "label": "Indo-Japanese township",
-        "body": "Krisumi City is a 65-acre master township by Krisumi Corporation, the joint venture between Krishna Group and Sumitomo Corporation. Waterside Residences is one of its phases."
+        "body": "Krisumi City is a 30.38-acre licensed master township by Krisumi Corporation Pvt. Ltd., the joint venture between Krishna Group and Sumitomo Corporation. Waterside Residences is one of its phases."
       },
       {
         "icon": "MapPin",
@@ -317,9 +317,9 @@
     ]
   },
   "builder": {
-    "name": "Krisumi Corporation",
+    "name": "Krisumi Corporation Pvt. Ltd.",
     "tagline": "Indo-Japanese real estate development",
-    "description": "Krisumi Corporation Pvt. Ltd. is a joint venture between India's Krishna Group and Japan's Sumitomo Corporation, bringing Japanese design discipline and after-sales rigor to the Indian residential market. Krisumi City, the firm's flagship 65-acre master township in Sector 36A Gurugram, comprises Waterside Residences and other Krisumi phases. Waterside Residences engages Nikken Housing System (Japan) for exterior architecture and Aoyama Nomura Design, also written as a.N.D., for interiors.",
+    "description": "Krisumi Corporation Pvt. Ltd. (CIN U70200HR2012PTC064545, PAN AAECV0565A) is a joint venture between India's Krishna Group and Japan's Sumitomo Corporation, bringing Japanese design discipline and after-sales rigor to the Indian residential market. Krisumi City, the firm's flagship 30.38-acre licensed master township in Sector 36A, Village Sihi, Gurugram, comprises Waterside Residences and other Krisumi phases. Waterside Residences engages Nikken Housing System (Japan) for exterior architecture and Aoyama Nomura Design, also written as a.N.D., for interiors. Promoter authorised signatory is Sh. Akash Khurana. The project banker is Sumitomo Mitsui Banking Corporation at Worldmark3, Aerocity, New Delhi.",
     "headquarters": "Gurugram, India",
     "websiteUrl": "https://krisumi.com",
     "notableProjects": [
@@ -337,8 +337,8 @@
   "investmentThesis": {
     "headline": "Project standing and construction progress",
     "paragraphs": [
-      "Waterside Residences is a premium residential collection within the 65-acre Krisumi City master township in Sector 36A, Gurugram. The project carries Indo-Japanese design pedigree: exteriors by Nikken Housing System, one of Japan's leading housing architecture firms, and interiors by Aoyama Nomura Design (a.N.D.). The development is part of Krisumi Corporation's Sector 36A portfolio, the joint venture between Krishna Group of India and the 400-year-old Sumitomo Corporation of Japan, and continues the Indo-Japanese craftsmanship sensibility that defines the Krisumi City master township.",
-      "Construction across Towers 3.1, 3.2 and 3.3 is well into the structural phase as of 6 April 2026. All three towers have completed Excavation, Foundation, Basement 2 Slab and Basement 1 Slab works at 100 percent. Ground Floor Slab work is in active progress, recorded at 80 percent for Tower 3.1, 85 percent for Tower 3.2 and 65 percent for Tower 3.3. Pricing is published from 4.35 Cr for the 2 LDK configuration through 6.75 Cr for the 3 LDK with servant quarters. Two confirmed unit plans are publicly visible: a 3 LDK with Servant in Tower 1 and a Penthouse A Lower Floor plan covering Towers 2 and 3."
+      "Krisumi Waterside Residences is a phase of the 30.38-acre Krisumi City master township in Sector 36A Gurgaon, registered with HARERA as Krisumi Waterside Residences (RC/REP/HARERA/GGM/812/544/2024/39). The current registered phase covers 5.10 acres with 3 towers (3.1, 3.2, 3.3) housing 612 residential apartments, 108 EWS units and 1 shop. Designed by Nikken Housing System (Japan) for exteriors and Aoyama Nomura Design (a.N.D.) for interiors. Project completion date as declared by the promoter is 14 October 2029, subject to extension by HARERA in accordance with the Act and rules.",
+      "Construction across Towers 3.1, 3.2 and 3.3 is well into the structural phase as of 6 April 2026. All three towers have completed Excavation, Foundation, Basement 2 Slab and Basement 1 Slab works at 100 percent. Ground Floor Slab work is in active progress, recorded at 80 percent for Tower 3.1, 85 percent for Tower 3.2 and 65 percent for Tower 3.3. Pricing is published from 4.35 Cr for the 2 LDK configuration through 6.75 Cr for the 3 LDK with servant quarters. RERA-mandated sales are on a carpet area basis only. The phase carries a registered FAR of 90,684.63 sqm."
     ],
     "dataPoints": [
       {
@@ -362,15 +362,20 @@
         "source": "krisumi.com construction update, 6 April 2026"
       },
       {
-        "label": "Master township",
-        "value": "Krisumi City, 65 acres"
+        "label": "Registered phase area",
+        "value": "5.0951 acres"
       },
       {
-        "label": "Starting Price",
-        "value": "4.35 Cr (2 LDK)"
+        "label": "RERA completion date",
+        "value": "14 October 2029"
       }
     ],
     "cards": [
+      {
+        "icon": "ShieldCheck",
+        "label": "HARERA registered",
+        "body": "RC/REP/HARERA/GGM/812/544/2024/39 dated 8 April 2024. Verifiable at haryanarera.gov.in (project ID 2817)."
+      },
       {
         "icon": "Building2",
         "label": "Indo-Japanese architecture",
@@ -379,7 +384,7 @@
       {
         "icon": "MapPin",
         "label": "Sector 36A, Dwarka Expressway",
-        "body": "Within the 65-acre Krisumi City master township in Gurugram. Northern Peripheral Road frontage at 1 km."
+        "body": "Within the 30.38-acre Krisumi City master township in Gurugram. Northern Peripheral Road frontage at 1 km."
       },
       {
         "icon": "TrendingUp",
@@ -392,19 +397,19 @@
   "faqs": [
     {
       "question": "Where is Waterside Residences located?",
-      "answer": "Waterside Residences is located in Sector 36A, Gurugram, inside the 65-acre Krisumi City master township. The plot opens onto the Northern Peripheral Road, marketed as the Dwarka Expressway. Indira Gandhi International Airport is at 24.8 km, Cyber City at 17 km, MG Road at 14.6 km, and Medanta Hospital at 9.6 km."
+      "answer": "Waterside Residences is located in Sector 36A, Village Sihi, Gurugram, Haryana, inside the 30.38-acre Krisumi City master township. The plot opens onto the Northern Peripheral Road, marketed as the Dwarka Expressway. Indira Gandhi International Airport is at 24.8 km, Cyber City at 17 km, MG Road at 14.6 km, and Medanta Hospital at 9.6 km."
     },
     {
       "question": "Who is the developer?",
-      "answer": "Waterside Residences is developed by Krisumi Corporation Pvt. Ltd., the joint venture between India's Krishna Group and Japan's Sumitomo Corporation. The architect partners for Waterside are Nikken Housing System (Japan) for exteriors and Aoyama Nomura Design (a.N.D.) for interiors. Source: krisumi.com Waterside Residences page."
+      "answer": "Waterside Residences is developed by Krisumi Corporation Pvt. Ltd. (CIN U70200HR2012PTC064545), the joint venture between India's Krishna Group and Japan's Sumitomo Corporation. The architect partners for Waterside are Nikken Housing System (Japan) for exteriors and Aoyama Nomura Design (a.N.D.) for interiors. Source: krisumi.com Waterside Residences page and HARERA registration certificate."
     },
     {
       "question": "What configurations are available?",
-      "answer": "Waterside Residences offers 2 LDK, 2 LDK with servant (2 LDK + S), 3 LDK, and 3 LDK with servant (3 LDK + S). Tower 1 features a 3 LDK with servant layout, with carpet area of 1485 sqft and saleable area of 2700 sqft. Towers 2 and 3 feature additional layouts including a Penthouse A Lower Floor with carpet area 3110 sqft and saleable area 5867 sqft."
+      "answer": "Waterside Residences offers 2 LDK, 2 LDK with servant (2 LDK + S), 3 LDK, and 3 LDK with servant (3 LDK + S). Tower 1 features a 3 LDK with servant layout, with carpet area of 1485 sqft and saleable area of 2700 sqft. Towers 2 and 3 feature additional layouts including a Penthouse A Lower Floor with carpet area 3110 sqft and saleable area 5867 sqft. The registered phase houses 612 residential apartments, 108 EWS units and 1 shop."
     },
     {
       "question": "What is the starting price?",
-      "answer": "The published starting price is 4.35 Cr for the 2 LDK configuration. The 3 LDK with servant is priced from 6.75 Cr. The full price list is: 2 LDK at 4.35 Cr, 2 LDK + S at 4.82 Cr, 2 LDK + S variant at 4.91 Cr, 3 LDK at 5.65 Cr, and 3 LDK + S at 6.75 Cr. Source: krisumi.com Project Price List."
+      "answer": "The published starting price is 4.35 Cr for the 2 LDK configuration. The 3 LDK with servant is priced from 6.75 Cr. The full price list is: 2 LDK at 4.35 Cr, 2 LDK + S at 4.82 Cr, 2 LDK + S variant at 4.91 Cr, 3 LDK at 5.65 Cr, and 3 LDK + S at 6.75 Cr. Source: krisumi.com Project Price List. Per RERA, sales are on a carpet area basis only."
     },
     {
       "question": "What is the construction status?",
@@ -416,11 +421,11 @@
     },
     {
       "question": "Is the project RERA registered?",
-      "answer": "RERA registration for Waterside Residences is currently pending verification. Krisumi Corporation has multiple HARERA registrations for its Sector 36A portfolio, and the specific marketing-to-legal mapping for Waterside Residences is being confirmed. The RERA number on this listing will be updated once HARERA confirmation is in hand. Prospective buyers should verify the latest RERA status at haryanarera.gov.in before booking."
+      "answer": "Yes. Waterside Residences is registered with HARERA Gurugram under registration RC/REP/HARERA/GGM/812/544/2024/39 dated 8 April 2024, with project completion declared as 14 October 2029. The registered phase covers 5.0951 acres of the 30.3813-acre Krisumi City master project, with a total FAR of 90,684.63 sqm. Registration details are publicly verifiable at haryanarera.gov.in (HARERA project ID 2817)."
     },
     {
       "question": "What is the possession date?",
-      "answer": "Possession for Waterside Residences is currently indicated as December 2028, pending confirmation in the project brochure. The construction progress as of April 2026, with Ground Floor Slab work still in progress across Towers 3.1, 3.2 and 3.3, is consistent with the indicated possession horizon."
+      "answer": "Per the HARERA registration certificate (RC/REP/HARERA/GGM/812/544/2024/39 dated 08.04.2024), the project completion date as declared by the promoter is 14 October 2029, subject to extension by HARERA in accordance with the Act and rules."
     },
     {
       "question": "What amenities are available?",
@@ -428,14 +433,16 @@
     },
     {
       "question": "How can I view Waterside Residences or book a unit?",
-      "answer": "For a private viewing, current pricing, payment plans and unit availability, please contact Cornerhouse Realty via the enquiry form on this page, or via the channels listed in the contact section. We coordinate directly with Krisumi for inventory and brochure access."
+      "answer": "For a private viewing, current pricing, payment plans and unit availability, please contact Cornerhouse Realty via the enquiry form on this page, or via the channels listed in the contact section. The Krisumi Sales Lounge is at Sector 36A, Village Sihi, Gurugram, Haryana 121004."
     }
   ],
   "rera": {
-    "number": "RERA-PENDING-VERIFICATION",
+    "number": "RC/REP/HARERA/GGM/812/544/2024/39",
     "authority": "HARERA",
     "state": "Haryana",
-    "verificationUrl": "https://haryanarera.gov.in"
+    "registeredDate": "2024-04-08",
+    "validUpto": "2029-10-14",
+    "verificationUrl": "https://haryanarera.gov.in/view_project/searchprojectDetail/2817"
   },
   "externalGalleryUrl": {
     "url": "https://krisumi.com/project/waterside-residences/",
@@ -536,7 +543,7 @@
       "floor-plan-tower2-3-ph-a-lower"
     ]
   },
-  "disclaimerAddendum": "Waterside Residences is being developed by Krisumi Corporation Pvt. Ltd. as part of the Krisumi City master township in Sector 36A, Gurugram, Haryana. RERA registration verification for Waterside Residences is currently in progress with HARERA Gurugram and the registration number on this listing is a placeholder pending confirmation. Prospective purchasers should verify all approved details, including the live HARERA registration number, validity, and project-specific disclosures, on the HARERA website at haryanarera.gov.in before booking. Information published on this page is sourced from the krisumi.com Waterside Residences project page and user-provided screenshots dated April 2026. The project brochure is pending; pricing, areas, possession date and amenity counts are subject to confirmation in the brochure once received. Renders, layouts and amenity references are conceptual artist impressions for representational purposes; actual designs are subject to authority approvals.",
+  "disclaimerAddendum": "Krisumi Waterside Residences is being developed by Krisumi Corporation Pvt. Ltd. (CIN U70200HR2012PTC064545) as part of the Krisumi City master township in Sector 36A, Village Sihi, Gurugram, Haryana 121004. The project is registered with the Haryana Real Estate Regulatory Authority, Gurugram, under registration number RC/REP/HARERA/GGM/812/544/2024/39 dated 8 April 2024 (HARERA project ID 2817, unique project ID RERA-GRG-PROJ-1562-2024). The registered phase covers 5.0951 acres of the 30.3813-acre Krisumi City master project, with a total FAR of 90,684.63 sqm and 612 residential apartments, 108 EWS units and 1 shop across Towers 3.1, 3.2 and 3.3. Project completion date as declared by the promoter is 14 October 2029, subject to extension by HARERA in accordance with the Act and rules. Per RERA, sales are on a carpet area basis only. Prospective purchasers should verify all approved details on the HARERA website at haryanarera.gov.in before booking. Renders, layouts and amenity references are conceptual artist impressions for representational purposes; actual designs are subject to authority approvals.",
   "images": {
     "concept-view-01": {
       "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-waterside-residences/originals/concept-view-01.webp",
@@ -655,8 +662,8 @@
   },
   "canonicalUrl": "https://cornerhouse.co.in/properties/krisumi-waterside-residences",
   "computedSeo": {
-    "title": "Waterside Residences Sector 36A Gurugram | Krisumi Corporation",
-    "description": "Waterside Residences by Krisumi: 2 LDK and 3 LDK Indo-Japanese homes in Sector 36A Gurugram, Krisumi City master township. Starting from 4.35 Cr.",
+    "title": "Waterside Residences Sector 36A Gurugram | Krisumi HARERA",
+    "description": "Krisumi Waterside Residences, Sector 36A Gurgaon. HARERA registered (GGM/812/544/2024/39). 2 LDK and 3 LDK from 4.35 Cr. Possession Oct 2029.",
     "ogImageUrl": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-waterside-residences/webp/gallery/main-pool.webp",
     "keywords": [
       "waterside residences",
@@ -670,7 +677,7 @@
       "krisumi city",
       "nikken housing system",
       "aoyama nomura design",
-      "sector 36a gurugram apartments"
+      "harera 812 544 2024"
     ]
   },
   "jsonLd": {
@@ -687,10 +694,10 @@
       ],
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Waterside Residences, Krisumi City",
+        "streetAddress": "Waterside Residences, Krisumi City, Sector 36A, Village Sihi",
         "addressLocality": "Sector 36A",
         "addressRegion": "Gurugram",
-        "postalCode": "122004",
+        "postalCode": "121004",
         "addressCountry": "IN"
       },
       "geo": {
@@ -721,7 +728,7 @@
       ],
       "brand": {
         "@type": "Brand",
-        "name": "Krisumi Corporation"
+        "name": "Krisumi Corporation Pvt. Ltd."
       },
       "offers": {
         "@type": "AggregateOffer",
@@ -741,7 +748,7 @@
           "name": "Where is Waterside Residences located?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Waterside Residences is located in Sector 36A, Gurugram, inside the 65-acre Krisumi City master township. The plot opens onto the Northern Peripheral Road, marketed as the Dwarka Expressway. Indira Gandhi International Airport is at 24.8 km, Cyber City at 17 km, MG Road at 14.6 km, and Medanta Hospital at 9.6 km."
+            "text": "Waterside Residences is located in Sector 36A, Village Sihi, Gurugram, Haryana, inside the 30.38-acre Krisumi City master township. The plot opens onto the Northern Peripheral Road, marketed as the Dwarka Expressway. Indira Gandhi International Airport is at 24.8 km, Cyber City at 17 km, MG Road at 14.6 km, and Medanta Hospital at 9.6 km."
           }
         },
         {
@@ -749,7 +756,7 @@
           "name": "Who is the developer?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Waterside Residences is developed by Krisumi Corporation Pvt. Ltd., the joint venture between India's Krishna Group and Japan's Sumitomo Corporation. The architect partners for Waterside are Nikken Housing System (Japan) for exteriors and Aoyama Nomura Design (a.N.D.) for interiors. Source: krisumi.com Waterside Residences page."
+            "text": "Waterside Residences is developed by Krisumi Corporation Pvt. Ltd. (CIN U70200HR2012PTC064545), the joint venture between India's Krishna Group and Japan's Sumitomo Corporation. The architect partners for Waterside are Nikken Housing System (Japan) for exteriors and Aoyama Nomura Design (a.N.D.) for interiors. Source: krisumi.com Waterside Residences page and HARERA registration certificate."
           }
         },
         {
@@ -757,7 +764,7 @@
           "name": "What configurations are available?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Waterside Residences offers 2 LDK, 2 LDK with servant (2 LDK + S), 3 LDK, and 3 LDK with servant (3 LDK + S). Tower 1 features a 3 LDK with servant layout, with carpet area of 1485 sqft and saleable area of 2700 sqft. Towers 2 and 3 feature additional layouts including a Penthouse A Lower Floor with carpet area 3110 sqft and saleable area 5867 sqft."
+            "text": "Waterside Residences offers 2 LDK, 2 LDK with servant (2 LDK + S), 3 LDK, and 3 LDK with servant (3 LDK + S). Tower 1 features a 3 LDK with servant layout, with carpet area of 1485 sqft and saleable area of 2700 sqft. Towers 2 and 3 feature additional layouts including a Penthouse A Lower Floor with carpet area 3110 sqft and saleable area 5867 sqft. The registered phase houses 612 residential apartments, 108 EWS units and 1 shop."
           }
         },
         {
@@ -765,7 +772,7 @@
           "name": "What is the starting price?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The published starting price is 4.35 Cr for the 2 LDK configuration. The 3 LDK with servant is priced from 6.75 Cr. The full price list is: 2 LDK at 4.35 Cr, 2 LDK + S at 4.82 Cr, 2 LDK + S variant at 4.91 Cr, 3 LDK at 5.65 Cr, and 3 LDK + S at 6.75 Cr. Source: krisumi.com Project Price List."
+            "text": "The published starting price is 4.35 Cr for the 2 LDK configuration. The 3 LDK with servant is priced from 6.75 Cr. The full price list is: 2 LDK at 4.35 Cr, 2 LDK + S at 4.82 Cr, 2 LDK + S variant at 4.91 Cr, 3 LDK at 5.65 Cr, and 3 LDK + S at 6.75 Cr. Source: krisumi.com Project Price List. Per RERA, sales are on a carpet area basis only."
           }
         },
         {
@@ -789,7 +796,7 @@
           "name": "Is the project RERA registered?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "RERA registration for Waterside Residences is currently pending verification. Krisumi Corporation has multiple HARERA registrations for its Sector 36A portfolio, and the specific marketing-to-legal mapping for Waterside Residences is being confirmed. The RERA number on this listing will be updated once HARERA confirmation is in hand. Prospective buyers should verify the latest RERA status at haryanarera.gov.in before booking."
+            "text": "Yes. Waterside Residences is registered with HARERA Gurugram under registration RC/REP/HARERA/GGM/812/544/2024/39 dated 8 April 2024, with project completion declared as 14 October 2029. The registered phase covers 5.0951 acres of the 30.3813-acre Krisumi City master project, with a total FAR of 90,684.63 sqm. Registration details are publicly verifiable at haryanarera.gov.in (HARERA project ID 2817)."
           }
         },
         {
@@ -797,7 +804,7 @@
           "name": "What is the possession date?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Possession for Waterside Residences is currently indicated as December 2028, pending confirmation in the project brochure. The construction progress as of April 2026, with Ground Floor Slab work still in progress across Towers 3.1, 3.2 and 3.3, is consistent with the indicated possession horizon."
+            "text": "Per the HARERA registration certificate (RC/REP/HARERA/GGM/812/544/2024/39 dated 08.04.2024), the project completion date as declared by the promoter is 14 October 2029, subject to extension by HARERA in accordance with the Act and rules."
           }
         },
         {
@@ -813,7 +820,7 @@
           "name": "How can I view Waterside Residences or book a unit?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "For a private viewing, current pricing, payment plans and unit availability, please contact Cornerhouse Realty via the enquiry form on this page, or via the channels listed in the contact section. We coordinate directly with Krisumi for inventory and brochure access."
+            "text": "For a private viewing, current pricing, payment plans and unit availability, please contact Cornerhouse Realty via the enquiry form on this page, or via the channels listed in the contact section. The Krisumi Sales Lounge is at Sector 36A, Village Sihi, Gurugram, Haryana 121004."
           }
         }
       ]
@@ -843,5 +850,5 @@
       ]
     }
   },
-  "generatedAt": "2026-05-01T10:07:58.980Z"
+  "generatedAt": "2026-05-01T13:58:00.926Z"
 }
