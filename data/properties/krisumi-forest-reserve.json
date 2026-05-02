@@ -52,9 +52,9 @@
   },
   "videoMp4s": [
     {
-      "url": "https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/krisumi-video.mp4",
+      "url": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/video/walkthrough.mp4",
       "label": "Krisumi walkthrough",
-      "description": "Generic Krisumi walkthrough hosted on krisumi.com — not a Forest Reserve specific film.",
+      "description": "Take a virtual walk through the Forest Reserve.",
       "posterImageKey": "video-thumbnail"
     }
   ],
@@ -987,7 +987,7 @@
         "latitude": 28.417709115225378,
         "longitude": 76.97435806153578
       },
-      "datePosted": "2026-04-28"
+      "datePosted": "2026-05-01"
     },
     "product": {
       "@context": "https://schema.org",
@@ -1113,5 +1113,5 @@
       ]
     }
   },
-  "generatedAt": "2026-04-28T10:31:54.942Z"
+  "generatedAt": "2026-05-01T20:14:11.864Z"
 }
