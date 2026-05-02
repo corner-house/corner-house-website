@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import Home from '@/pages/Home';
 import { PROPERTIES, SERVICES, ARTICLES } from '@/constants';
 import { PROPERTY_LISTING_SLUGS } from '@/data/propertyListings';
+import { usePageTracking } from '@/hooks/usePageTracking';
 
 export type NavigatePage = 'home' | 'detail' | 'service' | 'article';
 export type NavigateFn = (page: NavigatePage, id?: string) => void;
@@ -31,6 +32,7 @@ function PageLoader() {
 function Layout() {
   const navigate = useNavigate();
   const location = useLocation();
+  usePageTracking();
 
   const handleNavigate: NavigateFn = (page, id) => {
     if (page === 'home') {
