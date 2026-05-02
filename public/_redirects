@@ -5,10 +5,5 @@
 # Legacy listings retired — 301 to listings index so inbound links + crawlers settle gracefully.
 /properties/2   /properties   301
 
-# GSC HTML file verification — Cloudflare Pages auto-strips .html via 308; Google
-# Search Console fails verification on redirects, so we force a 200 rewrite that
-# preserves the exact .html URL Google expects.
-/googlebedb12b1684ba52e.html   /googlebedb12b1684ba52e.html   200
-
 /404.html    /404.html   404
 /*           /404.html   404
