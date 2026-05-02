@@ -3,6 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google tag (gtag.js). Loaded only on the production hostname so dev,
+         preview, and staging traffic does not pollute GA4. -->
+    <script>
+      (function () {
+        if (typeof window === 'undefined') return;
+        if (window.location.hostname !== 'cornerhouse.co.in') return;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6M5C83YEJB';
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { window.dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-6M5C83YEJB');
+      })();
+    </script>
+
     <meta name="theme-color" content="#1c1c1c" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
