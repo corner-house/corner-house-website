@@ -15,10 +15,19 @@
 - Project CLAUDE.md mandates feature → staging → main flow. Following that: created `feature/ga4-gsc-integration` from staging, will open PR to staging (NOT main).
 - Existing utility convention: `src/lib/`. Brief explicitly prescribes `src/utils/analytics.ts` and `src/hooks/usePageTracking.ts` to mirror Soul Infinity. Following the brief literally.
 
-## Phase 2: GSC verification file — DONE
+## Phase 2: GSC verification file — DONE (took two iterations)
 
-- Created `public/googlebedb12b1684ba52e.html` with exact content `google-site-verification: googlebedb12b1684ba52e.html`.
-- Vite copies `public/` to `dist/` at build time.
+**First attempt:** dropped a static `public/googlebedb12b1684ba52e.html`. Vite copied it to `dist/`, Cloudflare Pages served it — but with a 308 redirect to the extension-less URL. Cloudflare Pages auto-strips the `.html` extension and that redirect cannot be overridden via `_redirects` (the auto-redirect runs first). Google Search Console's HTML file verification method explicitly fails on 3xx responses, so this was a real blocker, not theoretical.
+
+**Final pattern:** Pages Function at `functions/googlebedb12b1684ba52e.html.ts`. Pages Functions bypass the `.html` auto-redirect, so requests to `/googlebedb12b1684ba52e.html` are routed straight to the Function which returns HTTP 200 with the exact verification body. Same pattern as the existing `functions/robots.txt.ts`.
+
+Verified on Cloudflare preview deployment of commit `ead21b1`:
+```
+$ curl -sS -X GET --max-redirs 0 -o /dev/null -w "%{http_code} %{num_redirects}\n" \
+    https://dc666d96.corner-house-website.pages.dev/googlebedb12b1684ba52e.html
+200 0
+```
+Body: `google-site-verification: googlebedb12b1684ba52e.html` (54 bytes including trailing newline).
 
 ## Phase 3: GA4 gtag.js — DONE
 

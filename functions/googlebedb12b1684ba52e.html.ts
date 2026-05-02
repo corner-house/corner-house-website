@@ -9,12 +9,17 @@
 
 const BODY = 'google-site-verification: googlebedb12b1684ba52e.html\n';
 
-export const onRequestGet = (): Response => {
-  return new Response(BODY, {
+const respond = (method: string): Response => {
+  const isHead = method === 'HEAD';
+  return new Response(isHead ? null : BODY, {
     status: 200,
     headers: {
       'Content-Type': 'text/plain; charset=utf-8',
       'Cache-Control': 'public, max-age=3600',
+      'Content-Length': String(new TextEncoder().encode(BODY).byteLength),
     },
   });
 };
+
+export const onRequestGet = (): Response => respond('GET');
+export const onRequestHead = (): Response => respond('HEAD');
