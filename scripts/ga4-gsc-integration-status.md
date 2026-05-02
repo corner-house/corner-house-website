@@ -38,12 +38,38 @@ Body: `google-site-verification: googlebedb12b1684ba52e.html` (54 bytes includin
 
 ## Phase 4: Build verify — DONE
 
-- `npm run build` clean. `dist/googlebedb12b1684ba52e.html` present.
-- `tsc --noEmit` (npm run lint) clean.
+- `npm run build` clean. `dist/googlebedb12b1684ba52e.html` present (later replaced by Pages Function — see Phase 2 update).
+- `tsc --noEmit` (npm run lint) clean for new files. Pre-existing `functions/robots.txt.ts(83,25): Cannot find name 'PagesFunction'` flag is unrelated and was on staging before this branch — left for a follow-up to add `@cloudflare/workers-types` to devDependencies.
 
-## Phase 5: PR — pending Saurabh review
+## Phase 5: PR — DONE
 
-- Pushed `feature/ga4-gsc-integration`.
-- Opened PR feature → staging.
-- Saurabh: review staging deploy at `https://staging.cornerhouse.co.in`, confirm gtag is in HTML and GSC file is reachable, then promote to main via second PR.
-- After production deploy: GSC verify, sitemap submit, Realtime check.
+- PR #6 (`feature/ga4-gsc-integration` → `staging`), merged 2026-05-02 06:28:55 UTC, merge commit `621d0b1`.
+- PR #7 (`staging` → `main`), merged 2026-05-02 06:29:35 UTC, merge commit `3cbdc32`.
+- Cloudflare Pages production deploy completed by 2026-05-02 06:30:41 UTC.
+
+## Phase 6: Production verification — DONE
+
+```
+$ curl -sS -X GET --max-redirs 0 https://cornerhouse.co.in/googlebedb12b1684ba52e.html
+HTTP 200  num_redirects=0  size=54 bytes
+google-site-verification: googlebedb12b1684ba52e.html
+
+$ curl -sS https://cornerhouse.co.in | grep G-6M5C83YEJB
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6M5C83YEJB';
+        gtag('config', 'G-6M5C83YEJB');
+```
+
+**Production HEAD:** `3cbdc32842d6c34c4398cae472187fe1f27e1ffa` on `main`.
+
+## Cleanup — DONE
+
+- Local branch `feature/ga4-gsc-integration` deleted.
+- Remote branch `feature/ga4-gsc-integration` deleted.
+
+## Next — Saurabh's manual steps
+
+1. Open https://search.google.com/search-console for the `https://cornerhouse.co.in/` property.
+2. Click **Verify** on the HTML file method — should now succeed.
+3. Sidebar → **Sitemaps** → submit `sitemap.xml`.
+4. Sidebar → **URL Inspection** → request indexing for the homepage and each property listing.
+5. Next day: open GA4 → **Reports → Realtime** while browsing the live site to confirm events are flowing.
