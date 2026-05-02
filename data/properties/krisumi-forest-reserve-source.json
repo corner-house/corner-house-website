@@ -278,9 +278,9 @@
 
   "videoMp4s": [
     {
-      "url": "https://krisumi.com/wp-content/themes/krisumi/assets/images/plp/krisumi-video.mp4",
+      "url": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/video/walkthrough.mp4",
       "label": "Krisumi walkthrough",
-      "description": "Generic Krisumi walkthrough hosted on krisumi.com — not a Forest Reserve specific film.",
+      "description": "Take a virtual walk through the Forest Reserve.",
       "posterImageKey": "video-thumbnail"
     }
   ],
