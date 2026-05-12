@@ -216,7 +216,7 @@
     "locality": "Sector 36A",
     "city": "Gurugram",
     "state": "Haryana",
-    "pincode": "121004",
+    "pincode": "122004",
     "latitude": 28.417709115225378,
     "longitude": 76.97435806153578,
     "googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3514.0!2d76.97435806153578!3d28.417709115225378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sWaterside+Residences+Krisumi+City+Sector+36A+Gurugram!5e0!3m2!1sen!2sin!4v1714300000000"
@@ -697,7 +697,7 @@
         "streetAddress": "Waterside Residences, Krisumi City, Sector 36A, Village Sihi",
         "addressLocality": "Sector 36A",
         "addressRegion": "Gurugram",
-        "postalCode": "121004",
+        "postalCode": "122004",
         "addressCountry": "IN"
       },
       "geo": {
@@ -705,7 +705,7 @@
         "latitude": 28.417709115225378,
         "longitude": 76.97435806153578
       },
-      "datePosted": "2026-05-01",
+      "datePosted": "2026-05-12",
       "offers": {
         "@type": "Offer",
         "priceCurrency": "INR",
@@ -850,5 +850,5 @@
       ]
     }
   },
-  "generatedAt": "2026-05-01T13:58:00.926Z"
+  "generatedAt": "2026-05-12T05:51:07.039Z"
 }

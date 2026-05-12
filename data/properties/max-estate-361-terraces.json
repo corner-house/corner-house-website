@@ -1,0 +1,941 @@
+{
+  "slug": "max-estate-361-terraces",
+  "projectName": "The Terraces at Estate 361",
+  "developerName": "Max Estates Limited",
+  "seo": {
+    "title": "The Terraces at Estate 361 | Max Estates | Sector 36A Gurugram",
+    "description": "The Terraces at Estate 361 by Max Estates — 1.5 & 2 BHK wellness homes in Sector 36A Gurugram, from ₹2.40 Cr. IGBC Platinum. RERA registered.",
+    "keywords": [
+      "The Terraces Estate 361",
+      "Max Estates Gurugram",
+      "1.5 BHK Sector 36A",
+      "2 BHK Dwarka Expressway",
+      "Max Estates Terraces",
+      "luxury apartments Sector 36A",
+      "IGBC Platinum Gurugram",
+      "wellness homes Gurugram",
+      "Estate 361 Terraces price",
+      "Dwarka Expressway new launch"
+    ],
+    "ogImageKey": "hero-featured"
+  },
+  "hero": {
+    "tagline": "Live Well, Inside Out — Forest-Backed Homes on Dwarka Expressway",
+    "priceFrom": "2.40 Cr",
+    "priceSuffix": "onwards",
+    "heroImageKey": "tower-exterior-facade",
+    "keyStats": [
+      {
+        "label": "Starting Price",
+        "value": "₹2.40 Cr+"
+      },
+      {
+        "label": "Configurations",
+        "value": "1.5 & 2 BHK + Duplex Loft"
+      },
+      {
+        "label": "Total Units",
+        "value": "374"
+      },
+      {
+        "label": "Amenities",
+        "value": "80,000+ sq.ft."
+      },
+      {
+        "label": "Certification",
+        "value": "IGBC Platinum (Pre-Certified)"
+      }
+    ]
+  },
+  "videos": {
+    "youtubeId": "k1ZBYFBnXJI"
+  },
+  "videoMp4s": [],
+  "atAGlance": {
+    "projectType": "Residential Apartments",
+    "configuration": "1.5 BHK & 2 BHK (incl. Duplex Loft)",
+    "unitSizes": "595–877 sq.ft. carpet",
+    "totalArea": "18.23 acres (Estate 361)",
+    "totalUnits": 374,
+    "totalTowers": 1,
+    "floors": "34",
+    "possession": "2032-12",
+    "status": "Under Construction",
+    "reraStatus": "Registered"
+  },
+  "pricing": [
+    {
+      "configuration": "1.5 BHK",
+      "carpetAreaSqft": 595,
+      "builtUpAreaSqft": 1144,
+      "totalPriceFrom": "2.40 Cr",
+      "inventoryStatus": "Available"
+    },
+    {
+      "configuration": "2 BHK",
+      "carpetAreaSqft": 814,
+      "builtUpAreaSqft": 1565,
+      "totalPriceFrom": "On Request",
+      "inventoryStatus": "Available"
+    },
+    {
+      "configuration": "2 BHK Loft",
+      "carpetAreaSqft": 877,
+      "builtUpAreaSqft": 1687,
+      "totalPriceFrom": "On Request",
+      "inventoryStatus": "Limited"
+    }
+  ],
+  "floorPlans": [],
+  "building": {
+    "towers": [
+      {
+        "name": "The Terraces Tower",
+        "floors": 34
+      }
+    ],
+    "structure": "RCC framed structure",
+    "parking": {
+      "type": "basement"
+    }
+  },
+  "amenities": {
+    "wellness": [
+      {
+        "name": "Integrated Wellness Centre"
+      },
+      {
+        "name": "Care at Home by Antara"
+      },
+      {
+        "name": "24x7 Ambulance and Emergency Services"
+      }
+    ],
+    "sports": [
+      {
+        "name": "Gymnasium / Fitness Center"
+      },
+      {
+        "name": "Swimming Pool"
+      },
+      {
+        "name": "Padel Tennis Court"
+      },
+      {
+        "name": "Pickleball Court"
+      },
+      {
+        "name": "Cricket Pitch"
+      },
+      {
+        "name": "Indoor Games Area"
+      },
+      {
+        "name": "Rock Climbing Zone (Terrace)"
+      },
+      {
+        "name": "Yoga Deck (Terrace)"
+      }
+    ],
+    "family": [
+      {
+        "name": "The Forest"
+      },
+      {
+        "name": "Multipurpose Hall"
+      },
+      {
+        "name": "Zen Garden (Terrace)"
+      },
+      {
+        "name": "Tropical Garden (Terrace)"
+      },
+      {
+        "name": "Cactus Garden (Terrace)"
+      },
+      {
+        "name": "Early Learning Centre"
+      },
+      {
+        "name": "Kids Lounge (Terrace)"
+      }
+    ],
+    "lifestyle": [
+      {
+        "name": "Restaurant"
+      },
+      {
+        "name": "Deli / Bakery"
+      },
+      {
+        "name": "Pool Bar"
+      },
+      {
+        "name": "Herb Garden (Terrace)"
+      },
+      {
+        "name": "Farm-to-Table Kitchen (Terrace)"
+      },
+      {
+        "name": "Florist"
+      },
+      {
+        "name": "Book and Gift Shop"
+      },
+      {
+        "name": "Boutique Lifestyle Store"
+      },
+      {
+        "name": "Pharmacy"
+      },
+      {
+        "name": "Pet Store and Creche"
+      },
+      {
+        "name": "Laundry and Dry Cleaning Services"
+      },
+      {
+        "name": "Salon"
+      },
+      {
+        "name": "Smart Lockers"
+      },
+      {
+        "name": "Optical Store"
+      },
+      {
+        "name": "Organic Grocery"
+      },
+      {
+        "name": "Convenience Store"
+      },
+      {
+        "name": "ATM"
+      },
+      {
+        "name": "Business Centre / Co-working Space"
+      }
+    ],
+    "sustainability": []
+  },
+  "location": {
+    "addressLine": "Sector 36A, Dwarka Expressway",
+    "locality": "Sector 36A",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "pincode": "122004",
+    "latitude": 28.4214618,
+    "longitude": 76.891168,
+    "googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d56142.83077984516!2d76.891168!3d28.4214618!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d17eb26869435%3A0xe3c46a5eec0e1542!2sEstate%20361%20by%20Max%20Estates!5e0!3m2!1sen!2sin!4v1764077302160!5m2!1sen!2sin"
+  },
+  "connectivity": [
+    {
+      "destination": "Planned Global City",
+      "driveTimeMinutes": 2,
+      "distanceKm": 1,
+      "category": "business"
+    },
+    {
+      "destination": "Proposed Delhi Metro Station",
+      "driveTimeMinutes": 5,
+      "distanceKm": 2,
+      "category": "metro"
+    },
+    {
+      "destination": "Genesis Hospital",
+      "driveTimeMinutes": 5,
+      "distanceKm": 3,
+      "category": "healthcare"
+    },
+    {
+      "destination": "Aarvy Hospital",
+      "driveTimeMinutes": 8,
+      "distanceKm": 5,
+      "category": "healthcare"
+    },
+    {
+      "destination": "NSP School",
+      "driveTimeMinutes": 8,
+      "distanceKm": 5,
+      "category": "education"
+    },
+    {
+      "destination": "Gurgaon World School",
+      "driveTimeMinutes": 9,
+      "distanceKm": 6,
+      "category": "education"
+    },
+    {
+      "destination": "RRTS Station",
+      "driveTimeMinutes": 10,
+      "distanceKm": 7,
+      "category": "metro"
+    },
+    {
+      "destination": "Medanta Hospital",
+      "driveTimeMinutes": 15,
+      "distanceKm": 11,
+      "category": "healthcare"
+    },
+    {
+      "destination": "Signature Hospital",
+      "driveTimeMinutes": 15,
+      "distanceKm": 11,
+      "category": "healthcare"
+    },
+    {
+      "destination": "Delhi Public School",
+      "driveTimeMinutes": 15,
+      "distanceKm": 12,
+      "category": "education"
+    },
+    {
+      "destination": "Sector 55-56 Metro Station",
+      "driveTimeMinutes": 25,
+      "distanceKm": 20,
+      "category": "metro"
+    },
+    {
+      "destination": "Classic Golf and Country Club, Tauru",
+      "driveTimeMinutes": 29,
+      "distanceKm": 24,
+      "category": "other"
+    },
+    {
+      "destination": "Cyber City",
+      "driveTimeMinutes": 30,
+      "distanceKm": 22,
+      "category": "business"
+    },
+    {
+      "destination": "Ambience Mall",
+      "driveTimeMinutes": 30,
+      "distanceKm": 22,
+      "category": "retail"
+    },
+    {
+      "destination": "IICC, Dwarka",
+      "driveTimeMinutes": 30,
+      "distanceKm": 24,
+      "category": "business"
+    },
+    {
+      "destination": "Indira Gandhi International Airport",
+      "driveTimeMinutes": 35,
+      "distanceKm": 28,
+      "category": "airport"
+    }
+  ],
+  "neighbourhood": {
+    "title": "The Neighbourhood",
+    "paragraphs": [
+      "The Terraces at Estate 361 sits in Sector 36A, Gurugram, at the confluence of the Dwarka Expressway, the proposed Metro corridor, and the Central Peripheral Road. The site is adjacent to the planned Global City CBD — a planned Central Business District expected to house over 200 multinational corporations and generate more than five lakh jobs over the coming decade.",
+      "Key destinations from the project: Planned Global City at 1 km, Proposed Delhi Metro Station at 2 km, Genesis Hospital at 3 km, RRTS Station at 7 km, Medanta Hospital at 11 km, Cyber City at 22 km, Ambience Mall at 22 km, IICC Dwarka at 24 km, and Indira Gandhi International Airport at 28 km.",
+      "Schools and education within reach include NSP School at 5 km, Gurgaon World School at 6 km, and Delhi Public School at 12 km. Healthcare options nearby include Aarvy Hospital, Signature Hospital, and Medanta — providing a complete spectrum of education, employment, and healthcare infrastructure within a 30-minute drive."
+    ],
+    "highlights": [
+      "Sector 36A, Gurugram — Dwarka Expressway frontage",
+      "Planned Global City CBD — 1 km",
+      "Proposed Delhi Metro Station — 2 km",
+      "RRTS Station — 7 km",
+      "Cyber City — 22 km",
+      "Indira Gandhi International Airport — 28 km"
+    ],
+    "backdropImageKey": "location-connectivity",
+    "cards": [
+      {
+        "icon": "MapPin",
+        "label": "TOD Zone at Dwarka Expressway",
+        "body": "Situated at the confluence of Dwarka Expressway, the proposed Metro corridor, and the Central Peripheral Road — adjacent to Global City, a planned CBD expected to house 200+ MNCs and generate over 5 lakh jobs."
+      },
+      {
+        "icon": "Sparkles",
+        "label": "8 Exclusive Community Terraces",
+        "body": "Spanning 5,000 sq ft across 8 levels within the tower, resident-only third spaces include a rock climbing zone, yoga deck, zen garden, cactus garden, tropical garden, herb garden, farm-to-table kitchen, and kids lounge."
+      },
+      {
+        "icon": "Users",
+        "label": "Integrated Wellness and Senior Care",
+        "body": "The estate includes an on-site integrated wellness centre with next-generation health diagnostics, light medical therapies, ayurveda, acupuncture, cold plunges, and infrared saunas. Senior care residences are managed by Antara Senior Living."
+      }
+    ]
+  },
+  "builder": {
+    "name": "Max Estates Limited",
+    "tagline": "The real estate arm of Max Group",
+    "description": "Max Estates Limited is the real estate arm of Max Group — a multi-business conglomerate founded in 1982. Max Estates has delivered Grade A commercial properties including Max Towers, Max Square, and Max House, all at 100% occupancy. The company brings proven institutional leasing capability and provides structured lease assistance and professional management for The Terraces.",
+    "headquarters": "Noida, Uttar Pradesh",
+    "notableProjects": [
+      "Max Towers",
+      "Max Square",
+      "Max House"
+    ]
+  },
+  "paymentPlan": {
+    "planName": "Construction-Linked Plan",
+    "milestones": [
+      {
+        "milestone": "On Application",
+        "percentage": 10
+      },
+      {
+        "milestone": "Within 90 Days of Application",
+        "percentage": 10
+      },
+      {
+        "milestone": "On Ground Floor Casting",
+        "percentage": 20
+      },
+      {
+        "milestone": "On 18th Floor Casting",
+        "percentage": 20
+      },
+      {
+        "milestone": "On Possession",
+        "percentage": 40
+      }
+    ],
+    "notes": []
+  },
+  "emiCalculator": {
+    "defaultPrincipalCr": 2.4,
+    "defaultInterestRatePct": 8.5,
+    "defaultTenureYears": 20,
+    "downPaymentPct": 20
+  },
+  "investmentThesis": {
+    "headline": "Wellness, sustainability, and TOD-grade location",
+    "paragraphs": [
+      "The Terraces is designed to the highest green building standard in India — IGBC Platinum Pre-Certified — with climate-responsive architecture, VRF air-conditioning, rainwater harvesting, solar rooftop systems, and STP, built for long-term environmental impact.",
+      "Each residence is equipped with a Treated Fresh Air (TFA) system that filters, conditions, and dehumidifies outdoor air continuously — maintaining indoor AQI between 0 and 50 as per WELL guidelines. The wellness positioning is reinforced by an on-site integrated wellness centre and Antara-managed senior care.",
+      "Max Estates brings proven institutional leasing capability — 100% occupancy across Max Towers, Max Square, and Max House — providing structured lease assistance and professional management for The Terraces. The site sits at the confluence of Dwarka Expressway, the proposed Metro corridor, and the Central Peripheral Road, adjacent to the planned Global City CBD."
+    ],
+    "dataPoints": [
+      {
+        "label": "Total units",
+        "value": "374"
+      },
+      {
+        "label": "Tower height",
+        "value": "34 floors"
+      },
+      {
+        "label": "Amenities footprint",
+        "value": "80,000+ sq.ft."
+      },
+      {
+        "label": "Estate land area",
+        "value": "18.23 acres"
+      },
+      {
+        "label": "Certification",
+        "value": "IGBC Platinum (Pre-Certified)"
+      },
+      {
+        "label": "Possession",
+        "value": "Dec 2032"
+      }
+    ],
+    "backdropImageKey": "sustainability-landscape",
+    "cards": [
+      {
+        "icon": "Building2",
+        "label": "IGBC Platinum Pre-Certified Design",
+        "body": "Climate-responsive architecture, VRF air-conditioning, rainwater harvesting, solar rooftop systems, and STP — built for long-term environmental impact."
+      },
+      {
+        "icon": "Home",
+        "label": "Treated Fresh Air in Every Home",
+        "body": "Each residence has a TFA system that filters, conditions, and dehumidifies outdoor air continuously — maintaining indoor AQI between 0 and 50 as per WELL guidelines."
+      },
+      {
+        "icon": "TrendingUp",
+        "label": "Institutional Leasing Backbone",
+        "body": "100% occupancy across Max Towers, Max Square, and Max House — structured lease assistance and professional management for The Terraces."
+      }
+    ]
+  },
+  "similarProperties": [
+    "krisumi-forest-reserve",
+    "sobha-aranya"
+  ],
+  "faqs": [
+    {
+      "question": "What is the starting price for The Terraces at Estate 361?",
+      "answer": "The Terraces at Estate 361 starts at ₹2.40 Cr onwards for 1.5 BHK residences. Prices vary by unit type, floor, and preferred location charges (PLC). GST is additional."
+    },
+    {
+      "question": "Where is The Terraces at Estate 361 located?",
+      "answer": "The project is located in Sector 36A, Gurugram, on the Dwarka Expressway — at the confluence of the Dwarka Expressway, the proposed Metro corridor, and the Central Peripheral Road. It is adjacent to the planned Global City CBD."
+    },
+    {
+      "question": "What configurations are available at The Terraces?",
+      "answer": "The Terraces offers 1.5 BHK residences (1,144 sq ft total area), 2 BHK residences (1,565 sq ft), and 2 BHK Duplex Loft units (1,687 sq ft). All units have 2 bathrooms."
+    },
+    {
+      "question": "Is The Terraces at Estate 361 RERA registered?",
+      "answer": "Yes. The Terraces at Estate 361 is registered with HARERA under registration number RC/REP/HARERA/GGM/1012/744/2025/115. Details are available at haryanarera.gov.in."
+    },
+    {
+      "question": "What is the IGBC Platinum certification for The Terraces?",
+      "answer": "The Terraces is IGBC Platinum Pre-Certified, the highest rating by the Indian Green Building Council. This covers climate-responsive architecture, VRF air-conditioning, energy-efficient water heating, rainwater harvesting, solar rooftop systems, and STP."
+    },
+    {
+      "question": "What are the exclusive community terraces at this project?",
+      "answer": "The Terraces has 8 resident-only community spaces spread across 5,000 sq ft at different levels within the tower — a rock climbing zone, yoga deck, zen garden, tropical garden, cactus garden, herb garden, farm-to-table kitchen, and kids lounge."
+    },
+    {
+      "question": "What is the Treated Fresh Air system in each home?",
+      "answer": "Every residence is equipped with a Treated Fresh Air (TFA) system that continuously supplies filtered, conditioned, and dehumidified outdoor air, designed to maintain indoor AQI between 0 and 50 as per WELL guidelines."
+    },
+    {
+      "question": "Who is the developer of The Terraces at Estate 361?",
+      "answer": "The developer is Max Estates Limited, the real estate arm of Max Group — a multi-business conglomerate founded in 1982. Max Estates has delivered Grade A commercial properties including Max Towers, Max Square, and Max House, all at 100% occupancy."
+    },
+    {
+      "question": "What wellness facilities are available at The Terraces?",
+      "answer": "The estate includes an integrated on-site wellness centre with next-generation health diagnostics, light medical therapies, ayurveda, acupuncture, cold plunges, infrared saunas, and pranic healing. Care at Home services are managed by Antara Senior Living."
+    },
+    {
+      "question": "What is the payment plan for The Terraces at Estate 361?",
+      "answer": "The payment plan is structured around construction milestones: 10% on application, 10% within 90 days of application, 20% on ground floor casting, 20% on 18th floor casting, and 40% on possession."
+    }
+  ],
+  "rera": {
+    "number": "RC/REP/HARERA/GGM/1012/744/2025/115",
+    "authority": "HARERA",
+    "state": "Haryana",
+    "verificationUrl": "https://haryanarera.gov.in"
+  },
+  "brochureUrl": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/brochure/the-terraces-brochure.pdf",
+  "gallery": {
+    "enabled": true,
+    "curated": [
+      {
+        "imageKey": "tower-exterior-facade",
+        "caption": "Tower Exterior",
+        "category": "exteriors"
+      },
+      {
+        "imageKey": "lobby-entrance",
+        "caption": "Lobby Entrance",
+        "category": "interiors"
+      },
+      {
+        "imageKey": "amenities-clubhouse",
+        "caption": "Clubhouse",
+        "category": "amenities"
+      },
+      {
+        "imageKey": "community-terrace-gathering",
+        "caption": "Community Terrace",
+        "category": "amenities"
+      },
+      {
+        "imageKey": "wellness-centre-interior",
+        "caption": "Wellness Centre",
+        "category": "amenities"
+      },
+      {
+        "imageKey": "forest-aerial",
+        "caption": "Forest Backdrop — Aerial",
+        "category": "surroundings"
+      },
+      {
+        "imageKey": "sustainability-landscape",
+        "caption": "Sustainability Landscape",
+        "category": "surroundings"
+      },
+      {
+        "imageKey": "location-connectivity",
+        "caption": "Location & Connectivity",
+        "category": "surroundings"
+      },
+      {
+        "imageKey": "gallery-pool-area",
+        "caption": "Pool Area",
+        "category": "amenities"
+      },
+      {
+        "imageKey": "gallery-terrace-view",
+        "caption": "Terrace View",
+        "category": "amenities"
+      },
+      {
+        "imageKey": "gallery-indoor-lounge",
+        "caption": "Indoor Lounge",
+        "category": "interiors"
+      },
+      {
+        "imageKey": "gallery-rock-climbing-zone",
+        "caption": "Rock Climbing Zone",
+        "category": "amenities"
+      },
+      {
+        "imageKey": "gallery-farm-to-table-kitchen",
+        "caption": "Farm-to-Table Kitchen",
+        "category": "amenities"
+      },
+      {
+        "imageKey": "gallery-water-feature",
+        "caption": "Water Feature",
+        "category": "amenities"
+      },
+      {
+        "imageKey": "gallery-sports-block",
+        "caption": "Sports Block",
+        "category": "amenities"
+      },
+      {
+        "imageKey": "gallery-wellness-exterior",
+        "caption": "Wellness Centre — Exterior",
+        "category": "amenities"
+      },
+      {
+        "imageKey": "gallery-entrance-plaza",
+        "caption": "Entrance Plaza",
+        "category": "exteriors"
+      },
+      {
+        "imageKey": "gallery-landscaping",
+        "caption": "Landscaping",
+        "category": "surroundings"
+      },
+      {
+        "imageKey": "gallery-garden-path",
+        "caption": "Garden Path",
+        "category": "surroundings"
+      },
+      {
+        "imageKey": "gallery-forest-greenery",
+        "caption": "Forest Greenery",
+        "category": "surroundings"
+      },
+      {
+        "imageKey": "masterplan-estate-361",
+        "caption": "Estate 361 Masterplan",
+        "category": "master-plans"
+      }
+    ],
+    "exclude": []
+  },
+  "disclaimerAddendum": "The Terraces at Estate 361 is being developed by Max Estates Limited. HARERA Gurugram Registration Number: RC/REP/HARERA/GGM/1012/744/2025/115. Verify all approved details on the HARERA website at haryanarera.gov.in before booking.",
+  "images": {
+    "amenities-clubhouse": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/originals/amenities-clubhouse.png",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/hero/amenities-clubhouse.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/gallery/amenities-clubhouse.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/thumb/amenities-clubhouse.webp"
+    },
+    "forest-aerial": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/originals/forest-aerial.png",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/hero/forest-aerial.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/gallery/forest-aerial.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/thumb/forest-aerial.webp"
+    },
+    "tower-exterior-facade": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/originals/tower-exterior-facade.png",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/hero/tower-exterior-facade.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/gallery/tower-exterior-facade.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/thumb/tower-exterior-facade.webp"
+    },
+    "community-terrace-gathering": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/originals/community-terrace-gathering.png",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/hero/community-terrace-gathering.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/gallery/community-terrace-gathering.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/thumb/community-terrace-gathering.webp"
+    },
+    "sustainability-landscape": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/originals/sustainability-landscape.png",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/hero/sustainability-landscape.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/gallery/sustainability-landscape.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/thumb/sustainability-landscape.webp"
+    },
+    "wellness-centre-interior": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/originals/wellness-centre-interior.png",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/hero/wellness-centre-interior.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/gallery/wellness-centre-interior.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/thumb/wellness-centre-interior.webp"
+    },
+    "lobby-entrance": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/originals/lobby-entrance.png",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/hero/lobby-entrance.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/gallery/lobby-entrance.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/thumb/lobby-entrance.webp"
+    },
+    "location-connectivity": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/originals/location-connectivity.png",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/hero/location-connectivity.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/gallery/location-connectivity.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/thumb/location-connectivity.webp"
+    },
+    "gallery-forest-greenery": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/originals/gallery-forest-greenery.png",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/hero/gallery-forest-greenery.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/gallery/gallery-forest-greenery.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/thumb/gallery-forest-greenery.webp"
+    },
+    "gallery-pool-area": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/originals/gallery-pool-area.png",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/hero/gallery-pool-area.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/gallery/gallery-pool-area.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/thumb/gallery-pool-area.webp"
+    },
+    "gallery-terrace-view": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/originals/gallery-terrace-view.png",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/hero/gallery-terrace-view.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/gallery/gallery-terrace-view.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/thumb/gallery-terrace-view.webp"
+    },
+    "gallery-indoor-lounge": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/originals/gallery-indoor-lounge.png",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/hero/gallery-indoor-lounge.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/gallery/gallery-indoor-lounge.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/thumb/gallery-indoor-lounge.webp"
+    },
+    "gallery-landscaping": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/originals/gallery-landscaping.png",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/hero/gallery-landscaping.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/gallery/gallery-landscaping.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/thumb/gallery-landscaping.webp"
+    },
+    "gallery-entrance-plaza": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/originals/gallery-entrance-plaza.png",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/hero/gallery-entrance-plaza.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/gallery/gallery-entrance-plaza.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/thumb/gallery-entrance-plaza.webp"
+    },
+    "gallery-wellness-exterior": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/originals/gallery-wellness-exterior.png",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/hero/gallery-wellness-exterior.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/gallery/gallery-wellness-exterior.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/thumb/gallery-wellness-exterior.webp"
+    },
+    "gallery-sports-block": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/originals/gallery-sports-block.png",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/hero/gallery-sports-block.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/gallery/gallery-sports-block.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/thumb/gallery-sports-block.webp"
+    },
+    "gallery-garden-path": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/originals/gallery-garden-path.png",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/hero/gallery-garden-path.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/gallery/gallery-garden-path.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/thumb/gallery-garden-path.webp"
+    },
+    "gallery-water-feature": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/originals/gallery-water-feature.png",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/hero/gallery-water-feature.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/gallery/gallery-water-feature.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/thumb/gallery-water-feature.webp"
+    },
+    "gallery-rock-climbing-zone": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/originals/gallery-rock-climbing-zone.png",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/hero/gallery-rock-climbing-zone.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/gallery/gallery-rock-climbing-zone.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/thumb/gallery-rock-climbing-zone.webp"
+    },
+    "gallery-farm-to-table-kitchen": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/originals/gallery-farm-to-table-kitchen.png",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/hero/gallery-farm-to-table-kitchen.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/gallery/gallery-farm-to-table-kitchen.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/thumb/gallery-farm-to-table-kitchen.webp"
+    },
+    "masterplan-estate-361": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/originals/masterplan-estate-361.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/hero/masterplan-estate-361.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/gallery/masterplan-estate-361.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/thumb/masterplan-estate-361.webp"
+    },
+    "hero-featured": {
+      "original": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/originals/hero-featured.jpg",
+      "hero": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/hero/hero-featured.webp",
+      "gallery": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/gallery/hero-featured.webp",
+      "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/thumb/hero-featured.webp"
+    }
+  },
+  "canonicalUrl": "https://cornerhouse.co.in/properties/max-estate-361-terraces",
+  "computedSeo": {
+    "title": "The Terraces at Estate 361 | Max Estates | Sector 36A Gurugram",
+    "description": "The Terraces at Estate 361 by Max Estates — 1.5 & 2 BHK wellness homes in Sector 36A Gurugram, from ₹2.40 Cr. IGBC Platinum. RERA registered.",
+    "ogImageUrl": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/gallery/hero-featured.webp",
+    "keywords": [
+      "The Terraces Estate 361",
+      "Max Estates Gurugram",
+      "1.5 BHK Sector 36A",
+      "2 BHK Dwarka Expressway",
+      "Max Estates Terraces",
+      "luxury apartments Sector 36A",
+      "IGBC Platinum Gurugram",
+      "wellness homes Gurugram",
+      "Estate 361 Terraces price",
+      "Dwarka Expressway new launch",
+      "The Terraces at Estate 361",
+      "Max Estates Limited"
+    ]
+  },
+  "jsonLd": {
+    "realEstateListing": {
+      "@context": "https://schema.org",
+      "@type": "RealEstateListing",
+      "name": "The Terraces at Estate 361",
+      "url": "https://cornerhouse.co.in/properties/max-estate-361-terraces",
+      "description": "Live Well, Inside Out — Forest-Backed Homes on Dwarka Expressway",
+      "image": [
+        "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/hero/tower-exterior-facade.webp"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sector 36A, Dwarka Expressway",
+        "addressLocality": "Sector 36A",
+        "addressRegion": "Gurugram",
+        "postalCode": "122004",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 28.4214618,
+        "longitude": 76.891168
+      },
+      "datePosted": "2026-05-12",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "price": 24000000,
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    "product": {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "The Terraces at Estate 361",
+      "description": "Live Well, Inside Out — Forest-Backed Homes on Dwarka Expressway",
+      "image": [
+        "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/hero/tower-exterior-facade.webp"
+      ],
+      "brand": {
+        "@type": "Brand",
+        "name": "Max Estates Limited"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "INR",
+        "lowPrice": 24000000,
+        "highPrice": 24000000,
+        "offerCount": 3,
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    "faqPage": {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the starting price for The Terraces at Estate 361?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Terraces at Estate 361 starts at ₹2.40 Cr onwards for 1.5 BHK residences. Prices vary by unit type, floor, and preferred location charges (PLC). GST is additional."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is The Terraces at Estate 361 located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The project is located in Sector 36A, Gurugram, on the Dwarka Expressway — at the confluence of the Dwarka Expressway, the proposed Metro corridor, and the Central Peripheral Road. It is adjacent to the planned Global City CBD."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What configurations are available at The Terraces?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Terraces offers 1.5 BHK residences (1,144 sq ft total area), 2 BHK residences (1,565 sq ft), and 2 BHK Duplex Loft units (1,687 sq ft). All units have 2 bathrooms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is The Terraces at Estate 361 RERA registered?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The Terraces at Estate 361 is registered with HARERA under registration number RC/REP/HARERA/GGM/1012/744/2025/115. Details are available at haryanarera.gov.in."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the IGBC Platinum certification for The Terraces?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Terraces is IGBC Platinum Pre-Certified, the highest rating by the Indian Green Building Council. This covers climate-responsive architecture, VRF air-conditioning, energy-efficient water heating, rainwater harvesting, solar rooftop systems, and STP."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the exclusive community terraces at this project?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Terraces has 8 resident-only community spaces spread across 5,000 sq ft at different levels within the tower — a rock climbing zone, yoga deck, zen garden, tropical garden, cactus garden, herb garden, farm-to-table kitchen, and kids lounge."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Treated Fresh Air system in each home?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every residence is equipped with a Treated Fresh Air (TFA) system that continuously supplies filtered, conditioned, and dehumidified outdoor air, designed to maintain indoor AQI between 0 and 50 as per WELL guidelines."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is the developer of The Terraces at Estate 361?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The developer is Max Estates Limited, the real estate arm of Max Group — a multi-business conglomerate founded in 1982. Max Estates has delivered Grade A commercial properties including Max Towers, Max Square, and Max House, all at 100% occupancy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What wellness facilities are available at The Terraces?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The estate includes an integrated on-site wellness centre with next-generation health diagnostics, light medical therapies, ayurveda, acupuncture, cold plunges, infrared saunas, and pranic healing. Care at Home services are managed by Antara Senior Living."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the payment plan for The Terraces at Estate 361?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The payment plan is structured around construction milestones: 10% on application, 10% within 90 days of application, 20% on ground floor casting, 20% on 18th floor casting, and 40% on possession."
+          }
+        }
+      ]
+    },
+    "breadcrumbList": {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cornerhouse.co.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Properties",
+          "item": "https://cornerhouse.co.in/properties"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The Terraces at Estate 361",
+          "item": "https://cornerhouse.co.in/properties/max-estate-361-terraces"
+        }
+      ]
+    }
+  },
+  "generatedAt": "2026-05-12T05:21:32.221Z"
+}
