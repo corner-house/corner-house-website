@@ -51,6 +51,7 @@ export function listingAsProperty(listing: PropertyListing): Property {
     beds,
     baths: beds,
     area: listing.atAGlance.unitSizes,
+    configuration: listing.atAGlance.configuration,
     images: [heroUrl].filter(Boolean),
     floorPlan: floorPlanUrl,
     description: listing.hero.tagline,

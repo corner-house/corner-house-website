@@ -1,0 +1,352 @@
+{
+  "slug": "max-estate-361-terraces",
+  "projectName": "The Terraces at Estate 361",
+  "developerName": "Max Estates Limited",
+
+  "seo": {
+    "title": "The Terraces at Estate 361 | Max Estates | Sector 36A Gurugram",
+    "description": "The Terraces at Estate 361 by Max Estates — 1.5 & 2 BHK wellness homes in Sector 36A Gurugram, from ₹2.40 Cr. IGBC Platinum. RERA registered.",
+    "keywords": [
+      "The Terraces Estate 361",
+      "Max Estates Gurugram",
+      "1.5 BHK Sector 36A",
+      "2 BHK Dwarka Expressway",
+      "Max Estates Terraces",
+      "luxury apartments Sector 36A",
+      "IGBC Platinum Gurugram",
+      "wellness homes Gurugram",
+      "Estate 361 Terraces price",
+      "Dwarka Expressway new launch"
+    ],
+    "ogImageKey": "hero-featured"
+  },
+
+  "hero": {
+    "tagline": "Live Well, Inside Out — Forest-Backed Homes on Dwarka Expressway",
+    "priceFrom": "2.40 Cr",
+    "priceSuffix": "onwards",
+    "heroImageKey": "tower-exterior-facade",
+    "keyStats": [
+      { "label": "Starting Price", "value": "₹2.40 Cr+" },
+      { "label": "Configurations", "value": "1.5 & 2 BHK + Duplex Loft" },
+      { "label": "Total Units", "value": "374" },
+      { "label": "Amenities", "value": "80,000+ sq.ft." },
+      { "label": "Certification", "value": "IGBC Platinum (Pre-Certified)" }
+    ]
+  },
+
+  "videos": {
+    "youtubeId": "k1ZBYFBnXJI"
+  },
+
+  "atAGlance": {
+    "projectType": "Residential Apartments",
+    "configuration": "1.5 BHK & 2 BHK (incl. Duplex Loft)",
+    "unitSizes": "595–877 sq.ft. carpet",
+    "totalArea": "18.23 acres (Estate 361)",
+    "totalUnits": 374,
+    "totalTowers": 1,
+    "floors": "34",
+    "possession": "Dec 2032",
+    "status": "Under Construction",
+    "reraStatus": "Registered"
+  },
+
+  "pricing": [
+    {
+      "configuration": "1.5 BHK",
+      "carpetAreaSqft": 595,
+      "builtUpAreaSqft": 1144,
+      "totalPriceFrom": "2.40 Cr",
+      "inventoryStatus": "Available"
+    },
+    {
+      "configuration": "2 BHK",
+      "carpetAreaSqft": 814,
+      "builtUpAreaSqft": 1565,
+      "totalPriceFrom": "On Request",
+      "inventoryStatus": "Available"
+    },
+    {
+      "configuration": "2 BHK Loft",
+      "carpetAreaSqft": 877,
+      "builtUpAreaSqft": 1687,
+      "totalPriceFrom": "On Request",
+      "inventoryStatus": "Limited"
+    }
+  ],
+
+  "floorPlans": [],
+
+  "building": {
+    "structure": "RCC framed structure",
+    "towers": [
+      { "name": "The Terraces Tower", "floors": 34 }
+    ],
+    "parking": {
+      "type": "basement"
+    }
+  },
+
+  "amenities": {
+    "wellness": [
+      { "name": "Integrated Wellness Centre" },
+      { "name": "Care at Home by Antara" },
+      { "name": "24x7 Ambulance and Emergency Services" }
+    ],
+    "sports": [
+      { "name": "Gymnasium / Fitness Center" },
+      { "name": "Swimming Pool" },
+      { "name": "Padel Tennis Court" },
+      { "name": "Pickleball Court" },
+      { "name": "Cricket Pitch" },
+      { "name": "Indoor Games Area" },
+      { "name": "Rock Climbing Zone (Terrace)" },
+      { "name": "Yoga Deck (Terrace)" }
+    ],
+    "family": [
+      { "name": "The Forest" },
+      { "name": "Multipurpose Hall" },
+      { "name": "Zen Garden (Terrace)" },
+      { "name": "Tropical Garden (Terrace)" },
+      { "name": "Cactus Garden (Terrace)" },
+      { "name": "Early Learning Centre" },
+      { "name": "Kids Lounge (Terrace)" }
+    ],
+    "lifestyle": [
+      { "name": "Restaurant" },
+      { "name": "Deli / Bakery" },
+      { "name": "Pool Bar" },
+      { "name": "Herb Garden (Terrace)" },
+      { "name": "Farm-to-Table Kitchen (Terrace)" },
+      { "name": "Florist" },
+      { "name": "Book and Gift Shop" },
+      { "name": "Boutique Lifestyle Store" },
+      { "name": "Pharmacy" },
+      { "name": "Pet Store and Creche" },
+      { "name": "Laundry and Dry Cleaning Services" },
+      { "name": "Salon" },
+      { "name": "Smart Lockers" },
+      { "name": "Optical Store" },
+      { "name": "Organic Grocery" },
+      { "name": "Convenience Store" },
+      { "name": "ATM" },
+      { "name": "Business Centre / Co-working Space" }
+    ],
+    "sustainability": []
+  },
+
+  "location": {
+    "addressLine": "Sector 36A, Dwarka Expressway",
+    "locality": "Sector 36A",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "pincode": "122004",
+    "latitude": 28.4214618,
+    "longitude": 76.891168,
+    "googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d56142.83077984516!2d76.891168!3d28.4214618!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d17eb26869435%3A0xe3c46a5eec0e1542!2sEstate%20361%20by%20Max%20Estates!5e0!3m2!1sen!2sin!4v1764077302160!5m2!1sen!2sin"
+  },
+
+  "connectivity": [
+    { "destination": "Planned Global City", "distanceKm": 1, "driveTimeMinutes": 2, "category": "business" },
+    { "destination": "Proposed Delhi Metro Station", "distanceKm": 2, "driveTimeMinutes": 5, "category": "metro" },
+    { "destination": "Genesis Hospital", "distanceKm": 3, "driveTimeMinutes": 5, "category": "healthcare" },
+    { "destination": "Aarvy Hospital", "distanceKm": 5, "driveTimeMinutes": 8, "category": "healthcare" },
+    { "destination": "NSP School", "distanceKm": 5, "driveTimeMinutes": 8, "category": "education" },
+    { "destination": "Gurgaon World School", "distanceKm": 6, "driveTimeMinutes": 9, "category": "education" },
+    { "destination": "RRTS Station", "distanceKm": 7, "driveTimeMinutes": 10, "category": "metro" },
+    { "destination": "Medanta Hospital", "distanceKm": 11, "driveTimeMinutes": 15, "category": "healthcare" },
+    { "destination": "Signature Hospital", "distanceKm": 11, "driveTimeMinutes": 15, "category": "healthcare" },
+    { "destination": "Delhi Public School", "distanceKm": 12, "driveTimeMinutes": 15, "category": "education" },
+    { "destination": "Sector 55-56 Metro Station", "distanceKm": 20, "driveTimeMinutes": 25, "category": "metro" },
+    { "destination": "Classic Golf and Country Club, Tauru", "distanceKm": 24, "driveTimeMinutes": 29, "category": "other" },
+    { "destination": "Cyber City", "distanceKm": 22, "driveTimeMinutes": 30, "category": "business" },
+    { "destination": "Ambience Mall", "distanceKm": 22, "driveTimeMinutes": 30, "category": "retail" },
+    { "destination": "IICC, Dwarka", "distanceKm": 24, "driveTimeMinutes": 30, "category": "business" },
+    { "destination": "Indira Gandhi International Airport", "distanceKm": 28, "driveTimeMinutes": 35, "category": "airport" }
+  ],
+
+  "neighbourhood": {
+    "title": "The Neighbourhood",
+    "paragraphs": [
+      "The Terraces at Estate 361 sits in Sector 36A, Gurugram, at the confluence of the Dwarka Expressway, the proposed Metro corridor, and the Central Peripheral Road. The site is adjacent to the planned Global City CBD — a planned Central Business District expected to house over 200 multinational corporations and generate more than five lakh jobs over the coming decade.",
+      "Key destinations from the project: Planned Global City at 1 km, Proposed Delhi Metro Station at 2 km, Genesis Hospital at 3 km, RRTS Station at 7 km, Medanta Hospital at 11 km, Cyber City at 22 km, Ambience Mall at 22 km, IICC Dwarka at 24 km, and Indira Gandhi International Airport at 28 km.",
+      "Schools and education within reach include NSP School at 5 km, Gurgaon World School at 6 km, and Delhi Public School at 12 km. Healthcare options nearby include Aarvy Hospital, Signature Hospital, and Medanta — providing a complete spectrum of education, employment, and healthcare infrastructure within a 30-minute drive."
+    ],
+    "highlights": [
+      "Sector 36A, Gurugram — Dwarka Expressway frontage",
+      "Planned Global City CBD — 1 km",
+      "Proposed Delhi Metro Station — 2 km",
+      "RRTS Station — 7 km",
+      "Cyber City — 22 km",
+      "Indira Gandhi International Airport — 28 km"
+    ],
+    "cards": [
+      {
+        "icon": "MapPin",
+        "label": "TOD Zone at Dwarka Expressway",
+        "body": "Situated at the confluence of Dwarka Expressway, the proposed Metro corridor, and the Central Peripheral Road — adjacent to Global City, a planned CBD expected to house 200+ MNCs and generate over 5 lakh jobs."
+      },
+      {
+        "icon": "Sparkles",
+        "label": "8 Exclusive Community Terraces",
+        "body": "Spanning 5,000 sq ft across 8 levels within the tower, resident-only third spaces include a rock climbing zone, yoga deck, zen garden, cactus garden, tropical garden, herb garden, farm-to-table kitchen, and kids lounge."
+      },
+      {
+        "icon": "Users",
+        "label": "Integrated Wellness and Senior Care",
+        "body": "The estate includes an on-site integrated wellness centre with next-generation health diagnostics, light medical therapies, ayurveda, acupuncture, cold plunges, and infrared saunas. Senior care residences are managed by Antara Senior Living."
+      }
+    ],
+    "backdropImageKey": "location-connectivity"
+  },
+
+  "builder": {
+    "name": "Max Estates Limited",
+    "tagline": "The real estate arm of Max Group",
+    "description": "Max Estates Limited is the real estate arm of Max Group — a multi-business conglomerate founded in 1982. Max Estates has delivered Grade A commercial properties including Max Towers, Max Square, and Max House, all at 100% occupancy. The company brings proven institutional leasing capability and provides structured lease assistance and professional management for The Terraces.",
+    "headquarters": "Noida, Uttar Pradesh",
+    "notableProjects": [
+      "Max Towers",
+      "Max Square",
+      "Max House"
+    ]
+  },
+
+  "paymentPlan": {
+    "planName": "Construction-Linked Plan",
+    "milestones": [
+      { "milestone": "On Application", "percentage": 10 },
+      { "milestone": "Within 90 Days of Application", "percentage": 10 },
+      { "milestone": "On Ground Floor Casting", "percentage": 20 },
+      { "milestone": "On 18th Floor Casting", "percentage": 20 },
+      { "milestone": "On Possession", "percentage": 40 }
+    ]
+  },
+
+  "emiCalculator": {
+    "defaultPrincipalCr": 2.4,
+    "defaultInterestRatePct": 8.5,
+    "defaultTenureYears": 20,
+    "downPaymentPct": 20
+  },
+
+  "investmentThesis": {
+    "headline": "Wellness, sustainability, and TOD-grade location",
+    "paragraphs": [
+      "The Terraces is designed to the highest green building standard in India — IGBC Platinum Pre-Certified — with climate-responsive architecture, VRF air-conditioning, rainwater harvesting, solar rooftop systems, and STP, built for long-term environmental impact.",
+      "Each residence is equipped with a Treated Fresh Air (TFA) system that filters, conditions, and dehumidifies outdoor air continuously — maintaining indoor AQI between 0 and 50 as per WELL guidelines. The wellness positioning is reinforced by an on-site integrated wellness centre and Antara-managed senior care.",
+      "Max Estates brings proven institutional leasing capability — 100% occupancy across Max Towers, Max Square, and Max House — providing structured lease assistance and professional management for The Terraces. The site sits at the confluence of Dwarka Expressway, the proposed Metro corridor, and the Central Peripheral Road, adjacent to the planned Global City CBD."
+    ],
+    "dataPoints": [
+      { "label": "Total units", "value": "374" },
+      { "label": "Tower height", "value": "34 floors" },
+      { "label": "Amenities footprint", "value": "80,000+ sq.ft." },
+      { "label": "Estate land area", "value": "18.23 acres" },
+      { "label": "Certification", "value": "IGBC Platinum (Pre-Certified)" },
+      { "label": "Possession", "value": "Dec 2032" }
+    ],
+    "cards": [
+      {
+        "icon": "Building2",
+        "label": "IGBC Platinum Pre-Certified Design",
+        "body": "Climate-responsive architecture, VRF air-conditioning, rainwater harvesting, solar rooftop systems, and STP — built for long-term environmental impact."
+      },
+      {
+        "icon": "Home",
+        "label": "Treated Fresh Air in Every Home",
+        "body": "Each residence has a TFA system that filters, conditions, and dehumidifies outdoor air continuously — maintaining indoor AQI between 0 and 50 as per WELL guidelines."
+      },
+      {
+        "icon": "TrendingUp",
+        "label": "Institutional Leasing Backbone",
+        "body": "100% occupancy across Max Towers, Max Square, and Max House — structured lease assistance and professional management for The Terraces."
+      }
+    ],
+    "backdropImageKey": "sustainability-landscape"
+  },
+
+  "similarProperties": ["krisumi-forest-reserve", "sobha-aranya"],
+
+  "faqs": [
+    {
+      "question": "What is the starting price for The Terraces at Estate 361?",
+      "answer": "The Terraces at Estate 361 starts at ₹2.40 Cr onwards for 1.5 BHK residences. Prices vary by unit type, floor, and preferred location charges (PLC). GST is additional."
+    },
+    {
+      "question": "Where is The Terraces at Estate 361 located?",
+      "answer": "The project is located in Sector 36A, Gurugram, on the Dwarka Expressway — at the confluence of the Dwarka Expressway, the proposed Metro corridor, and the Central Peripheral Road. It is adjacent to the planned Global City CBD."
+    },
+    {
+      "question": "What configurations are available at The Terraces?",
+      "answer": "The Terraces offers 1.5 BHK residences (1,144 sq ft total area), 2 BHK residences (1,565 sq ft), and 2 BHK Duplex Loft units (1,687 sq ft). All units have 2 bathrooms."
+    },
+    {
+      "question": "Is The Terraces at Estate 361 RERA registered?",
+      "answer": "Yes. The Terraces at Estate 361 is registered with HARERA under registration number RC/REP/HARERA/GGM/1012/744/2025/115. Details are available at haryanarera.gov.in."
+    },
+    {
+      "question": "What is the IGBC Platinum certification for The Terraces?",
+      "answer": "The Terraces is IGBC Platinum Pre-Certified, the highest rating by the Indian Green Building Council. This covers climate-responsive architecture, VRF air-conditioning, energy-efficient water heating, rainwater harvesting, solar rooftop systems, and STP."
+    },
+    {
+      "question": "What are the exclusive community terraces at this project?",
+      "answer": "The Terraces has 8 resident-only community spaces spread across 5,000 sq ft at different levels within the tower — a rock climbing zone, yoga deck, zen garden, tropical garden, cactus garden, herb garden, farm-to-table kitchen, and kids lounge."
+    },
+    {
+      "question": "What is the Treated Fresh Air system in each home?",
+      "answer": "Every residence is equipped with a Treated Fresh Air (TFA) system that continuously supplies filtered, conditioned, and dehumidified outdoor air, designed to maintain indoor AQI between 0 and 50 as per WELL guidelines."
+    },
+    {
+      "question": "Who is the developer of The Terraces at Estate 361?",
+      "answer": "The developer is Max Estates Limited, the real estate arm of Max Group — a multi-business conglomerate founded in 1982. Max Estates has delivered Grade A commercial properties including Max Towers, Max Square, and Max House, all at 100% occupancy."
+    },
+    {
+      "question": "What wellness facilities are available at The Terraces?",
+      "answer": "The estate includes an integrated on-site wellness centre with next-generation health diagnostics, light medical therapies, ayurveda, acupuncture, cold plunges, infrared saunas, and pranic healing. Care at Home services are managed by Antara Senior Living."
+    },
+    {
+      "question": "What is the payment plan for The Terraces at Estate 361?",
+      "answer": "The payment plan is structured around construction milestones: 10% on application, 10% within 90 days of application, 20% on ground floor casting, 20% on 18th floor casting, and 40% on possession."
+    }
+  ],
+
+  "rera": {
+    "number": "RC/REP/HARERA/GGM/1012/744/2025/115",
+    "authority": "HARERA",
+    "state": "Haryana",
+    "verificationUrl": "https://haryanarera.gov.in"
+  },
+
+  "gallery": {
+    "enabled": true,
+    "exclude": [],
+    "curated": [
+      { "imageKey": "tower-exterior-facade", "caption": "Tower Exterior", "category": "exteriors" },
+      { "imageKey": "lobby-entrance", "caption": "Lobby Entrance", "category": "interiors" },
+      { "imageKey": "amenities-clubhouse", "caption": "Clubhouse", "category": "amenities" },
+      { "imageKey": "community-terrace-gathering", "caption": "Community Terrace", "category": "amenities" },
+      { "imageKey": "wellness-centre-interior", "caption": "Wellness Centre", "category": "amenities" },
+      { "imageKey": "forest-aerial", "caption": "Forest Backdrop — Aerial", "category": "surroundings" },
+      { "imageKey": "sustainability-landscape", "caption": "Sustainability Landscape", "category": "surroundings" },
+      { "imageKey": "location-connectivity", "caption": "Location & Connectivity", "category": "surroundings" },
+      { "imageKey": "gallery-pool-area", "caption": "Pool Area", "category": "amenities" },
+      { "imageKey": "gallery-terrace-view", "caption": "Terrace View", "category": "amenities" },
+      { "imageKey": "gallery-indoor-lounge", "caption": "Indoor Lounge", "category": "interiors" },
+      { "imageKey": "gallery-rock-climbing-zone", "caption": "Rock Climbing Zone", "category": "amenities" },
+      { "imageKey": "gallery-farm-to-table-kitchen", "caption": "Farm-to-Table Kitchen", "category": "amenities" },
+      { "imageKey": "gallery-water-feature", "caption": "Water Feature", "category": "amenities" },
+      { "imageKey": "gallery-sports-block", "caption": "Sports Block", "category": "amenities" },
+      { "imageKey": "gallery-wellness-exterior", "caption": "Wellness Centre — Exterior", "category": "amenities" },
+      { "imageKey": "gallery-entrance-plaza", "caption": "Entrance Plaza", "category": "exteriors" },
+      { "imageKey": "gallery-landscaping", "caption": "Landscaping", "category": "surroundings" },
+      { "imageKey": "gallery-garden-path", "caption": "Garden Path", "category": "surroundings" },
+      { "imageKey": "gallery-forest-greenery", "caption": "Forest Greenery", "category": "surroundings" },
+      { "imageKey": "masterplan-estate-361", "caption": "Estate 361 Masterplan", "category": "master-plans" }
+    ]
+  },
+
+  "brochureUrl": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/brochure/the-terraces-brochure.pdf",
+
+  "disclaimerAddendum": "The Terraces at Estate 361 is being developed by Max Estates Limited. HARERA Gurugram Registration Number: RC/REP/HARERA/GGM/1012/744/2025/115. Verify all approved details on the HARERA website at haryanarera.gov.in before booking."
+}

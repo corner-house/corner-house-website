@@ -2,7 +2,7 @@ import React from 'react';
 import { Property } from '@/types';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Bed, Bath, Maximize, MapPin, Image as ImageIcon, Layout, ArrowRight } from 'lucide-react';
+import { Home, Maximize, MapPin, Image as ImageIcon, Layout, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 interface PropertyCardProps {
@@ -95,9 +95,8 @@ export default function PropertyCard({ property, onClick }: PropertyCardProps) {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-4 mt-6 pt-5 border-t border-border/40">
-            <Stat icon={Bed} value={`${property.beds} Beds`} />
-            <Stat icon={Bath} value={`${property.baths} Baths`} bordered />
+          <div className="grid grid-cols-2 gap-4 mt-6 pt-5 border-t border-border/40">
+            <Stat icon={Home} value={property.configuration} />
             <Stat icon={Maximize} value={property.area} />
           </div>
 
@@ -119,18 +118,13 @@ export default function PropertyCard({ property, onClick }: PropertyCardProps) {
 }
 
 interface StatProps {
-  icon: typeof Bed;
+  icon: typeof Home;
   value: string;
-  bordered?: boolean;
 }
 
-function Stat({ icon: Icon, value, bordered = false }: StatProps) {
+function Stat({ icon: Icon, value }: StatProps) {
   return (
-    <div
-      className={`flex flex-col items-center gap-2 ${
-        bordered ? 'border-x border-border/40' : ''
-      }`}
-    >
+    <div className="flex flex-col items-center gap-2">
       <div className="h-10 w-10 rounded-full bg-secondary/30 flex items-center justify-center group-hover:bg-primary/10 transition-colors duration-500">
         <Icon className="h-4 w-4 text-primary/60" />
       </div>

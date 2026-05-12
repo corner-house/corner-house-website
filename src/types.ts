@@ -7,6 +7,7 @@ export interface Property {
   beds: number;
   baths: number;
   area: string;
+  configuration: string;
   images: string[];
   floorPlan: string;
   description: string;
