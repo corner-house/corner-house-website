@@ -74,14 +74,32 @@ function extractFAQs(children: ReactNode): FAQEntry[] {
   return entries;
 }
 
-function FAQItem({ question, answerNodes, defaultOpen }: { question: string; answerNodes: ReactNode[]; defaultOpen?: boolean }) {
+function FAQItem({
+  question,
+  answerNodes,
+  defaultOpen,
+  index,
+}: {
+  question: string;
+  answerNodes: ReactNode[];
+  defaultOpen?: boolean;
+  index: number;
+}) {
   const [open, setOpen] = useState<boolean>(!!defaultOpen);
+  const panelId = `faq-panel-${index}`;
+  // Always render the answer body and toggle visibility via CSS rather than
+  // {open && (...)}. The lazy-mount pattern produced broken SSG → hydration
+  // behavior in production: items 2-10's body content was excluded from the
+  // server HTML and never mounted on the client when toggled. Always-rendered
+  // bodies make the SSR/CSR DOM identical, fix hydration, and put all 10
+  // answers in the static HTML (better for crawlers and AI citations).
   return (
     <div className="border-b border-border/60">
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
+        aria-controls={panelId}
         className="w-full flex items-start justify-between gap-6 py-6 text-left group"
       >
         <h3 className="text-lg md:text-xl font-heading font-medium leading-snug text-foreground group-hover:text-primary transition-colors">
@@ -95,11 +113,17 @@ function FAQItem({ question, answerNodes, defaultOpen }: { question: string; ans
           aria-hidden
         />
       </button>
-      {open && (
-        <div className="pb-8 pr-10 text-base md:text-lg font-light leading-[1.85] text-muted-foreground space-y-4 [&_p]:m-0">
-          {answerNodes}
-        </div>
-      )}
+      <div
+        id={panelId}
+        role="region"
+        aria-hidden={!open}
+        className={cn(
+          'pb-8 pr-10 text-base md:text-lg font-light leading-[1.85] text-muted-foreground space-y-4 [&_p]:m-0',
+          !open && 'hidden',
+        )}
+      >
+        {answerNodes}
+      </div>
     </div>
   );
 }
@@ -130,6 +154,7 @@ export default function FAQAccordion({ children }: FAQAccordionProps) {
         {entries.map((entry, i) => (
           <FAQItem
             key={`${entry.question}-${i}`}
+            index={i}
             question={entry.question}
             answerNodes={entry.answerNodes}
             defaultOpen={i === 0}
