@@ -49,7 +49,7 @@ export default function BlogIndex() {
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mb-20">
           <span className="text-xs font-sans font-semibold tracking-[0.5em] uppercase text-primary mb-8 block">
-            Corner House Blog
+            The Journal
           </span>
           <h1 className="text-5xl md:text-7xl font-heading font-medium leading-[1.05]">
             Honest reviews from a <span className="italic text-primary/80">RERA-registered desk.</span>

@@ -59,6 +59,7 @@ export interface BlogPostSummary
     | 'readingTime'
     | 'featured'
     | 'tags'
+    | 'author'
   > {}
 
 export function getBlogPostSummary(slug: string): BlogPostSummary | undefined {
@@ -76,6 +77,7 @@ export function getBlogPostSummary(slug: string): BlogPostSummary | undefined {
     readingTime: fm.readingTime,
     featured: fm.featured,
     tags: fm.tags,
+    author: fm.author,
   };
 }
 

@@ -14,7 +14,8 @@ interface BlogCardProps {
     | 'publishDate'
     | 'readingTime'
     | 'featured'
-  >;
+    | 'author'
+  > & { author?: string };
 }
 
 function formatDate(iso: string): string {
@@ -23,7 +24,25 @@ function formatDate(iso: string): string {
   return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
 }
 
+// Property images on R2 follow the convention: /<slug>/webp/{hero,gallery,thumb}/<key>.webp
+// Deriving the thumb URL from the heroImage avoids a separate frontmatter field and works for
+// any post whose images already follow the convention.
+function deriveThumbUrl(heroUrl: string): string {
+  if (heroUrl.includes('/webp/hero/')) return heroUrl.replace('/webp/hero/', '/webp/thumb/');
+  if (heroUrl.includes('/webp/gallery/')) return heroUrl.replace('/webp/gallery/', '/webp/thumb/');
+  return heroUrl;
+}
+
+// Excerpt = first ~160 chars of description (≈ first 2 lines on most card widths).
+function excerpt(description: string, max = 160): string {
+  if (description.length <= max) return description;
+  const cut = description.slice(0, max);
+  const lastSpace = cut.lastIndexOf(' ');
+  return `${cut.slice(0, lastSpace > 80 ? lastSpace : max).trim()}…`;
+}
+
 export default function BlogCard({ post }: BlogCardProps) {
+  const thumbUrl = deriveThumbUrl(post.heroImage);
   return (
     <Link
       to={`/blog/${post.slug}`}
@@ -31,17 +50,20 @@ export default function BlogCard({ post }: BlogCardProps) {
     >
       <div className="aspect-[16/10] overflow-hidden bg-muted relative">
         <img
-          src={post.heroImage}
+          src={thumbUrl}
           alt={post.heroImageAlt}
-          width={1200}
-          height={750}
+          width={800}
+          height={500}
           loading="lazy"
           decoding="async"
           referrerPolicy="no-referrer"
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+          className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 text-[0px] text-transparent"
         />
+        <span className="absolute top-4 left-4 bg-primary text-white text-[10px] tracking-[0.3em] uppercase font-semibold px-3 py-1.5">
+          {post.category}
+        </span>
         {post.featured && (
-          <span className="absolute top-4 left-4 bg-primary text-white text-[10px] tracking-[0.3em] uppercase font-semibold px-3 py-1.5">
+          <span className="absolute top-4 right-4 bg-[#1c1c1c] text-white text-[10px] tracking-[0.3em] uppercase font-semibold px-3 py-1.5">
             Featured
           </span>
         )}
@@ -50,16 +72,15 @@ export default function BlogCard({ post }: BlogCardProps) {
         </div>
       </div>
       <div className="p-7 space-y-4">
-        <span className="text-[10px] font-sans font-semibold tracking-[0.4em] uppercase text-primary block">
-          {post.category}
-        </span>
         <h3 className="text-xl md:text-2xl font-heading font-medium leading-tight group-hover:text-primary transition-colors">
           {post.title}
         </h3>
-        <p className="text-sm font-light text-muted-foreground leading-relaxed line-clamp-3">
-          {post.description}
+        <p className="text-sm font-light text-muted-foreground leading-relaxed">
+          {excerpt(post.description)}
         </p>
-        <div className="flex items-center gap-5 text-[10px] tracking-[0.3em] uppercase text-muted-foreground pt-2">
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-[10px] tracking-[0.3em] uppercase text-muted-foreground pt-1">
+          {post.author && <span>{post.author}</span>}
+          {post.author && <span className="h-3 w-[1px] bg-border" />}
           <span className="flex items-center gap-2">
             <Calendar className="h-3 w-3" />
             {formatDate(post.publishDate)}
@@ -68,6 +89,10 @@ export default function BlogCard({ post }: BlogCardProps) {
             <Clock className="h-3 w-3" />
             {post.readingTime}
           </span>
+        </div>
+        <div className="pt-2 flex items-center text-[11px] tracking-[0.3em] uppercase text-primary font-semibold group/cta">
+          Read More
+          <ArrowUpRight className="ml-2 h-3 w-3 transition-transform group-hover:translate-x-1" />
         </div>
       </div>
     </Link>
