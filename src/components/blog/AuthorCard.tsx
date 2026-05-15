@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 interface AuthorCardProps {
@@ -8,23 +9,48 @@ interface AuthorCardProps {
   profileUrl: string;
 }
 
+// First glyph of the author name, uppercased. Used by the fallback avatar when the photo
+// 404s. For "Saurabh" this yields "S"; works for future authors too.
+function initialOf(name: string): string {
+  const trimmed = name.trim();
+  return trimmed ? trimmed.charAt(0).toUpperCase() : '?';
+}
+
 export default function AuthorCard({ name, credential, bio, photoUrl, profileUrl }: AuthorCardProps) {
+  // photoUrl falls back to a navy-on-gold initials disc if the R2 fetch fails. The fallback
+  // is also used when photoUrl is empty so a missing URL never renders a broken-image box.
+  const [imgFailed, setImgFailed] = useState<boolean>(!photoUrl);
+
+  const showFallback = imgFailed || !photoUrl;
+
   return (
     <section className="my-16 border border-border p-8 md:p-10 bg-card">
       <span className="text-[10px] font-sans font-semibold tracking-[0.4em] uppercase text-primary block mb-6">
         About the Author
       </span>
-      <div className="flex flex-col md:flex-row gap-8">
-        <img
-          src={photoUrl}
-          alt={`${name}, ${credential}`}
-          width={128}
-          height={128}
-          loading="lazy"
-          decoding="async"
-          referrerPolicy="no-referrer"
-          className="h-28 w-28 md:h-32 md:w-32 rounded-full object-cover object-top shrink-0 border border-border"
-        />
+      <div className="flex flex-col md:flex-row gap-8 items-start">
+        {showFallback ? (
+          <div
+            role="img"
+            aria-label={`${name}, ${credential}`}
+            className="h-20 w-20 rounded-full shrink-0 flex items-center justify-center font-heading font-medium text-3xl select-none"
+            style={{ backgroundColor: '#C9933A', color: '#0D1F3C' }}
+          >
+            {initialOf(name)}
+          </div>
+        ) : (
+          <img
+            src={photoUrl}
+            alt={`${name}, ${credential}`}
+            width={80}
+            height={80}
+            loading="lazy"
+            decoding="async"
+            referrerPolicy="no-referrer"
+            onError={() => setImgFailed(true)}
+            className="h-20 w-20 rounded-full object-cover object-top shrink-0 border border-border text-[0px] text-transparent"
+          />
+        )}
         <div className="space-y-3">
           <h3 className="text-2xl font-heading font-medium leading-tight">{name}</h3>
           <p className="text-xs tracking-[0.25em] uppercase text-muted-foreground">{credential}</p>
