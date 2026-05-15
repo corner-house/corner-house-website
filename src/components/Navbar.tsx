@@ -1,11 +1,19 @@
 import React from 'react';
-import { Menu, X, Phone, MessageSquare } from 'lucide-react';
+import { Menu, Phone, MessageSquare } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 interface NavbarProps {
   onNavigate: (page: 'home' | 'detail' | 'service' | 'article', id?: string) => void;
 }
+
+// Two link kinds:
+//   - anchor → scrolls/navigates to a section on the home page (uses onNavigate)
+//   - route  → client-side route navigation via React Router <Link>
+type NavLink =
+  | { name: string; href: string; type: 'anchor' }
+  | { name: string; to: string; type: 'route' };
 
 export default function Navbar({ onNavigate }: NavbarProps) {
   const [isScrolled, setIsScrolled] = React.useState(false);
@@ -18,20 +26,14 @@ export default function Navbar({ onNavigate }: NavbarProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
+  const navLinks: NavLink[] = [
     { name: 'Properties', href: '#properties', type: 'anchor' },
     { name: 'Services', href: '#services', type: 'anchor' },
     { name: 'Localities', href: '#localities', type: 'anchor' },
-    { name: 'Journal', href: '#insights', type: 'anchor' },
+    // Journal routes to the real blog index at /blog. The home-page #insights section stays
+    // in place as its own surface; nav goes to the blog listing instead.
+    { name: 'Journal', to: '/blog', type: 'route' },
   ];
-
-  const handleLinkClick = (e: React.MouseEvent, link: any) => {
-    if (link.type === 'anchor') {
-      // If we are not on home page, navigate home first then scroll
-      // But for simplicity in this SPA-like state, we just scroll if on home
-      // In a real app with routing, this would be more complex
-    }
-  };
 
   return (
     <nav
@@ -59,19 +61,29 @@ export default function Navbar({ onNavigate }: NavbarProps) {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-12">
-          {navLinks.map((link) => (
-            <button
-              key={link.name}
-              onClick={() => onNavigate('home', link.href)}
-              className={`text-sm font-medium transition-colors tracking-wide uppercase ${
-                isScrolled 
-                  ? 'text-foreground/70 hover:text-primary' 
-                  : 'text-white/90 hover:text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.3)]'
-              }`}
-            >
-              {link.name}
-            </button>
-          ))}
+          {navLinks.map((link) => {
+            const className = `text-sm font-medium transition-colors tracking-wide uppercase ${
+              isScrolled
+                ? 'text-foreground/70 hover:text-primary'
+                : 'text-white/90 hover:text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.3)]'
+            }`;
+            if (link.type === 'route') {
+              return (
+                <Link key={link.name} to={link.to} className={className}>
+                  {link.name}
+                </Link>
+              );
+            }
+            return (
+              <button
+                key={link.name}
+                onClick={() => onNavigate('home', link.href)}
+                className={className}
+              >
+                {link.name}
+              </button>
+            );
+          })}
           <Button 
             variant={isScrolled ? "outline" : "default"} 
             onClick={() => onNavigate('home', '#contact')}
@@ -97,15 +109,25 @@ export default function Navbar({ onNavigate }: NavbarProps) {
             />
             <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background">
               <div className="flex flex-col space-y-8 mt-12">
-                {navLinks.map((link) => (
-                  <button
-                    key={link.name}
-                    onClick={() => onNavigate('home', link.href)}
-                    className="text-2xl font-heading font-medium hover:text-primary transition-colors text-left"
-                  >
-                    {link.name}
-                  </button>
-                ))}
+                {navLinks.map((link) => {
+                  const className = 'text-2xl font-heading font-medium hover:text-primary transition-colors text-left';
+                  if (link.type === 'route') {
+                    return (
+                      <Link key={link.name} to={link.to} className={className}>
+                        {link.name}
+                      </Link>
+                    );
+                  }
+                  return (
+                    <button
+                      key={link.name}
+                      onClick={() => onNavigate('home', link.href)}
+                      className={className}
+                    >
+                      {link.name}
+                    </button>
+                  );
+                })}
                 <div className="pt-8 space-y-4">
                   <Button 
                     className="w-full bg-primary text-white py-6"
