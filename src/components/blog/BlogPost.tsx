@@ -144,10 +144,14 @@ export default function BlogPost({ frontmatter, Content }: BlogPostProps) {
       />
       <BlogSchema frontmatter={frontmatter} />
 
-      {/* SECTION 1 — Full-width hero */}
-      <section className="relative h-[70vh] min-h-[480px] overflow-hidden">
+      {/* SECTION 1 — Full-width hero. The <img> is absolutely positioned inside the section so
+          it always fills the 70vh box (and so a broken image can never break out of layout to
+          leak alt text above the navbar). overflow-hidden on the section is the safety net. */}
+      <section className="relative h-[70vh] min-h-[480px] overflow-hidden bg-[#1c1c1c]">
         {/* fetchPriority is the React 19 prop spelling; the rendered HTML attribute is the
-            lowercase `fetchpriority` per spec, matching the project rule. */}
+            lowercase `fetchpriority` per spec, matching the project rule.
+            text-[0] + text-transparent hides the alt-text rendering inside the broken-image
+            box without removing the alt attribute (screen readers still read it). */}
         <img
           src={frontmatter.heroImage}
           alt={frontmatter.heroImageAlt}
@@ -157,7 +161,7 @@ export default function BlogPost({ frontmatter, Content }: BlogPostProps) {
           decoding="async"
           fetchPriority="high"
           referrerPolicy="no-referrer"
-          className="w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover text-[0px] text-transparent"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/55 to-black/85" />
         <div className="absolute inset-0 flex flex-col">
