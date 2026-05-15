@@ -17,6 +17,18 @@ function listRichPropertySlugs(): string[] {
     .sort();
 }
 
+// Blog posts (content/blog/<slug>.mdx) are loaded by src/data/blogPosts.ts via the same
+// import.meta.glob pattern. Mirror the discovery here so the sitemap is never stale relative
+// to the filesystem — prevents the silent SEO bug where new posts get excluded.
+function listBlogSlugs(): string[] {
+  const dir = resolve(process.cwd(), 'content/blog');
+  if (!existsSync(dir)) return [];
+  return readdirSync(dir)
+    .filter((f) => f.endsWith('.mdx'))
+    .map((f) => f.replace(/\.mdx$/, ''))
+    .sort();
+}
+
 const BASE_URL = 'https://cornerhouse.co.in';
 
 // Per-file last-commit date (ISO 8601, UTC). Falls back to file mtime if git is unavailable
@@ -49,12 +61,20 @@ interface SitemapEntry {
 }
 
 const richPropertySlugs = listRichPropertySlugs();
+const blogSlugs = listBlogSlugs();
 
 const allEntries: SitemapEntry[] = [
   { path: '/', priority: '1.0', changefreq: 'weekly', lastmod: homeLastMod },
   { path: '/properties', priority: '0.9', changefreq: 'weekly', lastmod: constantsLastMod },
   { path: '/services', priority: '0.8', changefreq: 'monthly', lastmod: constantsLastMod },
   { path: '/journal', priority: '0.8', changefreq: 'weekly', lastmod: constantsLastMod },
+  // Blog index — listed at the same priority as /journal because both surface editorial content.
+  {
+    path: '/blog',
+    priority: '0.8',
+    changefreq: 'weekly',
+    lastmod: blogSlugs.length > 0 ? fileLastMod(`content/blog/${blogSlugs[0]}.mdx`) : constantsLastMod,
+  },
   ...PROPERTIES.map((p) => ({
     path: `/properties/${p.id}`,
     priority: '0.9',
@@ -80,6 +100,13 @@ const allEntries: SitemapEntry[] = [
     changefreq: 'monthly',
     // Use article's real publish date rather than build time.
     lastmod: a.datePublished,
+  })),
+  // Individual blog posts — per-mdx last-commit date keeps Google's lastmod honest.
+  ...blogSlugs.map((slug) => ({
+    path: `/blog/${slug}`,
+    priority: '0.8',
+    changefreq: 'monthly',
+    lastmod: fileLastMod(`content/blog/${slug}.mdx`),
   })),
 ];
 

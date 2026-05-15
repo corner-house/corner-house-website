@@ -20,12 +20,27 @@ function listRichPropertySlugs(): string[] {
     .sort();
 }
 
+// Blog posts (content/blog/<slug>.mdx) — same filesystem-scan approach so new posts are
+// pinged without any hardcoded list maintenance.
+function listBlogSlugs(): string[] {
+  const dir = resolve(process.cwd(), 'content/blog');
+  if (!existsSync(dir)) return [];
+  return readdirSync(dir)
+    .filter((f) => f.endsWith('.mdx'))
+    .map((f) => f.replace(/\.mdx$/, ''))
+    .sort();
+}
+
+const blogSlugs = listBlogSlugs();
+
 const allUrls: string[] = [
   `${SITE_URL}/`,
   ...PROPERTIES.map((p) => `${SITE_URL}/properties/${p.id}`),
   ...listRichPropertySlugs().map((slug) => `${SITE_URL}/properties/${slug}`),
   ...SERVICES.map((s) => `${SITE_URL}/services/${s.id}`),
   ...ARTICLES.map((a) => `${SITE_URL}/journal/${a.id}`),
+  ...(blogSlugs.length > 0 ? [`${SITE_URL}/blog`] : []),
+  ...blogSlugs.map((slug) => `${SITE_URL}/blog/${slug}`),
 ];
 
 // Deduplicate by URL — first occurrence wins. Matches the generate-sitemap.ts dedup pattern:

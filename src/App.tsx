@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import Home from '@/pages/Home';
 import { PROPERTIES, SERVICES, ARTICLES } from '@/constants';
 import { PROPERTY_LISTING_SLUGS } from '@/data/propertyListings';
+import { BLOG_POST_SLUGS } from '@/data/blogPosts';
 import { usePageTracking } from '@/hooks/usePageTracking';
 
 export type NavigatePage = 'home' | 'detail' | 'service' | 'article';
@@ -105,6 +106,8 @@ const LazyJournal = React.lazy(() => import('@/pages/Journal'));
 const LazyPropertyDetail = React.lazy(() => import('@/pages/PropertyDetail'));
 const LazyServiceDetail = React.lazy(() => import('@/pages/ServiceDetail'));
 const LazyArticleDetail = React.lazy(() => import('@/pages/ArticleDetail'));
+const LazyBlogIndex = React.lazy(() => import('@/pages/blog/index'));
+const LazyBlogPost = React.lazy(() => import('@/pages/blog/[slug]'));
 const LazyNotFound = React.lazy(() => import('@/pages/NotFound'));
 
 export const routes: RouteRecord[] = [
@@ -136,6 +139,13 @@ export const routes: RouteRecord[] = [
         Component: LazyArticleDetail,
         entry: 'src/pages/ArticleDetail.tsx',
         getStaticPaths: () => ARTICLES.map((a) => `journal/${a.id}`),
+      },
+      { path: 'blog', Component: LazyBlogIndex, entry: 'src/pages/blog/index.tsx' },
+      {
+        path: 'blog/:slug',
+        Component: LazyBlogPost,
+        entry: 'src/pages/blog/[slug].tsx',
+        getStaticPaths: () => BLOG_POST_SLUGS.map((slug) => `blog/${slug}`),
       },
       // Static /404.html output needed by Cloudflare Pages _redirects catch-all.
       { path: '404', Component: LazyNotFound },

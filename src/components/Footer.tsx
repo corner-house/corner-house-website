@@ -1,5 +1,6 @@
 import React from 'react';
 import { Instagram, Linkedin, Facebook, Mail, Phone, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { SERVICES } from '@/constants';
 
 interface FooterProps {
@@ -48,18 +49,28 @@ export default function Footer({ onNavigate }: FooterProps) {
             <h4 className="text-sm font-sans font-semibold tracking-widest uppercase mb-8 text-white/40">Quick Links</h4>
             <ul className="space-y-4">
               {[
-                { name: 'Properties', id: '#properties' },
-                { name: 'Services', id: '#services' },
-                { name: 'Localities', id: '#localities' },
-                { name: 'Journal', id: '#insights' }
+                { name: 'Properties', kind: 'anchor', id: '#properties' },
+                { name: 'Services', kind: 'anchor', id: '#services' },
+                { name: 'Localities', kind: 'anchor', id: '#localities' },
+                // Journal in the footer mirrors the navbar — points to the real blog index.
+                { name: 'Journal', kind: 'route', to: '/blog' },
               ].map((item) => (
                 <li key={item.name}>
-                  <button 
-                    onClick={() => onNavigate?.('home', item.id)}
-                    className="text-white/70 hover:text-white transition-colors font-light text-left"
-                  >
-                    {item.name}
-                  </button>
+                  {item.kind === 'route' ? (
+                    <Link
+                      to={item.to!}
+                      className="text-white/70 hover:text-white transition-colors font-light"
+                    >
+                      {item.name}
+                    </Link>
+                  ) : (
+                    <button
+                      onClick={() => onNavigate?.('home', item.id)}
+                      className="text-white/70 hover:text-white transition-colors font-light text-left"
+                    >
+                      {item.name}
+                    </button>
+                  )}
                 </li>
               ))}
             </ul>
