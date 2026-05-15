@@ -17,6 +17,12 @@ test('blog post renders without console errors', async ({ page }) => {
   await expect(page.getByText('About this review:').first()).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Frequently Asked Questions' })).toBeVisible();
   await expect(page.getByText('About the Author').first()).toBeVisible();
+  // Redesign assertions: stats bar values, sidebar callback CTA, scorecard, cost breakdown.
+  await expect(page.getByText('Rs 6.29 Cr onwards').first()).toBeVisible();
+  await expect(page.getByText('June 2031').first()).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Request Callback' })).toBeVisible();
+  await expect(page.getByText('Corner House Scorecard').first()).toBeVisible();
+  await expect(page.getByText('All-In Cost Breakdown').first()).toBeVisible();
 
   // JSON-LD schemas: Article + FAQPage + BreadcrumbList.
   const schemaTypes = await page.$$eval(

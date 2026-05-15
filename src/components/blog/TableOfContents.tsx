@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface TocEntry {
@@ -15,11 +16,11 @@ function slugify(text: string): string {
     .replace(/-+/g, '-');
 }
 
-// Scans the rendered article for h2 headings (the strategy doc spec — section 5 — has 4 to 8 H2
-// sections per post). Runs after mount so it sees the MDX-rendered DOM. Sticky on desktop.
+// Mobile-only "Jump to section" collapsible. The desktop sidebar carries CTAs instead, so we
+// hide this on lg+ to avoid a redundant TOC competing with the sidebar.
 export default function TableOfContents() {
   const [entries, setEntries] = useState<TocEntry[]>([]);
-  const [activeId, setActiveId] = useState<string>('');
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const article = document.querySelector('article[data-blog-body]');
@@ -32,45 +33,42 @@ export default function TableOfContents() {
       return { id, text };
     });
     setEntries(collected);
-
-    const observer = new IntersectionObserver(
-      (entriesObserved) => {
-        const visible = entriesObserved.filter((e) => e.isIntersecting);
-        if (visible.length > 0) {
-          setActiveId(visible[0].target.id);
-        }
-      },
-      { rootMargin: '-100px 0px -60% 0px', threshold: 0 },
-    );
-    headings.forEach((h) => observer.observe(h));
-    return () => observer.disconnect();
   }, []);
 
   if (entries.length === 0) return null;
 
   return (
-    <nav
-      aria-label="Table of contents"
-      className="my-12 lg:my-0 lg:sticky lg:top-32 border-l-2 border-border pl-6"
-    >
-      <span className="text-[10px] font-sans font-semibold tracking-[0.4em] uppercase text-primary block mb-5">
-        On This Page
-      </span>
-      <ol className="space-y-3 text-sm">
-        {entries.map((e) => (
-          <li key={e.id}>
-            <a
-              href={`#${e.id}`}
-              className={cn(
-                'block leading-snug font-light transition-colors',
-                activeId === e.id ? 'text-primary font-medium' : 'text-muted-foreground hover:text-foreground',
-              )}
-            >
-              {e.text}
-            </a>
-          </li>
-        ))}
-      </ol>
+    <nav aria-label="Table of contents" className="lg:hidden my-8 border border-border bg-card">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left"
+      >
+        <span className="text-[10px] font-sans font-semibold tracking-[0.4em] uppercase text-primary">
+          Jump to Section
+        </span>
+        <ChevronDown
+          className={cn('h-4 w-4 text-muted-foreground transition-transform', open && 'rotate-180 text-primary')}
+          aria-hidden
+        />
+      </button>
+      {open && (
+        <ol className="px-5 pb-5 pt-1 space-y-2 border-t border-border/60">
+          {entries.map((e, i) => (
+            <li key={e.id} className="text-sm font-light text-muted-foreground">
+              <a
+                href={`#${e.id}`}
+                className="block hover:text-primary py-1.5"
+                onClick={() => setOpen(false)}
+              >
+                <span className="text-primary font-medium mr-2">{String(i + 1).padStart(2, '0')}</span>
+                {e.text}
+              </a>
+            </li>
+          ))}
+        </ol>
+      )}
     </nav>
   );
 }

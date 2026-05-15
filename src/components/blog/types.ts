@@ -1,3 +1,16 @@
+export interface ProjectStats {
+  configuration: string;
+  startingPrice: string;
+  hareraStatus: string;
+  possession: string;
+}
+
+export interface ScoreRow {
+  label: string;
+  score: string;
+  overall?: boolean;
+}
+
 export interface BlogFrontmatter {
   title: string;
   slug: string;
@@ -19,6 +32,11 @@ export interface BlogFrontmatter {
   schema: string[];
   featured: boolean;
   relatedPosts: string[];
+  // Optional per-post enrichments displayed in the new layout. Project review posts use both;
+  // other post types (developer track-record, buyer education, etc.) may omit them.
+  badge?: string;
+  stats?: ProjectStats;
+  scorecard?: ScoreRow[];
 }
 
 export interface FAQItem {

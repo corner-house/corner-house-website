@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-15T08:32:35.498Z",
+  "generatedAt": "2026-05-15T11:57:08.363Z",
   "count": 1,
   "posts": [
     {
@@ -17,8 +17,8 @@
         "HARERA Verified",
         "New Launch 2026"
       ],
-      "heroImage": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/blog/krisumi-forest-reserve-review/hero.webp",
-      "ogImage": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/blog/krisumi-forest-reserve-review/og.webp",
+      "heroImage": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/hero-featured.webp",
+      "ogImage": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/hero-featured.webp",
       "readingTime": "13 min",
       "wordCount": 3200,
       "featured": true,

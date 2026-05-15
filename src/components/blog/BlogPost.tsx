@@ -12,6 +12,11 @@ import AuthorCard from './AuthorCard';
 import CTAStrip from './CTAStrip';
 import RelatedPosts from './RelatedPosts';
 import TableOfContents from './TableOfContents';
+import StatsBar from './StatsBar';
+import ImageRow from './ImageRow';
+import CostBreakdown from './CostBreakdown';
+import ProjectScorecard from './ProjectScorecard';
+import BlogSidebar from './BlogSidebar';
 import { MdxH1, MdxH2, MdxH3, MdxP } from './mdx-elements';
 import type { BlogFrontmatter } from './types';
 
@@ -20,9 +25,6 @@ interface BlogPostProps {
   Content: ComponentType<Record<string, unknown>>;
 }
 
-// MDX component overrides — applied to every element MDX emits. Keeps the editorial typography
-// (font-heading, prose-style line-height) consistent across every post without authors having to
-// add classes inline in the .mdx file.
 const MDX_COMPONENTS = {
   // Heading + paragraph overrides live in mdx-elements.tsx so FAQAccordion can detect MdxH3
   // as a question marker via reference equality (see FAQAccordion.isH3).
@@ -95,6 +97,9 @@ const MDX_COMPONENTS = {
   CTAStrip,
   RelatedPosts,
   TableOfContents,
+  ImageRow,
+  CostBreakdown,
+  ProjectScorecard,
 };
 
 function formatDate(iso: string): string {
@@ -103,7 +108,28 @@ function formatDate(iso: string): string {
   return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
 }
 
+// Project name extraction for sidebar headlines — strips the editorial subtitle off the title.
+function projectNameFrom(title: string): string {
+  return title.split(/[:—–-]/)[0].trim();
+}
+
 export default function BlogPost({ frontmatter, Content }: BlogPostProps) {
+  const projectName = projectNameFrom(frontmatter.title);
+  const recentPosts = [
+    {
+      slug: 'krisumi-projects-explained',
+      title: 'Krisumi Projects Explained',
+      category: 'Project Reviews',
+      comingSoon: true,
+    },
+    {
+      slug: 'sector-36a-gurgaon-guide',
+      title: 'Sector 36A Gurgaon Guide',
+      category: 'Location Guides',
+      comingSoon: true,
+    },
+  ];
+
   return (
     <main className="bg-background pb-24">
       <SEO
@@ -118,7 +144,7 @@ export default function BlogPost({ frontmatter, Content }: BlogPostProps) {
       />
       <BlogSchema frontmatter={frontmatter} />
 
-      {/* Hero */}
+      {/* SECTION 1 — Full-width hero */}
       <section className="relative h-[70vh] min-h-[480px] overflow-hidden">
         {/* fetchPriority is the React 19 prop spelling; the rendered HTML attribute is the
             lowercase `fetchpriority` per spec, matching the project rule. */}
@@ -133,7 +159,7 @@ export default function BlogPost({ frontmatter, Content }: BlogPostProps) {
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/55 to-black/85" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/55 to-black/85" />
         <div className="absolute inset-0 flex flex-col">
           <div className="container mx-auto px-6 pt-32">
             <Link
@@ -146,11 +172,11 @@ export default function BlogPost({ frontmatter, Content }: BlogPostProps) {
           </div>
           <div className="container mx-auto px-6 mt-auto pb-14">
             <div className="max-w-4xl">
-              <span className="bg-primary/90 text-white border-none px-4 py-1.5 tracking-[0.3em] uppercase text-[10px] mb-6 inline-block">
-                {frontmatter.category}
+              {/* Green pill badge — uses theme primary (sage green) so it stays brand-consistent. */}
+              <span className="inline-block bg-primary text-white px-4 py-1.5 mb-6 tracking-[0.3em] uppercase text-[10px] font-semibold">
+                {frontmatter.badge ?? 'Buyer Review'}
               </span>
-              {/* Hero title is presentational only — the canonical H1 lives in the MDX body
-                  (Section 5, item 4). Using a div/p avoids two H1s on the page. */}
+              {/* Hero title is presentational only — the canonical H1 lives in the MDX body. */}
               <div
                 role="heading"
                 aria-level={2}
@@ -178,14 +204,40 @@ export default function BlogPost({ frontmatter, Content }: BlogPostProps) {
         </div>
       </section>
 
-      {/* Body */}
-      <section className="container mx-auto px-6 mt-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          <article data-blog-body className="lg:col-span-8 lg:col-start-2 max-w-none">
-            <MDXProvider components={MDX_COMPONENTS}>
-              <Content />
-            </MDXProvider>
-          </article>
+      {/* SECTION 2 — Stats bar (full-width navy band). Optional, only renders when frontmatter
+          provides stats. */}
+      {frontmatter.stats && (
+        <StatsBar
+          stats={[
+            { label: 'Configuration', value: frontmatter.stats.configuration },
+            { label: 'Starting Price', value: frontmatter.stats.startingPrice },
+            { label: 'HARERA Status', value: frontmatter.stats.hareraStatus },
+            { label: 'Possession', value: frontmatter.stats.possession },
+          ]}
+        />
+      )}
+
+      {/* SECTION 3 — Two-column body */}
+      <section className="container mx-auto px-6 mt-12 md:mt-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+          <div className="lg:col-span-8">
+            {/* Mobile-only TOC accordion. Desktop sidebar replaces it. */}
+            <TableOfContents />
+            <article data-blog-body>
+              <MDXProvider components={MDX_COMPONENTS}>
+                <Content />
+              </MDXProvider>
+            </article>
+          </div>
+          <div className="lg:col-span-4">
+            <div className="lg:sticky lg:top-32">
+              <BlogSidebar
+                projectName={projectName}
+                contactSlug={frontmatter.slug}
+                recentPosts={recentPosts}
+              />
+            </div>
+          </div>
         </div>
       </section>
     </main>
