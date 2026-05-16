@@ -5,10 +5,15 @@ interface AuthorCardProps {
   name: string;
   credential: string;
   bio: string;
-  photoUrl: string;
+  // Optional. Defaults to the canonical Saurabh portrait at the apex domain so MDX authors
+  // don't need to pass it for the common case. onError still triggers the initials disc if
+  // the URL fails at runtime.
+  photoUrl?: string;
   profileUrl: string;
   achievement?: string;
 }
+
+const DEFAULT_PHOTO_URL = 'https://www.cornerhouse.co.in/saurabh-jain.png';
 
 function initialOf(name: string): string {
   const trimmed = name.trim();
@@ -19,12 +24,12 @@ export default function AuthorCard({
   name,
   credential,
   bio,
-  photoUrl,
+  photoUrl = DEFAULT_PHOTO_URL,
   profileUrl,
   achievement,
 }: AuthorCardProps) {
   // onError fallback kept as a safety net; the live photo is confirmed working in production.
-  const [imgFailed, setImgFailed] = useState<boolean>(!photoUrl);
+  const [imgFailed, setImgFailed] = useState<boolean>(false);
   const showFallback = imgFailed || !photoUrl;
 
   return (

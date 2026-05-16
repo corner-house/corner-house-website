@@ -10,7 +10,24 @@ interface RecentPost {
   title: string;
   category: string;
   href?: string;
+  // Optional thumbnail (uses heroImage from frontmatter). Rendered as a 64x64 square.
+  thumbUrl?: string;
+  thumbAlt?: string;
+  // Optional ISO publish date, formatted for display.
+  publishDate?: string;
   comingSoon?: boolean;
+}
+
+function formatRecentDate(iso?: string): string {
+  if (!iso) return '';
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return '';
+  return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+}
+
+function truncate(text: string, max: number): string {
+  if (text.length <= max) return text;
+  return `${text.slice(0, max - 1).trim()}…`;
 }
 
 interface BlogSidebarProps {
@@ -197,19 +214,38 @@ function RecentPostsCard({ posts }: { posts: RecentPost[] }) {
       <ul className="space-y-5">
         {posts.map((p) => {
           const inner = (
-            <>
-              <span className="text-[10px] font-sans font-semibold tracking-[0.3em] uppercase text-primary block mb-2">
-                {p.category}
-              </span>
-              <span className="block text-base font-heading font-medium leading-snug text-foreground group-hover:text-primary transition-colors">
-                {p.title}
-              </span>
-              {p.comingSoon && (
-                <span className="mt-2 inline-block text-[10px] tracking-[0.25em] uppercase text-muted-foreground">
-                  Coming soon
-                </span>
+            <div className="flex gap-4">
+              {p.thumbUrl && (
+                <img
+                  src={p.thumbUrl}
+                  alt={p.thumbAlt ?? ''}
+                  width={64}
+                  height={64}
+                  loading="lazy"
+                  decoding="async"
+                  referrerPolicy="no-referrer"
+                  className="h-16 w-16 shrink-0 object-cover bg-muted text-[0px] text-transparent"
+                />
               )}
-            </>
+              <div className="min-w-0 flex-1">
+                <span className="text-[10px] font-sans font-semibold tracking-[0.3em] uppercase text-primary block mb-1.5">
+                  {p.category}
+                </span>
+                <span className="block text-sm font-heading font-medium leading-snug text-foreground group-hover:text-primary transition-colors">
+                  {truncate(p.title, 50)}
+                </span>
+                {p.publishDate && !p.comingSoon && (
+                  <span className="mt-1.5 block text-[10px] tracking-[0.2em] uppercase text-muted-foreground">
+                    {formatRecentDate(p.publishDate)}
+                  </span>
+                )}
+                {p.comingSoon && (
+                  <span className="mt-1.5 block text-[10px] tracking-[0.25em] uppercase text-muted-foreground">
+                    Coming soon
+                  </span>
+                )}
+              </div>
+            </div>
           );
           if (p.comingSoon || !p.href) {
             return (

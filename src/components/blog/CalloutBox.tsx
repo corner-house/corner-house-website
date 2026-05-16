@@ -92,7 +92,17 @@ export default function CalloutBox({ type = 'info', title, children }: CalloutBo
         >
           {displayTitle}
         </span>
-        <div className="[&_p]:mb-3 [&_strong]:font-semibold [&_strong]:text-foreground">
+        {/* Caveat handwritten font for the HARERA-verified callout (FIX 4g) so the
+            credibility disclosure reads like a personal margin note rather than a UI banner.
+            Other callout types keep the default Inter body for legibility. */}
+        <div
+          className={cn(
+            '[&_strong]:font-semibold [&_strong]:text-foreground',
+            type === 'harera'
+              ? 'font-caveat text-lg md:text-xl leading-relaxed [&_p]:mb-2'
+              : '[&_p]:mb-3',
+          )}
+        >
           {children}
         </div>
       </div>
