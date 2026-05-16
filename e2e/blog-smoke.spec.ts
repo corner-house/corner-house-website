@@ -20,7 +20,10 @@ test('blog post renders without console errors', async ({ page }) => {
   // Redesign assertions: stats bar values, sidebar callback CTA, scorecard, cost breakdown.
   await expect(page.getByText('On Request').first()).toBeVisible();
   await expect(page.getByText('November 2030').first()).toBeVisible();
-  await expect(page.getByRole('button', { name: 'Request Callback' })).toBeVisible();
+  // Callback form replaced with WhatsApp link + tel: fallback while lead webhook is unwired.
+  const waLinks = page.getByRole('link', { name: /Chat on WhatsApp/i });
+  await expect(waLinks.first()).toBeVisible();
+  await expect(waLinks.first()).toHaveAttribute('href', /wa\.me\/919871950051/);
   await expect(page.getByText('Corner House Scorecard').first()).toBeVisible();
   await expect(page.getByText('All-In Cost Breakdown').first()).toBeVisible();
   // New sections from the upgrade.

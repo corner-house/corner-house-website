@@ -1,9 +1,9 @@
-import { useState, type FormEvent } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { ArrowRight, FileText, Download } from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, FileText, Download, Phone } from 'lucide-react';
 import LeadCaptureModal, { type LeadData } from '@/components/LeadCaptureModal';
+import { SITE_CONTACT, phoneLink, whatsappLink } from '@/site-contact';
+import WhatsAppIcon from './WhatsAppIcon';
 
 interface RecentPost {
   slug: string;
@@ -56,19 +56,11 @@ function AboutCard() {
   );
 }
 
-function CallbackCard({ projectName, contactSlug }: { projectName: string; contactSlug: string }) {
-  const navigate = useNavigate();
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-
-  const onSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    const params = new URLSearchParams({ project: contactSlug });
-    if (name.trim()) params.set('name', name.trim());
-    if (phone.trim()) params.set('phone', phone.trim());
-    navigate(`/contact?${params.toString()}`);
-  };
-
+function CallbackCard({ projectName }: { projectName: string; contactSlug: string }) {
+  // The previous name+phone form submitted to a placeholder webhook that silently discarded
+  // every lead (known backlog). Until the webhook is wired up, we route enquiries directly to
+  // Saurabh's WhatsApp with the project name pre-filled so no lead is lost.
+  const waMessage = `Hi, I'm interested in ${projectName}. Please share details.`;
   return (
     <div className="border border-primary/40 bg-primary/5 p-6">
       <span className="text-[10px] font-sans font-semibold tracking-[0.4em] uppercase text-primary block mb-4">
@@ -78,39 +70,24 @@ function CallbackCard({ projectName, contactSlug }: { projectName: string; conta
         Interested in {projectName}?
       </h4>
       <p className="text-sm font-light text-muted-foreground leading-relaxed mb-5">
-        Talk to Saurabh directly. Site visits, price sheet, and honest answers — no spam.
+        Talk to Saurabh directly. Site visits, price sheet, and honest answers.
       </p>
-      <form className="space-y-3" onSubmit={onSubmit}>
-        <Input
-          type="text"
-          name="name"
-          placeholder="Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          autoComplete="name"
-          required
-          className="bg-white"
-        />
-        <Input
-          type="tel"
-          name="phone"
-          placeholder="Phone number"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-          autoComplete="tel"
-          required
-          inputMode="tel"
-          className="bg-white"
-        />
-        <Button
-          type="submit"
-          className="w-full bg-primary text-white hover:bg-primary/90 rounded-none py-5 text-[11px] tracking-[0.3em] uppercase font-semibold"
-        >
-          Request Callback
-        </Button>
-      </form>
-      <p className="mt-4 text-xs text-muted-foreground font-light">
-        Your details go only to Saurabh directly.
+      <a
+        href={whatsappLink(waMessage)}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center justify-center gap-2 w-full text-white py-3.5 text-[12px] tracking-[0.25em] uppercase font-semibold transition-opacity hover:opacity-90"
+        style={{ backgroundColor: '#25D366' }}
+      >
+        <WhatsAppIcon className="h-4 w-4" />
+        Chat on WhatsApp
+      </a>
+      <p className="mt-3 text-xs text-muted-foreground font-light text-center">
+        or call{' '}
+        <a href={phoneLink()} className="text-primary hover:underline font-medium">
+          <Phone className="inline h-3 w-3 mr-1 align-baseline" aria-hidden />
+          {SITE_CONTACT.phone}
+        </a>
       </p>
     </div>
   );

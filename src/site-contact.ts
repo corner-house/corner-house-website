@@ -1,8 +1,8 @@
 export const SITE_CONTACT = {
-  phone: '+91 98765 43210',
-  phoneE164: '+919876543210',
-  whatsapp: '+91 98765 43210',
-  whatsappE164: '919876543210',
+  phone: '+91 98719 50051',
+  phoneE164: '+919871950051',
+  whatsapp: '+91 98719 50051',
+  whatsappE164: '919871950051',
   email: 'thecornerhouserealty@gmail.com',
 } as const;
 
