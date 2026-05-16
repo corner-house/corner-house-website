@@ -29,6 +29,7 @@ import DesignImageStrip from './DesignImageStrip';
 import VerdictBadge from './VerdictBadge';
 import NextArticleStrip from './NextArticleStrip';
 import Mark from './Mark';
+import { ComparisonTable } from './ComparisonTable';
 import { MdxH3 } from './mdx-elements';
 import { getAllBlogPostSummaries } from '@/data/blogPosts';
 import type { BlogFrontmatter } from './types';
@@ -126,6 +127,7 @@ const MDX_COMPONENTS = {
   VerdictBadge,
   NextArticleStrip,
   Mark,
+  ComparisonTable,
 };
 
 function formatDate(iso: string): string {
