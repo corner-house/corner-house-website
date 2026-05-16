@@ -32,13 +32,6 @@ function formatDate(iso: string): string {
   return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
 }
 
-// Same R2 path convention used by BlogCard: /webp/hero/ → /webp/thumb/.
-function deriveThumbUrl(heroUrl: string): string {
-  if (heroUrl.includes('/webp/hero/')) return heroUrl.replace('/webp/hero/', '/webp/thumb/');
-  if (heroUrl.includes('/webp/gallery/')) return heroUrl.replace('/webp/gallery/', '/webp/thumb/');
-  return heroUrl;
-}
-
 function excerpt(description: string, max = 160): string {
   if (description.length <= max) return description;
   const cut = description.slice(0, max);
@@ -52,7 +45,8 @@ interface RealCardProps {
 }
 
 function RealCard({ post, index }: RealCardProps) {
-  const thumbUrl = deriveThumbUrl(post.heroImage);
+  // Use heroImage directly so each card shows its own image; the previous /thumb/
+  // substitution collapsed posts that shared a filename to the same URL.
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -63,7 +57,7 @@ function RealCard({ post, index }: RealCardProps) {
       <Link to={`/blog/${post.slug}`} className="group block">
         <div className="relative aspect-[4/5] overflow-hidden mb-8 shadow-xl bg-muted">
           <img
-            src={thumbUrl}
+            src={post.heroImage}
             alt={post.heroImageAlt}
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 text-[0px] text-transparent"
             loading="lazy"

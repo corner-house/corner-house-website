@@ -24,15 +24,6 @@ function formatDate(iso: string): string {
   return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
 }
 
-// Property images on R2 follow the convention: /<slug>/webp/{hero,gallery,thumb}/<key>.webp
-// Deriving the thumb URL from the heroImage avoids a separate frontmatter field and works for
-// any post whose images already follow the convention.
-function deriveThumbUrl(heroUrl: string): string {
-  if (heroUrl.includes('/webp/hero/')) return heroUrl.replace('/webp/hero/', '/webp/thumb/');
-  if (heroUrl.includes('/webp/gallery/')) return heroUrl.replace('/webp/gallery/', '/webp/thumb/');
-  return heroUrl;
-}
-
 // Excerpt = first ~160 chars of description (≈ first 2 lines on most card widths).
 function excerpt(description: string, max = 160): string {
   if (description.length <= max) return description;
@@ -42,7 +33,9 @@ function excerpt(description: string, max = 160): string {
 }
 
 export default function BlogCard({ post }: BlogCardProps) {
-  const thumbUrl = deriveThumbUrl(post.heroImage);
+  // Use heroImage directly — no URL substitution. Previously this swapped
+  // /webp/hero/ and /webp/gallery/ for /webp/thumb/, which collapsed posts
+  // that shared a filename across folders to the same thumb URL.
   return (
     <Link
       to={`/blog/${post.slug}`}
@@ -50,7 +43,7 @@ export default function BlogCard({ post }: BlogCardProps) {
     >
       <div className="aspect-[16/10] overflow-hidden bg-muted relative">
         <img
-          src={thumbUrl}
+          src={post.heroImage}
           alt={post.heroImageAlt}
           width={800}
           height={500}
