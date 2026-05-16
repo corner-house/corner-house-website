@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Linkedin, Facebook, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { SERVICES } from '@/constants';
 
@@ -36,12 +36,6 @@ export default function Footer({ onNavigate }: FooterProps) {
               <a href="https://www.instagram.com/thecornerhouserealty/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
                 <Instagram className="h-5 w-5 text-white/40 hover:text-white transition-colors cursor-pointer" />
               </a>
-              <a href="#" aria-label="Follow us on LinkedIn">
-                <Linkedin className="h-5 w-5 text-white/40 hover:text-white transition-colors cursor-pointer" />
-              </a>
-              <a href="#" aria-label="Follow us on Facebook">
-                <Facebook className="h-5 w-5 text-white/40 hover:text-white transition-colors cursor-pointer" />
-              </a>
             </div>
           </div>
 
@@ -49,10 +43,9 @@ export default function Footer({ onNavigate }: FooterProps) {
             <h4 className="text-sm font-sans font-semibold tracking-widest uppercase mb-8 text-white/40">Quick Links</h4>
             <ul className="space-y-4">
               {[
-                { name: 'Properties', kind: 'anchor', id: '#properties' },
-                { name: 'Services', kind: 'anchor', id: '#services' },
+                { name: 'Properties', kind: 'route', to: '/properties' },
+                { name: 'Services', kind: 'route', to: '/services' },
                 { name: 'Localities', kind: 'anchor', id: '#localities' },
-                // Journal in the footer mirrors the navbar — points to the real blog index.
                 { name: 'Journal', kind: 'route', to: '/blog' },
               ].map((item) => (
                 <li key={item.name}>
@@ -115,10 +108,6 @@ export default function Footer({ onNavigate }: FooterProps) {
 
         <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-white/30 text-xs tracking-widest uppercase">
           <p>© 2026 THE CORNER HOUSE. ALL RIGHTS RESERVED.</p>
-          <div className="flex space-x-8 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-          </div>
         </div>
 
         <div className="mt-8 pt-6 border-t border-white/5 flex flex-col md:flex-row justify-center md:justify-end items-center gap-3 text-white/40">

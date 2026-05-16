@@ -754,7 +754,7 @@
       "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/thumb/hero-featured.webp"
     }
   },
-  "canonicalUrl": "https://cornerhouse.co.in/properties/max-estate-361-terraces",
+  "canonicalUrl": "https://www.cornerhouse.co.in/properties/max-estate-361-terraces",
   "computedSeo": {
     "title": "The Terraces at Estate 361 | Max Estates | Sector 36A Gurugram",
     "description": "The Terraces at Estate 361 by Max Estates — 1.5 & 2 BHK wellness homes in Sector 36A Gurugram, from ₹2.40 Cr. IGBC Platinum. RERA registered.",
@@ -779,7 +779,7 @@
       "@context": "https://schema.org",
       "@type": "RealEstateListing",
       "name": "The Terraces at Estate 361",
-      "url": "https://cornerhouse.co.in/properties/max-estate-361-terraces",
+      "url": "https://www.cornerhouse.co.in/properties/max-estate-361-terraces",
       "description": "Live Well, Inside Out — Forest-Backed Homes on Dwarka Expressway",
       "image": [
         "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/max-estate-361-terraces/webp/hero/tower-exterior-facade.webp"
@@ -920,19 +920,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://cornerhouse.co.in/"
+          "item": "https://www.cornerhouse.co.in/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Properties",
-          "item": "https://cornerhouse.co.in/properties"
+          "item": "https://www.cornerhouse.co.in/properties"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "The Terraces at Estate 361",
-          "item": "https://cornerhouse.co.in/properties/max-estate-361-terraces"
+          "item": "https://www.cornerhouse.co.in/properties/max-estate-361-terraces"
         }
       ]
     }

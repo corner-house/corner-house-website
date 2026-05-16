@@ -77,7 +77,7 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://cornerhouse.co.in/sitemap.xml
+Sitemap: https://www.cornerhouse.co.in/sitemap.xml
 `;
 
 export const onRequest: PagesFunction = () =>

@@ -27,11 +27,11 @@ export default function Navbar({ onNavigate }: NavbarProps) {
   }, []);
 
   const navLinks: NavLink[] = [
-    { name: 'Properties', href: '#properties', type: 'anchor' },
-    { name: 'Services', href: '#services', type: 'anchor' },
+    { name: 'Properties', to: '/properties', type: 'route' },
+    { name: 'Services', to: '/services', type: 'route' },
+    // Localities has no dedicated route — scrolls to the home-page section. Rendered as a
+    // <button>, so no href="#" leaks into crawl reports.
     { name: 'Localities', href: '#localities', type: 'anchor' },
-    // Journal routes to the real blog index at /blog. The home-page #insights section stays
-    // in place as its own surface; nav goes to the blog listing instead.
     { name: 'Journal', to: '/blog', type: 'route' },
   ];
 

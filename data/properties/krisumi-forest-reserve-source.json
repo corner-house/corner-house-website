@@ -3,7 +3,7 @@
 
   "_unverified": [
     "location.latitude / location.longitude — RESOLVED 2026-04-28 by Saurabh: plot-precise coordinates from Krisumi project listings (28.417709115225378, 76.97435806153578).",
-    "atAGlance.possession — brochure does not state a possession date. RERA registered 02.05.2025; license validity dates 17.01.2029 / 27.06.2029 / 03.06.2026. Current value 'November 2030' is unverified placeholder. NEEDS-CLIENT-INPUT.",
+    "atAGlance.possession — RESOLVED 2026-05-17 by Saurabh: HARERA-committed possession is June 2031. Brochure itself does not state a date; client confirmation supersedes the prior placeholder.",
     "pricing[*].carpetAreaSqft / builtUpAreaSqft — brochure does not publish carpet or built-up areas. Schema requires positive numbers; current values are placeholders. NEEDS-CLIENT-INPUT: Krisumi pricing/area sheet.",
     "atAGlance.totalTowers — brochure spec sections reference 'A & B' (one RERA) plus 'II' (separate RERA). Tower B's physical existence and floor count not visible in brochure. Source uses '3' as a working number. NEEDS-CLIENT-INPUT.",
     "building.towers[*].floors — brochure does not state floor counts numerically. Schema requires positive integer; placeholder '30' kept here. NEEDS-CLIENT-INPUT.",
@@ -55,7 +55,7 @@
     "totalUnits": 638,
     "totalTowers": 3,
     "floors": "Multi-tower mid-rise",
-    "possession": "November 2030",
+    "possession": "June 2031",
     "status": "Under Construction",
     "reraStatus": "Registered"
   },

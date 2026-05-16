@@ -2,6 +2,10 @@
 # Precedence: explicit prerendered files → these rules → 404 fallback.
 # Unknown routes hit 404.html with HTTP 404 (fixes soft-404 issue).
 
+# Apex → www. Canonical host is www.cornerhouse.co.in (SEO.tsx, sitemap, JSON-LD all agree).
+# Must come before path-specific rules so host normalization is the first hop.
+https://cornerhouse.co.in/*    https://www.cornerhouse.co.in/:splat    301
+
 # Legacy listings retired — 301 to listings index so inbound links + crawlers settle gracefully.
 /properties/2   /properties   301
 

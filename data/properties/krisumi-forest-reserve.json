@@ -66,7 +66,7 @@
     "totalUnits": 638,
     "totalTowers": 3,
     "floors": "Multi-tower mid-rise",
-    "possession": "2030-11",
+    "possession": "2031-06",
     "status": "Under Construction",
     "reraStatus": "Registered"
   },
@@ -944,7 +944,7 @@
       "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/thumb/location-map-sector-36a-gurugram.webp"
     }
   },
-  "canonicalUrl": "https://cornerhouse.co.in/properties/krisumi-forest-reserve",
+  "canonicalUrl": "https://www.cornerhouse.co.in/properties/krisumi-forest-reserve",
   "computedSeo": {
     "title": "The Forest Reserve Sector 36A Gurugram | Krisumi Corporation",
     "description": "The Forest Reserve by Krisumi Corporation: Japanese-designed apartments in Sector 36A Gurugram. RERA registered. Part of the Krisumi City masterplan.",
@@ -969,7 +969,7 @@
       "@context": "https://schema.org",
       "@type": "RealEstateListing",
       "name": "The Forest Reserve",
-      "url": "https://cornerhouse.co.in/properties/krisumi-forest-reserve",
+      "url": "https://www.cornerhouse.co.in/properties/krisumi-forest-reserve",
       "description": "A sanctuary for the spirit.",
       "image": [
         "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/hero/hero-banner-forest.webp"
@@ -1096,19 +1096,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://cornerhouse.co.in/"
+          "item": "https://www.cornerhouse.co.in/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Properties",
-          "item": "https://cornerhouse.co.in/properties"
+          "item": "https://www.cornerhouse.co.in/properties"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "The Forest Reserve",
-          "item": "https://cornerhouse.co.in/properties/krisumi-forest-reserve"
+          "item": "https://www.cornerhouse.co.in/properties/krisumi-forest-reserve"
         }
       ]
     }

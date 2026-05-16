@@ -660,7 +660,7 @@
       "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-waterside-residences/webp/thumb/floor-plan-tower2-3-ph-a-lower.webp"
     }
   },
-  "canonicalUrl": "https://cornerhouse.co.in/properties/krisumi-waterside-residences",
+  "canonicalUrl": "https://www.cornerhouse.co.in/properties/krisumi-waterside-residences",
   "computedSeo": {
     "title": "Waterside Residences Sector 36A Gurugram | Krisumi HARERA",
     "description": "Krisumi Waterside Residences, Sector 36A Gurgaon. HARERA registered (GGM/812/544/2024/39). 2 LDK and 3 LDK from 4.35 Cr. Possession Oct 2029.",
@@ -685,7 +685,7 @@
       "@context": "https://schema.org",
       "@type": "RealEstateListing",
       "name": "Waterside Residences",
-      "url": "https://cornerhouse.co.in/properties/krisumi-waterside-residences",
+      "url": "https://www.cornerhouse.co.in/properties/krisumi-waterside-residences",
       "description": "Luxury Waterside Residences on the Dwarka Expressway.",
       "image": [
         "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-waterside-residences/webp/hero/main-pool.webp",
@@ -833,19 +833,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://cornerhouse.co.in/"
+          "item": "https://www.cornerhouse.co.in/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Properties",
-          "item": "https://cornerhouse.co.in/properties"
+          "item": "https://www.cornerhouse.co.in/properties"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Waterside Residences",
-          "item": "https://cornerhouse.co.in/properties/krisumi-waterside-residences"
+          "item": "https://www.cornerhouse.co.in/properties/krisumi-waterside-residences"
         }
       ]
     }

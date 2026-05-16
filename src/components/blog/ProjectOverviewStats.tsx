@@ -21,7 +21,7 @@ export default function ProjectOverviewStats({
   projectType = 'Residential Apartments',
   configuration = '2, 3, 4 LDK and Penthouses',
   landArea = '6.49 acres',
-  possession = 'November 2030',
+  possession = 'June 2031',
 }: ProjectOverviewStatsProps) {
   const items: StatItem[] = [
     { icon: Building2, label: 'Project Type', value: projectType },

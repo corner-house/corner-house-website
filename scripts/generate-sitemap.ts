@@ -29,7 +29,7 @@ function listBlogSlugs(): string[] {
     .sort();
 }
 
-const BASE_URL = 'https://cornerhouse.co.in';
+const BASE_URL = 'https://www.cornerhouse.co.in';
 
 // Per-file last-commit date (ISO 8601, UTC). Falls back to file mtime if git is unavailable
 // or the file is untracked. Google ignores sitemap lastmod when every URL shares the same date,

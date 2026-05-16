@@ -10,7 +10,7 @@ import {
   type ImageVariants,
 } from '../src/components/property/schema.js';
 
-const SITE_URL = 'https://cornerhouse.co.in';
+const SITE_URL = 'https://www.cornerhouse.co.in';
 
 interface ImagesManifest {
   propertyName: string;

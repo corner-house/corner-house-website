@@ -85,7 +85,7 @@ const phases: Phase[] = [
       harera: 'GGM/944/676 and /945/677',
       towers: '3 towers, 30 floors each',
       config: '2, 3, 4 LDK + Penthouses',
-      possession: 'November 2030',
+      possession: 'June 2031',
       price: 'On request (premium)',
       architect: 'Nikken Sekkei',
       developer: 'Krisumi Corporation',

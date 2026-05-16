@@ -2,7 +2,7 @@ import { readdirSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { PROPERTIES, SERVICES, ARTICLES } from '../src/constants';
 
-const SITE_URL = 'https://cornerhouse.co.in';
+const SITE_URL = 'https://www.cornerhouse.co.in';
 const KEY = '843e23ec010cf01b84a9f1068c9df883';
 const KEY_LOCATION = `${SITE_URL}/${KEY}.txt`;
 

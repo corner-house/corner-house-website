@@ -21,7 +21,7 @@ interface ManifestEntry {
   url: string;
 }
 
-const SITE_URL = 'https://cornerhouse.co.in';
+const SITE_URL = 'https://www.cornerhouse.co.in';
 const BLOG_DIR = resolve(process.cwd(), 'content/blog');
 const OUT = resolve(process.cwd(), 'public/blog-manifest.json');
 

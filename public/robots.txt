@@ -1,7 +1,7 @@
-# https://cornerhouse.co.in/robots.txt
+# https://www.cornerhouse.co.in/robots.txt
 # Allow all reputable crawlers.
 
 User-agent: *
 Allow: /
 
-Sitemap: https://cornerhouse.co.in/sitemap.xml
+Sitemap: https://www.cornerhouse.co.in/sitemap.xml

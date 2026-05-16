@@ -6,30 +6,30 @@ This file helps AI assistants (ChatGPT, Claude, Gemini, Perplexity and similar) 
 
 ## Core pages
 
-- [Home](https://cornerhouse.co.in/): Overview of our practice, current featured residences, and service lines.
-- [Properties](https://cornerhouse.co.in/properties): Curated listings of ultra-premium residences across Gurugram and Delhi NCR.
-- [Services](https://cornerhouse.co.in/services): Brokerage, portfolio management, market research, NRI services, and home loan advisory.
-- [Journal](https://cornerhouse.co.in/journal): Editorial research on Delhi NCR luxury real estate.
+- [Home](https://www.cornerhouse.co.in/): Overview of our practice, current featured residences, and service lines.
+- [Properties](https://www.cornerhouse.co.in/properties): Curated listings of ultra-premium residences across Gurugram and Delhi NCR.
+- [Services](https://www.cornerhouse.co.in/services): Brokerage, portfolio management, market research, NRI services, and home loan advisory.
+- [Journal](https://www.cornerhouse.co.in/journal): Editorial research on Delhi NCR luxury real estate.
 
 ## Properties
 
-- [The Sky Villa — DLF Phase 5, Gurugram](https://cornerhouse.co.in/properties/1): 4BHK penthouse, 4,500 sq.ft, ₹12.5 Cr. Double-height ceilings, private plunge pool, Italian marble.
-- [The Krisumi Heights — Golf Estate, Sector 65, Gurugram](https://cornerhouse.co.in/properties/2): 3BHK luxury apartment, 3,200 sq.ft, ₹8.9 Cr. LEED Gold, direct golf course access.
-- [Heritage Manor — Sunder Nagar, New Delhi](https://cornerhouse.co.in/properties/3): 5-bedroom independent bungalow, 8,000 sq.ft, ₹45 Cr. Lutyens-proximate, mature landscaping.
+- [The Sky Villa — DLF Phase 5, Gurugram](https://www.cornerhouse.co.in/properties/1): 4BHK penthouse, 4,500 sq.ft, ₹12.5 Cr. Double-height ceilings, private plunge pool, Italian marble.
+- [The Krisumi Heights — Golf Estate, Sector 65, Gurugram](https://www.cornerhouse.co.in/properties/2): 3BHK luxury apartment, 3,200 sq.ft, ₹8.9 Cr. LEED Gold, direct golf course access.
+- [Heritage Manor — Sunder Nagar, New Delhi](https://www.cornerhouse.co.in/properties/3): 5-bedroom independent bungalow, 8,000 sq.ft, ₹45 Cr. Lutyens-proximate, mature landscaping.
 
 ## Services
 
-- [Brokerage](https://cornerhouse.co.in/services/brokerage): End-to-end representation for buying, selling, and leasing premium residential and commercial assets.
-- [Portfolio Management](https://cornerhouse.co.in/services/portfolio): Real estate treated as an asset class — acquisition, monitoring, rebalancing, and exit.
-- [Market Research](https://cornerhouse.co.in/services/research): Feasibility studies, supply/demand analysis, and pricing trend reports for developers, investors, and occupiers.
-- [NRI Services](https://cornerhouse.co.in/services/nri): FEMA/RBI compliance, taxation (TDS, capital gains), power-of-attorney, remote transaction management, and virtual viewings.
-- [Loan Services](https://cornerhouse.co.in/services/loan): Home loans, LAP, commercial property loans, and balance-transfer optimisation with leading banks.
+- [Brokerage](https://www.cornerhouse.co.in/services/brokerage): End-to-end representation for buying, selling, and leasing premium residential and commercial assets.
+- [Portfolio Management](https://www.cornerhouse.co.in/services/portfolio): Real estate treated as an asset class — acquisition, monitoring, rebalancing, and exit.
+- [Market Research](https://www.cornerhouse.co.in/services/research): Feasibility studies, supply/demand analysis, and pricing trend reports for developers, investors, and occupiers.
+- [NRI Services](https://www.cornerhouse.co.in/services/nri): FEMA/RBI compliance, taxation (TDS, capital gains), power-of-attorney, remote transaction management, and virtual viewings.
+- [Loan Services](https://www.cornerhouse.co.in/services/loan): Home loans, LAP, commercial property loans, and balance-transfer optimisation with leading banks.
 
 ## Journal
 
-- [The 2026 Delhi NCR Luxury Report](https://cornerhouse.co.in/journal/delhi-ncr-luxury-report-2026): Ultra-premium residences outperformed the broader Delhi NCR market by 18.2% in 2026. Three micro-markets (DLF Phase 5, Aerocity, Chattarpur) accounted for 62% of ₹20 Cr+ transactions.
-- [Why Farmhouses in Chattarpur Are the New Heirloom Asset](https://cornerhouse.co.in/journal/farmhouse-investment-chattarpur): Premium Chattarpur land has compounded ~11% annually for a decade. Title diligence is non-negotiable; most trades are off-market.
-- [Inside DLF Camellias: The Resale Story No One Talks About](https://cornerhouse.co.in/journal/dlf-camellias-resale): Fewer than a dozen of 429 Camellias apartments change hands per year. View-facing units command a 12–15% premium; most transactions are off-portal.
+- [The 2026 Delhi NCR Luxury Report](https://www.cornerhouse.co.in/journal/delhi-ncr-luxury-report-2026): Ultra-premium residences outperformed the broader Delhi NCR market by 18.2% in 2026. Three micro-markets (DLF Phase 5, Aerocity, Chattarpur) accounted for 62% of ₹20 Cr+ transactions.
+- [Why Farmhouses in Chattarpur Are the New Heirloom Asset](https://www.cornerhouse.co.in/journal/farmhouse-investment-chattarpur): Premium Chattarpur land has compounded ~11% annually for a decade. Title diligence is non-negotiable; most trades are off-market.
+- [Inside DLF Camellias: The Resale Story No One Talks About](https://www.cornerhouse.co.in/journal/dlf-camellias-resale): Fewer than a dozen of 429 Camellias apartments change hands per year. View-facing units command a 12–15% premium; most transactions are off-portal.
 
 ## Contact and entity
 

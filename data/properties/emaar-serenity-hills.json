@@ -832,7 +832,7 @@
       "thumb": "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/emaar-serenity-hills/webp/thumb/hero-featured.webp"
     }
   },
-  "canonicalUrl": "https://cornerhouse.co.in/properties/emaar-serenity-hills",
+  "canonicalUrl": "https://www.cornerhouse.co.in/properties/emaar-serenity-hills",
   "computedSeo": {
     "title": "Emaar Serenity Hills Sector 86 Gurugram — 3 & 4 BHK Apartments",
     "description": "Emaar Serenity Hills: 3 & 4 BHK luxury apartments in Sector 86 Gurugram, from ₹2.98 Cr. IGBC Platinum, 25.9 acres, 8-acre grove. HARERA registered.",
@@ -857,7 +857,7 @@
       "@context": "https://schema.org",
       "@type": "RealEstateListing",
       "name": "Emaar Serenity Hills",
-      "url": "https://cornerhouse.co.in/properties/emaar-serenity-hills",
+      "url": "https://www.cornerhouse.co.in/properties/emaar-serenity-hills",
       "description": "Come Home to Acres of Nature.",
       "image": [
         "https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/emaar-serenity-hills/webp/hero/serenity-building.webp",
@@ -1002,19 +1002,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://cornerhouse.co.in/"
+          "item": "https://www.cornerhouse.co.in/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Properties",
-          "item": "https://cornerhouse.co.in/properties"
+          "item": "https://www.cornerhouse.co.in/properties"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Emaar Serenity Hills",
-          "item": "https://cornerhouse.co.in/properties/emaar-serenity-hills"
+          "item": "https://www.cornerhouse.co.in/properties/emaar-serenity-hills"
         }
       ]
     }
