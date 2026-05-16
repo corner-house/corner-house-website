@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 const ANSWER_STARTS = [
   'Yes, Krisumi Forest Reserve is worth serious consideration',
-  'The krisumi forest reserve price starts at approximately Rs 6.29 Cr',
+  'The krisumi forest reserve price is available on request',
   'The hidden costs at Krisumi Forest Reserve that buyers consistently',
   'The key pros of Krisumi Forest Reserve are:',
   'Yes, based on available evidence, Krisumi Corporation',

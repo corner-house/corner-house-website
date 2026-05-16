@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, FileText } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
+import LeadCaptureModal, { type LeadData } from '@/components/LeadCaptureModal';
 
 interface RecentPost {
   slug: string;
@@ -24,7 +25,7 @@ export default function BlogSidebar({ projectName, contactSlug, recentPosts }: B
     <aside className="space-y-6">
       <AboutCard />
       <CallbackCard projectName={projectName} contactSlug={contactSlug} />
-      <BrochureCard contactSlug={contactSlug} />
+      <BrochureCard projectName={projectName} contactSlug={contactSlug} />
       <RecentPostsCard posts={recentPosts} />
     </aside>
   );
@@ -112,7 +113,30 @@ function CallbackCard({ projectName, contactSlug }: { projectName: string; conta
   );
 }
 
-function BrochureCard({ contactSlug }: { contactSlug: string }) {
+function BrochureCard({ projectName, contactSlug }: { projectName: string; contactSlug: string }) {
+  // Reuse the existing LeadCaptureModal used on property listings (PropertyDetail.tsx) instead
+  // of building a new form. The modal collects name/phone/email. Project + requestType context
+  // is encoded into the modal title (the modal's only contextual prop today) and stamped onto
+  // the captured lead via metadata so future webhook integration can route brochure requests.
+  const [open, setOpen] = useState(false);
+
+  const handleSuccess = (data: LeadData) => {
+    // Metadata for the lead — will be picked up once useLeadGate / webhook integration goes
+    // live. For now, capturing in window-level analytics if available so brochure requests
+    // are at least visible in the data layer.
+    if (typeof window !== 'undefined' && 'dataLayer' in window) {
+      const w = window as Window & { dataLayer?: Array<Record<string, unknown>> };
+      w.dataLayer?.push({
+        event: 'blog_brochure_request',
+        project: projectName,
+        projectSlug: contactSlug,
+        requestType: 'brochure',
+        leadName: data.name,
+      });
+    }
+    setOpen(false);
+  };
+
   return (
     <div className="border border-border bg-card p-6">
       <FileText className="h-5 w-5 text-primary mb-4" aria-hidden />
@@ -122,12 +146,19 @@ function BrochureCard({ contactSlug }: { contactSlug: string }) {
       <p className="text-sm font-light text-muted-foreground leading-relaxed mb-5">
         Get the official brochure with all floor plans, pricing, and amenities.
       </p>
-      <Link
-        to={`/contact?project=${contactSlug}&type=brochure`}
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
         className="inline-flex items-center justify-center w-full border border-primary text-primary py-3 text-[11px] tracking-[0.3em] uppercase font-semibold hover:bg-primary hover:text-white transition-colors"
       >
         Request Brochure
-      </Link>
+      </button>
+      <LeadCaptureModal
+        isOpen={open}
+        onClose={() => setOpen(false)}
+        onSuccess={handleSuccess}
+        title={`${projectName} — Brochure Request`}
+      />
     </div>
   );
 }
