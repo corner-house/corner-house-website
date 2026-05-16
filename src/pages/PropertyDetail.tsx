@@ -4,8 +4,6 @@ import { useLayoutContext } from '@/App';
 import { PROPERTIES } from '@/constants';
 import { getPropertyListing } from '@/data/propertyListings';
 import PropertyListingPage from '@/components/property/PropertyListingPage';
-import LeadCaptureModal from '@/components/LeadCaptureModal';
-import { useLeadGate } from '@/lib/lead-gate';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
@@ -14,6 +12,42 @@ import {
   Phone, MessageSquare, CheckCircle2, ChevronLeft, ChevronRight
 } from 'lucide-react';
 import SEO, { SITE_URL } from '@/components/SEO';
+import { whatsappLink } from '@/site-contact';
+import WhatsAppIcon from '@/components/blog/WhatsAppIcon';
+
+// Sticky bottom CTA bar shown on every property detail page. Replaces the
+// previous LeadCaptureModal gate which had a broken webhook and silently
+// discarded every submission. WhatsApp routes to Saurabh directly.
+function StickyWhatsAppBar({ projectTitle }: { projectTitle: string }) {
+  const message = `Hi, I'm interested in ${projectTitle}. Please share details.`;
+  return (
+    <div
+      className="fixed bottom-0 left-0 right-0 z-40 px-4 py-3 md:py-4 shadow-[0_-10px_30px_rgba(0,0,0,0.15)]"
+      style={{ backgroundColor: '#0D1F3C' }}
+    >
+      <div className="container mx-auto flex items-center justify-between gap-4">
+        <div className="hidden sm:block min-w-0">
+          <p className="text-[10px] tracking-[0.3em] uppercase text-white/60">
+            Interested in this property?
+          </p>
+          <p className="text-sm md:text-base font-heading font-medium text-white truncate">
+            Talk to Saurabh directly.
+          </p>
+        </div>
+        <a
+          href={whatsappLink(message)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-2 text-white px-5 md:px-7 py-3 text-[11px] tracking-[0.3em] uppercase font-semibold transition-opacity hover:opacity-90 w-full sm:w-auto"
+          style={{ backgroundColor: '#25D366' }}
+        >
+          <WhatsAppIcon className="h-4 w-4" />
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  );
+}
 
 export default function PropertyDetail() {
   const { id } = useParams<{ id: string }>();
@@ -21,9 +55,6 @@ export default function PropertyDetail() {
   const legacy = !richListing ? PROPERTIES.find((p) => p.id === id) : null;
   const projectTitle =
     richListing?.projectName ?? legacy?.title ?? 'this residence';
-
-  const { captured, ready, markCaptured } = useLeadGate();
-  const showGate = ready && !captured;
 
   const content = richListing ? (
     <PropertyListingPage listing={richListing} />
@@ -33,14 +64,9 @@ export default function PropertyDetail() {
 
   return (
     <>
-      {content}
-      <LeadCaptureModal
-        isOpen={showGate}
-        persistent
-        title={projectTitle}
-        onClose={() => {}}
-        onSuccess={() => markCaptured()}
-      />
+      {/* Pad the bottom so the sticky bar never overlaps the last bit of content. */}
+      <div className="pb-24 md:pb-20">{content}</div>
+      <StickyWhatsAppBar projectTitle={projectTitle} />
     </>
   );
 }

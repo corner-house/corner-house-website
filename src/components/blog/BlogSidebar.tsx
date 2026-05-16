@@ -110,7 +110,13 @@ function BrochureCard({
   const baseClass =
     'inline-flex items-center justify-center w-full border border-primary text-primary py-3 text-[11px] tracking-[0.3em] uppercase font-semibold hover:bg-primary hover:text-white transition-colors gap-2';
 
-  const handleSuccess = (data: LeadData) => {
+  // POST the lead to the new /api/lead Cloudflare Pages Function so it is
+  // persisted (Cloudflare logs + optional Formspree fan-out) before the PDF
+  // opens. If the POST fails we still open the PDF (the user already gave us
+  // intent) but surface a WhatsApp fallback so they can re-send their request.
+  const waMessage = `Hi, I'm interested in the ${projectName} brochure. Please share details.`;
+  const waHref = whatsappLink(waMessage);
+  const handleSuccess = async (data: LeadData) => {
     if (typeof window !== 'undefined' && 'dataLayer' in window) {
       const w = window as Window & { dataLayer?: Array<Record<string, unknown>> };
       w.dataLayer?.push({
@@ -121,9 +127,32 @@ function BrochureCard({
         leadName: data.name,
       });
     }
+    let ok = true;
+    try {
+      const res = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: data.name,
+          phone: data.phone,
+          email: data.email,
+          project: projectName,
+          projectSlug: contactSlug,
+          requestType: 'brochure',
+          source: 'blog-sidebar',
+          pageUrl: typeof window !== 'undefined' ? window.location.href : undefined,
+        }),
+      });
+      ok = res.ok;
+    } catch {
+      ok = false;
+    }
     setOpen(false);
-    if (brochureUrl && typeof window !== 'undefined') {
+    if (ok && brochureUrl && typeof window !== 'undefined') {
       window.open(brochureUrl, '_blank', 'noopener,noreferrer');
+    } else if (typeof window !== 'undefined') {
+      // Surface a manual WhatsApp fallback so the buyer's intent isn't lost.
+      window.open(waHref, '_blank', 'noopener,noreferrer');
     }
   };
 
