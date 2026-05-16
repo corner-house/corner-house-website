@@ -18,11 +18,21 @@ test('blog post renders without console errors', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Frequently Asked Questions' })).toBeVisible();
   await expect(page.getByText('About the Author').first()).toBeVisible();
   // Redesign assertions: stats bar values, sidebar callback CTA, scorecard, cost breakdown.
-  await expect(page.getByText('Rs 6.29 Cr onwards').first()).toBeVisible();
-  await expect(page.getByText('June 2031').first()).toBeVisible();
+  await expect(page.getByText('On Request').first()).toBeVisible();
+  await expect(page.getByText('November 2030').first()).toBeVisible();
   await expect(page.getByRole('button', { name: 'Request Callback' })).toBeVisible();
   await expect(page.getByText('Corner House Scorecard').first()).toBeVisible();
   await expect(page.getByText('All-In Cost Breakdown').first()).toBeVisible();
+  // New sections from the upgrade.
+  await expect(page.getByRole('heading', { name: 'Amenities and Lifestyle' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Price and Value for Money' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'What Buyers Are Saying' })).toBeVisible();
+  await expect(page.getByText('Corner House Verdict').first()).toBeVisible();
+  // Brochure card now a direct download link to the R2 PDF.
+  const brochureLink = page.getByRole('link', { name: /Download Brochure PDF/i });
+  await expect(brochureLink).toBeVisible();
+  await expect(brochureLink).toHaveAttribute('href', /brochure\/Krishumi-Forest-researve\.pdf$/);
+  await expect(brochureLink).toHaveAttribute('target', '_blank');
 
   // JSON-LD schemas: Article + FAQPage + BreadcrumbList.
   const schemaTypes = await page.$$eval(

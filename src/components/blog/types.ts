@@ -37,6 +37,9 @@ export interface BlogFrontmatter {
   badge?: string;
   stats?: ProjectStats;
   scorecard?: ScoreRow[];
+  // Direct PDF download URL for the project brochure. When set, sidebar Download Brochure
+  // card becomes a one-click download (target=_blank). When omitted, falls back to /contact.
+  brochureUrl?: string;
 }
 
 export interface FAQItem {

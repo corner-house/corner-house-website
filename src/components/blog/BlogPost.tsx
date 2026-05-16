@@ -17,6 +17,11 @@ import ImageRow from './ImageRow';
 import CostBreakdown from './CostBreakdown';
 import ProjectScorecard from './ProjectScorecard';
 import BlogSidebar from './BlogSidebar';
+import AmenitiesGrid from './AmenitiesGrid';
+import TestimonialsGrid from './TestimonialsGrid';
+import PriceValueCard from './PriceValueCard';
+import VerdictBox from './VerdictBox';
+import PullQuote from './PullQuote';
 import { MdxH1, MdxH2, MdxH3, MdxP } from './mdx-elements';
 import type { BlogFrontmatter } from './types';
 
@@ -69,7 +74,13 @@ const MDX_COMPONENTS = {
       className="my-8 border-l-4 border-primary pl-6 py-2 font-heading italic text-xl md:text-2xl leading-snug text-foreground"
     />
   ),
-  hr: () => <hr className="my-14 border-border/60" />,
+  // Centered gold rule between H2 sections — replaces the default thin border the previous
+  // hr override produced. Visual rhythm between major sections per FIX 8.
+  hr: () => (
+    <div className="my-14 flex justify-center" aria-hidden>
+      <span className="block h-px w-16" style={{ backgroundColor: '#C9933A' }} />
+    </div>
+  ),
   img: ({ src, alt, width, height, loading }: { src?: string; alt?: string; width?: string | number; height?: string | number; loading?: 'lazy' | 'eager' }) => (
     <img
       src={src}
@@ -100,6 +111,11 @@ const MDX_COMPONENTS = {
   ImageRow,
   CostBreakdown,
   ProjectScorecard,
+  AmenitiesGrid,
+  TestimonialsGrid,
+  PriceValueCard,
+  VerdictBox,
+  PullQuote,
 };
 
 function formatDate(iso: string): string {
@@ -234,11 +250,14 @@ export default function BlogPost({ frontmatter, Content }: BlogPostProps) {
             </article>
           </div>
           <div className="lg:col-span-4">
-            <div className="lg:sticky lg:top-32">
+            {/* Sticky sidebar with viewport-bound max-height + internal scroll so the rail
+                never overlaps the author card or footer at the bottom of the article. */}
+            <div className="lg:sticky lg:top-8 lg:max-h-[calc(100vh-4rem)] lg:overflow-y-auto pr-1">
               <BlogSidebar
                 projectName={projectName}
                 contactSlug={frontmatter.slug}
                 recentPosts={recentPosts}
+                brochureUrl={frontmatter.brochureUrl}
               />
             </div>
           </div>

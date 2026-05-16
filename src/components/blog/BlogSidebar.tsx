@@ -1,9 +1,8 @@
 import { useState, type FormEvent } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { ArrowRight, FileText } from 'lucide-react';
+import { ArrowRight, FileText, Download } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import LeadCaptureModal, { type LeadData } from '@/components/LeadCaptureModal';
 
 interface RecentPost {
   slug: string;
@@ -17,15 +16,18 @@ interface BlogSidebarProps {
   projectName: string;
   contactSlug: string;
   recentPosts: RecentPost[];
+  // Optional direct-PDF brochure URL. When set, the Download Brochure card becomes a direct
+  // download link opening in a new tab (no form). When omitted, falls back to the contact page.
+  brochureUrl?: string;
 }
 
 // Sticky right sidebar — 4 stacked cards. Sticky positioning is on the wrapper in BlogPost.
-export default function BlogSidebar({ projectName, contactSlug, recentPosts }: BlogSidebarProps) {
+export default function BlogSidebar({ projectName, contactSlug, recentPosts, brochureUrl }: BlogSidebarProps) {
   return (
     <aside className="space-y-6">
       <AboutCard />
       <CallbackCard projectName={projectName} contactSlug={contactSlug} />
-      <BrochureCard projectName={projectName} contactSlug={contactSlug} />
+      <BrochureCard contactSlug={contactSlug} brochureUrl={brochureUrl} />
       <RecentPostsCard posts={recentPosts} />
     </aside>
   );
@@ -113,30 +115,11 @@ function CallbackCard({ projectName, contactSlug }: { projectName: string; conta
   );
 }
 
-function BrochureCard({ projectName, contactSlug }: { projectName: string; contactSlug: string }) {
-  // Reuse the existing LeadCaptureModal used on property listings (PropertyDetail.tsx) instead
-  // of building a new form. The modal collects name/phone/email. Project + requestType context
-  // is encoded into the modal title (the modal's only contextual prop today) and stamped onto
-  // the captured lead via metadata so future webhook integration can route brochure requests.
-  const [open, setOpen] = useState(false);
-
-  const handleSuccess = (data: LeadData) => {
-    // Metadata for the lead — will be picked up once useLeadGate / webhook integration goes
-    // live. For now, capturing in window-level analytics if available so brochure requests
-    // are at least visible in the data layer.
-    if (typeof window !== 'undefined' && 'dataLayer' in window) {
-      const w = window as Window & { dataLayer?: Array<Record<string, unknown>> };
-      w.dataLayer?.push({
-        event: 'blog_brochure_request',
-        project: projectName,
-        projectSlug: contactSlug,
-        requestType: 'brochure',
-        leadName: data.name,
-      });
-    }
-    setOpen(false);
-  };
-
+function BrochureCard({ contactSlug, brochureUrl }: { contactSlug: string; brochureUrl?: string }) {
+  // When a direct PDF URL is provided, the card becomes a no-friction download (opens in a
+  // new tab). When omitted, falls back to /contact?type=brochure for the lead-form path.
+  const baseClass =
+    'inline-flex items-center justify-center w-full border border-primary text-primary py-3 text-[11px] tracking-[0.3em] uppercase font-semibold hover:bg-primary hover:text-white transition-colors gap-2';
   return (
     <div className="border border-border bg-card p-6">
       <FileText className="h-5 w-5 text-primary mb-4" aria-hidden />
@@ -146,19 +129,21 @@ function BrochureCard({ projectName, contactSlug }: { projectName: string; conta
       <p className="text-sm font-light text-muted-foreground leading-relaxed mb-5">
         Get the official brochure with all floor plans, pricing, and amenities.
       </p>
-      <button
-        type="button"
-        onClick={() => setOpen(true)}
-        className="inline-flex items-center justify-center w-full border border-primary text-primary py-3 text-[11px] tracking-[0.3em] uppercase font-semibold hover:bg-primary hover:text-white transition-colors"
-      >
-        Request Brochure
-      </button>
-      <LeadCaptureModal
-        isOpen={open}
-        onClose={() => setOpen(false)}
-        onSuccess={handleSuccess}
-        title={`${projectName} — Brochure Request`}
-      />
+      {brochureUrl ? (
+        <a
+          href={brochureUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={baseClass}
+        >
+          <Download className="h-4 w-4" />
+          Download Brochure PDF
+        </a>
+      ) : (
+        <Link to={`/contact?project=${contactSlug}&type=brochure`} className={baseClass}>
+          Request Brochure
+        </Link>
+      )}
     </div>
   );
 }
