@@ -1,4 +1,4 @@
-import { useState, type ReactNode, type ReactElement } from 'react';
+import { useState, type ReactNode, type ReactElement, Fragment } from 'react';
 import { Children, isValidElement } from 'react';
 import { Head } from 'vite-react-ssg';
 import { ChevronDown } from 'lucide-react';
@@ -165,13 +165,17 @@ export default function FAQAccordion({ children }: FAQAccordionProps) {
       )}
       <div className="border-t border-border/60">
         {entries.map((entry, i) => (
-          <FAQItem
-            key={`${entry.question}-${i}`}
-            index={i}
-            question={entry.question}
-            answerNodes={entry.answerNodes}
-            defaultOpen={i === 0}
-          />
+          // Fragment wrapper holds the React key so it doesn't appear in FAQItem's prop
+          // type-check (newer @types/react flag `key` as an unexpected extra prop on the
+          // component itself; the JSX runtime still consumes it for list reconciliation).
+          <Fragment key={`${entry.question}-${i}`}>
+            <FAQItem
+              index={i}
+              question={entry.question}
+              answerNodes={entry.answerNodes}
+              defaultOpen={i === 0}
+            />
+          </Fragment>
         ))}
       </div>
     </section>

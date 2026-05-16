@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { motion } from 'motion/react';
 import { ArrowUpRight, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -185,10 +186,14 @@ export default function Insights(_props: InsightsProps) {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {posts.map((post, i) => (
-            <RealCard key={post.slug} post={post} index={i} />
+            <Fragment key={post.slug}>
+              <RealCard post={post} index={i} />
+            </Fragment>
           ))}
           {placeholders.map((data, i) => (
-            <ComingSoonCard key={data.title} data={data} index={posts.length + i} />
+            <Fragment key={data.title}>
+              <ComingSoonCard data={data} index={posts.length + i} />
+            </Fragment>
           ))}
         </div>
 
