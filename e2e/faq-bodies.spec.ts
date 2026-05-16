@@ -9,7 +9,7 @@ const ANSWER_STARTS = [
   'Krisumi Waterfall Residences and Krisumi Forest Reserve are both',
   'Krisumi Forest Reserve carries two HARERA registration numbers',
   'The HARERA-registered possession date for Krisumi Forest Reserve',
-  'Krisumi Forest Reserve is under construction with a November 2030',
+  'Krisumi Forest Reserve is under construction with a June 2031',
   "Krisumi Forest Reserve's construction quality advantage",
 ];
 

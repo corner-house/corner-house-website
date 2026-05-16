@@ -179,21 +179,27 @@ export default function ArticleDetail() {
                 Share
               </span>
               <a
-                href="#"
+                href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(`${SITE_URL}/journal/${article.id}`)}&text=${encodeURIComponent(article.title)}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Share on Twitter"
                 className="h-10 w-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
               >
                 <Twitter className="h-4 w-4" />
               </a>
               <a
-                href="#"
+                href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`${SITE_URL}/journal/${article.id}`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Share on LinkedIn"
                 className="h-10 w-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
               >
                 <Linkedin className="h-4 w-4" />
               </a>
               <a
-                href="#"
+                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`${SITE_URL}/journal/${article.id}`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Share on Facebook"
                 className="h-10 w-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
               >

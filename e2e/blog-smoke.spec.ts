@@ -19,7 +19,7 @@ test('blog post renders without console errors', async ({ page }) => {
   await expect(page.getByText('About the Author').first()).toBeVisible();
   // Redesign assertions: stats bar values, sidebar callback CTA, scorecard, cost breakdown.
   await expect(page.getByText('On Request').first()).toBeVisible();
-  await expect(page.getByText('November 2030').first()).toBeVisible();
+  await expect(page.getByText('June 2031').first()).toBeVisible();
   // Callback form replaced with WhatsApp link + tel: fallback while lead webhook is unwired.
   const waLinks = page.getByRole('link', { name: /Chat on WhatsApp/i });
   await expect(waLinks.first()).toBeVisible();
