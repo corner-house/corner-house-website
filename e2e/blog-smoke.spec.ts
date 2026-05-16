@@ -28,11 +28,10 @@ test('blog post renders without console errors', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Price and Value for Money' })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'What Buyers Are Saying' })).toBeVisible();
   await expect(page.getByText('Corner House Verdict').first()).toBeVisible();
-  // Brochure card now a direct download link to the R2 PDF.
-  const brochureLink = page.getByRole('link', { name: /Download Brochure PDF/i });
-  await expect(brochureLink).toBeVisible();
-  await expect(brochureLink).toHaveAttribute('href', /brochure\/Krishumi-Forest-researve\.pdf$/);
-  await expect(brochureLink).toHaveAttribute('target', '_blank');
+  // Brochure card is now a lead-gated button: click opens LeadCaptureModal; on submit it
+  // redirects to the R2 PDF in a new tab. We just verify the button exists here.
+  const brochureBtn = page.getByRole('button', { name: /Download Brochure/i });
+  await expect(brochureBtn).toBeVisible();
 
   // JSON-LD schemas: Article + FAQPage + BreadcrumbList.
   const schemaTypes = await page.$$eval(

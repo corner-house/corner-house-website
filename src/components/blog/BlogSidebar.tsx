@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, FileText, Download } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
+import LeadCaptureModal, { type LeadData } from '@/components/LeadCaptureModal';
 
 interface RecentPost {
   slug: string;
@@ -27,7 +28,7 @@ export default function BlogSidebar({ projectName, contactSlug, recentPosts, bro
     <aside className="space-y-6">
       <AboutCard />
       <CallbackCard projectName={projectName} contactSlug={contactSlug} />
-      <BrochureCard contactSlug={contactSlug} brochureUrl={brochureUrl} />
+      <BrochureCard projectName={projectName} contactSlug={contactSlug} brochureUrl={brochureUrl} />
       <RecentPostsCard posts={recentPosts} />
     </aside>
   );
@@ -115,11 +116,40 @@ function CallbackCard({ projectName, contactSlug }: { projectName: string; conta
   );
 }
 
-function BrochureCard({ contactSlug, brochureUrl }: { contactSlug: string; brochureUrl?: string }) {
-  // When a direct PDF URL is provided, the card becomes a no-friction download (opens in a
-  // new tab). When omitted, falls back to /contact?type=brochure for the lead-form path.
+function BrochureCard({
+  projectName,
+  contactSlug,
+  brochureUrl,
+}: {
+  projectName: string;
+  contactSlug: string;
+  brochureUrl?: string;
+}) {
+  // Lead-gated brochure download: clicking the button opens the same LeadCaptureModal used on
+  // property listing pages. On successful submission, push a dataLayer event for analytics and
+  // open the brochure PDF in a new tab. If no brochureUrl is configured, fall back to a plain
+  // contact link.
+  const [open, setOpen] = useState(false);
   const baseClass =
     'inline-flex items-center justify-center w-full border border-primary text-primary py-3 text-[11px] tracking-[0.3em] uppercase font-semibold hover:bg-primary hover:text-white transition-colors gap-2';
+
+  const handleSuccess = (data: LeadData) => {
+    if (typeof window !== 'undefined' && 'dataLayer' in window) {
+      const w = window as Window & { dataLayer?: Array<Record<string, unknown>> };
+      w.dataLayer?.push({
+        event: 'blog_brochure_request',
+        project: projectName,
+        projectSlug: contactSlug,
+        requestType: 'brochure',
+        leadName: data.name,
+      });
+    }
+    setOpen(false);
+    if (brochureUrl && typeof window !== 'undefined') {
+      window.open(brochureUrl, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
     <div className="border border-border bg-card p-6">
       <FileText className="h-5 w-5 text-primary mb-4" aria-hidden />
@@ -130,15 +160,18 @@ function BrochureCard({ contactSlug, brochureUrl }: { contactSlug: string; broch
         Get the official brochure with all floor plans, pricing, and amenities.
       </p>
       {brochureUrl ? (
-        <a
-          href={brochureUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={baseClass}
-        >
-          <Download className="h-4 w-4" />
-          Download Brochure PDF
-        </a>
+        <>
+          <button type="button" onClick={() => setOpen(true)} className={baseClass}>
+            <Download className="h-4 w-4" />
+            Download Brochure
+          </button>
+          <LeadCaptureModal
+            isOpen={open}
+            onClose={() => setOpen(false)}
+            onSuccess={handleSuccess}
+            title={`${projectName} — Brochure Download`}
+          />
+        </>
       ) : (
         <Link to={`/contact?project=${contactSlug}&type=brochure`} className={baseClass}>
           Request Brochure

@@ -87,12 +87,12 @@ function FAQItem({
 }) {
   const [open, setOpen] = useState<boolean>(!!defaultOpen);
   const panelId = `faq-panel-${index}`;
-  // Always render the answer body and toggle visibility via CSS rather than
-  // {open && (...)}. The lazy-mount pattern produced broken SSG → hydration
-  // behavior in production: items 2-10's body content was excluded from the
-  // server HTML and never mounted on the client when toggled. Always-rendered
-  // bodies make the SSR/CSR DOM identical, fix hydration, and put all 10
-  // answers in the static HTML (better for crawlers and AI citations).
+  const number = String(index + 1).padStart(2, '0');
+  // Always render the answer body and toggle visibility via CSS rather than {open && (...)}.
+  // The lazy-mount pattern produced broken SSG → hydration behaviour in production: items 2-10
+  // body content was excluded from the server HTML and never mounted on the client when
+  // toggled. Always-rendered bodies make the SSR/CSR DOM identical and put all 10 answers in
+  // static HTML (crawlers + AI citation).
   return (
     <div className="border-b border-border/60">
       <button
@@ -100,16 +100,29 @@ function FAQItem({
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-controls={panelId}
-        className="w-full flex items-start justify-between gap-6 py-6 text-left group"
+        className="w-full flex items-start justify-between gap-5 py-6 text-left group"
       >
-        <h3 className="text-lg md:text-xl font-heading font-medium leading-snug text-foreground group-hover:text-primary transition-colors">
-          {question}
-        </h3>
+        <div className="flex items-start gap-5 flex-1">
+          <span
+            aria-hidden
+            className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full font-heading text-[11px] font-medium mt-0.5"
+            style={{ backgroundColor: '#C9933A', color: '#0D1F3C' }}
+          >
+            {number}
+          </span>
+          <h3
+            className="text-lg md:text-xl font-heading font-semibold leading-snug group-hover:text-primary transition-colors"
+            style={{ color: '#0D1F3C' }}
+          >
+            {question}
+          </h3>
+        </div>
         <ChevronDown
           className={cn(
-            'h-5 w-5 mt-1 shrink-0 text-muted-foreground transition-transform duration-300',
-            open && 'rotate-180 text-primary',
+            'h-5 w-5 mt-1 shrink-0 transition-transform duration-300 ease-out',
+            open && 'rotate-180',
           )}
+          style={{ color: open ? '#C9933A' : undefined }}
           aria-hidden
         />
       </button>
@@ -118,8 +131,8 @@ function FAQItem({
         role="region"
         aria-hidden={!open}
         className={cn(
-          'pb-8 pr-10 text-base md:text-lg font-light leading-[1.85] text-muted-foreground space-y-4 [&_p]:m-0',
-          !open && 'hidden',
+          'pl-13 md:pl-[3.25rem] pr-10 text-base md:text-lg font-light leading-[1.85] text-gray-700 space-y-4 [&_p]:m-0 transition-all duration-300 ease-out overflow-hidden',
+          open ? 'opacity-100 pb-8 max-h-[2000px]' : 'opacity-0 pb-0 max-h-0',
         )}
       >
         {answerNodes}

@@ -22,6 +22,11 @@ import TestimonialsGrid from './TestimonialsGrid';
 import PriceValueCard from './PriceValueCard';
 import VerdictBox from './VerdictBox';
 import PullQuote from './PullQuote';
+import ProjectOverviewStats from './ProjectOverviewStats';
+import LocationAdvantage from './LocationAdvantage';
+import DesignImageStrip from './DesignImageStrip';
+import VerdictBadge from './VerdictBadge';
+import NextArticleStrip from './NextArticleStrip';
 import { MdxH1, MdxH2, MdxH3, MdxP } from './mdx-elements';
 import type { BlogFrontmatter } from './types';
 
@@ -116,6 +121,11 @@ const MDX_COMPONENTS = {
   PriceValueCard,
   VerdictBox,
   PullQuote,
+  ProjectOverviewStats,
+  LocationAdvantage,
+  DesignImageStrip,
+  VerdictBadge,
+  NextArticleStrip,
 };
 
 function formatDate(iso: string): string {

@@ -7,20 +7,24 @@ interface AuthorCardProps {
   bio: string;
   photoUrl: string;
   profileUrl: string;
+  achievement?: string;
 }
 
-// First glyph of the author name, uppercased. Used by the fallback avatar when the photo
-// 404s. For "Saurabh" this yields "S"; works for future authors too.
 function initialOf(name: string): string {
   const trimmed = name.trim();
   return trimmed ? trimmed.charAt(0).toUpperCase() : '?';
 }
 
-export default function AuthorCard({ name, credential, bio, photoUrl, profileUrl }: AuthorCardProps) {
-  // photoUrl falls back to a navy-on-gold initials disc if the R2 fetch fails. The fallback
-  // is also used when photoUrl is empty so a missing URL never renders a broken-image box.
+export default function AuthorCard({
+  name,
+  credential,
+  bio,
+  photoUrl,
+  profileUrl,
+  achievement,
+}: AuthorCardProps) {
+  // onError fallback kept as a safety net; the live photo is confirmed working in production.
   const [imgFailed, setImgFailed] = useState<boolean>(!photoUrl);
-
   const showFallback = imgFailed || !photoUrl;
 
   return (
@@ -51,10 +55,18 @@ export default function AuthorCard({ name, credential, bio, photoUrl, profileUrl
             className="h-20 w-20 rounded-full object-cover object-top shrink-0 border border-border text-[0px] text-transparent"
           />
         )}
-        <div className="space-y-3">
+        <div className="space-y-2">
           <h3 className="text-2xl font-heading font-medium leading-tight">{name}</h3>
           <p className="text-xs tracking-[0.25em] uppercase text-muted-foreground">{credential}</p>
-          <p className="text-base font-light leading-relaxed text-muted-foreground">{bio}</p>
+          {achievement && (
+            <p
+              className="text-xs font-sans font-semibold tracking-[0.2em] uppercase"
+              style={{ color: '#C9933A' }}
+            >
+              {achievement}
+            </p>
+          )}
+          <p className="text-base font-light leading-relaxed text-muted-foreground pt-2">{bio}</p>
           <Link
             to={profileUrl}
             className="inline-block mt-3 text-[11px] tracking-[0.3em] uppercase text-primary font-semibold hover:underline"
