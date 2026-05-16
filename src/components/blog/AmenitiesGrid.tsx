@@ -28,7 +28,7 @@ const AMENITIES: Amenity[] = [
 // 4-col desktop, 2-col mobile. Gold icon up top, label, optional note.
 export default function AmenitiesGrid() {
   return (
-    <div className="my-10 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div className="not-prose my-10 grid grid-cols-2 md:grid-cols-4 gap-4">
       {AMENITIES.map((a) => {
         const Icon = a.icon;
         return (

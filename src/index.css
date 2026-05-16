@@ -1,6 +1,15 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
+
+/* Tailwind v4 — plugin + content-source declarations live in CSS rather than
+   the v3 JS config. @plugin replaces `plugins:` and @source adds extra glob
+   roots that the Vite plugin's auto-detector might miss (here: MDX files
+   under content/), so prose-x modifiers and any inline Tailwind classes in
+   MDX survive the production purge. */
+@plugin "@tailwindcss/typography";
+@source "../content/**/*.mdx";
+
 /* Fonts loaded via <link> in index.html for faster rendering */
 
 @custom-variant dark (&:is(.dark *));

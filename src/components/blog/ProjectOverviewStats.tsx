@@ -31,7 +31,7 @@ export default function ProjectOverviewStats({
   ];
 
   return (
-    <div className="my-10 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-0 border border-border bg-card">
+    <div className="not-prose my-10 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-0 border border-border bg-card">
       {items.map((item, i) => {
         const Icon = item.icon;
         return (

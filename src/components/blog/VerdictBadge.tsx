@@ -14,7 +14,7 @@ export default function VerdictBadge({
   subtitle,
 }: VerdictBadgeProps) {
   return (
-    <div className="my-10 flex flex-col items-center text-center">
+    <div className="not-prose my-10 flex flex-col items-center text-center">
       <div className="flex items-baseline gap-2">
         <div
           className="h-[100px] w-[100px] rounded-full flex items-center justify-center font-heading font-medium"

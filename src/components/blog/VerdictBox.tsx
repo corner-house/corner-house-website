@@ -10,7 +10,7 @@ interface VerdictBoxProps {
 export default function VerdictBox({ children, label = 'Corner House Verdict' }: VerdictBoxProps) {
   return (
     <div
-      className="my-10 p-8 border-l-4"
+      className="not-prose my-10 p-8 border-l-4"
       style={{ backgroundColor: '#F0F3F8', borderLeftColor: '#C9933A' }}
     >
       <span

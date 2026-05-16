@@ -20,7 +20,7 @@ export default function LocationAdvantage({
   directionsUrl,
 }: LocationAdvantageProps) {
   return (
-    <div className="my-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
+    <div className="not-prose my-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
       {/* Left — bullet list */}
       <ul className="space-y-3">
         {items.map((it) => (

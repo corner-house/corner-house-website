@@ -52,7 +52,7 @@ export default function NextArticleStrip({
   );
 
   const baseClasses =
-    'my-14 border-y border-border py-7 md:py-8 px-6 md:px-8 flex flex-col md:flex-row md:items-center gap-4 md:gap-8 transition-colors group';
+    'not-prose my-14 border-y border-border py-7 md:py-8 px-6 md:px-8 flex flex-col md:flex-row md:items-center gap-4 md:gap-8 transition-colors group';
   if (comingSoon) {
     return (
       <div className={cn(baseClasses, 'opacity-70 cursor-not-allowed')} aria-disabled>

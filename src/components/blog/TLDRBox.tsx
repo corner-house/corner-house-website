@@ -6,7 +6,7 @@ interface TLDRBoxProps {
 
 export default function TLDRBox({ children }: TLDRBoxProps) {
   return (
-    <aside className="my-12 bg-secondary/40 border-l-4 border-primary p-8 md:p-10">
+    <aside className="not-prose my-12 bg-secondary/40 border-l-4 border-primary p-8 md:p-10">
       <span className="text-[10px] font-sans font-semibold tracking-[0.4em] uppercase text-primary block mb-5">
         TL;DR
       </span>

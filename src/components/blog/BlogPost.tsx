@@ -27,7 +27,7 @@ import LocationAdvantage from './LocationAdvantage';
 import DesignImageStrip from './DesignImageStrip';
 import VerdictBadge from './VerdictBadge';
 import NextArticleStrip from './NextArticleStrip';
-import { MdxH1, MdxH2, MdxH3, MdxP } from './mdx-elements';
+import { MdxH3 } from './mdx-elements';
 import type { BlogFrontmatter } from './types';
 
 interface BlogPostProps {
@@ -36,75 +36,32 @@ interface BlogPostProps {
 }
 
 const MDX_COMPONENTS = {
-  // Heading + paragraph overrides live in mdx-elements.tsx so FAQAccordion can detect MdxH3
-  // as a question marker via reference equality (see FAQAccordion.isH3).
-  h1: MdxH1,
-  h2: MdxH2,
+  // Tailwind Typography (prose) handles h1/h2/h4/h5/h6/p/ul/ol/li/a/blockquote/img/code/pre
+  // visually via prose-* modifiers on the article wrapper below. We only keep:
+  //   - h3 → MdxH3 reference equality is how FAQAccordion detects FAQ question boundaries.
+  //     MdxH3 itself is now minimal so prose can apply its own h3 styling on top.
+  //   - a  → custom anchor that opens external links in a new tab and uses react-router Link
+  //     for internal hrefs. Prose handles colour/underline via prose-a:* modifiers; the
+  //     internal/external routing decision lives in the component, not in CSS.
+  //   - hr → centered gold rule (project-specific visual rhythm).
   h3: MdxH3,
-  p: MdxP,
-  ul: (props: { children?: ReactNode }) => (
-    <ul {...props} className="list-disc pl-6 my-5 space-y-2 text-base md:text-lg font-light leading-[1.8] text-muted-foreground" />
-  ),
-  ol: (props: { children?: ReactNode }) => (
-    <ol {...props} className="list-decimal pl-6 my-5 space-y-2 text-base md:text-lg font-light leading-[1.8] text-muted-foreground" />
-  ),
-  li: (props: { children?: ReactNode }) => <li {...props} className="pl-1" />,
   a: ({ href, children, ...rest }: { href?: string; children?: ReactNode }) => {
     const isExternal = !!href && /^https?:\/\//i.test(href) && !href.includes('cornerhouse.co.in');
     if (isExternal) {
       return (
-        <a
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-primary underline decoration-primary/30 hover:decoration-primary underline-offset-4 transition-colors"
-          {...rest}
-        >
+        <a href={href} target="_blank" rel="noopener noreferrer" {...rest}>
           {children}
         </a>
       );
     }
-    return (
-      <Link
-        to={href ?? '#'}
-        className="text-primary underline decoration-primary/30 hover:decoration-primary underline-offset-4 transition-colors"
-      >
-        {children}
-      </Link>
-    );
+    return <Link to={href ?? '#'}>{children}</Link>;
   },
-  blockquote: (props: { children?: ReactNode }) => (
-    <blockquote
-      {...props}
-      className="my-8 border-l-4 border-primary pl-6 py-2 font-heading italic text-xl md:text-2xl leading-snug text-foreground"
-    />
-  ),
-  // Centered gold rule between H2 sections — replaces the default thin border the previous
-  // hr override produced. Visual rhythm between major sections per FIX 8.
   hr: () => (
-    <div className="my-14 flex justify-center" aria-hidden>
+    <div className="not-prose my-14 flex justify-center" aria-hidden>
       <span className="block h-px w-16" style={{ backgroundColor: '#C9933A' }} />
     </div>
   ),
-  img: ({ src, alt, width, height, loading }: { src?: string; alt?: string; width?: string | number; height?: string | number; loading?: 'lazy' | 'eager' }) => (
-    <img
-      src={src}
-      alt={alt ?? ''}
-      width={width ?? 1200}
-      height={height ?? 675}
-      loading={loading ?? 'lazy'}
-      decoding="async"
-      referrerPolicy="no-referrer"
-      className="my-10 w-full h-auto"
-    />
-  ),
-  code: (props: { children?: ReactNode }) => (
-    <code {...props} className="bg-secondary/60 px-1.5 py-0.5 rounded text-[0.9em] font-mono text-foreground" />
-  ),
-  pre: (props: { children?: ReactNode }) => (
-    <pre {...props} className="my-8 bg-[#1c1c1c] text-white p-6 overflow-x-auto text-sm rounded-sm" />
-  ),
-  // Inline-usable components from MDX (authors write <TLDRBox>, <CalloutBox>, etc. directly in .mdx)
+  // Inline-usable components from MDX (authors write <TLDRBox>, <CalloutBox>, etc. directly).
   TLDRBox,
   CalloutBox,
   ProsConsTable,
@@ -253,7 +210,21 @@ export default function BlogPost({ frontmatter, Content }: BlogPostProps) {
           <div className="lg:col-span-8">
             {/* Mobile-only TOC accordion. Desktop sidebar replaces it. */}
             <TableOfContents />
-            <article data-blog-body>
+            <article
+              data-blog-body
+              className="prose prose-slate max-w-none
+                prose-headings:font-playfair
+                prose-h2:text-[#0D1F3C] prose-h2:text-2xl
+                prose-h3:text-[#0D1F3C]
+                prose-a:text-[#0F6E56] prose-a:no-underline
+                hover:prose-a:underline
+                prose-blockquote:border-l-[#C9933A]
+                prose-blockquote:font-cormorant prose-blockquote:italic
+                prose-img:rounded-lg
+                prose-table:text-sm
+                prose-th:bg-[#0D1F3C] prose-th:text-white prose-th:p-3
+                prose-td:p-3"
+            >
               <MDXProvider components={MDX_COMPONENTS}>
                 <Content />
               </MDXProvider>

@@ -23,7 +23,7 @@ export default function ImageRow({ images, caption }: ImageRowProps) {
         : 'md:grid-cols-2';
 
   return (
-    <figure className="my-12">
+    <figure className="not-prose my-12">
       <div className={`grid grid-cols-1 ${colsClass} gap-4 md:gap-5`}>
         {images.map((img, i) => (
           <div key={i} className="aspect-[4/3] overflow-hidden bg-muted">

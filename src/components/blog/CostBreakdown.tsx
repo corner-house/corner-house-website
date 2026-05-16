@@ -14,7 +14,7 @@ interface CostBreakdownProps {
 // treatment so the headline number ("18-22% above base") is unmissable on scan.
 export default function CostBreakdown({ rows, title = 'All-In Cost Breakdown' }: CostBreakdownProps) {
   return (
-    <section className="my-12 border border-border bg-card">
+    <section className="not-prose my-12 border border-border bg-card">
       <header className="px-6 py-5 border-b border-border bg-secondary/40">
         <span className="text-[10px] font-sans font-semibold tracking-[0.4em] uppercase text-primary">
           {title}

@@ -29,7 +29,7 @@ export default function CTAStrip({
   const useWhatsApp = !ctaUrl;
 
   return (
-    <section className="my-16 bg-[#1c1c1c] text-white p-10 md:p-14">
+    <section className="not-prose my-16 bg-[#1c1c1c] text-white p-10 md:p-14">
       <div className="max-w-3xl space-y-5">
         <h3 className="text-3xl md:text-4xl font-heading font-medium leading-tight">{headline}</h3>
         <p className="text-base md:text-lg font-light text-white/70 leading-relaxed">{subtext}</p>

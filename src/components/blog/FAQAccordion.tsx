@@ -157,7 +157,7 @@ export default function FAQAccordion({ children }: FAQAccordionProps) {
   };
 
   return (
-    <section className="my-12">
+    <section className="not-prose my-12">
       {entries.length > 0 && (
         <Head>
           <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>

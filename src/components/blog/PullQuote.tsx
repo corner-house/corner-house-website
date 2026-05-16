@@ -10,7 +10,7 @@ interface PullQuoteProps {
 export default function PullQuote({ children, attribution }: PullQuoteProps) {
   return (
     <figure
-      className="my-12 pl-6 md:pl-8 border-l-4"
+      className="not-prose my-12 pl-6 md:pl-8 border-l-4"
       style={{ borderLeftColor: '#C9933A' }}
     >
       <blockquote className="font-heading italic text-2xl md:text-3xl leading-snug text-foreground">

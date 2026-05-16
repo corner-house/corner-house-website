@@ -13,7 +13,7 @@ interface TestimonialsGridProps {
 
 export default function TestimonialsGrid({ items, disclaimer }: TestimonialsGridProps) {
   return (
-    <div className="my-10">
+    <div className="not-prose my-10">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {items.map((t, i) => (
           <figure

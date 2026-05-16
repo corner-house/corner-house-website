@@ -13,7 +13,7 @@ interface DesignImageStripProps {
 export default function DesignImageStrip({ images }: DesignImageStripProps) {
   if (images.length === 0) return null;
   return (
-    <div className="my-8 -mx-6 md:mx-0 overflow-x-auto">
+    <div className="not-prose my-8 -mx-6 md:mx-0 overflow-x-auto">
       <div className="flex gap-4 px-6 md:px-0 pb-3">
         {images.map((img, i) => (
           <figure

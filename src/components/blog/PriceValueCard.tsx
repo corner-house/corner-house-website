@@ -23,7 +23,7 @@ export default function PriceValueCard({
   ctaUrl,
 }: PriceValueCardProps) {
   return (
-    <div className="my-10 space-y-8">
+    <div className="not-prose my-10 space-y-8">
       {/* Configuration table */}
       <div className="border border-border bg-card overflow-x-auto">
         <table className="w-full text-sm md:text-base">

@@ -68,7 +68,7 @@ export default function RelatedPosts({ slugs, posts }: RelatedPostsProps) {
   if (resolved.length === 0) return null;
 
   return (
-    <section className="my-20">
+    <section className="not-prose my-20">
       <div className="flex items-end justify-between mb-10">
         <div>
           <span className="text-[10px] font-sans font-semibold tracking-[0.4em] uppercase text-primary mb-3 block">

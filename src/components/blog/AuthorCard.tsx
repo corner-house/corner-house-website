@@ -28,7 +28,7 @@ export default function AuthorCard({
   const showFallback = imgFailed || !photoUrl;
 
   return (
-    <section className="my-16 border border-border p-8 md:p-10 bg-card">
+    <section className="not-prose my-16 border border-border p-8 md:p-10 bg-card">
       <span className="text-[10px] font-sans font-semibold tracking-[0.4em] uppercase text-primary block mb-6">
         About the Author
       </span>

@@ -69,7 +69,7 @@ export default function CalloutBox({ type = 'info', title, children }: CalloutBo
 
   return (
     <aside
-      className={cn('relative my-10 p-6 md:p-8 flex gap-5', !customStyle && 'border-l-4', wrap)}
+      className={cn('not-prose relative my-10 p-6 md:p-8 flex gap-5', !customStyle && 'border-l-4', wrap)}
       style={customStyle}
     >
       {badge && (

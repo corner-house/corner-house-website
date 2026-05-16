@@ -14,7 +14,7 @@ export default function ProsConsTable({
   consTitle = 'Watch Out For',
 }: ProsConsTableProps) {
   return (
-    <div className="my-12 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+    <div className="not-prose my-12 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
       {/* Pros */}
       <div className="border border-emerald-200 bg-emerald-50/60 p-7">
         <div className="flex items-center gap-3 mb-6 pb-4 border-b border-emerald-200">
