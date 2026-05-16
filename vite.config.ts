@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import mdx from '@mdx-js/rollup';
 import remarkFrontmatter from 'remark-frontmatter';
 import remarkMdxFrontmatter from 'remark-mdx-frontmatter';
+import svgr from 'vite-plugin-svgr';
 import path from 'path';
 import {defineConfig, loadEnv} from 'vite';
 import {visualizer} from 'rollup-plugin-visualizer';
@@ -26,6 +27,10 @@ export default defineConfig(({mode, isSsrBuild}) => {
         }),
       },
       react({include: /\.(mdx|js|jsx|ts|tsx)$/}),
+      // Lets *.svg files be imported as React components via:
+      //   import { ReactComponent as Logo } from './logo.svg?react'
+      // Default behaviour (importing as a URL string) is preserved for non-?react imports.
+      svgr(),
       tailwindcss(),
       ...(analyze && !isSsrBuild
         ? [visualizer({filename: 'dist/stats.html', gzipSize: true, brotliSize: true}) as never]
