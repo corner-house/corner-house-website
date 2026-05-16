@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-16T19:21:41.871Z",
+  "generatedAt": "2026-05-16T19:27:57.312Z",
   "count": 3,
   "posts": [
     {
@@ -21,7 +21,7 @@
       "readingTime": "11 min",
       "wordCount": 2800,
       "featured": false,
-      "url": "https://cornerhouse.co.in/blog/is-krisumi-good-investment"
+      "url": "https://www.cornerhouse.co.in/blog/is-krisumi-good-investment"
     },
     {
       "slug": "krisumi-projects-explained",
@@ -42,7 +42,7 @@
       "readingTime": "5 min",
       "wordCount": 1200,
       "featured": false,
-      "url": "https://cornerhouse.co.in/blog/krisumi-projects-explained"
+      "url": "https://www.cornerhouse.co.in/blog/krisumi-projects-explained"
     },
     {
       "slug": "krisumi-forest-reserve-review",
@@ -64,7 +64,7 @@
       "readingTime": "13 min",
       "wordCount": 3200,
       "featured": true,
-      "url": "https://cornerhouse.co.in/blog/krisumi-forest-reserve-review"
+      "url": "https://www.cornerhouse.co.in/blog/krisumi-forest-reserve-review"
     }
   ]
 }

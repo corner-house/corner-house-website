@@ -114,8 +114,8 @@ test.describe('LeadCaptureModal Portal Verification', () => {
       }
     });
 
-    console.log('Navigating to direct URL: https://cornerhouse.co.in/properties/downtown66');
-    await page.goto('https://cornerhouse.co.in/properties/downtown66', {
+    console.log('Navigating to direct URL: https://www.cornerhouse.co.in/properties/downtown66');
+    await page.goto('https://www.cornerhouse.co.in/properties/downtown66', {
       waitUntil: 'load',
       timeout: 45000
     });
@@ -178,8 +178,8 @@ test.describe('LeadCaptureModal Portal Verification', () => {
       }
     });
 
-    console.log('Navigating to homepage: https://cornerhouse.co.in/');
-    await page.goto('https://cornerhouse.co.in/', {
+    console.log('Navigating to homepage: https://www.cornerhouse.co.in/');
+    await page.goto('https://www.cornerhouse.co.in/', {
       waitUntil: 'networkidle',
       timeout: 30000
     });

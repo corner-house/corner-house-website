@@ -1,6 +1,6 @@
 import { Head } from 'vite-react-ssg';
 
-export const SITE_URL = 'https://cornerhouse.co.in';
+export const SITE_URL = 'https://www.cornerhouse.co.in';
 const DEFAULT_OG = `${SITE_URL}/og-default.jpg`;
 
 interface SEOProps {
