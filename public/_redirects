@@ -14,5 +14,10 @@ https://cornerhouse.co.in/*    https://www.cornerhouse.co.in/:splat    301
 /about     /          301
 /contact   /#contact  301
 
+# Legacy /journal/:id route served placeholder articles — GSC flagged
+# /journal/dlf-camellias-resale as "crawled but not indexed". Funnel all
+# /journal/* traffic to the real /blog so inbound links + crawlers settle.
+/journal/*   /blog      301
+
 /404.html    /404.html   404
 /*           /404.html   404
