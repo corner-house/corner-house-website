@@ -1,7 +1,6 @@
 import Hero from '@/components/Hero';
 import HomePropertyCarousel from '@/components/HomePropertyCarousel';
 import Services from '@/components/Services';
-import Localities from '@/components/Localities';
 import Insights from '@/components/Insights';
 import Testimonials from '@/components/Testimonials';
 import InquiryForm from '@/components/InquiryForm';
@@ -98,7 +97,6 @@ export default function Home() {
 
       <Services onNavigate={onNavigate} />
 
-      <Localities />
       <Insights onNavigate={onNavigate} />
       <Testimonials />
 

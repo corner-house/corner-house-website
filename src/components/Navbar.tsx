@@ -29,9 +29,9 @@ export default function Navbar({ onNavigate }: NavbarProps) {
   const navLinks: NavLink[] = [
     { name: 'Properties', to: '/properties', type: 'route' },
     { name: 'Services', to: '/services', type: 'route' },
-    // Localities has no dedicated route — scrolls to the home-page section. Rendered as a
-    // <button>, so no href="#" leaks into crawl reports.
-    { name: 'Localities', href: '#localities', type: 'anchor' },
+    // Localities homepage section was removed; nav link points to /blog as an interim
+    // destination until dedicated sector guide posts are written.
+    { name: 'Localities', to: '/blog', type: 'route' },
     { name: 'Journal', to: '/blog', type: 'route' },
   ];
 
