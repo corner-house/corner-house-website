@@ -191,8 +191,10 @@ export default function Services() {
     name: 'Corner House Realty',
     url: SITE_URL,
     logo: `${SITE_URL}/logos/corner-house-horizontal-transparent.svg`,
+    image: `${SITE_URL}/og-default.jpg`,
     description:
       'HARERA-registered luxury real estate brokerage in Gurugram and Delhi NCR. Specialising in HARERA-verified premium residential projects.',
+    priceRange: '₹2 Cr – ₹25 Cr',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'C3-151, Sobha Sector 108',
