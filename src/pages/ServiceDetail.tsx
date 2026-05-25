@@ -6,11 +6,21 @@ import { Button } from '@/components/ui/button';
 import { motion } from 'motion/react';
 import { ArrowLeft, CheckCircle2, MessageSquare, Phone } from 'lucide-react';
 import SEO, { SITE_URL } from '@/components/SEO';
+import ResearchPage from '@/pages/services/Research';
+import PortfolioPage from '@/pages/services/Portfolio';
+import NriPage from '@/pages/services/Nri';
 
 export default function ServiceDetail() {
   const { id } = useParams<{ id: string }>();
   const { onBack: layoutBack } = useLayoutContext();
   const onBack = () => layoutBack('#services');
+
+  // Services with long-form SEO pages render their own component (own SEO, JSON-LD, FAQs, CTA).
+  // Remaining services (brokerage, loan) fall through to the generic template below.
+  if (id === 'research') return <ResearchPage />;
+  if (id === 'portfolio') return <PortfolioPage />;
+  if (id === 'nri') return <NriPage />;
+
   const service = SERVICES.find((s) => s.id === id);
 
   if (!service) {
