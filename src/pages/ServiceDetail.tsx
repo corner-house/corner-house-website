@@ -9,6 +9,7 @@ import SEO, { SITE_URL } from '@/components/SEO';
 import ResearchPage from '@/pages/services/Research';
 import PortfolioPage from '@/pages/services/Portfolio';
 import NriPage from '@/pages/services/Nri';
+import BrokeragePage from '@/pages/services/Brokerage';
 
 export default function ServiceDetail() {
   const { id } = useParams<{ id: string }>();
@@ -16,7 +17,8 @@ export default function ServiceDetail() {
   const onBack = () => layoutBack('#services');
 
   // Services with long-form SEO pages render their own component (own SEO, JSON-LD, FAQs, CTA).
-  // Remaining services (brokerage, loan) fall through to the generic template below.
+  // Loan remains on the generic template below until a similar rebuild ships.
+  if (id === 'brokerage') return <BrokeragePage />;
   if (id === 'research') return <ResearchPage />;
   if (id === 'portfolio') return <PortfolioPage />;
   if (id === 'nri') return <NriPage />;
