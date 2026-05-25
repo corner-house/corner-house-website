@@ -8,7 +8,8 @@ export const SERVICES: Service[] = [
     title: 'Brokerage',
     description: 'Expert guidance for buying, selling, and leasing premium residential and commercial assets.',
     icon: 'Home',
-    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=70&w=800',
+    image: 'https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-forest-reserve/webp/gallery/entrance-render-website.webp',
+    imageAlt: 'Luxury real estate brokerage Gurugram — HARERA verified property advisory',
     fullDescription: 'Our brokerage services are built on the foundation of deep market knowledge and a commitment to transparency. Whether you are looking to acquire a luxury residence, sell a prime commercial asset, or lease high-end office space, our team provides end-to-end support to ensure a seamless transaction.',
     features: [
       'Residential Sales & Leasing',
@@ -30,7 +31,8 @@ export const SERVICES: Service[] = [
     title: 'Portfolio Management',
     description: 'Strategic real estate investment planning to maximize returns and diversify your wealth.',
     icon: 'Briefcase',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=70&w=800',
+    image: 'https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/sobha-aranya/webp/gallery/balcony-golf-course-view-private-garden.webp',
+    imageAlt: 'Real estate portfolio management Gurugram — investment advisory',
     fullDescription: 'We treat real estate as a critical asset class in your wealth portfolio. Our Portfolio Management Services (PMS) focus on identifying high-yield opportunities, managing risks, and ensuring long-term capital appreciation through strategic asset allocation.',
     features: [
       'Investment Strategy Development',
@@ -52,7 +54,8 @@ export const SERVICES: Service[] = [
     title: 'Market Research',
     description: 'Data-driven insights and trend analysis to help you make informed real estate decisions.',
     icon: 'Search',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=70&w=800',
+    image: 'https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/krisumi-waterside-residences/webp/gallery/concept-view-01.webp',
+    imageAlt: 'Gurugram luxury real estate market research — Dwarka Expressway',
     fullDescription: 'In a dynamic market like Gurugram and Delhi NCR, data is your most valuable asset. Our research team provides comprehensive reports, feasibility studies, and trend analysis to help developers, investors, and occupiers make informed decisions.',
     features: [
       'Feasibility Studies',
@@ -73,7 +76,8 @@ export const SERVICES: Service[] = [
     title: 'NRI Services',
     description: 'End-to-end support for non-resident Indians, from property search to legal compliance.',
     icon: 'Globe',
-    image: 'https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&q=70&w=800',
+    image: 'https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/emaar-serenity-hills/webp/gallery/serenity-building.webp',
+    imageAlt: 'NRI property services Gurugram — non-resident India real estate advisory',
     fullDescription: 'We understand the unique challenges faced by Non-Resident Indians when investing in Indian real estate. Our dedicated NRI desk provides a single window for all property-related needs, ensuring peace of mind and complete transparency.',
     features: [
       'Remote Property Management',
@@ -94,7 +98,8 @@ export const SERVICES: Service[] = [
     title: 'Loan Services',
     description: 'Tailored financial solutions and seamless home loan processing with leading banks.',
     icon: 'CreditCard',
-    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=70&w=800',
+    image: 'https://pub-f00f91c779cf4225a9881062b14b46d3.r2.dev/downtown66/webp/gallery/banner-image.webp',
+    imageAlt: 'Home loan advisory Gurugram — luxury property financing',
     fullDescription: 'Securing the right financing is as important as finding the right property. We partner with leading financial institutions to provide you with the most competitive interest rates and a hassle-free loan processing experience.',
     features: [
       'Home Loan Assistance',

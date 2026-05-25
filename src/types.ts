@@ -22,6 +22,7 @@ export interface Service {
   description: string;
   icon: string;
   image: string;
+  imageAlt: string;
   fullDescription: string;
   features: string[];
   process?: { title: string; description: string }[];

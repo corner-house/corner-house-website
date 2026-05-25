@@ -76,7 +76,7 @@ export default function ServiceDetail() {
       <div className="relative h-[60vh] min-h-[400px] overflow-hidden">
         <img
           src={service.image}
-          alt={service.title}
+          alt={service.imageAlt}
           className="w-full h-full object-cover"
           loading="eager"
           decoding="async"
