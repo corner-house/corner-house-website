@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Property } from '@/types';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Home, Maximize, MapPin, Image as ImageIcon, Layout, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+
+// LeadCaptureModal is dynamically imported behind a click-triggered conditional
+// render. When statically imported AND rendered unconditionally here, vite-react-ssg's
+// asset collector hits a chunk-collision quirk because the same module is also
+// rendered conditionally elsewhere (e.g. BlogSidebar). The lazy + Suspense +
+// conditional-render pattern keeps the modal out of SSG's static traversal.
+const LeadCaptureModal = lazy(() => import('@/components/LeadCaptureModal'));
 
 interface PropertyCardProps {
   key?: React.Key;
@@ -13,11 +20,25 @@ interface PropertyCardProps {
 
 export default function PropertyCard({ property, onClick }: PropertyCardProps) {
   const [view, setView] = React.useState<'photo' | 'floorplan'>('photo');
+  // Modal gate: clicking the card or VIEW DETAILS opens the lead form first.
+  // onSuccess (after the modal's own POST to /api/lead) navigates to the
+  // property detail page via the parent-provided onClick callback. If the user
+  // dismisses the modal without submitting, no navigation happens.
+  const [leadOpen, setLeadOpen] = React.useState(false);
+  const openLead = () => setLeadOpen(true);
+  const handleLeadSuccess = () => {
+    setLeadOpen(false);
+    onClick(property.id);
+  };
+  const leadSource =
+    typeof window !== 'undefined'
+      ? `property-card:${property.id} ${window.location.pathname}`
+      : `property-card:${property.id}`;
 
   return (
     <Card
       className="group border border-border/40 bg-white overflow-hidden rounded-none shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer flex flex-col h-full"
-      onClick={() => onClick(property.id)}
+      onClick={openLead}
     >
       <CardContent className="p-0 flex flex-col h-full">
         <div className="relative aspect-[4/5] overflow-hidden bg-muted">
@@ -104,7 +125,7 @@ export default function PropertyCard({ property, onClick }: PropertyCardProps) {
             type="button"
             onClick={(e) => {
               e.stopPropagation();
-              onClick(property.id);
+              openLead();
             }}
             className="mt-6 w-full inline-flex items-center justify-center gap-2 bg-primary text-white hover:bg-primary/90 active:scale-[0.98] transition-all py-4 text-xs font-bold tracking-[0.2em] rounded-none touch-manipulation"
           >
@@ -113,6 +134,19 @@ export default function PropertyCard({ property, onClick }: PropertyCardProps) {
           </button>
         </div>
       </CardContent>
+
+      {leadOpen && (
+        <Suspense fallback={null}>
+          <LeadCaptureModal
+            isOpen={leadOpen}
+            onClose={() => setLeadOpen(false)}
+            onSuccess={handleLeadSuccess}
+            title={property.title}
+            source={leadSource}
+            message="Requesting property details"
+          />
+        </Suspense>
+      )}
     </Card>
   );
 }
