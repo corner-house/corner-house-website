@@ -193,7 +193,15 @@ async function sendNotificationEmail(
   lead: NormalisedLead,
 ): Promise<{ ok: true } | { ok: false; error: string }> {
   if (!env.RESEND_API_KEY || !env.LEAD_TO_EMAIL) {
-    return { ok: false, error: 'resend_env_missing' };
+    // Diagnostic: surface which specific var is missing so we don't have to
+    // guess between dashboard misconfigurations. Safe to log — only reports
+    // presence/absence, never the value. Remove this verbosity once stable.
+    const hasApiKey = !!env.RESEND_API_KEY;
+    const hasToEmail = !!env.LEAD_TO_EMAIL;
+    return {
+      ok: false,
+      error: `resend_env_missing (RESEND_API_KEY=${hasApiKey ? 'present' : 'absent'}, LEAD_TO_EMAIL=${hasToEmail ? 'present' : 'absent'})`,
+    };
   }
 
   // `onboarding@resend.dev` works without a verified sending domain but is
