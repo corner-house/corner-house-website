@@ -153,11 +153,13 @@ function BrochureCard({
           name: data.name,
           phone: data.phone,
           email: data.email,
-          project: projectName,
-          projectSlug: contactSlug,
-          requestType: 'brochure',
-          source: 'blog-sidebar',
-          pageUrl: typeof window !== 'undefined' ? window.location.href : undefined,
+          property: projectName,
+          // New /api/lead schema is name/phone/email/property/source/message.
+          // We encode the lead origin + post slug in `source` and put the
+          // brochure-request discriminator in `message` so it shows up in the
+          // notification email and Sheet row.
+          source: `blog-sidebar:${contactSlug}${typeof window !== 'undefined' ? ' ' + window.location.pathname : ''}`,
+          message: 'Brochure request',
         }),
       });
       ok = res.ok;
