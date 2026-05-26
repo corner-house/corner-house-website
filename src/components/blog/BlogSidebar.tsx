@@ -127,13 +127,12 @@ function BrochureCard({
   const baseClass =
     'inline-flex items-center justify-center w-full border border-primary text-primary py-3 text-[11px] tracking-[0.3em] uppercase font-semibold hover:bg-primary hover:text-white transition-colors gap-2';
 
-  // POST the lead to the new /api/lead Cloudflare Pages Function so it is
-  // persisted (Cloudflare logs + optional Formspree fan-out) before the PDF
-  // opens. If the POST fails we still open the PDF (the user already gave us
-  // intent) but surface a WhatsApp fallback so they can re-send their request.
+  // LeadCaptureModal POSTs to /api/lead itself (using the source/message we
+  // pass below). onSuccess fires AFTER that POST has succeeded, so we just
+  // need to push analytics and open the PDF. No duplicate fetch here.
   const waMessage = `Hi, I'm interested in the ${projectName} brochure. Please share details.`;
   const waHref = whatsappLink(waMessage);
-  const handleSuccess = async (data: LeadData) => {
+  const handleSuccess = (data: LeadData) => {
     if (typeof window !== 'undefined' && 'dataLayer' in window) {
       const w = window as Window & { dataLayer?: Array<Record<string, unknown>> };
       w.dataLayer?.push({
@@ -144,36 +143,19 @@ function BrochureCard({
         leadName: data.name,
       });
     }
-    let ok = true;
-    try {
-      const res = await fetch('/api/lead', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: data.name,
-          phone: data.phone,
-          email: data.email,
-          property: projectName,
-          // New /api/lead schema is name/phone/email/property/source/message.
-          // We encode the lead origin + post slug in `source` and put the
-          // brochure-request discriminator in `message` so it shows up in the
-          // notification email and Sheet row.
-          source: `blog-sidebar:${contactSlug}${typeof window !== 'undefined' ? ' ' + window.location.pathname : ''}`,
-          message: 'Brochure request',
-        }),
-      });
-      ok = res.ok;
-    } catch {
-      ok = false;
-    }
     setOpen(false);
-    if (ok && brochureUrl && typeof window !== 'undefined') {
+    if (brochureUrl && typeof window !== 'undefined') {
       window.open(brochureUrl, '_blank', 'noopener,noreferrer');
     } else if (typeof window !== 'undefined') {
-      // Surface a manual WhatsApp fallback so the buyer's intent isn't lost.
+      // Surface a manual WhatsApp fallback in the unlikely case brochureUrl
+      // somehow ends up empty by the time onSuccess fires.
       window.open(waHref, '_blank', 'noopener,noreferrer');
     }
   };
+  const leadSource =
+    typeof window !== 'undefined'
+      ? `blog-sidebar:${contactSlug} ${window.location.pathname}`
+      : `blog-sidebar:${contactSlug}`;
 
   return (
     <div className="border border-border bg-card p-6">
@@ -195,6 +177,8 @@ function BrochureCard({
             onClose={() => setOpen(false)}
             onSuccess={handleSuccess}
             title={`${projectName} — Brochure Download`}
+            source={leadSource}
+            message="Brochure request"
           />
         </>
       ) : (

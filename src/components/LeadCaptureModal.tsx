@@ -9,7 +9,17 @@ interface LeadCaptureModalProps {
   isOpen: boolean;
   onClose: () => void;
   onSuccess: (data: LeadData) => void;
+  // Property name — used both as the modal heading and as `property` in the API payload.
   title: string;
+  // Optional `source` and `message` to override the defaults in the /api/lead payload.
+  // `source` defaults to window.location.pathname. `message` defaults to an empty string.
+  // Use these to discriminate where the lead came from in Saurabh's inbox (e.g.
+  //   <LeadCaptureModal source="blog-sidebar:sobha-aranya-review /blog/sobha-aranya-review"
+  //                     message="Brochure request" ... />
+  // The modal makes a single POST to /api/lead; callers should NOT duplicate the call
+  // in onSuccess. onSuccess only fires AFTER a successful POST.
+  source?: string;
+  message?: string;
   persistent?: boolean;
 }
 
@@ -19,7 +29,15 @@ export interface LeadData {
   email: string;
 }
 
-export default function LeadCaptureModal({ isOpen, onClose, onSuccess, title, persistent = false }: LeadCaptureModalProps) {
+export default function LeadCaptureModal({
+  isOpen,
+  onClose,
+  onSuccess,
+  title,
+  source,
+  message,
+  persistent = false,
+}: LeadCaptureModalProps) {
   const [formData, setFormData] = React.useState<LeadData>({
     name: '',
     phone: '',
@@ -32,16 +50,17 @@ export default function LeadCaptureModal({ isOpen, onClose, onSuccess, title, pe
     setIsSubmitting(true);
 
     // Property is auto-derived from the modal's `title` prop (the residence
-    // the buyer is asking about); Source is the current pathname so we can
-    // tell where in the funnel the lead came from. Message stays blank — the
-    // current form has no textarea and we deliberately do not add one (no
-    // added friction). The LeadData callback shape stays unchanged so we
-    // don't touch any caller.
+    // the buyer is asking about). Source defaults to the current pathname but
+    // callers can pass an explicit `source` prop with more context (e.g.
+    // "blog-sidebar:<slug>"). Message defaults to empty but callers can pass
+    // a discriminator (e.g. "Brochure request"). The LeadData callback shape
+    // stays unchanged so we don't touch any caller's onSuccess signature.
     const apiPayload = {
       ...formData,
       property: title,
-      source: typeof window !== 'undefined' ? window.location.pathname : '',
-      message: '',
+      source:
+        source ?? (typeof window !== 'undefined' ? window.location.pathname : ''),
+      message: message ?? '',
     };
 
     try {

@@ -1,8 +1,13 @@
+import { lazy, Suspense, useState } from 'react';
 import { Download, MapPin, MessageSquare, Phone } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import type { PropertyListing } from '../schema';
 import { getImage, getImageOrNull } from '../image-helpers';
 import { SITE_CONTACT, phoneLink, whatsappLink } from '@/site-contact';
+
+// Dynamic import keeps the modal out of vite-react-ssg's static asset
+// collection. See PropertyCard for the underlying SSG chunk-collision rationale.
+const LeadCaptureModal = lazy(() => import('@/components/LeadCaptureModal'));
 
 interface HeroProps {
   listing: PropertyListing;
@@ -17,6 +22,21 @@ export default function Hero({ listing }: HeroProps) {
     : `${listing.hero.priceFrom} ${listing.hero.priceSuffix}`;
 
   const whatsappMessage = `Hi, I'd like more details on ${listing.projectName} in ${listing.location.locality}.`;
+
+  // Lead-gated brochure download: clicking BROCHURE opens the modal first.
+  // After a successful submit (the modal POSTs to /api/lead on its own), open
+  // the PDF in a new tab. Dismissing the modal aborts the download.
+  const [leadOpen, setLeadOpen] = useState(false);
+  const handleLeadSuccess = () => {
+    setLeadOpen(false);
+    if (listing.brochureUrl && typeof window !== 'undefined') {
+      window.open(listing.brochureUrl, '_blank', 'noopener,noreferrer');
+    }
+  };
+  const leadSource =
+    typeof window !== 'undefined'
+      ? `property-page-brochure:${listing.slug} ${window.location.pathname}`
+      : `property-page-brochure:${listing.slug}`;
 
   return (
     <section className="relative">
@@ -110,15 +130,13 @@ export default function Hero({ listing }: HeroProps) {
                 <Phone className="mr-2 h-5 w-5" /> <span className="hidden sm:inline">CALL&nbsp;</span>{SITE_CONTACT.phone}
               </a>
               {listing.brochureUrl && (
-                <a
-                  href={listing.brochureUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  download
+                <button
+                  type="button"
+                  onClick={() => setLeadOpen(true)}
                   className="inline-flex flex-1 sm:flex-none items-center justify-center rounded-lg border border-white/50 bg-black/30 hover:bg-black/50 text-white font-medium text-sm px-6 md:px-8 py-3.5 md:py-4 transition-colors backdrop-blur"
                 >
                   <Download className="mr-2 h-5 w-5" /> BROCHURE
-                </a>
+                </button>
               )}
             </div>
           </div>
@@ -144,6 +162,19 @@ export default function Hero({ listing }: HeroProps) {
           ))}
         </div>
       </div>
+
+      {listing.brochureUrl && leadOpen && (
+        <Suspense fallback={null}>
+          <LeadCaptureModal
+            isOpen={leadOpen}
+            onClose={() => setLeadOpen(false)}
+            onSuccess={handleLeadSuccess}
+            title={`${listing.projectName} — Brochure Download`}
+            source={leadSource}
+            message="Brochure request"
+          />
+        </Suspense>
+      )}
     </section>
   );
 }
