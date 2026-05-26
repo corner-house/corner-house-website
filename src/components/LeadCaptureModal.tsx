@@ -27,15 +27,57 @@ export default function LeadCaptureModal({ isOpen, onClose, onSuccess, title, pe
   });
   const [isSubmitting, setIsSubmitting] = React.useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate API call
-    setTimeout(() => {
+    // Property is auto-derived from the modal's `title` prop (the residence
+    // the buyer is asking about); Source is the current pathname so we can
+    // tell where in the funnel the lead came from. Message stays blank — the
+    // current form has no textarea and we deliberately do not add one (no
+    // added friction). The LeadData callback shape stays unchanged so we
+    // don't touch any caller.
+    const apiPayload = {
+      ...formData,
+      property: title,
+      source: typeof window !== 'undefined' ? window.location.pathname : '',
+      message: '',
+    };
+
+    try {
+      const res = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(apiPayload),
+      });
+      const body = (await res.json().catch(() => ({ ok: false }))) as {
+        ok?: boolean;
+        emailOk?: boolean;
+        sheetOk?: boolean;
+      };
+      // 502 (partial failure) still means the lead was captured on at least
+      // one side — treat it as success for the user but log so we can see it.
+      const captured = res.ok || body.emailOk === true || body.sheetOk === true;
+      if (!captured) {
+        console.error('[lead] submit failed', { status: res.status, body });
+        alert(
+          'Something went wrong submitting your details. Please try again, or reach us on WhatsApp at +91 98719 50051.',
+        );
+        return;
+      }
+      if (!res.ok) {
+        // Partial success — log for ops visibility but proceed.
+        console.warn('[lead] partial capture', { status: res.status, body });
+      }
       onSuccess(formData);
+    } catch (err) {
+      console.error('[lead] network error', err);
+      alert(
+        'We could not reach our servers. Please check your connection and try again, or reach us on WhatsApp at +91 98719 50051.',
+      );
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const [portalMounted, setPortalMounted] = React.useState(false);
