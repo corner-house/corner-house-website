@@ -193,14 +193,30 @@ async function sendNotificationEmail(
   lead: NormalisedLead,
 ): Promise<{ ok: true } | { ok: false; error: string }> {
   if (!env.RESEND_API_KEY || !env.LEAD_TO_EMAIL) {
-    // Diagnostic: surface which specific var is missing so we don't have to
-    // guess between dashboard misconfigurations. Safe to log — only reports
-    // presence/absence, never the value. Remove this verbosity once stable.
+    // Diagnostic: surface which specific var is missing AND the full key list
+    // visible to the function, so we can tell apart "not set" vs "empty value"
+    // vs "wrong name" vs "wrong project". Safe to log — only reports KEY names
+    // and presence/length of values, never the actual values. Remove this
+    // verbosity once the integration is stable.
     const hasApiKey = !!env.RESEND_API_KEY;
     const hasToEmail = !!env.LEAD_TO_EMAIL;
+    const envKeys = Object.keys(env as Record<string, unknown>).sort();
+    // Dump length of LEAD_TO_EMAIL specifically — distinguishes "undefined"
+    // (var doesn't exist) from "empty string" (var exists but value is blank).
+    const toEmailValue = env.LEAD_TO_EMAIL;
+    const toEmailDiag =
+      toEmailValue === undefined
+        ? 'undefined'
+        : toEmailValue === null
+        ? 'null'
+        : `string(len=${(toEmailValue as string).length})`;
     return {
       ok: false,
-      error: `resend_env_missing (RESEND_API_KEY=${hasApiKey ? 'present' : 'absent'}, LEAD_TO_EMAIL=${hasToEmail ? 'present' : 'absent'})`,
+      error:
+        `resend_env_missing (RESEND_API_KEY=${hasApiKey ? 'present' : 'absent'}, ` +
+        `LEAD_TO_EMAIL=${hasToEmail ? 'present' : 'absent'}, ` +
+        `LEAD_TO_EMAIL_raw=${toEmailDiag}, ` +
+        `envKeys=[${envKeys.join(',')}])`,
     };
   }
 
